@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página No Encontrada - PODIUMEX</title>
+    <meta name="description" content="La página que buscas no existe. Visita nuestro catálogo de podiums profesionales.">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #header-container{min-height:80px}
+        .error-page {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background: var(--secondary);
+        }
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .error-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-actions a {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-home {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-home:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .btn-catalog {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--border);
+        }
+        .btn-catalog:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            .error-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Página No Encontrada</h1>
+            <p class="error-message">
+                Lo sentimos, la página que estás buscando no existe o ha sido movida.
+                Te invitamos a explorar nuestro catálogo de podiums profesionales.
+            </p>
+            <div class="error-actions">
+                <a href="/index.html" class="btn-home">Ir al Inicio</a>
+                <a href="/catalogo.html" class="btn-catalog">Ver Catálogo</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
