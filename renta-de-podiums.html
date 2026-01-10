@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Podiums Profesionales - PODIUMEX México</title>
-    <meta name="description" content="Catálogo completo de podiums profesionales: acrílico, madera, LED y combinados. Especificaciones técnicas y opciones de renta o compra en México.">
-    <meta name="keywords" content="catálogo podiums, podiums profesionales, podiums acrílico, podiums madera, podiums LED, especificaciones podiums, podiums México">
-    <meta property="og:title" content="Catálogo de Podiums Profesionales - PODIUMEX">
-    <meta property="og:description" content="Explora nuestro catálogo completo de podiums profesionales. Encuentra el modelo perfecto para tu evento.">
+    <title>Renta de Podiums Profesionales - Alquiler de Podium en México | PODIUMEX</title>
+    <meta name="description" content="Renta de podiums profesionales en México. Alquiler de podium de acrílico, madera y combinados para eventos corporativos, conferencias y ceremonias. Entrega en 24 hrs.">
+    <meta name="keywords" content="renta de podiums, renta de podium, alquiler podium, renta podium acrílico, renta podium madera, alquiler podiums México, renta podium CDMX">
+    <meta property="og:title" content="Renta de Podiums Profesionales - PODIUMEX México">
+    <meta property="og:description" content="Servicio de renta de podiums para eventos. Alquiler de podium con entrega, instalación y soporte técnico incluido.">
     <meta property="og:type" content="website">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,6 +128,28 @@
         .sidebar-overlay {
             display: none;
         }
+        .sidebar-nav {
+            margin-bottom: 1.5rem;
+        }
+        .sidebar-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+        .sidebar-nav-link:hover {
+            background: var(--secondary);
+        }
+        .sidebar-nav-link.active {
+            background: var(--accent);
+            color: var(--white);
+            font-weight: 500;
+        }
 
         /* Main content */
         .catalog-main {
@@ -151,6 +173,40 @@
         }
         .mobile-filter-btn {
             display: none;
+        }
+
+        /* Page header */
+        .page-header {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .page-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .page-header p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .rental-benefits {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .rental-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+        .rental-benefit svg {
+            color: var(--success);
         }
 
         /* Category sections */
@@ -215,7 +271,7 @@
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
-        .catalog-badge.new { background: #10b981; }
+        .catalog-badge.available { background: #10b981; }
         .catalog-badge.popular { background: #f59e0b; }
         .catalog-badge.premium { background: #1e293b; }
 
@@ -274,26 +330,35 @@
             color: var(--primary);
         }
 
-        /* Features */
-        .catalog-features {
-            list-style: none;
+        /* Rental info */
+        .rental-info {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 6px;
+            padding: 0.75rem;
             margin-bottom: 1rem;
         }
-        .catalog-features li {
-            padding: 0.3rem 0;
+        .rental-info-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #166534;
+            text-transform: uppercase;
+            margin-bottom: 0.375rem;
+        }
+        .rental-info-list {
+            list-style: none;
+        }
+        .rental-info-list li {
             font-size: 0.75rem;
-            color: var(--text);
+            color: #15803d;
+            padding: 0.2rem 0;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.375rem;
         }
-        .catalog-features li::before {
-            content: '';
-            width: 4px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 50%;
-            flex-shrink: 0;
+        .rental-info-list li::before {
+            content: '✓';
+            font-weight: 700;
         }
 
         /* Actions */
@@ -338,7 +403,6 @@
                 width: 280px;
                 height: calc(100vh - 80px);
                 z-index: 200;
-                transition: left 0.3s ease;
             }
             .catalog-sidebar.active {
                 left: 0;
@@ -379,6 +443,10 @@
             .catalog-actions {
                 flex-direction: column;
             }
+            .rental-benefits {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -390,66 +458,115 @@
             <svg class="breadcrumb-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span class="breadcrumb-current">Catálogo</span>
+            <a href="catalogo.html" class="breadcrumb-link">Catálogo</a>
+            <svg class="breadcrumb-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="breadcrumb-current">Renta de Podiums</span>
         </div>
     </nav>
     <div class="catalog-layout">
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
         <aside class="catalog-sidebar" id="catalogSidebar">
             <div class="sidebar-header">
-                <h2>Filtros</h2>
-                <p>8 productos disponibles</p>
+                <h2>Catálogo</h2>
+                <p>Renta de Podiums</p>
             </div>
+            <div class="sidebar-nav">
+                <a href="venta-de-podiums.html" class="sidebar-nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    </svg>
+                    Venta de Podiums
+                </a>
+                <a href="renta-de-podiums.html" class="sidebar-nav-link active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    Renta de Podiums
+                </a>
+            </div>
+            <div class="filter-divider"></div>
             <div class="filter-section">
                 <h3>Material</h3>
                 <div class="filter-list">
                     <button class="filter-item active" data-filter="all">
                         <span class="filter-radio"></span>
-                        Todos los productos
-                        <span class="filter-count">12</span>
+                        Todos los podiums
+                        <span class="filter-count">8</span>
                     </button>
                     <button class="filter-item" data-filter="acrilico">
                         <span class="filter-radio"></span>
                         Acrílico
-                        <span class="filter-count">6</span>
+                        <span class="filter-count">4</span>
                     </button>
                     <button class="filter-item" data-filter="madera">
                         <span class="filter-radio"></span>
                         Madera
-                        <span class="filter-count">3</span>
+                        <span class="filter-count">2</span>
                     </button>
                     <button class="filter-item" data-filter="combinado">
                         <span class="filter-radio"></span>
                         Combinados
-                        <span class="filter-count">3</span>
-                    </button>
-                    <button class="filter-item" data-filter="led">
-                        <span class="filter-radio"></span>
-                        Con LED
-                        <span class="filter-count">4</span>
+                        <span class="filter-count">2</span>
                     </button>
                 </div>
             </div>
             <div class="filter-divider"></div>
             <div class="filter-section">
-                <h3>Ordenar por</h3>
+                <h3>Duración de Renta</h3>
                 <div class="filter-list">
-                    <button class="filter-item active" data-sort="destacados">
+                    <button class="filter-item active" data-duration="all">
                         <span class="filter-radio"></span>
-                        Destacados
+                        Todas las duraciones
                     </button>
-                    <button class="filter-item" data-sort="nombre">
+                    <button class="filter-item" data-duration="dia">
                         <span class="filter-radio"></span>
-                        Nombre A-Z
+                        Por día
                     </button>
-                    <button class="filter-item" data-sort="recientes">
+                    <button class="filter-item" data-duration="semana">
                         <span class="filter-radio"></span>
-                        Más recientes
+                        Por semana
+                    </button>
+                    <button class="filter-item" data-duration="mes">
+                        <span class="filter-radio"></span>
+                        Por mes
                     </button>
                 </div>
             </div>
         </aside>
         <main class="catalog-main">
+            <div class="page-header">
+                <h1>Renta de Podiums Profesionales</h1>
+                <p>Servicio completo de renta de podium para eventos corporativos, conferencias, ceremonias y más. Incluye entrega, instalación y soporte técnico.</p>
+                <div class="rental-benefits">
+                    <div class="rental-benefit">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Entrega en 24 hrs
+                    </div>
+                    <div class="rental-benefit">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Instalación incluida
+                    </div>
+                    <div class="rental-benefit">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Soporte técnico 24/7
+                    </div>
+                    <div class="rental-benefit">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Personalización temporal
+                    </div>
+                </div>
+            </div>
             <div class="catalog-topbar">
                 <button class="mobile-filter-btn" id="mobileFilterBtn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -461,24 +578,24 @@
                     </svg>
                     Filtros
                 </button>
-                <p class="catalog-results">Mostrando <span id="resultCount">8</span> productos</p>
+                <p class="catalog-results">Mostrando <span id="resultCount">8</span> podiums disponibles para renta</p>
             </div>
             <div class="category-section" id="productos">
                 <div class="category-title">
-                    <h3>Nuestros Podiums</h3>
+                    <h3>Podiums Disponibles para Renta</h3>
                     <span class="category-count">8 modelos</span>
                 </div>
                 <div class="catalog-grid">
-                    <!-- Podium Madera Negro -->
+                    <!-- Renta Podium Madera Negro -->
                     <div class="catalog-card" data-category="madera">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/podium-madera-negro.webp" alt="Podium de Madera Negro - Elegante podium profesional con acabado negro mate" loading="lazy">
-                            <span class="catalog-badge popular">Disponible</span>
+                            <img src="img/catalogo/podium-madera-negro.webp" alt="Renta de Podium de Madera Negro - Alquiler para eventos corporativos" loading="lazy">
+                            <span class="catalog-badge available">Disponible</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Classic Series</span>
-                            <h3>Podium de Madera Negro</h3>
-                            <p>Diseño elegante y profesional en acabado negro mate. Ideal para conferencias, eventos corporativos, exposiciones y ceremonias que requieren presencia y sofisticación.</p>
+                            <span class="catalog-series">Classic Series - Renta</span>
+                            <h3>Renta Podium de Madera Negro</h3>
+                            <p>Alquiler de podium elegante en acabado negro mate. Ideal para conferencias, eventos corporativos y ceremonias que requieren presencia profesional.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -493,34 +610,36 @@
                                     <span class="spec-value">MDF alta densidad</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">12-15 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Acabado pintura negra mate resistente</li>
-                                <li>Diseño rectangular robusto con refuerzos internos</li>
-                                <li>Base estable para micrófonos y documentos</li>
-                                <li>Fácil de transportar (fondo: 35 cm)</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación</li>
+                                    <li>Recolección al finalizar</li>
+                                    <li>Soporte técnico</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=madera-negro" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20de%20Madera%20Negro" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/podium-madera-negro.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Madera Negro Compacto -->
+                    <!-- Renta Podium Madera Negro Compacto -->
                     <div class="catalog-card" data-category="madera">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/podium-madera-negro-compacto.webp" alt="Podium de Madera Negro Compacto - Diseño elegante y portátil para espacios reducidos" loading="lazy">
-                            <span class="catalog-badge new">Nuevo</span>
+                            <img src="img/catalogo/podium-madera-negro-compacto.webp" alt="Renta de Podium de Madera Negro Compacto - Alquiler para espacios reducidos" loading="lazy">
+                            <span class="catalog-badge available">Disponible</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Classic Series</span>
-                            <h3>Podium Madera Negro Compacto</h3>
-                            <p>Versión compacta del clásico podium negro. Ideal para espacios reducidos, estudios de grabación y eventos íntimos que requieren presencia profesional sin ocupar demasiado espacio.</p>
+                            <span class="catalog-series">Classic Series - Renta</span>
+                            <h3>Renta Podium Madera Negro Compacto</h3>
+                            <p>Alquiler de podium compacto ideal para espacios reducidos, estudios de grabación y eventos íntimos que requieren presencia profesional.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -535,34 +654,36 @@
                                     <span class="spec-value">MDF 1.2 cm</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">9-11 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Diseño compacto para espacios reducidos</li>
-                                <li>Acabado barniz negro satinado</li>
-                                <li>Ultra ligero y fácil de transportar</li>
-                                <li>Base reforzada para estabilidad</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación</li>
+                                    <li>Recolección al finalizar</li>
+                                    <li>Soporte técnico</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=madera-negro-compacto" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Madera%20Negro%20Compacto" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/podium-madera-negro-compacto.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Acrílico Transparente -->
+                    <!-- Renta Podium Acrílico Transparente -->
                     <div class="catalog-card" data-category="acrilico">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/acrilico-transparente.webp" alt="Podium de Acrílico Transparente - Diseño moderno y minimalista para eventos corporativos" loading="lazy">
-                            <span class="catalog-badge popular">Disponible</span>
+                            <img src="img/catalogo/acrilico-transparente.webp" alt="Renta de Podium de Acrílico Transparente - Alquiler para eventos modernos" loading="lazy">
+                            <span class="catalog-badge popular">Popular</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Premium Series</span>
-                            <h3>Podium de Acrílico Transparente</h3>
-                            <p>Diseño minimalista en acrílico cristalino de 6mm. Transparencia total y acabado pulido para un efecto visual limpio y profesional.</p>
+                            <span class="catalog-series">Premium Series - Renta</span>
+                            <h3>Renta Podium Acrílico Transparente</h3>
+                            <p>Alquiler de podium minimalista en acrílico cristalino. Transparencia total y acabado pulido para eventos corporativos de alto impacto.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -577,34 +698,36 @@
                                     <span class="spec-value">Acrílico 6mm</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">8-10 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Transparencia total sin burbujas ni imperfecciones</li>
-                                <li>Bordes pulidos con acabado estético</li>
-                                <li>Fácil de transportar y ensamblar</li>
-                                <li>Resistente a rayones y fácil limpieza</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación</li>
+                                    <li>Personalización temporal con vinil</li>
+                                    <li>Soporte técnico 24/7</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=acrilico-transparente" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Acrílico%20Transparente" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/acrilico-transparente.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Acrílico Transparente Compacto -->
+                    <!-- Renta Podium Acrílico Transparente Compacto -->
                     <div class="catalog-card" data-category="acrilico">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/acrilico-transparente-compacto.webp" alt="Podium de Acrílico Transparente Compacto - Diseño minimalista y portátil para espacios reducidos" loading="lazy">
-                            <span class="catalog-badge new">Nuevo</span>
+                            <img src="img/catalogo/acrilico-transparente-compacto.webp" alt="Renta de Podium de Acrílico Transparente Compacto - Alquiler para streaming" loading="lazy">
+                            <span class="catalog-badge available">Disponible</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Premium Series</span>
-                            <h3>Podium Acrílico Transparente Compacto</h3>
-                            <p>Versión compacta del podium de acrílico transparente. Ideal para espacios reducidos, estudios de grabación y eventos íntimos que requieren un look moderno y minimalista.</p>
+                            <span class="catalog-series">Premium Series - Renta</span>
+                            <h3>Renta Podium Acrílico Compacto</h3>
+                            <p>Alquiler de podium compacto en acrílico transparente. Ideal para podcasts, streaming y eventos íntimos con look moderno.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -619,34 +742,36 @@
                                     <span class="spec-value">Acrílico 5mm</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">6-8 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Diseño ultra compacto para espacios reducidos</li>
-                                <li>Acabado pulido brillante de alta transparencia</li>
-                                <li>Ultra ligero y fácil de transportar</li>
-                                <li>Ideal para podcasts y streaming</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación</li>
+                                    <li>Recolección al finalizar</li>
+                                    <li>Soporte técnico</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=acrilico-transparente-compacto" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Acrílico%20Transparente%20Compacto" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/acrilico-transparente-compacto.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Acrílico Negro -->
+                    <!-- Renta Podium Acrílico Negro -->
                     <div class="catalog-card" data-category="acrilico">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/acrilico-negro.webp" alt="Podium de Acrílico Negro - Diseño elegante y sofisticado para eventos corporativos" loading="lazy">
-                            <span class="catalog-badge new">Nuevo</span>
+                            <img src="img/catalogo/acrilico-negro.webp" alt="Renta de Podium de Acrílico Negro - Alquiler elegante para eventos premium" loading="lazy">
+                            <span class="catalog-badge premium">Premium</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Signature Series</span>
-                            <h3>Podium de Acrílico Negro</h3>
-                            <p>Elegancia y sofisticación en acrílico negro de 6mm. Superficie lisa y pulida con un look discreto y profesional ideal para eventos formales.</p>
+                            <span class="catalog-series">Signature Series - Renta</span>
+                            <h3>Renta Podium Acrílico Negro</h3>
+                            <p>Alquiler de podium elegante en acrílico negro. Superficie lisa y pulida con look sofisticado para eventos formales y lanzamientos.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -661,34 +786,36 @@
                                     <span class="spec-value">Acrílico negro 6mm</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">8-10 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Color negro sólido para look sofisticado</li>
-                                <li>Superficie lisa y pulida sin imperfecciones</li>
-                                <li>Fácil de transportar y ensamblar</li>
-                                <li>Resistente a rayones y fácil de limpiar</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación premium</li>
+                                    <li>Personalización con vinil</li>
+                                    <li>Soporte técnico 24/7</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=acrilico-negro" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Acrílico%20Negro" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/acrilico-negro.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Acrílico Negro Compacto -->
+                    <!-- Renta Podium Acrílico Negro Compacto -->
                     <div class="catalog-card" data-category="acrilico">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/acrilico-negro-compacto.webp" alt="Podium de Acrílico Negro Compacto - Diseño elegante y portátil para espacios reducidos" loading="lazy">
-                            <span class="catalog-badge new">Nuevo</span>
+                            <img src="img/catalogo/acrilico-negro-compacto.webp" alt="Renta de Podium de Acrílico Negro Compacto - Alquiler para espacios reducidos" loading="lazy">
+                            <span class="catalog-badge available">Disponible</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Signature Series</span>
-                            <h3>Podium Acrílico Negro Compacto</h3>
-                            <p>Versión compacta del elegante podium de acrílico negro. Ideal para espacios reducidos, estudios de grabación y eventos íntimos que requieren un look sofisticado y discreto.</p>
+                            <span class="catalog-series">Signature Series - Renta</span>
+                            <h3>Renta Podium Acrílico Negro Compacto</h3>
+                            <p>Alquiler de podium compacto en acrílico negro. Ideal para estudios, podcasts y eventos íntimos con look sofisticado.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -703,34 +830,36 @@
                                     <span class="spec-value">Acrílico negro 5mm</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">6-8 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Diseño compacto para espacios reducidos</li>
-                                <li>Acabado pulido brillante ultra elegante</li>
-                                <li>Ultra ligero y fácil de transportar</li>
-                                <li>Ideal para podcasts y streaming</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación</li>
+                                    <li>Recolección al finalizar</li>
+                                    <li>Soporte técnico</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=acrilico-negro-compacto" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Acrílico%20Negro%20Compacto" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/acrilico-negro-compacto.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Madera Caoba + Acrílico -->
+                    <!-- Renta Podium Madera Caoba + Acrílico -->
                     <div class="catalog-card" data-category="combinado">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/madera-caoba-acrilico.webp" alt="Podium de Madera Caoba con Acrílico Transparente - Diseño elegante combinado para eventos corporativos" loading="lazy">
-                            <span class="catalog-badge new">Nuevo</span>
+                            <img src="img/catalogo/madera-caoba-acrilico.webp" alt="Renta de Podium Madera Caoba con Acrílico - Alquiler ejecutivo premium" loading="lazy">
+                            <span class="catalog-badge premium">Premium</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Executive Series</span>
-                            <h3>Podium Madera Caoba y Acrílico</h3>
-                            <p>Elegante combinación de madera caoba barnizada y acrílico transparente de 6mm. Diseño moderno y sofisticado para eventos que requieren distinción.</p>
+                            <span class="catalog-series">Executive Series - Renta</span>
+                            <h3>Renta Podium Madera Caoba y Acrílico</h3>
+                            <p>Alquiler de podium ejecutivo combinando madera caoba y acrílico transparente. Diseño distinguido para eventos corporativos de alto nivel.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -745,34 +874,36 @@
                                     <span class="spec-value">MDF Caoba + Acrílico</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">10-12 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Combinación elegante de madera y acrílico</li>
-                                <li>Acabado barnizado para protección y estética</li>
-                                <li>Panel de acrílico transparente integrado</li>
-                                <li>Base robusta con refuerzos internos</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación VIP</li>
+                                    <li>Personalización con logo temporal</li>
+                                    <li>Soporte técnico dedicado</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=madera-caoba-acrilico" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Madera%20Caoba%20con%20Acrílico" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/madera-caoba-acrilico.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Podium Madera Caoba + Acrílico Compacto -->
+                    <!-- Renta Podium Madera Caoba + Acrílico Compacto -->
                     <div class="catalog-card" data-category="combinado">
                         <div class="catalog-card-image">
-                            <img src="img/catalogo/madera-caoba-acrilico-compacto.webp" alt="Podium de Madera Caoba con Acrílico Compacto - Diseño elegante y portátil para espacios reducidos" loading="lazy">
-                            <span class="catalog-badge new">Nuevo</span>
+                            <img src="img/catalogo/madera-caoba-acrilico-compacto.webp" alt="Renta de Podium Madera Caoba con Acrílico Compacto - Alquiler ejecutivo para espacios reducidos" loading="lazy">
+                            <span class="catalog-badge available">Disponible</span>
                         </div>
                         <div class="catalog-card-content">
-                            <span class="catalog-series">Executive Series</span>
-                            <h3>Podium Madera Caoba y Acrílico Compacto</h3>
-                            <p>Versión compacta del elegante podium combinado. Ideal para espacios reducidos y eventos íntimos que requieren la distinción de madera caoba y acrílico transparente.</p>
+                            <span class="catalog-series">Executive Series - Renta</span>
+                            <h3>Renta Podium Caoba-Acrílico Compacto</h3>
+                            <p>Alquiler de podium ejecutivo compacto. Ideal para espacios reducidos que requieren la distinción de madera caoba y acrílico.</p>
                             <div class="catalog-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Altura</span>
@@ -787,19 +918,21 @@
                                     <span class="spec-value">MDF Caoba + Acrílico 5mm</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Peso</span>
-                                    <span class="spec-value">7-9 kg</span>
+                                    <span class="spec-label">Disponibilidad</span>
+                                    <span class="spec-value">Inmediata</span>
                                 </div>
                             </div>
-                            <ul class="catalog-features">
-                                <li>Diseño compacto para espacios reducidos</li>
-                                <li>Combinación elegante de materiales</li>
-                                <li>Ligero y fácil de transportar</li>
-                                <li>Ideal para podcasts y streaming ejecutivo</li>
-                            </ul>
+                            <div class="rental-info">
+                                <div class="rental-info-title">Incluye en la renta</div>
+                                <ul class="rental-info-list">
+                                    <li>Entrega e instalación</li>
+                                    <li>Recolección al finalizar</li>
+                                    <li>Soporte técnico</li>
+                                </ul>
+                            </div>
                             <div class="catalog-pricing">
                                 <div class="catalog-actions">
-                                    <a href="contacto.html?producto=madera-caoba-acrilico-compacto" class="btn-primary">Cotizar</a>
+                                    <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20rentar%20el%20Podium%20Caoba%20Acrílico%20Compacto" class="btn-primary" target="_blank">Rentar Ahora</a>
                                     <a href="catalogo/madera-caoba-acrilico-compacto.html" class="btn-secondary">Ver Detalles</a>
                                 </div>
                             </div>
@@ -811,11 +944,11 @@
     </div>
     <section class="cta-section" id="contacto">
         <div class="cta-content">
-            <h2>¿Necesitas ayuda para elegir?</h2>
-            <p>Nuestros asesores especializados te guiarán para encontrar el podium perfecto según tu tipo de evento, presupuesto y requisitos técnicos.</p>
+            <h2>¿Necesitas Rentar un Podium?</h2>
+            <p>Cotiza tu renta de podium en minutos. Incluye entrega, instalación y recolección. Disponibilidad inmediata en CDMX, Monterrey y Guadalajara.</p>
             <div class="cta-buttons">
-                <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20información%20sobre%20el%20catálogo%20de%20podiums" class="btn-whatsapp" target="_blank">
-                    WhatsApp
+                <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20información%20sobre%20renta%20de%20podiums" class="btn-whatsapp" target="_blank">
+                    WhatsApp Renta
                 </a>
                 <a href="tel:+525530454714" class="btn-call">
                     Llamar Ahora
@@ -828,7 +961,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const filterBtns = document.querySelectorAll('.filter-item[data-filter]');
-            const sortBtns = document.querySelectorAll('.filter-item[data-sort]');
+            const durationBtns = document.querySelectorAll('.filter-item[data-duration]');
             const cards = document.querySelectorAll('.catalog-card');
             const resultCount = document.getElementById('resultCount');
             const sidebar = document.getElementById('catalogSidebar');
@@ -858,9 +991,9 @@
                 });
             });
 
-            sortBtns.forEach(btn => {
+            durationBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    sortBtns.forEach(b => b.classList.remove('active'));
+                    durationBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
                 });
             });

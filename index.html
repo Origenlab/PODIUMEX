@@ -34,7 +34,8 @@
 
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
     <link rel="preload" href="footer.html" as="fetch" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -213,59 +214,14 @@
 
     <style>
         @font-face{font-family:'Inter';font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-        :root{--primary:#0a0a0a;--secondary:#fafafa;--accent:#b8860b;--text:#1a1a1a}
+        :root{--primary:#1a1a1a;--secondary:#f5f5f5;--accent:#b8860b;--text:#333;--text-light:#666;--border:#e5e5e5;--white:#fff;--success:#10b981}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
-        .hero{padding:6rem 3rem 4rem;max-width:1400px;margin:0 auto}
-        .hero-content{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-        .hero h1{font-size:clamp(2.5rem,5vw,4rem);line-height:1.08;color:var(--primary);margin-bottom:1.75rem;letter-spacing:-0.03em;font-weight:700}
-        .highlight{color:var(--accent)}
-        header{background:rgba(255,255,255,0.98);padding:1.25rem 3rem;position:fixed;top:0;width:100%;z-index:1000;backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.06)}
-        header nav{display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto}
-        .logo{font-size:1.5rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-0.03em}
-        .nav-links{display:flex;list-style:none;gap:3rem;align-items:center}
-        .nav-links a{text-decoration:none;color:#4a4a4a;font-weight:500;transition:color .25s;font-size:0.95rem}
-        .nav-links a:hover{color:var(--primary)}
-        .menu-toggle{display:none}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text);background:#fff}
         #header-container{min-height:80px}
     </style>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="header-container">
-        <header id="header">
-            <nav aria-label="Navegación principal">
-                <a href="/index.html" class="logo" title="PODIUMEX - Venta de Podiums y Renta de Podium">PODIUMEX</a>
-                <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="/catalogo.html" title="Catálogo de Podiums en Venta">Catálogo</a></li>
-                    <li class="dropdown">
-                        <a href="/servicios.html" class="dropdown-toggle" title="Servicios de Renta de Podium">
-                            Servicios
-                            <span class="dropdown-arrow">▼</span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="/entrega-e-instalacion.html">Entrega e Instalación</a>
-                            <a href="/personalizacion-total.html">Personalización Total</a>
-                            <a href="/setup-para-streaming.html">Setup para Streaming</a>
-                            <a href="/soporte-tecnico.html">Soporte Técnico 24/7</a>
-                            <a href="/financiamiento.html">Financiamiento Flexible</a>
-                            <a href="/sustentabilidad.html">Sustentabilidad Certificada</a>
-                            <a href="/mantenimiento.html">Mantenimiento Profesional</a>
-                            <a href="/asesoria-de-eventos.html">Asesoría de Eventos</a>
-                            <a href="/servicios.html">Ver Todos los Servicios</a>
-                        </div>
-                    </li>
-                    <li><a href="/nosotros.html" title="Sobre PODIUMEX">Nosotros</a></li>
-                    <li><a href="/contacto.html" title="Contacto para Venta de Podiums">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <div id="header-container"></div>
 
     <main>
         <section class="hero" aria-labelledby="hero-heading">
@@ -273,20 +229,6 @@
                 <div class="hero-text">
                     <h1 id="hero-heading">Venta de Podiums y <span class="highlight">Renta de Podium</span> Profesional en México</h1>
                     <p>Especialistas en <strong>venta de podiums</strong> y <strong>renta de podium</strong> para eventos corporativos, conferencias y ceremonias. Reserva online 24/7, precios transparentes, entrega garantizada en menos de 24 horas en CDMX, Monterrey y Guadalajara.</p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Podiums vendidos y rentados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Satisfacción cliente</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24hrs</span>
-                            <span class="stat-label">Entrega garantizada</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="hero-intro">
                     <h2>Líder en Venta de Podiums y Renta de Podium en México</h2>
@@ -339,15 +281,8 @@
                         <span class="product-category">Premium Series - Venta de Podium</span>
                         <h3 itemprop="name">Podium de Acrílico en Venta</h3>
                         <p itemprop="description">Diseño moderno y elegante en acrílico cristal transparente. Este <strong>podium de acrílico</strong> es perfecto para eventos corporativos y conferencias. Disponible para <strong>venta de podium</strong> o <strong>renta</strong>.</p>
-                        <ul class="product-features">
-                            <li>Acrílico cristal transparente 15mm</li>
-                            <li>Acabado premium pulido</li>
-                            <li>Diseño minimalista contemporáneo</li>
-                            <li>Atril ajustable incluido</li>
-                            <li>Personalización con grabado láser</li>
-                        </ul>
                         <div class="product-price">
-                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium de Acrílico">Cotizar Podium de Acrílico</a>
+                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium de Acrílico">Podium de Acrílico</a>
                         </div>
                     </div>
                 </article>
@@ -360,15 +295,8 @@
                         <span class="product-category">Classic Series - Venta de Podiums</span>
                         <h3 itemprop="name">Podium de Madera en Venta</h3>
                         <p itemprop="description">Elegancia clásica y calidez natural en este <strong>podium de madera</strong>. Ideal para ceremonias académicas y eventos institucionales. Disponible para <strong>venta de podiums</strong> con entrega inmediata.</p>
-                        <ul class="product-features">
-                            <li>Madera de caoba certificada FSC</li>
-                            <li>Acabado barnizado UV resistente</li>
-                            <li>Atril con superficie antideslizante</li>
-                            <li>Grabado de escudos y logos</li>
-                            <li>Almacenamiento interno para documentos</li>
-                        </ul>
                         <div class="product-price">
-                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium de Madera">Cotizar Podium de Madera</a>
+                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium de Madera">Podium de Madera</a>
                         </div>
                     </div>
                 </article>
@@ -381,15 +309,8 @@
                         <span class="product-category">Executive Series - Venta de Podium</span>
                         <h3 itemprop="name">Podium Madera con Acrílico en Venta</h3>
                         <p itemprop="description">La combinación perfecta de tradición y modernidad. Este <strong>podium</strong> combina base sólida de madera con detalles en acrílico. Ideal para <strong>venta de podium</strong> ejecutivo.</p>
-                        <ul class="product-features">
-                            <li>Base de madera maciza premium</li>
-                            <li>Atril de acrílico cristal</li>
-                            <li>Diseño híbrido exclusivo</li>
-                            <li>Acabados personalizables</li>
-                            <li>Máxima estabilidad y elegancia</li>
-                        </ul>
                         <div class="product-price">
-                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium Madera-Acrílico">Cotizar Madera con Acrílico</a>
+                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium Madera-Acrílico">Madera con Acrílico</a>
                         </div>
                     </div>
                 </article>
@@ -402,15 +323,72 @@
                         <span class="product-category">Signature Series - Venta de Podiums</span>
                         <h3 itemprop="name">Podium Acrílico Negro en Venta</h3>
                         <p itemprop="description">Sofisticación y presencia imponente. <strong>Podium</strong> en acrílico negro brillante para lanzamientos de productos premium. <strong>Venta de podiums</strong> con diseño vanguardista exclusivo.</p>
-                        <ul class="product-features">
-                            <li>Acrílico negro brillante 15mm</li>
-                            <li>Acabado espejo de alta calidad</li>
-                            <li>Diseño vanguardista exclusivo</li>
-                            <li>Resistente a huellas y manchas</li>
-                            <li>Grabado láser en contraste plateado</li>
-                        </ul>
                         <div class="product-price">
-                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium Acrílico Negro">Cotizar Acrílico Negro</a>
+                            <a href="#contacto" class="btn-primary" title="Cotizar Venta de Podium Acrílico Negro">Acrílico Negro</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="products rentals" id="renta" aria-labelledby="renta-heading">
+            <div class="section-header">
+                <h2 id="renta-heading">Renta de Podium Profesional - Servicio Premium</h2>
+                <p>Servicio completo de <strong>renta de podium</strong> para eventos corporativos, conferencias y ceremonias. Entrega, instalación y soporte técnico incluido en cada <strong>renta de podiums</strong>.</p>
+            </div>
+            <div class="products-grid">
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-image">
+                        <img src="img/index/podium-de-acrilico.webp" alt="Renta de Podium de Acrílico Transparente - Alquiler para eventos corporativos" loading="lazy" width="400" height="500">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Premium Series - Renta de Podium</span>
+                        <h3 itemprop="name">Renta Podium de Acrílico</h3>
+                        <p itemprop="description">Alquiler de podium de acrílico transparente para eventos de alto impacto. <strong>Renta de podium</strong> con entrega e instalación incluida.</p>
+                        <div class="product-price">
+                            <a href="#contacto" class="btn-primary" title="Cotizar Renta de Podium de Acrílico">Renta Acrílico</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-image">
+                        <img src="img/index/podium-de-madera.webp" alt="Renta de Podium de Madera - Alquiler elegante para ceremonias" loading="lazy" width="400" height="500">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Classic Series - Renta de Podiums</span>
+                        <h3 itemprop="name">Renta Podium de Madera</h3>
+                        <p itemprop="description">Alquiler de podium de madera clásico para ceremonias y eventos institucionales. <strong>Renta de podiums</strong> con soporte técnico 24/7.</p>
+                        <div class="product-price">
+                            <a href="#contacto" class="btn-primary" title="Cotizar Renta de Podium de Madera">Renta Madera</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-image">
+                        <img src="img/index/madera-con-acrilico.webp" alt="Renta de Podium Madera con Acrílico - Alquiler ejecutivo premium" loading="lazy" width="400" height="500">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Executive Series - Renta de Podium</span>
+                        <h3 itemprop="name">Renta Podium Madera-Acrílico</h3>
+                        <p itemprop="description">Alquiler de podium ejecutivo que combina madera y acrílico. <strong>Renta de podium</strong> ideal para conferencias corporativas.</p>
+                        <div class="product-price">
+                            <a href="#contacto" class="btn-primary" title="Cotizar Renta de Podium Madera-Acrílico">Renta Ejecutivo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-image">
+                        <img src="img/index/acrilico-negro.webp" alt="Renta de Podium Acrílico Negro - Alquiler premium para lanzamientos" loading="lazy" width="400" height="500">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Signature Series - Renta de Podiums</span>
+                        <h3 itemprop="name">Renta Podium Acrílico Negro</h3>
+                        <p itemprop="description">Alquiler de podium acrílico negro para eventos premium y lanzamientos. <strong>Renta de podiums</strong> con personalización temporal disponible.</p>
+                        <div class="product-price">
+                            <a href="#contacto" class="btn-primary" title="Cotizar Renta de Podium Acrílico Negro">Renta Negro</a>
                         </div>
                     </div>
                 </article>
@@ -532,86 +510,146 @@
                 <div class="testimonials-grid">
                     <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                         <div class="reviewer-image">
-                            <img src="img/index/maria-gonzalez.webp" alt="María González - Cliente satisfecha con venta de podium" loading="lazy" width="100" height="100">
+                            <img src="img/index/maria-gonzalez.webp" alt="María González - Cliente satisfecha con venta de podium" loading="lazy" width="56" height="56">
                         </div>
-                        <div class="star-rating">
-                            <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">María González</p>
+                                <p class="reviewer-title">Directora de Eventos, Google México</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
                         </div>
-                        <p class="testimonial-text" itemprop="reviewBody">"El servicio de <strong>venta de podiums</strong> de PODIUMEX superó todas nuestras expectativas. La entrega fue puntual, el podium impecable. Sin duda recomiendo su <strong>venta de podium</strong> para eventos corporativos."</p>
-                        <div class="reviewer-info">
-                            <p class="reviewer-name" itemprop="author">María González</p>
-                            <p class="reviewer-title">Directora de Eventos, Google México</p>
-                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"El servicio de <strong>venta de podiums</strong> de PODIUMEX superó todas nuestras expectativas. La entrega fue puntual, el podium impecable."</p>
                     </article>
 
                     <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                         <div class="reviewer-image">
-                            <img src="img/index/carlos-rodriguez.webp" alt="Carlos Rodríguez - Cliente satisfecho con renta de podium" loading="lazy" width="100" height="100">
+                            <img src="img/index/carlos-rodriguez.webp" alt="Carlos Rodríguez - Cliente satisfecho con renta de podium" loading="lazy" width="56" height="56">
                         </div>
-                        <div class="star-rating">
-                            <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Carlos Rodríguez</p>
+                                <p class="reviewer-title">Coordinador de Eventos, UNAM</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
                         </div>
-                        <p class="testimonial-text" itemprop="reviewBody">"Excelente calidad en la <strong>renta de podium</strong>. El podium de acrílico que rentamos para nuestra conferencia anual fue perfecto. La asesoría sobre <strong>renta de podium</strong> vs compra fue excepcional."</p>
-                        <div class="reviewer-info">
-                            <p class="reviewer-name" itemprop="author">Carlos Rodríguez</p>
-                            <p class="reviewer-title">Coordinador de Eventos, UNAM</p>
-                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"Excelente calidad en la <strong>renta de podium</strong>. El podium de acrílico que rentamos para nuestra conferencia anual fue perfecto."</p>
                     </article>
 
                     <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                         <div class="reviewer-image">
-                            <img src="img/index/ana-martinez.webp" alt="Ana Martínez - Cliente satisfecha con venta de podiums" loading="lazy" width="100" height="100">
+                            <img src="img/index/ana-martinez.webp" alt="Ana Martínez - Cliente satisfecha con venta de podiums" loading="lazy" width="56" height="56">
                         </div>
-                        <div class="star-rating">
-                            <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Ana Martínez</p>
+                                <p class="reviewer-title">Gerente de Comunicación, Banorte</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
                         </div>
-                        <p class="testimonial-text" itemprop="reviewBody">"La mejor inversión en <strong>venta de podiums</strong>. Compramos tres podiums de madera con acrílico y la calidad es superior. El equipo de PODIUMEX nos asesoró perfectamente en la <strong>venta de podium</strong>."</p>
-                        <div class="reviewer-info">
-                            <p class="reviewer-name" itemprop="author">Ana Martínez</p>
-                            <p class="reviewer-title">Gerente de Comunicación, Banorte</p>
-                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"La mejor inversión en <strong>venta de podiums</strong>. Compramos tres podiums de madera con acrílico y la calidad es superior."</p>
                     </article>
 
                     <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                         <div class="reviewer-image">
-                            <img src="img/index/roberto-sanchez.webp" alt="Roberto Sánchez - Cliente satisfecho con venta de podium" loading="lazy" width="100" height="100">
+                            <img src="img/index/roberto-sanchez.webp" alt="Roberto Sánchez - Cliente satisfecho con venta de podium" loading="lazy" width="56" height="56">
                         </div>
-                        <div class="star-rating">
-                            <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Roberto Sánchez</p>
+                                <p class="reviewer-title">Director de Operaciones, Microsoft</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
                         </div>
-                        <p class="testimonial-text" itemprop="reviewBody">"Servicio impecable en <strong>venta de podiums</strong>. La plataforma digital es muy intuitiva, la cotización fue inmediata y la entrega se realizó exactamente como prometieron."</p>
-                        <div class="reviewer-info">
-                            <p class="reviewer-name" itemprop="author">Roberto Sánchez</p>
-                            <p class="reviewer-title">Director de Operaciones, Microsoft México</p>
-                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"Servicio impecable en <strong>venta de podiums</strong>. La plataforma digital es muy intuitiva y la entrega fue exacta."</p>
                     </article>
 
                     <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                         <div class="reviewer-image">
-                            <img src="img/index/laura-fernandez.webp" alt="Laura Fernández - Cliente frecuente de renta de podium" loading="lazy" width="100" height="100">
+                            <img src="img/index/laura-fernandez.webp" alt="Laura Fernández - Cliente frecuente de renta de podium" loading="lazy" width="56" height="56">
                         </div>
-                        <div class="star-rating">
-                            <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Laura Fernández</p>
+                                <p class="reviewer-title">Coordinadora de Eventos, Marriott</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
                         </div>
-                        <p class="testimonial-text" itemprop="reviewBody">"Llevamos dos años usando la <strong>renta de podium</strong> de PODIUMEX. La calidad de productos y confiabilidad del servicio de <strong>renta de podium</strong> nos ha permitido elevar nuestras conferencias."</p>
-                        <div class="reviewer-info">
-                            <p class="reviewer-name" itemprop="author">Laura Fernández</p>
-                            <p class="reviewer-title">Coordinadora de Eventos, Marriott Hotels</p>
-                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"Llevamos dos años usando la <strong>renta de podium</strong> de PODIUMEX. La calidad y confiabilidad son excepcionales."</p>
                     </article>
 
                     <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                         <div class="reviewer-image">
-                            <img src="img/index/jorge-hernandez.webp" alt="Jorge Hernández - Cliente satisfecho con venta de podiums personalizados" loading="lazy" width="100" height="100">
+                            <img src="img/index/jorge-hernandez.webp" alt="Jorge Hernández - Cliente satisfecho con venta de podiums personalizados" loading="lazy" width="56" height="56">
                         </div>
-                        <div class="star-rating">
-                            <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Jorge Hernández</p>
+                                <p class="reviewer-title">Brand Manager, FEMSA</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
                         </div>
-                        <p class="testimonial-text" itemprop="reviewBody">"La personalización en la <strong>venta de podium</strong> quedó perfecta. El podium con nuestro logo corporativo se convirtió en pieza clave de nuestra identidad visual. Altamente recomendable."</p>
-                        <div class="reviewer-info">
-                            <p class="reviewer-name" itemprop="author">Jorge Hernández</p>
-                            <p class="reviewer-title">Brand Manager, FEMSA</p>
+                        <p class="testimonial-text" itemprop="reviewBody">"La personalización en la <strong>venta de podium</strong> quedó perfecta. El podium con nuestro logo se convirtió en pieza clave."</p>
+                    </article>
+
+                    <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="reviewer-image">
+                            <img src="img/index/patricia-luna.webp" alt="Patricia Luna - Cliente satisfecha con renta de podium" loading="lazy" width="56" height="56">
                         </div>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Patricia Luna</p>
+                                <p class="reviewer-title">Event Manager, Coca-Cola</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"La <strong>renta de podium</strong> para nuestro evento fue impecable. Profesionalismo y puntualidad en cada detalle."</p>
+                    </article>
+
+                    <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="reviewer-image">
+                            <img src="img/index/miguel-torres.webp" alt="Miguel Torres - Cliente satisfecho con venta de podium" loading="lazy" width="56" height="56">
+                        </div>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Miguel Torres</p>
+                                <p class="reviewer-title">Director General, Telmex</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"Compramos 5 podiums para nuestras oficinas. La <strong>venta de podiums</strong> incluyó personalización perfecta."</p>
+                    </article>
+
+                    <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="reviewer-image">
+                            <img src="img/index/sofia-ramirez.webp" alt="Sofía Ramírez - Cliente frecuente de renta de podium" loading="lazy" width="56" height="56">
+                        </div>
+                        <div class="reviewer-header">
+                            <div class="reviewer-info">
+                                <p class="reviewer-name" itemprop="author">Sofía Ramírez</p>
+                                <p class="reviewer-title">Coordinadora, Tecnológico de Monterrey</p>
+                            </div>
+                            <div class="star-rating">
+                                <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" itemprop="reviewBody">"Usamos PODIUMEX para todas nuestras graduaciones. El servicio de <strong>renta de podium</strong> es inigualable."</p>
                     </article>
                 </div>
             </div>
