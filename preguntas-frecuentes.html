@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Venta y Renta de Podiums | PODIUMEX México</title>
+    <meta name="description" content="Resuelve todas tus dudas sobre venta de podiums y renta de podium. tiempos de entrega, personalización, garantías y más. PODIUMEX responde tus preguntas.">
+    <meta name="keywords" content="preguntas frecuentes podiums, FAQ venta podiums, dudas renta podium, información podiums México">
+    <meta property="og:title" content="Preguntas Frecuentes - Venta y Renta de Podiums | PODIUMEX">
+    <meta property="og:description" content="Encuentra respuestas a todas tus preguntas sobre venta de podiums y renta de podium profesional en México.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://podiumex.com/preguntas-frecuentes.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face{font-family:'Inter';font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2')}
+        :root{--primary:#1a1a1a;--secondary:#f5f5f5;--accent:#b8860b;--text:#333;--text-light:#666;--border:#e5e5e5;--white:#fff;--success:#10b981}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text);background:#fff}
+        </style>
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <style>
+        /* FAQ Page Specific Styles */
+        .faq-page {
+            padding: 4rem 2rem 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .faq-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .faq-page-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .faq-page-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Category Tabs */
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .faq-category-btn {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border);
+            background: var(--white);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .faq-category-btn:hover,
+        .faq-category-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* FAQ Sections */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+        .faq-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .faq-section-title svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+
+        /* FAQ Items */
+        .faq-page-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-page-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .faq-page-question {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            gap: 1rem;
+        }
+        .faq-page-question span {
+            flex: 1;
+        }
+        .faq-page-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .faq-page-item.active .faq-page-icon {
+            background: var(--accent);
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+        .faq-page-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-page-item.active .faq-page-answer {
+            max-height: 500px;
+        }
+        .faq-page-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+        .faq-page-answer-content strong {
+            color: var(--primary);
+        }
+        .faq-page-answer-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .faq-page-answer-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Quick Contact Box */
+        .faq-contact-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: var(--white);
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .faq-contact-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .faq-contact-box p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .faq-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .faq-contact-btn.primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+        .faq-contact-btn.primary:hover {
+            background: #9a7209;
+        }
+        .faq-contact-btn.secondary {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .faq-contact-btn.secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Search Box */
+        .faq-search {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+        .faq-search input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        .faq-search input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(184,134,11,0.1);
+        }
+        .faq-search-icon {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .faq-page {
+                padding: 3rem 1.5rem;
+            }
+            .faq-page-header h2 {
+                font-size: 1.5rem;
+            }
+            .faq-category-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+            .faq-contact-box {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org FAQ markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cuánto cuesta la venta de podiums?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ofrecemos venta de podiums con diferentes opciones según modelo y material. Contáctanos para recibir una cotización personalizada. Ofrecemos opciones de financiamiento y programa de trade-in."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es el tiempo de entrega para renta de podium?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Para renta de podium en CDMX, Monterrey y Guadalajara entregamos en menos de 24 horas. Para otras ciudades, el tiempo varía entre 24-48 horas. Ofrecemos servicio express en 12 horas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo personalizar el podium con mi logo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, tanto en venta de podium como renta de podium ofrecemos grabado láser de alta calidad para logos, escudos y diseños personalizados. Contáctanos para conocer las opciones disponibles."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Incluyen instalación en la renta de podium?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, todos nuestros servicios de renta de podium incluyen instalación profesional y desmontaje al finalizar tu evento sin costo adicional."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué tipos de podiums tienen disponibles?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Contamos con podiums de acrílico transparente, acrílico negro, madera clásica, y combinaciones de madera con acrílico. Todos disponibles en versión estándar y compacta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Ofrecen descuentos por volumen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, en venta de podiums ofrecemos: 10% de descuento para 3+ podiums, 15% para 5+, y 20% para 10+. También tenemos planes corporativos de renta con hasta 30% de descuento."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué garantía tienen los podiums?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Todos nuestros podiums en venta incluyen garantía de 2 años contra defectos de fabricación. También ofrecemos garantía extendida de hasta 5 años."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Hacen envíos a toda la República?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, realizamos envíos a toda la República Mexicana. El tiempo de entrega varía según la ubicación: 24 horas en CDMX, Monterrey y Guadalajara; 24-72 horas para el resto del país."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+        <header id="header">
+        <nav>
+            <a href="/index.html" class="logo">PODIUMEX</a>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="dropdown">
+                    <a href="/catalogo.html" class="dropdown-toggle">
+                        Catálogo
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/venta-de-podiums.html">Venta de Podiums</a>
+                        <a href="/renta-de-podiums.html">Renta de Podiums</a>
+                        <a href="/catalogo.html">Ver Todo el Catálogo</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/servicios.html" class="dropdown-toggle">
+                        Servicios
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a>
+                        <a href="/personalizacion-total.html">Personalización Premium</a>
+                        <a href="/setup-para-streaming.html">Setup para Streaming</a>
+                        <a href="/soporte-tecnico.html">Soporte Técnico 24/7</a>
+                        <a href="/financiamiento.html">Financiamiento Flexible</a>
+                        <a href="/sustentabilidad.html">Sustentabilidad Certificada</a>
+                        <a href="/mantenimiento.html">Mantenimiento Profesional</a>
+                        <a href="/asesoria-de-eventos.html">Asesoría de Eventos</a>
+                    </div>
+                </li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Preguntas Frecuentes sobre <span class="highlight">Venta y Renta de Podiums</span></h1>
+                <p>Encuentra respuestas a todas tus dudas sobre <strong>venta de podiums</strong>, <strong>renta de podium</strong>, tiempos de entrega, personalización y más.</p>
+            </div>
+            <div class="hero-intro">
+                <h2>Todo lo que Necesitas Saber</h2>
+                <p>En <strong>PODIUMEX</strong> queremos que tomes la mejor decisión para tu evento. Hemos recopilado las preguntas más frecuentes de nuestros clientes sobre <strong>venta de podiums</strong> y <strong>renta de podium</strong> para ayudarte a resolver cualquier duda.</p>
+                <p>Si no encuentras la respuesta que buscas, nuestro equipo de asesores está disponible por <strong>WhatsApp</strong>, teléfono o correo electrónico para brindarte atención personalizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-content">
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Respuesta Inmediata</h3>
+                    <p>Atención en menos de 2 horas</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Asesoría Gratuita</h3>
+                    <p>Sin compromiso de compra</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Expertos en Podiums</h3>
+                    <p>+15 años de experiencia</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Soporte 24/7</h3>
+                    <p>WhatsApp siempre disponible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-page">
+        <div class="faq-page-header">
+            <h2>Resuelve Tus Dudas</h2>
+            <p>Haz clic en cada pregunta para ver la respuesta completa. Usa las categorías para filtrar por tema.</p>
+        </div>
+
+        <!-- Search -->
+        <div class="faq-search">
+            <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="faqSearch" placeholder="Buscar pregunta...">
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="faq-categories">
+            <button class="faq-category-btn active" data-category="all">Todas</button>
+            <button class="faq-category-btn" data-category="cotizaciones">Cotizaciones</button>
+            <button class="faq-category-btn" data-category="entregas">Entregas</button>
+            <button class="faq-category-btn" data-category="productos">Productos</button>
+            <button class="faq-category-btn" data-category="servicios">Servicios</button>
+            <button class="faq-category-btn" data-category="pagos">Pagos</button>
+        </div>
+
+        <!-- Cotizaciones -->
+        <div class="faq-section" data-section="cotizaciones">
+            <h3 class="faq-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Cotizaciones
+            </h3>
+
+            <div class="faq-page-item" data-category="cotizaciones">
+                <div class="faq-page-question">
+                    <span>¿Cómo puedo obtener una cotización para venta de podiums?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Obtener una cotización personalizada para <strong>venta de podiums</strong> es muy sencillo:
+                        <ul>
+                            <li><strong>WhatsApp:</strong> Envíanos un mensaje y te respondemos en minutos</li>
+                            <li><strong>Teléfono:</strong> Llámanos para atención inmediata</li>
+                            <li><strong>Formulario web:</strong> Completa tus datos y te contactamos</li>
+                        </ul>
+                        Cada cotización se adapta a tus necesidades específicas: modelo, material, personalización y cantidad. Todas nuestras cotizaciones incluyen IVA y ofrecemos opciones de financiamiento.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="cotizaciones">
+                <div class="faq-page-question">
+                    <span>¿Cómo funciona la cotización para renta de podium?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Para <strong>renta de podium</strong> te proporcionamos una cotización que incluye:
+                        <ul>
+                            <li><strong>Modelo seleccionado:</strong> Acrílico, madera o combinado</li>
+                            <li><strong>Duración del evento:</strong> Por día o por evento completo</li>
+                            <li><strong>Servicios incluidos:</strong> Entrega, instalación y recolección</li>
+                            <li><strong>Personalización:</strong> Si requieres grabado o vinilo temporal</li>
+                        </ul>
+                        Contáctanos por WhatsApp para recibir tu cotización en minutos.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="cotizaciones">
+                <div class="faq-page-question">
+                    <span>¿Ofrecen descuentos por volumen?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, tanto en <strong>venta de podiums</strong> como en <strong>renta de podium</strong> manejamos descuentos especiales:
+                        <ul>
+                            <li><strong>Compras múltiples:</strong> Descuentos progresivos según cantidad</li>
+                            <li><strong>Clientes corporativos:</strong> Tarifas preferenciales</li>
+                            <li><strong>Rentas frecuentes:</strong> Planes especiales para clientes recurrentes</li>
+                        </ul>
+                        Contáctanos para recibir una cotización personalizada con los descuentos aplicables a tu caso.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="cotizaciones">
+                <div class="faq-page-question">
+                    <span>¿La personalización tiene costo adicional?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        La personalización con grabado láser tiene un costo adicional que depende del diseño:
+                        <ul>
+                            <li><strong>Logo simple:</strong> Diseños de una tinta o silueta</li>
+                            <li><strong>Logo con detalles:</strong> Diseños con elementos elaborados</li>
+                            <li><strong>Escudo institucional:</strong> Diseños complejos o multicolor</li>
+                        </ul>
+                        Para <strong>renta de podium</strong> ofrecemos personalización temporal con vinilo. El grabado láser permanente está disponible solo en <strong>venta de podium</strong>. Solicita tu cotización con el diseño deseado.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Entregas y Tiempos -->
+        <div class="faq-section" data-section="entregas">
+            <h3 class="faq-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                Entregas y Tiempos
+            </h3>
+
+            <div class="faq-page-item" data-category="entregas">
+                <div class="faq-page-question">
+                    <span>¿Cuál es el tiempo de entrega para renta de podium?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Los tiempos de entrega para <strong>renta de podium</strong> son:
+                        <ul>
+                            <li><strong>CDMX, Monterrey, Guadalajara:</strong> Menos de 24 horas</li>
+                            <li><strong>Zona Metropolitana:</strong> 24 horas</li>
+                            <li><strong>Ciudades principales:</strong> 24-48 horas</li>
+                            <li><strong>Resto de la República:</strong> 48-72 horas</li>
+                        </ul>
+                        Ofrecemos servicio express en 12 horas con cargo adicional para situaciones urgentes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="entregas">
+                <div class="faq-page-question">
+                    <span>¿Hacen envíos a toda la República?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, realizamos <strong>venta de podiums</strong> y <strong>renta de podium</strong> a toda la República Mexicana. Contamos con flotilla propia en las principales ciudades y alianzas con transportistas especializados para el resto del país. El embalaje profesional garantiza que tu podium llegue en perfectas condiciones.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="entregas">
+                <div class="faq-page-question">
+                    <span>¿Incluyen instalación en la entrega?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, tanto la <strong>venta de podiums</strong> como la <strong>renta de podium</strong> incluyen instalación profesional sin costo adicional en zona metropolitana. Nuestro equipo técnico se encarga de:
+                        <ul>
+                            <li>Descarga y colocación del podium</li>
+                            <li>Nivelación y ajustes</li>
+                            <li>Verificación de estabilidad</li>
+                            <li>Limpieza final</li>
+                        </ul>
+                        En la renta, también incluimos desmontaje y recolección al finalizar tu evento.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="entregas">
+                <div class="faq-page-question">
+                    <span>¿Puedo programar la entrega en horario específico?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, puedes programar la entrega de tu <strong>renta de podium</strong> o <strong>venta de podium</strong> en el horario que mejor te convenga. Ofrecemos ventanas de entrega de 2 horas y confirmamos por WhatsApp cuando nuestro equipo está en camino. Para eventos, recomendamos programar la entrega con al menos 3 horas de anticipación.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Productos y Modelos -->
+        <div class="faq-section" data-section="productos">
+            <h3 class="faq-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                Productos y Modelos
+            </h3>
+
+            <div class="faq-page-item" data-category="productos">
+                <div class="faq-page-question">
+                    <span>¿Qué tipos de podiums tienen disponibles?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Contamos con una amplia variedad de podiums para <strong>venta</strong> y <strong>renta</strong>:
+                        <ul>
+                            <li><strong>Podium de Acrílico Transparente:</strong> Moderno, elegante, ideal para eventos corporativos</li>
+                            <li><strong>Podium de Acrílico Negro:</strong> Sofisticado, imponente, perfecto para lanzamientos</li>
+                            <li><strong>Podium de Madera Negro:</strong> Clásico, profesional, ideal para instituciones</li>
+                            <li><strong>Podium Madera con Acrílico:</strong> Combina tradición y modernidad</li>
+                        </ul>
+                        Todos los modelos están disponibles en versión estándar y compacta.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="productos">
+                <div class="faq-page-question">
+                    <span>¿Cuáles son las dimensiones de los podiums?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Las dimensiones estándar de nuestros podiums son:
+                        <ul>
+                            <li><strong>Podiums Estándar:</strong> 120cm alto x 60cm ancho x 50cm profundidad</li>
+                            <li><strong>Podiums Compactos:</strong> 110cm alto x 50cm ancho x 40cm profundidad</li>
+                        </ul>
+                        También fabricamos podiums a medida según tus especificaciones. El atril tiene inclinación ergonómica de 15° para comodidad del orador.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="productos">
+                <div class="faq-page-question">
+                    <span>¿Los podiums soportan equipos de audio y micrófono?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, todos nuestros podiums están diseñados para integrar equipos de audio:
+                        <ul>
+                            <li>Orificios discretos para cables de micrófono</li>
+                            <li>Base reforzada para micrófonos de cuello de ganso</li>
+                            <li>Compartimento interior para cables y equipos</li>
+                            <li>Compatibilidad con sistemas de conferencias</li>
+                        </ul>
+                        En la <strong>renta de podium</strong> para streaming, incluimos configuración de iluminación optimizada.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="productos">
+                <div class="faq-page-question">
+                    <span>¿De qué materiales están hechos los podiums?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Utilizamos materiales premium en la fabricación de todos nuestros podiums:
+                        <ul>
+                            <li><strong>Acrílico:</strong> Plexiglás de 12mm de espesor, resistente a impactos</li>
+                            <li><strong>Madera:</strong> MDF de alta densidad con acabado lacado o enchapado</li>
+                            <li><strong>Herrajes:</strong> Acero inoxidable de grado comercial</li>
+                            <li><strong>Acabados:</strong> Pintura automotriz o lacas de alta resistencia</li>
+                        </ul>
+                        Todos nuestros materiales cuentan con certificación de calidad y sustentabilidad.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios Adicionales -->
+        <div class="faq-section" data-section="servicios">
+            <h3 class="faq-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                Servicios Adicionales
+            </h3>
+
+            <div class="faq-page-item" data-category="servicios">
+                <div class="faq-page-question">
+                    <span>¿Qué garantía tienen los podiums en venta?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Todos nuestros podiums en <strong>venta</strong> incluyen:
+                        <ul>
+                            <li><strong>Garantía estándar:</strong> 2 años contra defectos de fabricación</li>
+                            <li><strong>Garantía extendida:</strong> Hasta 5 años (opcional)</li>
+                            <li><strong>Cobertura:</strong> Reparación o reemplazo sin costo</li>
+                            <li><strong>Soporte técnico:</strong> Asesoría permanente post-venta</li>
+                        </ul>
+                        La garantía no cubre daños por mal uso, accidentes o modificaciones no autorizadas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="servicios">
+                <div class="faq-page-question">
+                    <span>¿Qué pasa si el podium se daña durante la renta?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Todos nuestros servicios de <strong>renta de podium</strong> incluyen seguro de responsabilidad:
+                        <ul>
+                            <li><strong>Daños por uso normal:</strong> Sin cargo adicional</li>
+                            <li><strong>Daños accidentales menores:</strong> Cubiertos por el seguro</li>
+                            <li><strong>Equipo de respaldo:</strong> Siempre llevamos respaldo para emergencias</li>
+                        </ul>
+                        En caso de daño mayor por negligencia, se aplicará el costo de reparación o reposición según valuación.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="servicios">
+                <div class="faq-page-question">
+                    <span>¿Ofrecen servicio de mantenimiento?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, ofrecemos servicios de mantenimiento para podiums adquiridos con nosotros:
+                        <ul>
+                            <li><strong>Mantenimiento preventivo:</strong> Limpieza profesional, pulido y ajustes</li>
+                            <li><strong>Mantenimiento correctivo:</strong> Reparación de daños, reemplazo de piezas</li>
+                            <li><strong>Plan anual:</strong> 2 mantenimientos preventivos con 20% de descuento</li>
+                        </ul>
+                        También realizamos restauración de podiums de otras marcas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="servicios">
+                <div class="faq-page-question">
+                    <span>¿Tienen soporte técnico durante el evento?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, en la <strong>renta de podium</strong> ofrecemos diferentes niveles de soporte:
+                        <ul>
+                            <li><strong>Soporte telefónico 24/7:</strong> Incluido sin costo</li>
+                            <li><strong>Técnico en sitio:</strong> Disponible con cargo adicional</li>
+                            <li><strong>Tiempo de respuesta:</strong> Máximo 2 horas para emergencias</li>
+                        </ul>
+                        Para eventos críticos, recomendamos contratar técnico en sitio para máxima tranquilidad.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagos y Facturación -->
+        <div class="faq-section" data-section="pagos">
+            <h3 class="faq-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                Pagos y Facturación
+            </h3>
+
+            <div class="faq-page-item" data-category="pagos">
+                <div class="faq-page-question">
+                    <span>¿Qué métodos de pago aceptan?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Aceptamos múltiples formas de pago para tu comodidad:
+                        <ul>
+                            <li><strong>Transferencia bancaria:</strong> SPEI inmediato</li>
+                            <li><strong>Tarjeta de crédito/débito:</strong> Visa, MasterCard, American Express</li>
+                            <li><strong>PayPal:</strong> Pago seguro en línea</li>
+                            <li><strong>Depósito bancario:</strong> BBVA, Santander, Banorte</li>
+                            <li><strong>Pago en efectivo:</strong> En nuestras oficinas</li>
+                        </ul>
+                        Para <strong>venta de podiums</strong>, ofrecemos financiamiento hasta 12 MSI con tarjetas participantes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="pagos">
+                <div class="faq-page-question">
+                    <span>¿Emiten factura fiscal?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Sí, emitimos factura fiscal (CFDI) para todas nuestras operaciones de <strong>venta de podiums</strong> y <strong>renta de podium</strong>. Solo necesitamos tu RFC y datos fiscales. La factura se envía por correo electrónico en un máximo de 24 horas hábiles después del pago.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="pagos">
+                <div class="faq-page-question">
+                    <span>¿Requieren anticipo para reservar?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Las políticas de anticipo son:
+                        <ul>
+                            <li><strong>Renta de podium:</strong> 50% de anticipo para confirmar, 50% antes de la entrega</li>
+                            <li><strong>Venta de podium estándar:</strong> 50% anticipo, 50% contra entrega</li>
+                            <li><strong>Venta con personalización:</strong> 70% anticipo, 30% contra entrega</li>
+                            <li><strong>Clientes frecuentes:</strong> Crédito a 15-30 días disponible</li>
+                        </ul>
+                        Aceptamos órdenes de compra de empresas con cuenta establecida.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-page-item" data-category="pagos">
+                <div class="faq-page-question">
+                    <span>¿Cuál es la política de cancelación?</span>
+                    <div class="faq-page-icon">▼</div>
+                </div>
+                <div class="faq-page-answer">
+                    <div class="faq-page-answer-content">
+                        Nuestra política de cancelación es flexible:
+                        <ul>
+                            <li><strong>Más de 7 días antes:</strong> Reembolso del 100% del anticipo</li>
+                            <li><strong>3-7 días antes:</strong> Reembolso del 50% o reprogramación sin costo</li>
+                            <li><strong>Menos de 3 días:</strong> Sin reembolso, pero crédito para evento futuro</li>
+                        </ul>
+                        Para <strong>venta de podium</strong> con personalización, el anticipo no es reembolsable una vez iniciada la producción.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="faq-contact-box">
+            <h3>¿No Encontraste tu Respuesta?</h3>
+            <p>Nuestro equipo de asesores está listo para resolver cualquier duda sobre venta de podiums y renta de podium.</p>
+            <div class="faq-contact-buttons">
+                <a href="https://wa.me/525530454714?text=Hola,%20tengo%20una%20pregunta%20sobre%20podiums" class="faq-contact-btn primary" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
+                <a href="/contacto.html" class="faq-contact-btn secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Formulario de Contacto
+                </a>
+                <a href="tel:+525530454714" class="faq-contact-btn secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <a href="/index.html" class="footer-logo">PODIUMEX</a>
+                    <p class="footer-tagline">Líderes en fabricación y renta de podiums profesionales en México. Calidad premium, diseño excepcional y servicio integral para eventos corporativos de alto nivel.</p>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+525530454714">+52 55 3045 4714</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium" target="_blank" rel="noopener">WhatsApp Directo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="/venta-de-podiums.html">Venta de Podiums</a></li>
+                        <li><a href="/renta-de-podiums.html">Renta de Podiums</a></li>
+                        <li><a href="/catalogo.html">Ver Todo el Catálogo</a></li>
+                    </ul>
+                    <h5>Por Material</h5>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente.html">Podium Acrílico Transparente</a></li>
+                        <li><a href="/catalogo/acrilico-negro.html">Podium Acrílico Negro</a></li>
+                        <li><a href="/catalogo/podium-madera-negro.html">Podium Madera Negro</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico.html">Podium Madera y Acrílico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Modelos Compactos</h4>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente-compacto.html">Acrílico Transparente Compacto</a></li>
+                        <li><a href="/catalogo/acrilico-negro-compacto.html">Acrílico Negro Compacto</a></li>
+                        <li><a href="/catalogo/podium-madera-negro-compacto.html">Madera Negro Compacto</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico-compacto.html">Madera y Acrílico Compacto</a></li>
+                    </ul>
+                    <h5>Por Uso</h5>
+                    <ul>
+                        <li><a href="/catalogo.html#corporativo">Eventos Corporativos</a></li>
+                        <li><a href="/catalogo.html#conferencias">Conferencias</a></li>
+                        <li><a href="/catalogo.html#streaming">Streaming y Podcasts</a></li>
+                        <li><a href="/catalogo.html#ceremonias">Ceremonias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a></li>
+                        <li><a href="/personalizacion-total.html">Personalización Premium</a></li>
+                        <li><a href="/setup-para-streaming.html">Setup para Streaming</a></li>
+                        <li><a href="/soporte-tecnico.html">Soporte Técnico 24/7</a></li>
+                        <li><a href="/financiamiento.html">Financiamiento Flexible</a></li>
+                        <li><a href="/sustentabilidad.html">Sustentabilidad Certificada</a></li>
+                        <li><a href="/mantenimiento.html">Mantenimiento Profesional</a></li>
+                        <li><a href="/asesoria-de-eventos.html">Asesoría de Eventos</a></li>
+                        <li><a href="/servicios.html">Todos los Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="/testimonios.html">Testimonios</a></li>
+                        <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-location">
+                <div class="location-content">
+                    <div class="location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="location-details">
+                        <span class="location-label">Ubicación</span>
+                        <address>Av. Tamaulipas 150-1301B, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</address>
+                    </div>
+                    <a href="https://maps.google.com/?q=Av.+Tamaulipas+150,+Condesa,+Ciudad+de+México" class="location-link" target="_blank" rel="noopener">
+                        Ver en Google Maps
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 PODIUMEX. Todos los derechos reservados.</p>
+                <p class="footer-tagline-bottom">Fabricación y renta de podiums profesionales en México.</p>
+                <div class="footer-badges">
+                    <span class="badge">Envíos a toda la República</span>
+                    <span class="badge">Garantía de Calidad</span>
+                    <span class="badge">Atención Personalizada</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip">Cotiza por WhatsApp</span>
+        <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium%20para%20mi%20evento"
+           class="whatsapp-float-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp">
+            <span class="whatsapp-badge">1</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-page-item').forEach(item => {
+            item.querySelector('.faq-page-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all items
+                document.querySelectorAll('.faq-page-item').forEach(i => i.classList.remove('active'));
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Category filter functionality
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+
+                // Show/hide sections
+                document.querySelectorAll('.faq-section').forEach(section => {
+                    if (category === 'all' || section.dataset.section === category) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+
+            document.querySelectorAll('.faq-page-item').forEach(item => {
+                const question = item.querySelector('.faq-page-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-page-answer-content').textContent.toLowerCase();
+
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm ? 'none' : 'block';
+                }
+            });
+
+            // Show all sections when searching
+            if (searchTerm) {
+                document.querySelectorAll('.faq-section').forEach(section => {
+                    section.style.display = 'block';
+                });
+                document.querySelectorAll('.faq-category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector('.faq-category-btn[data-category="all"]').classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

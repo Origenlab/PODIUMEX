@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Guías y Consejos sobre Podiums Profesionales | PODIUMEX México</title>
+    <meta name="description" content="Descubre guías, consejos y tendencias sobre podiums profesionales. Aprende sobre venta de podiums, renta de podium, eventos corporativos y más en el blog de PODIUMEX.">
+    <meta name="keywords" content="blog podiums, guías podiums profesionales, consejos eventos corporativos, tendencias podiums, venta podiums México">
+    <meta property="og:title" content="Blog PODIUMEX - Guías y Consejos sobre Podiums Profesionales">
+    <meta property="og:description" content="Artículos, guías y consejos sobre venta de podiums, renta de podium y organización de eventos corporativos.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://podiumex.com/blog.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face{font-family:'Inter';font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2')}
+        :root{--primary:#1a1a1a;--secondary:#f5f5f5;--accent:#b8860b;--text:#333;--text-light:#666;--border:#e5e5e5;--white:#fff;--success:#10b981}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text);background:#fff}
+        </style>
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <style>
+        /* Blog Page Styles */
+        .blog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 5rem;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 3rem;
+        }
+
+        /* Blog Main Content */
+        .blog-main {
+            min-width: 0;
+        }
+
+        .blog-header {
+            margin-bottom: 3rem;
+        }
+        .blog-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .blog-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        /* Featured Post */
+        .featured-post {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+        }
+        .featured-post-image {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            position: relative;
+        }
+        .featured-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .featured-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .featured-post-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .featured-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .featured-post-category {
+            background: var(--secondary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .featured-post-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .featured-post-content h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .featured-post-content h3 a:hover {
+            color: var(--accent);
+        }
+        .featured-post-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .featured-post-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .featured-post-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        /* Blog Card */
+        .blog-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+        .blog-card-image {
+            height: 180px;
+            background: linear-gradient(135deg, #2d2d2d 0%, var(--primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.3);
+            font-size: 3rem;
+            position: relative;
+        }
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .blog-card-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--white);
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        .blog-card-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .blog-card-content h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .blog-card-content h3 a:hover {
+            color: var(--accent);
+        }
+        .blog-card-excerpt {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .blog-card-link {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Pagination */
+        .blog-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .pagination-btn:hover,
+        .pagination-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        .pagination-btn.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* Sidebar */
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .sidebar-widget:last-child {
+            margin-bottom: 0;
+        }
+        .sidebar-widget-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* Search Widget */
+        .sidebar-search {
+            position: relative;
+        }
+        .sidebar-search input {
+            width: 100%;
+            padding: 0.875rem 1rem 0.875rem 2.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+        .sidebar-search input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .sidebar-search svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        /* Categories Widget */
+        .sidebar-categories {
+            list-style: none;
+        }
+        .sidebar-categories li {
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-categories li:last-child {
+            margin-bottom: 0;
+        }
+        .sidebar-categories a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.625rem 0;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        .sidebar-categories li:last-child a {
+            border-bottom: none;
+        }
+        .sidebar-categories a:hover {
+            color: var(--accent);
+            padding-left: 0.5rem;
+        }
+        .sidebar-categories .count {
+            background: var(--secondary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* Popular Posts Widget */
+        .popular-post {
+            display: flex;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .popular-post:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .popular-post:first-child {
+            padding-top: 0;
+        }
+        .popular-post-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            background: var(--secondary);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-light);
+        }
+        .popular-post-content h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.35rem;
+            line-height: 1.4;
+        }
+        .popular-post-content h4 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .popular-post-content h4 a:hover {
+            color: var(--accent);
+        }
+        .popular-post-content span {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* Tags Widget */
+        .sidebar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .sidebar-tag {
+            padding: 0.4rem 0.875rem;
+            background: var(--secondary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .sidebar-tag:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Quick Links Widget */
+        .quick-links {
+            list-style: none;
+        }
+        .quick-links li {
+            margin-bottom: 0.625rem;
+        }
+        .quick-links li:last-child {
+            margin-bottom: 0;
+        }
+        .quick-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.5rem 0;
+            transition: all 0.2s ease;
+        }
+        .quick-links a:hover {
+            color: var(--accent);
+            padding-left: 0.5rem;
+        }
+        .quick-links svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        /* CTA Widget */
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        .sidebar-cta h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .sidebar-cta p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+        .sidebar-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.875rem 1.5rem;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .sidebar-cta-btn:hover {
+            background: #9a7209;
+        }
+
+        /* Newsletter Widget */
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            margin-bottom: 0.75rem;
+        }
+        .newsletter-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .newsletter-form button {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .newsletter-form button:hover {
+            background: var(--accent);
+        }
+        .newsletter-note {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+            .blog-sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .sidebar-widget {
+                margin-bottom: 0;
+            }
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            .featured-post-image {
+                min-height: 250px;
+            }
+        }
+        @media (max-width: 768px) {
+            .blog-container {
+                padding: 3rem 1.5rem;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .blog-sidebar {
+                grid-template-columns: 1fr;
+            }
+            .blog-header h2 {
+                font-size: 1.5rem;
+            }
+            .featured-post-content {
+                padding: 1.5rem;
+            }
+            .featured-post-content h3 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org Blog markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog PODIUMEX",
+        "description": "Guías, consejos y tendencias sobre podiums profesionales, venta de podiums y organización de eventos corporativos.",
+        "url": "https://podiumex.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "PODIUMEX",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://podiumex.com/images/logo.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+        <header id="header">
+        <nav>
+            <a href="/index.html" class="logo">PODIUMEX</a>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="dropdown">
+                    <a href="/catalogo.html" class="dropdown-toggle">
+                        Catálogo
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/venta-de-podiums.html">Venta de Podiums</a>
+                        <a href="/renta-de-podiums.html">Renta de Podiums</a>
+                        <a href="/catalogo.html">Ver Todo el Catálogo</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/servicios.html" class="dropdown-toggle">
+                        Servicios
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a>
+                        <a href="/personalizacion-total.html">Personalización Premium</a>
+                        <a href="/setup-para-streaming.html">Setup para Streaming</a>
+                        <a href="/soporte-tecnico.html">Soporte Técnico 24/7</a>
+                        <a href="/financiamiento.html">Financiamiento Flexible</a>
+                        <a href="/sustentabilidad.html">Sustentabilidad Certificada</a>
+                        <a href="/mantenimiento.html">Mantenimiento Profesional</a>
+                        <a href="/asesoria-de-eventos.html">Asesoría de Eventos</a>
+                    </div>
+                </li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Blog <span class="highlight">PODIUMEX</span></h1>
+                <p>Descubre guías, consejos y las últimas tendencias sobre <strong>podiums profesionales</strong>, <strong>organización de eventos</strong> y todo lo que necesitas saber para destacar en tus presentaciones.</p>
+            </div>
+            <div class="hero-intro">
+                <h2>Conocimiento para tus Eventos</h2>
+                <p>En nuestro blog encontrarás artículos especializados sobre <strong>venta de podiums</strong>, <strong>renta de podium</strong>, consejos de protocolo, tendencias en eventos corporativos y guías prácticas para elegir el podium perfecto.</p>
+                <p>Nuestros expertos comparten su experiencia de más de 15 años en la industria para ayudarte a tomar las mejores decisiones para tus eventos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-content">
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>+50 Artículos</h3>
+                    <p>Guías especializadas</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Expertos</h3>
+                    <p>+15 años de experiencia</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Actualizado</h3>
+                    <p>Contenido semanal nuevo</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>Gratuito</h3>
+                    <p>Acceso libre a todo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+        <!-- Main Content -->
+        <main class="blog-main">
+            <div class="blog-header">
+                <h2>Últimos Artículos</h2>
+                <p>Explora nuestros artículos más recientes sobre podiums profesionales y eventos corporativos.</p>
+            </div>
+
+            <!-- Featured Post -->
+            <article class="featured-post">
+                <div class="featured-post-image">
+                    <span class="featured-badge">Destacado</span>
+                    <img src="img/blog/guia-elegir-podium.webp" alt="Guía completa para elegir el podium perfecto" onerror="this.style.display='none'">
+                </div>
+                <div class="featured-post-content">
+                    <div class="featured-post-meta">
+                        <span class="featured-post-category">Guías</span>
+                        <span>10 min de lectura</span>
+                    </div>
+                    <h3><a href="/blog/guia-elegir-podium-perfecto.html">Guía Completa: Cómo Elegir el Podium Perfecto para tu Evento</a></h3>
+                    <p class="featured-post-excerpt">Descubre todos los factores que debes considerar al elegir entre venta de podium o renta de podium. Analizamos materiales, tamaños, estilos y presupuestos para ayudarte a tomar la mejor decisión.</p>
+                    <a href="/blog/guia-elegir-podium-perfecto.html" class="featured-post-link">
+                        Leer artículo completo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Tendencias</span>
+                        <img src="img/blog/tendencias-podiums-profesionales.webp" alt="Tendencias en podiums profesionales" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>5 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/tendencias-podiums-profesionales.html">Tendencias en Podiums Profesionales</a></h3>
+                        <p class="blog-card-excerpt">Las últimas innovaciones en diseño, materiales y tecnología que están transformando la industria de podiums.</p>
+                        <a href="/blog/tendencias-podiums-profesionales.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Consejos</span>
+                        <img src="img/blog/venta-vs-renta.webp" alt="Venta vs renta de podiums" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>7 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/venta-vs-renta-podium.html">Venta de Podium vs Renta: ¿Cuál Conviene Más?</a></h3>
+                        <p class="blog-card-excerpt">Análisis detallado para ayudarte a decidir entre comprar o rentar un podium según tus necesidades.</p>
+                        <a href="/blog/venta-vs-renta-podium.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Materiales</span>
+                        <img src="img/blog/podium-acrilico-madera.webp" alt="Podium acrílico vs madera" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>6 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/podium-acrilico-vs-madera.html">Podium de Acrílico vs Madera: Ventajas y Desventajas</a></h3>
+                        <p class="blog-card-excerpt">Comparativa completa entre los dos materiales más populares para podiums profesionales.</p>
+                        <a href="/blog/podium-acrilico-vs-madera.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Eventos</span>
+                        <img src="img/blog/eventos-corporativos.webp" alt="Organizar eventos corporativos" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>8 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/organizar-evento-corporativo.html">Cómo Organizar un Evento Corporativo Exitoso</a></h3>
+                        <p class="blog-card-excerpt">Guía paso a paso para planificar conferencias, lanzamientos y presentaciones profesionales.</p>
+                        <a href="/blog/organizar-evento-corporativo.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Personalización</span>
+                        <img src="img/blog/grabado-laser-podiums.webp" alt="Grabado láser en podiums" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>4 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/grabado-laser-podiums.html">Personalización con Grabado Láser: Todo lo que Debes Saber</a></h3>
+                        <p class="blog-card-excerpt">Descubre las posibilidades del grabado láser para personalizar tu podium con logos y diseños.</p>
+                        <a href="/blog/grabado-laser-podiums.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Streaming</span>
+                        <img src="img/blog/podiums-streaming.webp" alt="Podiums para streaming" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>5 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/podiums-eventos-hibridos.html">Podiums para Eventos Híbridos y Streaming</a></h3>
+                        <p class="blog-card-excerpt">Cómo elegir y configurar el podium ideal para transmisiones en vivo y eventos virtuales.</p>
+                        <a href="/blog/podiums-eventos-hibridos.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Mantenimiento</span>
+                        <img src="img/blog/cuidado-podiums.webp" alt="Cuidado y mantenimiento de podiums" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>4 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/mantenimiento-podiums.html">Guía de Mantenimiento: Cómo Cuidar tu Podium</a></h3>
+                        <p class="blog-card-excerpt">Consejos prácticos para mantener tu podium en perfectas condiciones por muchos años.</p>
+                        <a href="/blog/mantenimiento-podiums.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-category">Protocolo</span>
+                        <img src="img/blog/protocolo-eventos.webp" alt="Protocolo en eventos" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>6 min de lectura</span>
+                        </div>
+                        <h3><a href="/blog/protocolo-uso-podium.html">Protocolo y Etiqueta en el Uso del Podium</a></h3>
+                        <p class="blog-card-excerpt">Reglas de protocolo y mejores prácticas para presentaciones profesionales desde el podium.</p>
+                        <a href="/blog/protocolo-uso-podium.html" class="blog-card-link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="blog-pagination" aria-label="Paginación del blog">
+                <a href="#" class="pagination-btn disabled" aria-label="Página anterior">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </a>
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn" aria-label="Página siguiente">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+            </nav>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+            <!-- Search -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Buscar</h3>
+                <div class="sidebar-search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" placeholder="Buscar artículos...">
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Categorías</h3>
+                <ul class="sidebar-categories">
+                    <li><a href="/blog/categoria/guias.html">Guías Completas <span class="count">12</span></a></li>
+                    <li><a href="/blog/categoria/consejos.html">Consejos Prácticos <span class="count">18</span></a></li>
+                    <li><a href="/blog/categoria/tendencias.html">Tendencias <span class="count">8</span></a></li>
+                    <li><a href="/blog/categoria/materiales.html">Materiales <span class="count">6</span></a></li>
+                    <li><a href="/blog/categoria/eventos.html">Eventos Corporativos <span class="count">15</span></a></li>
+                    <li><a href="/blog/categoria/mantenimiento.html">Mantenimiento <span class="count">5</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links - Catálogo -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Catálogo de Podiums</h3>
+                <ul class="quick-links">
+                    <li>
+                        <a href="/venta-de-podiums.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Venta de Podiums
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/renta-de-podiums.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Renta de Podiums
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/catalogo/acrilico-transparente.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Podium Acrílico Transparente
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/catalogo/acrilico-negro.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Podium Acrílico Negro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/catalogo/podium-madera-negro.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Podium Madera Negro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/catalogo/madera-caoba-acrilico.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Podium Madera y Acrílico
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/catalogo.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Ver Todo el Catálogo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Popular Posts -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Más Leídos</h3>
+                <div class="popular-post">
+                    <div class="popular-post-image">1</div>
+                    <div class="popular-post-content">
+                        <h4><a href="/blog/guia-elegir-podium-perfecto.html">Guía Completa: Elegir el Podium Perfecto</a></h4>
+                        <span>2,450 lecturas</span>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <div class="popular-post-image">2</div>
+                    <div class="popular-post-content">
+                        <h4><a href="/blog/venta-vs-renta-podium.html">Venta vs Renta de Podium</a></h4>
+                        <span>1,820 lecturas</span>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <div class="popular-post-image">3</div>
+                    <div class="popular-post-content">
+                        <h4><a href="/blog/podium-acrilico-vs-madera.html">Acrílico vs Madera: Comparativa</a></h4>
+                        <span>1,540 lecturas</span>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <div class="popular-post-image">4</div>
+                    <div class="popular-post-content">
+                        <h4><a href="/blog/tendencias-podiums-profesionales.html">Tendencias en Podiums Profesionales</a></h4>
+                        <span>1,280 lecturas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links - Servicios -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Nuestros Servicios</h3>
+                <ul class="quick-links">
+                    <li>
+                        <a href="/entrega-e-instalacion.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Entrega e Instalación Express
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/personalizacion-total.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Personalización Premium
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/setup-para-streaming.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Setup para Streaming
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/soporte-tecnico.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Soporte Técnico 24/7
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/financiamiento.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Financiamiento Flexible
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mantenimiento.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Mantenimiento Profesional
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/servicios.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Todos los Servicios
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Etiquetas Populares</h3>
+                <div class="sidebar-tags">
+                    <a href="/blog/tag/venta-podiums.html" class="sidebar-tag">Venta de Podiums</a>
+                    <a href="/blog/tag/renta-podium.html" class="sidebar-tag">Renta de Podium</a>
+                    <a href="/blog/tag/acrilico.html" class="sidebar-tag">Acrílico</a>
+                    <a href="/blog/tag/madera.html" class="sidebar-tag">Madera</a>
+                    <a href="/blog/tag/eventos.html" class="sidebar-tag">Eventos</a>
+                    <a href="/blog/tag/conferencias.html" class="sidebar-tag">Conferencias</a>
+                    <a href="/blog/tag/streaming.html" class="sidebar-tag">Streaming</a>
+                    <a href="/blog/tag/personalizacion.html" class="sidebar-tag">Personalización</a>
+                    <a href="/blog/tag/corporativo.html" class="sidebar-tag">Corporativo</a>
+                    <a href="/blog/tag/protocolo.html" class="sidebar-tag">Protocolo</a>
+                </div>
+            </div>
+
+            <!-- CTA Widget -->
+            <div class="sidebar-widget sidebar-cta">
+                <h4>¿Necesitas un Podium?</h4>
+                <p>Cotiza tu venta o renta de podium sin compromiso. Respuesta en menos de 2 horas.</p>
+                <a href="/contacto.html" class="sidebar-cta-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Solicitar Cotización
+                </a>
+            </div>
+
+            <!-- Quick Links - Empresa -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Empresa</h3>
+                <ul class="quick-links">
+                    <li>
+                        <a href="/nosotros.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Sobre Nosotros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/testimonios.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Testimonios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/preguntas-frecuentes.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Preguntas Frecuentes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contacto.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">Newsletter</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">Recibe consejos y ofertas exclusivas en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirme</button>
+                </form>
+                <p class="newsletter-note">Sin spam. Puedes darte de baja cuando quieras.</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <a href="/index.html" class="footer-logo">PODIUMEX</a>
+                    <p class="footer-tagline">Líderes en fabricación y renta de podiums profesionales en México. Calidad premium, diseño excepcional y servicio integral para eventos corporativos de alto nivel.</p>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+525530454714">+52 55 3045 4714</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium" target="_blank" rel="noopener">WhatsApp Directo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="/venta-de-podiums.html">Venta de Podiums</a></li>
+                        <li><a href="/renta-de-podiums.html">Renta de Podiums</a></li>
+                        <li><a href="/catalogo.html">Ver Todo el Catálogo</a></li>
+                    </ul>
+                    <h5>Por Material</h5>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente.html">Podium Acrílico Transparente</a></li>
+                        <li><a href="/catalogo/acrilico-negro.html">Podium Acrílico Negro</a></li>
+                        <li><a href="/catalogo/podium-madera-negro.html">Podium Madera Negro</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico.html">Podium Madera y Acrílico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Modelos Compactos</h4>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente-compacto.html">Acrílico Transparente Compacto</a></li>
+                        <li><a href="/catalogo/acrilico-negro-compacto.html">Acrílico Negro Compacto</a></li>
+                        <li><a href="/catalogo/podium-madera-negro-compacto.html">Madera Negro Compacto</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico-compacto.html">Madera y Acrílico Compacto</a></li>
+                    </ul>
+                    <h5>Por Uso</h5>
+                    <ul>
+                        <li><a href="/catalogo.html#corporativo">Eventos Corporativos</a></li>
+                        <li><a href="/catalogo.html#conferencias">Conferencias</a></li>
+                        <li><a href="/catalogo.html#streaming">Streaming y Podcasts</a></li>
+                        <li><a href="/catalogo.html#ceremonias">Ceremonias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a></li>
+                        <li><a href="/personalizacion-total.html">Personalización Premium</a></li>
+                        <li><a href="/setup-para-streaming.html">Setup para Streaming</a></li>
+                        <li><a href="/soporte-tecnico.html">Soporte Técnico 24/7</a></li>
+                        <li><a href="/financiamiento.html">Financiamiento Flexible</a></li>
+                        <li><a href="/sustentabilidad.html">Sustentabilidad Certificada</a></li>
+                        <li><a href="/mantenimiento.html">Mantenimiento Profesional</a></li>
+                        <li><a href="/asesoria-de-eventos.html">Asesoría de Eventos</a></li>
+                        <li><a href="/servicios.html">Todos los Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="/testimonios.html">Testimonios</a></li>
+                        <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-location">
+                <div class="location-content">
+                    <div class="location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="location-details">
+                        <span class="location-label">Ubicación</span>
+                        <address>Av. Tamaulipas 150-1301B, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</address>
+                    </div>
+                    <a href="https://maps.google.com/?q=Av.+Tamaulipas+150,+Condesa,+Ciudad+de+México" class="location-link" target="_blank" rel="noopener">
+                        Ver en Google Maps
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 PODIUMEX. Todos los derechos reservados.</p>
+                <p class="footer-tagline-bottom">Fabricación y renta de podiums profesionales en México.</p>
+                <div class="footer-badges">
+                    <span class="badge">Envíos a toda la República</span>
+                    <span class="badge">Garantía de Calidad</span>
+                    <span class="badge">Atención Personalizada</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip">Cotiza por WhatsApp</span>
+        <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium%20para%20mi%20evento"
+           class="whatsapp-float-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp">
+            <span class="whatsapp-badge">1</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

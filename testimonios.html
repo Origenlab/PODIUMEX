@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios - Opiniones de Clientes | PODIUMEX México</title>
+    <meta name="description" content="Descubre lo que dicen nuestros clientes sobre PODIUMEX. Testimonios reales de empresas Fortune 500, universidades e instituciones que confían en nuestra venta y renta de podiums profesionales.">
+    <meta name="keywords" content="testimonios podiumex, opiniones podiums, reseñas venta podiums, clientes renta podiums, experiencias podiums profesionales">
+    <meta property="og:title" content="Testimonios de Clientes - PODIUMEX">
+    <meta property="og:description" content="Conoce las experiencias de nuestros clientes satisfechos con la venta y renta de podiums profesionales.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://podiumex.com/testimonios.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face{font-family:'Inter';font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2')}
+        :root{--primary:#1a1a1a;--secondary:#f5f5f5;--accent:#b8860b;--text:#333;--text-light:#666;--border:#e5e5e5;--white:#fff;--success:#10b981}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text);background:#fff}
+        </style>
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <style>
+        /* Testimonials Page Specific Styles */
+        .testimonials-page {
+            padding: 4rem 2rem 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .testimonials-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .testimonials-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+            padding: 2.5rem;
+            background: var(--secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /* Testimonials Grid */
+        .testimonials-full-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        /* Featured Testimonial */
+        .featured-testimonial {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            color: var(--white);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .featured-testimonial .featured-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 3px solid var(--accent);
+        }
+        .featured-testimonial .featured-content {
+            max-width: 800px;
+        }
+        .featured-testimonial .featured-quote {
+            font-size: 1.35rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .featured-testimonial .featured-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .featured-testimonial .author-info h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .featured-testimonial .author-info p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .featured-testimonial .stars {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-left: auto;
+        }
+
+        /* Regular Testimonial Card */
+        .testimonial-card-full {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card-full .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .testimonial-card-full .reviewer-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .testimonial-card-full .reviewer-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.125rem;
+        }
+        .testimonial-card-full .reviewer-info p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        .testimonial-card-full .stars {
+            margin-left: auto;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        .testimonial-card-full .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+        .testimonial-card-full .testimonial-text strong {
+            color: var(--primary);
+        }
+
+        /* Company Logos Section */
+        .companies-section {
+            margin-top: 5rem;
+            text-align: center;
+        }
+        .companies-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+        .companies-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+        .company-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        /* CTA Section */
+        .testimonials-cta {
+            margin-top: 5rem;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--secondary);
+            border-radius: 20px;
+        }
+        .testimonials-cta h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .testimonials-cta p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .testimonials-cta .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .testimonials-cta .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .testimonials-cta .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .testimonials-full-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-testimonial {
+                grid-column: 1 / -1;
+            }
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .testimonials-full-grid {
+                grid-template-columns: 1fr;
+            }
+            .featured-testimonial {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 2rem;
+            }
+            .featured-testimonial .featured-image {
+                margin: 0 auto;
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+            .featured-testimonial .featured-author {
+                flex-direction: column;
+                text-align: center;
+            }
+            .featured-testimonial .stars {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+            .stat-number {
+                font-size: 2rem;
+            }
+            .testimonials-page {
+                padding: 3rem 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PODIUMEX",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "500",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+</head>
+<body>
+        <header id="header">
+        <nav>
+            <a href="/index.html" class="logo">PODIUMEX</a>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="dropdown">
+                    <a href="/catalogo.html" class="dropdown-toggle">
+                        Catálogo
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/venta-de-podiums.html">Venta de Podiums</a>
+                        <a href="/renta-de-podiums.html">Renta de Podiums</a>
+                        <a href="/catalogo.html">Ver Todo el Catálogo</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/servicios.html" class="dropdown-toggle">
+                        Servicios
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a>
+                        <a href="/personalizacion-total.html">Personalización Premium</a>
+                        <a href="/setup-para-streaming.html">Setup para Streaming</a>
+                        <a href="/soporte-tecnico.html">Soporte Técnico 24/7</a>
+                        <a href="/financiamiento.html">Financiamiento Flexible</a>
+                        <a href="/sustentabilidad.html">Sustentabilidad Certificada</a>
+                        <a href="/mantenimiento.html">Mantenimiento Profesional</a>
+                        <a href="/asesoria-de-eventos.html">Asesoría de Eventos</a>
+                    </div>
+                </li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Testimonios de <span class="highlight">Clientes Satisfechos</span></h1>
+                <p>Descubre por qué empresas Fortune 500, universidades e instituciones de prestigio confían en <strong>PODIUMEX</strong> para la <strong>venta y renta de podiums</strong> profesionales en México.</p>
+            </div>
+            <div class="hero-intro">
+                <h2>Más de 500 Clientes Nos Respaldan</h2>
+                <p>En <strong>PODIUMEX</strong> nos enorgullece haber servido a más de <strong>500 empresas e instituciones</strong> en todo México. Cada testimonio refleja nuestro compromiso con la excelencia, la calidad superior de nuestros <strong>podiums profesionales</strong> y un servicio al cliente excepcional.</p>
+                <p>Desde <strong>conferencias corporativas</strong> hasta <strong>graduaciones universitarias</strong>, nuestros clientes destacan la puntualidad en entregas, la calidad de materiales premium y la atención personalizada que nos distingue como líderes en <strong>venta y renta de podiums</strong> en México.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-content">
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>+500 Clientes</h3>
+                    <p>Empresas satisfechas</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>4.9/5 Estrellas</h3>
+                    <p>Calificación promedio</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>98% Recomiendan</h3>
+                    <p>Nos recomendarían</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-text">
+                    <h3>100% Verificados</h3>
+                    <p>Testimonios reales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-page">
+        <div class="testimonials-header">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <p>Testimonios verificados de empresas e instituciones que han confiado en nuestros servicios de venta y renta de podiums profesionales.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Clientes Satisfechos</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1,200+</span>
+                <span class="stat-label">Eventos Realizados</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Calificación Promedio</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Tasa de Satisfacción</span>
+            </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="testimonials-full-grid">
+            <!-- Featured Testimonial -->
+            <div class="featured-testimonial" itemscope itemtype="https://schema.org/Review">
+                <div class="featured-image">MG</div>
+                <div class="featured-content">
+                    <p class="featured-quote" itemprop="reviewBody">"El servicio de <strong>venta de podiums</strong> de PODIUMEX superó todas nuestras expectativas. Desde el primer contacto hasta la entrega final, cada paso fue manejado con profesionalismo excepcional. El podium de acrílico que adquirimos para nuestras conferencias de prensa se ha convertido en pieza clave de nuestra imagen corporativa. La entrega fue puntual, el podium impecable y el equipo siempre disponible para resolver cualquier duda."</p>
+                    <div class="featured-author">
+                        <div class="author-info">
+                            <h4 itemprop="author">María González</h4>
+                            <p>Directora de Eventos, Google México</p>
+                        </div>
+                        <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Testimonials -->
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">CR</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Carlos Rodríguez</h4>
+                        <p>Coordinador de Eventos, UNAM</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Excelente calidad en la <strong>renta de podium</strong>. El podium de acrílico que rentamos para nuestra conferencia anual fue perfecto. El proceso de reserva fue sencillo y la entrega puntual. Definitivamente seguiremos trabajando con PODIUMEX para todos nuestros eventos académicos."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">AM</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Ana Martínez</h4>
+                        <p>Gerente de Comunicación, Banorte</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"La mejor inversión en <strong>venta de podiums</strong>. Compramos tres podiums de madera con acrílico y la calidad es superior a cualquier otro proveedor que hayamos utilizado. El acabado es impecable y la durabilidad excepcional."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">RS</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Roberto Sánchez</h4>
+                        <p>Director de Operaciones, Microsoft</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Servicio impecable en <strong>venta de podiums</strong>. La plataforma digital es muy intuitiva, la cotización fue rápida y la entrega exacta en tiempo y forma. El podium cumplió todas nuestras especificaciones técnicas."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">LF</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Laura Fernández</h4>
+                        <p>Coordinadora de Eventos, Marriott</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Llevamos dos años usando la <strong>renta de podium</strong> de PODIUMEX. La calidad y confiabilidad son excepcionales. Nuestros huéspedes siempre quedan impresionados con la elegancia de los podiums en nuestros salones."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">JH</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Jorge Hernández</h4>
+                        <p>Brand Manager, FEMSA</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"La personalización en la <strong>venta de podium</strong> quedó perfecta. El grabado láser de nuestro logo corporativo es de una precisión impresionante. El podium se ha convertido en pieza clave de nuestra identidad visual."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">PL</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Patricia Luna</h4>
+                        <p>Event Manager, Coca-Cola</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"La <strong>renta de podium</strong> para nuestro evento fue impecable. El equipo de PODIUMEX demostró profesionalismo y puntualidad en cada detalle. El podium llegó perfectamente embalado y en condiciones impecables."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">MT</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Miguel Torres</h4>
+                        <p>Director General, Telmex</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Compramos 5 podiums para nuestras oficinas corporativas. La <strong>venta de podiums</strong> incluyó personalización perfecta con nuestro branding. La inversión valió completamente la pena por la calidad recibida."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">SR</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Sofía Ramírez</h4>
+                        <p>Coordinadora, Tecnológico de Monterrey</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Usamos PODIUMEX para todas nuestras graduaciones desde hace 3 años. El servicio de <strong>renta de podium</strong> es inigualable. Siempre puntuales, siempre impecables, siempre profesionales."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">DM</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Daniel Mendoza</h4>
+                        <p>CEO, Startup México</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Para nuestra primera conferencia de inversionistas, necesitábamos un <strong>podium profesional</strong> que proyectara seriedad. PODIUMEX entregó exactamente eso. El podium de acrílico transparente fue el complemento perfecto para nuestro escenario."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">CV</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Carmen Vega</h4>
+                        <p>Directora de Protocolo, Gobierno CDMX</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Los estándares de calidad de PODIUMEX son excepcionales. La <strong>venta de podiums</strong> para nuestras oficinas cumplió con todos los requisitos de protocolo oficial. Altamente recomendados para eventos gubernamentales."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">FG</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Fernando García</h4>
+                        <p>Director Comercial, Liverpool</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Excelente experiencia con la <strong>renta de podiums</strong> para nuestra convención anual. El servicio de entrega e instalación fue impecable. El equipo técnico muy profesional y atento a cada detalle."</p>
+            </article>
+
+            <article class="testimonial-card-full" itemscope itemtype="https://schema.org/Review">
+                <div class="card-header">
+                    <div class="reviewer-avatar">EA</div>
+                    <div class="reviewer-info">
+                        <h4 itemprop="author">Eduardo Aguilar</h4>
+                        <p>Director de Producción, Televisa</p>
+                    </div>
+                    <span class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">★★★★★<meta itemprop="ratingValue" content="5"></span>
+                </div>
+                <p class="testimonial-text" itemprop="reviewBody">"Para nuestras producciones en vivo necesitamos <strong>podiums profesionales</strong> que luzcan impecables en cámara. PODIUMEX nos ha proveído con equipos de primera calidad que han elevado la imagen de nuestros programas."</p>
+            </article>
+        </div>
+
+        <!-- Companies Section -->
+        <div class="companies-section">
+            <h3>Empresas que Confían en Nosotros</h3>
+            <div class="companies-grid">
+                <span class="company-logo">Google</span>
+                <span class="company-logo">Microsoft</span>
+                <span class="company-logo">Coca-Cola</span>
+                <span class="company-logo">FEMSA</span>
+                <span class="company-logo">Banorte</span>
+                <span class="company-logo">Telmex</span>
+                <span class="company-logo">Liverpool</span>
+                <span class="company-logo">Marriott</span>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="testimonials-cta">
+            <h3>Únete a Nuestros Clientes Satisfechos</h3>
+            <p>Descubre por qué más de 500 empresas confían en PODIUMEX para sus eventos. Solicita tu cotización sin compromiso.</p>
+            <div class="cta-buttons">
+                <a href="/contacto.html" class="btn-primary">Solicitar Cotización</a>
+                <a href="/catalogo.html" class="btn-secondary">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <a href="/index.html" class="footer-logo">PODIUMEX</a>
+                    <p class="footer-tagline">Líderes en fabricación y renta de podiums profesionales en México. Calidad premium, diseño excepcional y servicio integral para eventos corporativos de alto nivel.</p>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+525530454714">+52 55 3045 4714</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium" target="_blank" rel="noopener">WhatsApp Directo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="/venta-de-podiums.html">Venta de Podiums</a></li>
+                        <li><a href="/renta-de-podiums.html">Renta de Podiums</a></li>
+                        <li><a href="/catalogo.html">Ver Todo el Catálogo</a></li>
+                    </ul>
+                    <h5>Por Material</h5>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente.html">Podium Acrílico Transparente</a></li>
+                        <li><a href="/catalogo/acrilico-negro.html">Podium Acrílico Negro</a></li>
+                        <li><a href="/catalogo/podium-madera-negro.html">Podium Madera Negro</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico.html">Podium Madera y Acrílico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Modelos Compactos</h4>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente-compacto.html">Acrílico Transparente Compacto</a></li>
+                        <li><a href="/catalogo/acrilico-negro-compacto.html">Acrílico Negro Compacto</a></li>
+                        <li><a href="/catalogo/podium-madera-negro-compacto.html">Madera Negro Compacto</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico-compacto.html">Madera y Acrílico Compacto</a></li>
+                    </ul>
+                    <h5>Por Uso</h5>
+                    <ul>
+                        <li><a href="/catalogo.html#corporativo">Eventos Corporativos</a></li>
+                        <li><a href="/catalogo.html#conferencias">Conferencias</a></li>
+                        <li><a href="/catalogo.html#streaming">Streaming y Podcasts</a></li>
+                        <li><a href="/catalogo.html#ceremonias">Ceremonias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a></li>
+                        <li><a href="/personalizacion-total.html">Personalización Premium</a></li>
+                        <li><a href="/setup-para-streaming.html">Setup para Streaming</a></li>
+                        <li><a href="/soporte-tecnico.html">Soporte Técnico 24/7</a></li>
+                        <li><a href="/financiamiento.html">Financiamiento Flexible</a></li>
+                        <li><a href="/sustentabilidad.html">Sustentabilidad Certificada</a></li>
+                        <li><a href="/mantenimiento.html">Mantenimiento Profesional</a></li>
+                        <li><a href="/asesoria-de-eventos.html">Asesoría de Eventos</a></li>
+                        <li><a href="/servicios.html">Todos los Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="/testimonios.html">Testimonios</a></li>
+                        <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-location">
+                <div class="location-content">
+                    <div class="location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="location-details">
+                        <span class="location-label">Ubicación</span>
+                        <address>Av. Tamaulipas 150-1301B, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</address>
+                    </div>
+                    <a href="https://maps.google.com/?q=Av.+Tamaulipas+150,+Condesa,+Ciudad+de+México" class="location-link" target="_blank" rel="noopener">
+                        Ver en Google Maps
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 PODIUMEX. Todos los derechos reservados.</p>
+                <p class="footer-tagline-bottom">Fabricación y renta de podiums profesionales en México.</p>
+                <div class="footer-badges">
+                    <span class="badge">Envíos a toda la República</span>
+                    <span class="badge">Garantía de Calidad</span>
+                    <span class="badge">Atención Personalizada</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip">Cotiza por WhatsApp</span>
+        <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium%20para%20mi%20evento"
+           class="whatsapp-float-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp">
+            <span class="whatsapp-badge">1</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

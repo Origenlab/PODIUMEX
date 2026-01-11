@@ -3,250 +3,848 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - PODIUMEX</title>
-    <meta name="description" content="Contáctanos para rentar o comprar podiums profesionales. Respuesta inmediata por WhatsApp, teléfono o email. Atención 7 días a la semana en toda la República Mexicana.">
+    <title>Contacto - Cotiza tu Podium Profesional | PODIUMEX México</title>
+    <meta name="description" content="Contacta a PODIUMEX para cotizar tu podium profesional. Venta y renta de podiums en México. Atención personalizada, respuesta inmediata por WhatsApp.">
+    <meta name="keywords" content="contacto podiumex, cotizar podium, venta podiums méxico, renta podiums cdmx, podiums profesionales contacto">
+    <meta property="og:title" content="Contacto - Cotiza tu Podium | PODIUMEX">
+    <meta property="og:description" content="Solicita una cotización personalizada para tu podium profesional. Respuesta inmediata.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://podiumex.com/contacto.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
     <style>
-        :root{--primary:#0a0a0a;--secondary:#fafafa;--accent:#b8860b;--text:#1a1a1a}
+        @font-face{font-family:'Inter';font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2')}
+        :root{--primary:#1a1a1a;--secondary:#f5f5f5;--accent:#b8860b;--text:#333;--text-light:#666;--border:#e5e5e5;--white:#fff;--success:#25D366}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
-        .hero{padding:6rem 3rem 4rem;max-width:1400px;margin:0 auto}
-        .hero h1{font-size:clamp(2.5rem,5vw,3.5rem);line-height:1.1;color:var(--primary);margin-bottom:1.75rem;letter-spacing:-0.02em;font-weight:700}
-        .highlight{color:var(--accent)}
-        #header-container{min-height:80px}
-    </style>
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text);background:#fff}
+        </style>
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <style>
+        /* Contact Layout */
+        .contact-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            position: sticky;
+            top: 100px;
+        }
+        .contact-info h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .contact-info > p {
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .info-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .info-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        .info-card-content h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .info-card-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        .info-card-content a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .info-card-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Business Hours */
+        .business-hours {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(184,134,11,0.08) 0%, rgba(184,134,11,0.02) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(184,134,11,0.15);
+        }
+        .business-hours h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+        .hours-item span:first-child {
+            color: var(--text-light);
+        }
+        .hours-item span:last-child {
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .form-header {
+            margin-bottom: 2rem;
+        }
+        .form-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .form-header p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .form-group label .required {
+            color: #ef4444;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: var(--white);
+            color: var(--text);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(184,134,11,0.1);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        /* Product Selection */
+        .product-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+        .product-option {
+            position: relative;
+        }
+        .product-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .product-option label {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+        .product-option input:checked + label {
+            border-color: var(--accent);
+            background: rgba(184,134,11,0.05);
+        }
+        .product-option label::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .product-option input:checked + label::before {
+            background: var(--accent);
+            border-color: var(--accent);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #20bd5a;
+        }
+        .submit-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        .form-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 0 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .map-container {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+        .map-header {
+            padding: 1.5rem;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .map-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .map-header a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .map-header a:hover {
+            background: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .contact-info {
+                position: static;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .product-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .contact-hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+            .contact-section {
+                padding: 3rem 1.5rem;
+            }
+            .contact-form-container {
+                padding: 1.5rem;
+            }
+            .map-section {
+                padding: 0 1.5rem 3rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "PODIUMEX",
+        "description": "Venta y renta de podiums profesionales en México",
+        "url": "https://podiumex.com",
+        "telephone": "+52-55-3045-4714",
+        "email": "podiumexmx@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Tamaulipas 150-1301B",
+            "addressLocality": "Ciudad de México",
+            "addressRegion": "CDMX",
+            "postalCode": "06140",
+            "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "14:00"
+            }
+        ],
+        "priceRange": "$$"
+    }
+    </script>
 </head>
 <body>
-    <div id="header-container"></div>
-    <nav class="breadcrumbs" aria-label="Navegación">
-        <div class="breadcrumbs-wrapper">
-            <a href="index.html" class="breadcrumb-link">Inicio</a>
-            <svg class="breadcrumb-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="breadcrumb-current">Contacto</span>
-        </div>
-    </nav>
+        <header id="header">
+        <nav>
+            <a href="/index.html" class="logo">PODIUMEX</a>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="dropdown">
+                    <a href="/catalogo.html" class="dropdown-toggle">
+                        Catálogo
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/venta-de-podiums.html">Venta de Podiums</a>
+                        <a href="/renta-de-podiums.html">Renta de Podiums</a>
+                        <a href="/catalogo.html">Ver Todo el Catálogo</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/servicios.html" class="dropdown-toggle">
+                        Servicios
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a>
+                        <a href="/personalizacion-total.html">Personalización Premium</a>
+                        <a href="/setup-para-streaming.html">Setup para Streaming</a>
+                        <a href="/soporte-tecnico.html">Soporte Técnico 24/7</a>
+                        <a href="/financiamiento.html">Financiamiento Flexible</a>
+                        <a href="/sustentabilidad.html">Sustentabilidad Certificada</a>
+                        <a href="/mantenimiento.html">Mantenimiento Profesional</a>
+                        <a href="/asesoria-de-eventos.html">Asesoría de Eventos</a>
+                    </div>
+                </li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Contacta con <span class="highlight">PODIUMEX</span></h1>
-                <p>Estamos disponibles para ayudarte a seleccionar el podium perfecto para tu evento. Respuesta garantizada en menos de 15 minutos vía WhatsApp.</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">7 días</span>
-                        <span class="stat-label">Atención semanal</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">&lt;15 min</span>
-                        <span class="stat-label">Tiempo de respuesta</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Cobertura nacional</span>
-                    </div>
-                </div>
+                <h1>Contacto - <span class="highlight">Cotiza tu Podium</span> Profesional</h1>
+                <p>Estamos listos para ayudarte a encontrar el <strong>podium perfecto</strong> para tu evento. Respuesta inmediata garantizada por <strong>WhatsApp</strong>, atención personalizada y asesoría sin costo.</p>
             </div>
             <div class="hero-intro">
-                <h2>Múltiples Canales de Comunicación Disponibles</h2>
-                <p>En PODIUMEX valoramos tu tiempo y preferencias de comunicación. Por eso ofrecemos <strong>múltiples canales para contactarnos</strong>: WhatsApp con respuesta inmediata, llamadas telefónicas directas, email con atención en menos de 2 horas y videollamadas programadas para asesoría técnica personalizada. Nuestro equipo está capacitado para responder dudas sobre <strong>modelos, precios, disponibilidad, logística y personalización</strong>.</p>
-                <p>Atendemos de <strong>lunes a viernes de 8:00 a 20:00 hrs</strong> y sábados de 9:00 a 14:00 hrs. Para emergencias fuera de horario (eventos de última hora), contamos con <strong>línea de WhatsApp activa 24/7</strong> con personal de guardia para cotizaciones urgentes y reservaciones express. Cobertura en toda la República Mexicana con entrega express en CDMX, Monterrey y Guadalajara.</p>
+                <h2>Atención Personalizada para tu Evento</h2>
+                <p>En <strong>PODIUMEX</strong> sabemos que cada evento es único. Nuestro equipo de asesores especializados está disponible para ayudarte a seleccionar el <strong>podium ideal</strong> según tus necesidades: material, tamaño, personalización y presupuesto. Ya sea para <strong>venta o renta de podiums</strong>, te garantizamos respuesta en menos de 15 minutos.</p>
+                <p>Contamos con <strong>cobertura nacional</strong> y entrega express en CDMX, Monterrey y Guadalajara. Además, ofrecemos <strong>asesoría técnica gratuita</strong> para ayudarte a elegir entre nuestros modelos de acrílico transparente, acrílico negro, madera y combinaciones exclusivas.</p>
             </div>
         </div>
     </section>
+
+    <!-- Trust Bar -->
     <section class="trust-bar">
         <div class="trust-content">
             <div class="trust-item">
                 <div class="trust-text">
                     <h3>WhatsApp 24/7</h3>
-                    <p>Respuesta inmediata</p>
+                    <p>Respuesta inmediata garantizada</p>
                 </div>
             </div>
             <div class="trust-item">
                 <div class="trust-text">
-                    <h3>Atención Telefónica</h3>
-                    <p>Lun-Vie 8:00-20:00</p>
+                    <h3>Cotización Gratis</h3>
+                    <p>Sin compromiso de compra</p>
                 </div>
             </div>
             <div class="trust-item">
                 <div class="trust-text">
-                    <h3>Email Corporativo</h3>
-                    <p>Respuesta en 2 horas</p>
+                    <h3>Asesoría Experta</h3>
+                    <p>Te ayudamos a elegir</p>
                 </div>
             </div>
             <div class="trust-item">
                 <div class="trust-text">
                     <h3>Cobertura Nacional</h3>
-                    <p>Toda la República</p>
+                    <p>Envíos a toda la República</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="service-single-content" style="background: var(--secondary);">
-        <div class="service-two-col">
-            <div class="service-col">
-                <h3>Información de Contacto</h3>
-                <ul class="service-list">
-                    <li><strong>WhatsApp:</strong> <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium" target="_blank">+52 55 3045 4714</a></li>
-                    <li><strong>Teléfono:</strong> <a href="tel:+525530454714">+52 55 3045 4714</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a></li>
-                    <li><strong>Dirección:</strong> Av. Tamaulipas 150-1301B, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</li>
-                </ul>
-            </div>
-            <div class="service-col">
-                <h3>Horarios de Atención</h3>
-                <ul class="service-list">
-                    <li><strong>WhatsApp:</strong> 24 horas, 7 días a la semana (respuesta automatizada + guardia)</li>
-                    <li><strong>Teléfono:</strong> Lunes a Viernes de 8:00 a 20:00 hrs</li>
-                    <li><strong>Teléfono:</strong> Sábados de 9:00 a 14:00 hrs</li>
-                    <li><strong>Email:</strong> Respuesta en horario laboral (máximo 2 horas)</li>
-                    <li><strong>Emergencias:</strong> WhatsApp 24/7 para eventos urgentes</li>
-                </ul>
-            </div>
-        </div>
-        <div class="service-intro-section">
-            <h2>Oficinas y Zonas de Cobertura</h2>
-            <p>PODIUMEX opera en toda la República Mexicana con servicio de entrega express en las principales ciudades del país. Nuestra red logística garantiza entrega en menos de 24 horas en CDMX, Monterrey y Guadalajara, y cobertura de 48-72 horas en el resto del territorio nacional. Contamos con almacenes estratégicamente ubicados para optimizar tiempos de entrega.</p>
-        </div>
-        <div class="service-two-col">
-            <div class="service-col">
-                <h3>Entrega Express en 24 Horas</h3>
-                <ul class="service-list">
-                    <li>Ciudad de México y Área Metropolitana</li>
-                    <li>Monterrey y Zona Metropolitana</li>
-                    <li>Guadalajara y Zona Metropolitana</li>
-                </ul>
-            </div>
-            <div class="service-col">
-                <h3>Cobertura Nacional (48-72 hrs)</h3>
-                <ul class="service-list">
-                    <li>Puebla, Querétaro, León, Aguascalientes</li>
-                    <li>Mérida, Cancún, Tijuana, Ciudad Juárez</li>
-                    <li>Toluca, Morelia, San Luis Potosí, Hermosillo</li>
-                    <li>Veracruz, Oaxaca, Chihuahua, Saltillo</li>
-                    <li>Todas las capitales estatales y ciudades principales</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-cards-grid">
-            <div class="info-card">
-                <h4>Cotizaciones Inmediatas</h4>
-                <p>Recibe precios exactos por WhatsApp en menos de 15 minutos con disponibilidad en tiempo real</p>
-            </div>
-            <div class="info-card">
-                <h4>Asesoría Personalizada</h4>
-                <p>Expertos en protocolo y eventos disponibles para recomendaciones técnicas sin costo</p>
-            </div>
-            <div class="info-card">
-                <h4>Respuesta Garantizada</h4>
-                <p>Nunca dejamos un mensaje sin responder. Tiempo máximo de respuesta: 2 horas laborales</p>
-            </div>
-        </div>
-    </section>
-    <section class="contact-form-section">
-        <div class="contact-form-container">
-            <div class="contact-form-header">
-                <h2>Envíanos un Mensaje</h2>
-                <p>Completa el formulario y nos pondremos en contacto contigo inmediatamente por WhatsApp con toda la información que necesitas.</p>
-            </div>
-            <form id="whatsappForm" class="whatsapp-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <p>Nuestro equipo de asesores está disponible para brindarte atención personalizada y resolver todas tus dudas sobre nuestros podiums profesionales.</p>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+525530454714">+52 55 3045 4714</a></p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="empresa">Empresa / Organización</label>
-                        <input type="text" id="empresa" name="empresa" placeholder="Ej: ACME Corporation">
+
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/525530454714" target="_blank" rel="noopener">Enviar mensaje directo</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>Ubicación</h3>
+                            <p>Av. Tamaulipas 150-1301B<br>Col. Condesa, Cuauhtémoc<br>06140 CDMX, México</p>
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="telefono">Teléfono (WhatsApp) *</label>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 55 1234 5678">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Ej: contacto@empresa.com">
+
+                <div class="business-hours">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Horario de Atención
+                    </h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Lunes - Viernes</span>
+                            <span>9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sábado</span>
+                            <span>10:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Domingo</span>
+                            <span>Cerrado</span>
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h2>Solicita tu Cotización</h2>
+                    <p>Completa el formulario y te responderemos de inmediato por WhatsApp</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono <span class="required">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="55 1234 5678" required>
+                        </div>
+                    </div>
+
                     <div class="form-group">
-                        <label for="ciudad">Ciudad *</label>
-                        <select id="ciudad" name="ciudad" required>
-                            <option value="">Selecciona tu ciudad</option>
-                            <option value="CDMX">Ciudad de México</option>
-                            <option value="Monterrey">Monterrey</option>
-                            <option value="Guadalajara">Guadalajara</option>
-                            <option value="Puebla">Puebla</option>
-                            <option value="Querétaro">Querétaro</option>
-                            <option value="León">León</option>
-                            <option value="Aguascalientes">Aguascalientes</option>
-                            <option value="Mérida">Mérida</option>
-                            <option value="Cancún">Cancún</option>
-                            <option value="Tijuana">Tijuana</option>
-                            <option value="Otra">Otra ciudad</option>
+                        <label for="servicio">Tipo de Servicio <span class="required">*</span></label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="Venta de Podium">Venta de Podium</option>
+                            <option value="Renta de Podium">Renta de Podium</option>
+                            <option value="Venta y Renta">Ambos (Venta y Renta)</option>
+                            <option value="Personalización">Personalización de Podium</option>
+                            <option value="Otro">Otro</option>
                         </select>
                     </div>
+
                     <div class="form-group">
-                        <label for="fecha">Fecha del evento (opcional)</label>
-                        <input type="date" id="fecha" name="fecha">
+                        <label>Tipo de Podium de Interés</label>
+                        <div class="product-options">
+                            <div class="product-option">
+                                <input type="checkbox" id="acrilico" name="productos" value="Acrílico Transparente">
+                                <label for="acrilico">Acrílico Transparente</label>
+                            </div>
+                            <div class="product-option">
+                                <input type="checkbox" id="acrilico-negro" name="productos" value="Acrílico Negro">
+                                <label for="acrilico-negro">Acrílico Negro</label>
+                            </div>
+                            <div class="product-option">
+                                <input type="checkbox" id="madera" name="productos" value="Madera Negro">
+                                <label for="madera">Madera Negro</label>
+                            </div>
+                            <div class="product-option">
+                                <input type="checkbox" id="madera-acrilico" name="productos" value="Madera con Acrílico">
+                                <label for="madera-acrilico">Madera con Acrílico</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha">Fecha del Evento</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+                        <div class="form-group">
+                            <label for="ubicacion">Ubicación del Evento</label>
+                            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad o dirección">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="mensaje">Mensaje Adicional</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu evento, requerimientos especiales o cualquier duda que tengas..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Enviar por WhatsApp
+                    </button>
+
+                    <p class="form-note">Al enviar, serás redirigido a WhatsApp con tu mensaje prellenado</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-header">
+                <h3>Nuestra Ubicación</h3>
+                <a href="https://maps.google.com/?q=Av.+Tamaulipas+150,+Condesa,+Ciudad+de+México" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    Cómo llegar
+                </a>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661234567891!2d-99.1756!3d19.4119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4cf0c0c0c1%3A0x1234567890abcdef!2sAv.%20Tamaulipas%20150%2C%20Condesa%2C%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1234567890"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de PODIUMEX">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <a href="/index.html" class="footer-logo">PODIUMEX</a>
+                    <p class="footer-tagline">Líderes en fabricación y renta de podiums profesionales en México. Calidad premium, diseño excepcional y servicio integral para eventos corporativos de alto nivel.</p>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+525530454714">+52 55 3045 4714</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium" target="_blank" rel="noopener">WhatsApp Directo</a>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="mensaje">¿En qué podemos ayudarte? *</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu necesidad: tipo de evento, presupuesto aproximado, dudas específicas, etc."></textarea>
+                <div class="footer-section">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="/venta-de-podiums.html">Venta de Podiums</a></li>
+                        <li><a href="/renta-de-podiums.html">Renta de Podiums</a></li>
+                        <li><a href="/catalogo.html">Ver Todo el Catálogo</a></li>
+                    </ul>
+                    <h5>Por Material</h5>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente.html">Podium Acrílico Transparente</a></li>
+                        <li><a href="/catalogo/acrilico-negro.html">Podium Acrílico Negro</a></li>
+                        <li><a href="/catalogo/podium-madera-negro.html">Podium Madera Negro</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico.html">Podium Madera y Acrílico</a></li>
+                    </ul>
                 </div>
-                <div class="form-submit">
-                    <button type="submit" class="btn-submit-whatsapp">
-                        Enviar Mensaje por WhatsApp
-                    </button>
-                    <p class="form-note">Al enviar, serás redirigido a WhatsApp con tu información pre-llenada</p>
+                <div class="footer-section">
+                    <h4>Modelos Compactos</h4>
+                    <ul>
+                        <li><a href="/catalogo/acrilico-transparente-compacto.html">Acrílico Transparente Compacto</a></li>
+                        <li><a href="/catalogo/acrilico-negro-compacto.html">Acrílico Negro Compacto</a></li>
+                        <li><a href="/catalogo/podium-madera-negro-compacto.html">Madera Negro Compacto</a></li>
+                        <li><a href="/catalogo/madera-caoba-acrilico-compacto.html">Madera y Acrílico Compacto</a></li>
+                    </ul>
+                    <h5>Por Uso</h5>
+                    <ul>
+                        <li><a href="/catalogo.html#corporativo">Eventos Corporativos</a></li>
+                        <li><a href="/catalogo.html#conferencias">Conferencias</a></li>
+                        <li><a href="/catalogo.html#streaming">Streaming y Podcasts</a></li>
+                        <li><a href="/catalogo.html#ceremonias">Ceremonias</a></li>
+                    </ul>
                 </div>
-            </form>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="/entrega-e-instalacion.html">Entrega e Instalación Express</a></li>
+                        <li><a href="/personalizacion-total.html">Personalización Premium</a></li>
+                        <li><a href="/setup-para-streaming.html">Setup para Streaming</a></li>
+                        <li><a href="/soporte-tecnico.html">Soporte Técnico 24/7</a></li>
+                        <li><a href="/financiamiento.html">Financiamiento Flexible</a></li>
+                        <li><a href="/sustentabilidad.html">Sustentabilidad Certificada</a></li>
+                        <li><a href="/mantenimiento.html">Mantenimiento Profesional</a></li>
+                        <li><a href="/asesoria-de-eventos.html">Asesoría de Eventos</a></li>
+                        <li><a href="/servicios.html">Todos los Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="/testimonios.html">Testimonios</a></li>
+                        <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-location">
+                <div class="location-content">
+                    <div class="location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="location-details">
+                        <span class="location-label">Ubicación</span>
+                        <address>Av. Tamaulipas 150-1301B, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</address>
+                    </div>
+                    <a href="https://maps.google.com/?q=Av.+Tamaulipas+150,+Condesa,+Ciudad+de+México" class="location-link" target="_blank" rel="noopener">
+                        Ver en Google Maps
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
-    <section class="service-single-content" style="background: var(--secondary); padding-top: 0;">
-        <div class="service-faq">
-            <h3>Preguntas Frecuentes sobre Contacto</h3>
-            <div class="service-faq-item">
-                <div class="service-faq-question">¿Cuál es el mejor canal para recibir cotización inmediata?</div>
-                <div class="service-faq-answer">WhatsApp es el canal más rápido con respuesta garantizada en menos de 15 minutos. Nuestro sistema automatizado detecta mensajes entrantes y activa alertas al equipo de ventas. Para cotizaciones complejas o eventos corporativos grandes, recomendamos WhatsApp primero y luego agendar videollamada si necesitas asesoría técnica detallada con pantalla compartida de modelos y acabados.</div>
-            </div>
-            <div class="service-faq-item">
-                <div class="service-faq-question">¿Tienen oficinas físicas que pueda visitar para ver los podiums?</div>
-                <div class="service-faq-answer">Sí, contamos con showroom en Ciudad de México disponible con cita previa. El showroom tiene modelos físicos de todas las series (Executive, Professional, Hybrid Event, Essential, Government) con diferentes acabados para que puedas ver calidad de maderas, acrílicos y componentes electrónicos. Para agendar visita, envíanos WhatsApp con mínimo 24 horas de anticipación. También ofrecemos servicio de muestras físicas enviadas a tu oficina en CDMX, Monterrey y Guadalajara.</div>
-            </div>
-            <div class="service-faq-item">
-                <div class="service-faq-question">¿Responden dudas técnicas fuera de horario laboral?</div>
-                <div class="service-faq-answer">Sí, nuestro WhatsApp corporativo está activo 24/7 con personal de guardia para emergencias y eventos de última hora. De lunes a viernes de 8:00 a 20:00 hrs tenemos equipo completo con respuesta inmediata. Sábados de 9:00 a 14:00 hrs atención normal. Fuera de estos horarios (noches, domingos, días festivos) el WhatsApp tiene personal de guardia que atiende cotizaciones urgentes con tiempo de respuesta de 30-60 minutos máximo.</div>
-            </div>
-            <div class="service-faq-item">
-                <div class="service-faq-question">¿Puedo solicitar videollamada para ver modelos antes de rentar?</div>
-                <div class="service-faq-answer">Absolutamente. Ofrecemos videollamadas técnicas programadas de 30-45 minutos donde mostramos los modelos en vivo, explicamos características, respondemos dudas específicas y hacemos zoom a detalles de acabados. Para agendar videollamada, solicítala por WhatsApp o email indicando tu disponibilidad horaria y qué modelos te interesan. El servicio es 100% gratuito y sin compromiso de compra. Ideal para clientes fuera de CDMX que no pueden visitar showroom.</div>
-            </div>
-            <div class="service-faq-item">
-                <div class="service-faq-question">¿Cómo contacto a soporte técnico si tengo problema durante mi evento?</div>
-                <div class="service-faq-answer">Para soporte técnico urgente durante eventos activos, usa el WhatsApp corporativo con palabra clave "EMERGENCIA" al inicio del mensaje para activar protocolo de respuesta prioritaria. Nuestro equipo técnico responde en menos de 5 minutos y coordina solución (troubleshooting remoto, envío de técnico en sitio o reemplazo inmediato de equipo). También puedes llamar directo a +52 55 3045 4714 para soporte técnico 24/7.</div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 PODIUMEX. Todos los derechos reservados.</p>
+                <p class="footer-tagline-bottom">Fabricación y renta de podiums profesionales en México.</p>
+                <div class="footer-badges">
+                    <span class="badge">Envíos a toda la República</span>
+                    <span class="badge">Garantía de Calidad</span>
+                    <span class="badge">Atención Personalizada</span>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>¿Listo para cotizar tu podium profesional?</h2>
-            <p>Contáctanos ahora por WhatsApp y recibe respuesta inmediata con precios exactos, disponibilidad en tiempo real y asesoría técnica sin costo.</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium%20para%20mi%20evento" class="btn-whatsapp" target="_blank">
-                    WhatsApp
-                </a>
-                <a href="tel:+525530454714" class="btn-call">
-                    Llamar Ahora
-                </a>
-            </div>
-        </div>
-    </section>
-    <div id="footer-container"></div>
-    <script src="js/app.js" defer></script>
+    </footer>
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip">Cotiza por WhatsApp</span>
+        <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20cotizar%20un%20podium%20para%20mi%20evento"
+           class="whatsapp-float-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp">
+            <span class="whatsapp-badge">1</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // WhatsApp Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const nombre = document.getElementById('nombre').value;
+            const empresa = document.getElementById('empresa').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const servicio = document.getElementById('servicio').value;
+            const fecha = document.getElementById('fecha').value;
+            const ubicacion = document.getElementById('ubicacion').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Get selected products
+            const productos = [];
+            document.querySelectorAll('input[name="productos"]:checked').forEach(function(checkbox) {
+                productos.push(checkbox.value);
+            });
+
+            // Build WhatsApp message
+            let whatsappMessage = `*Nueva Cotización - PODIUMEX*\n\n`;
+            whatsappMessage += `*Nombre:* ${nombre}\n`;
+            if (empresa) whatsappMessage += `*Empresa:* ${empresa}\n`;
+            whatsappMessage += `*Email:* ${email}\n`;
+            whatsappMessage += `*Teléfono:* ${telefono}\n`;
+            whatsappMessage += `*Servicio:* ${servicio}\n`;
+            if (productos.length > 0) whatsappMessage += `*Productos de interés:* ${productos.join(', ')}\n`;
+            if (fecha) whatsappMessage += `*Fecha del evento:* ${fecha}\n`;
+            if (ubicacion) whatsappMessage += `*Ubicación:* ${ubicacion}\n`;
+            if (mensaje) whatsappMessage += `\n*Mensaje:*\n${mensaje}`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // WhatsApp number
+            const phoneNumber = '525530454714';
+
+            // Open WhatsApp
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        });
+    </script>
 </body>
 </html>

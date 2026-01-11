@@ -17,58 +17,13 @@ const CONFIG = {
 };
 
 // ============================================
-// COMPONENT LOADER
-// ============================================
-async function loadComponent(elementId, componentPath) {
-    const element = document.getElementById(elementId);
-    if (!element) {
-        console.warn(`Element #${elementId} not found`);
-        return false;
-    }
-
-    try {
-        const response = await fetch(componentPath);
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        const html = await response.text();
-        element.innerHTML = html;
-
-        // Initialize component-specific functionality
-        if (elementId === 'header-container') {
-            initializeMenu();
-            initializeHeaderScroll();
-        }
-        if (elementId === 'footer-container') {
-            initializeScrollTop();
-        }
-        return true;
-    } catch (error) {
-        console.error(`Error loading ${componentPath}:`, error.message);
-        return false;
-    }
-}
-
-// ============================================
 // DOM READY INITIALIZATION
 // ============================================
-document.addEventListener('DOMContentLoaded', async function() {
-    // Load header if container exists and is empty
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        if (!headerContainer.querySelector('header')) {
-            await loadComponent('header-container', 'header.html');
-        } else {
-            initializeMenu();
-            initializeHeaderScroll();
-        }
-    }
-
-    // Load footer
-    const footerContainer = document.getElementById('footer-container');
-    if (footerContainer) {
-        await loadComponent('footer-container', 'footer.html');
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize header and footer functionality
+    initializeMenu();
+    initializeHeaderScroll();
+    initializeScrollTop();
 
     // Initialize all modules
     initializeFAQ();
@@ -676,7 +631,6 @@ function showNotification(message, type = 'info') {
 // EXPORT PUBLIC API
 // ============================================
 window.PODIUMEX = {
-    loadComponent,
     formatPrice,
     getQueryParam,
     debounce,
