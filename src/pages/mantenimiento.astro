@@ -123,7 +123,7 @@ const description = "Servicio de mantenimiento preventivo y correctivo para podi
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();

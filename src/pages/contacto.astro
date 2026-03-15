@@ -271,7 +271,7 @@ const schema = JSON.stringify({
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     document.getElementById('contactForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
       const form = e.target as HTMLFormElement;

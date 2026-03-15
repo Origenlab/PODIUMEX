@@ -121,7 +121,7 @@ const description = "Soporte tecnico profesional disponible 24/7. Asistencia ant
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();

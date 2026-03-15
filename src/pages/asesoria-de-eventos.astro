@@ -132,7 +132,7 @@ const description = "Asesoria profesional para seleccion de podiums en eventos. 
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();

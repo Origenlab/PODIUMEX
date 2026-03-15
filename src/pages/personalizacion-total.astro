@@ -128,7 +128,7 @@ const description = "Personaliza tu podium con grabado laser de alta precision. 
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();

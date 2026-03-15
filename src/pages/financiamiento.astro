@@ -123,7 +123,7 @@ const description = "Opciones de financiamiento y pago flexible para compra de p
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
