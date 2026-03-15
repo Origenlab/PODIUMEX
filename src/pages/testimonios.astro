@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Testimonios - Clientes Satisfechos | PODIUMEX Mexico";
+const description = "Conoce las experiencias de nuestros clientes. Empresas, instituciones y organizadores de eventos confian en PODIUMEX para sus podiums profesionales.";
+
+const testimonials = [
+  { name: "Lic. Roberto Martinez", company: "Grupo Financiero Nacional", role: "Director de Comunicacion", text: "PODIUMEX transformo nuestras conferencias de prensa. El podium de acrilico transparente con nuestro logo grabado le da un nivel de profesionalismo impresionante a cada evento. El servicio de entrega e instalacion fue impecable.", rating: 5 },
+  { name: "Arq. Patricia Gonzalez", company: "Universidad Autonoma Metropolitana", role: "Coordinadora de Eventos", text: "Rentamos podiums para nuestras ceremonias de graduacion y congresos academicos. La calidad de los productos y la puntualidad en las entregas han sido excepcionales. Ya son nuestro proveedor de confianza.", rating: 5 },
+  { name: "Ing. Carlos Fernandez", company: "Tecnologias Avanzadas S.A.", role: "CEO", text: "Compramos el podium de madera con acrilico para nuestra sala de conferencias. El grabado laser de nuestro logo quedo perfecto. El equipo de PODIUMEX nos asesoro en todo momento para elegir el modelo ideal.", rating: 5 },
+  { name: "Mtra. Ana Lucia Ruiz", company: "Secretaria de Educacion Publica", role: "Jefa de Logistica", text: "Hemos trabajado con PODIUMEX en multiples eventos gubernamentales. Su profesionalismo, la calidad de sus podiums de madera y su capacidad de personalizar con escudos institucionales los hacen unicos en el mercado.", rating: 5 },
+  { name: "Lic. Fernando Castillo", company: "Hotel Grand Meridien", role: "Gerente de Eventos", text: "Adquirimos tres podiums para nuestros salones de eventos. La versatilidad de los modelos nos permite adaptarnos a cualquier tipo de evento. El servicio postventa y mantenimiento ha sido de primera.", rating: 5 },
+  { name: "Dra. Maria Elena Torres", company: "Congreso Medico Nacional", role: "Presidenta del Comite Organizador", text: "Para nuestro congreso anual necesitabamos podiums que proyectaran seriedad y elegancia. PODIUMEX no solo cumplio sino que supero nuestras expectativas. El setup para streaming fue clave para nuestra transmision en vivo.", rating: 5 },
+];
+---
+
+<Layout title={title} description={description} canonical="/testimonios">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Lo que Dicen Nuestros <span class="highlight">Clientes</span></h1>
+        <p>Empresas, instituciones de gobierno, universidades y organizadores de eventos confian en PODIUMEX para sus presentaciones profesionales.</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">98.7%</span>
+            <span class="stat-label">Satisfaccion</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1,500+</span>
+            <span class="stat-label">Eventos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Clientes</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="https://wa.me/525530454714?text=Hola,%20quiero%20cotizar%20un%20podium" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cotizar Ahora
+          </a>
+          <a href="/catalogo" class="btn-call">Ver Catalogo</a>
+        </div>
+      </div>
+      <div class="hero-intro">
+        <h2>Experiencias Reales de Clientes Satisfechos</h2>
+        <p>Cada testimonio refleja nuestro compromiso con la excelencia y la satisfaccion del cliente. Desde grandes corporativos hasta instituciones gubernamentales, nuestros podiums han sido protagonistas en los eventos mas importantes de Mexico.</p>
+        <p>Mas de 500 empresas y organizaciones han elegido PODIUMEX como su proveedor de confianza para podiums profesionales, respaldando nuestra trayectoria con una calificacion de satisfaccion del 98.7%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-content">
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>Calificacion 4.9/5</h3>
+          <p>Promedio general</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>98.7% Recomiendan</h3>
+          <p>A otros profesionales</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>500+ Clientes</h3>
+          <p>En todo Mexico</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>Confianza Total</h3>
+          <p>Resultados comprobados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <section class="testimonials-page">
+    <div class="testimonials-header">
+      <h2>Testimonios de Nuestros Clientes</h2>
+      <p>Descubre por que las principales empresas e instituciones de Mexico eligen PODIUMEX para sus eventos profesionales.</p>
+    </div>
+
+    <div class="cards-grid" style="padding:0;">
+      {testimonials.map(t => (
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;">
+          <div style="display:flex;gap:0.25rem;margin-bottom:1rem;">
+            {[1,2,3,4,5].map(() => (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
+          <p style="font-size:0.95rem;color:var(--text-medium);line-height:1.7;margin-bottom:1.5rem;font-style:italic;">"{t.text}"</p>
+          <div>
+            <p style="font-weight:600;color:var(--primary);font-size:0.95rem;">{t.name}</p>
+            <p style="font-size:0.85rem;color:var(--text-light);">{t.role}</p>
+            <p style="font-size:0.85rem;color:var(--accent);font-weight:500;">{t.company}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Unete a Nuestros Clientes Satisfechos</h2>
+      <p>Descubre por que mas de 500 empresas confian en PODIUMEX. Cotiza sin compromiso y vive la experiencia de trabajar con profesionales.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/525530454714?text=Hola,%20quiero%20cotizar%20un%20podium%20profesional" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar Ahora
+        </a>
+        <a href="/contacto" class="btn-call">Contacto</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

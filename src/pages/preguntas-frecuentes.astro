@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Preguntas Frecuentes - Venta y Renta de Podiums | PODIUMEX Mexico";
+const description = "Resuelve todas tus dudas sobre venta de podiums y renta de podium. Tiempos de entrega, personalizacion, garantias y mas.";
+
+const faqs = [
+  { q: "Que tipos de podiums ofrecen?", a: "Ofrecemos una amplia variedad de podiums profesionales: acrilico transparente, acrilico negro, madera negro y madera con acrilico. Cada modelo esta disponible en tamano estandar y compacto para adaptarse a las necesidades de tu evento. Todos nuestros podiums estan fabricados con materiales de la mas alta calidad y acabados profesionales." },
+  { q: "Cual es el tiempo de entrega?", a: "Nuestro servicio de entrega express garantiza 24 horas en CDMX, Monterrey y Guadalajara. Para el resto de la republica mexicana, el tiempo de entrega es de 48 a 72 horas. Para pedidos con personalizacion, el tiempo puede variar segun la complejidad del grabado." },
+  { q: "Ofrecen personalizacion?", a: "Si, ofrecemos personalizacion completa mediante grabado laser de alta precision. Puedes incluir logos corporativos, escudos institucionales, escudos gubernamentales y disenos personalizados en tu podium. El grabado laser garantiza un acabado profesional y duradero." },
+  { q: "Cual es la diferencia entre venta y renta?", a: "La venta te otorga la propiedad permanente del podium, ideal para empresas, instituciones y organizaciones que realizan eventos frecuentes. La renta es el uso temporal del podium por evento, perfecta para eventos unicos o esporadicos. Ambas opciones incluyen nuestros estandares de calidad y soporte profesional." },
+  { q: "Que incluye el servicio de renta?", a: "El servicio de renta incluye entrega en tu sede o venue, instalacion profesional y nivelacion del podium, soporte tecnico durante tu evento y recoleccion al finalizar. Tambien ofrecemos configuracion de microfonos y asesoria para el posicionamiento optimo en tu escenario." },
+  { q: "Hacen envios a todo Mexico?", a: "Si, tenemos cobertura nacional completa. Realizamos envios a todas las ciudades y estados de la republica mexicana. Contamos con una red logistica confiable que nos permite entregar tu podium en optimas condiciones a cualquier punto del pais." },
+  { q: "Que metodos de pago aceptan?", a: "Aceptamos multiples metodos de pago: transferencia bancaria, tarjetas de credito y debito, y ofrecemos facturacion para empresas y gobierno. Tambien contamos con opciones de financiamiento y meses sin intereses para la compra de podiums." },
+  { q: "Ofrecen garantia?", a: "Si, todos nuestros productos cuentan con garantia. La garantia cubre defectos de fabricacion y materiales. Ademas, ofrecemos servicio de mantenimiento preventivo y correctivo para prolongar la vida util de tu podium." },
+  { q: "Pueden personalizar con el logo de mi empresa?", a: "Por supuesto. Nuestro servicio de grabado laser de alta resolucion permite plasmar el logo de tu empresa, institucion o dependencia gubernamental en el podium. El resultado es un acabado elegante y profesional que refuerza la imagen de tu marca en cada presentacion." },
+  { q: "Como puedo cotizar?", a: "Puedes cotizar de manera rapida y sencilla a traves de WhatsApp, llamada telefonica o nuestro formulario web en la pagina de contacto. Nuestro equipo de asesores te respondera en menos de 1 hora con una cotizacion detallada y sin compromiso." }
+];
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+});
+---
+
+<Layout title={title} description={description} canonical="/preguntas-frecuentes" schema={schema}>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Preguntas Frecuentes sobre <span class="highlight">Podiums</span></h1>
+        <p>Encuentra respuestas a las dudas mas comunes sobre nuestros productos y servicios de venta y renta de podiums profesionales.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/525530454714?text=Hola,%20tengo%20una%20pregunta%20sobre%20sus%20podiums" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pregunta por WhatsApp
+          </a>
+          <a href="/contacto" class="btn-call">Contacto</a>
+        </div>
+      </div>
+      <div class="hero-intro">
+        <h2>Todo lo que Necesitas Saber sobre Podiums Profesionales</h2>
+        <p>Hemos recopilado las preguntas mas frecuentes que recibimos de nuestros clientes sobre venta de podiums, renta de podiums, personalizacion, tiempos de entrega, garantias y metodos de pago. Si tu pregunta no aparece aqui, no dudes en contactarnos.</p>
+        <p>En PODIUMEX nos esforzamos por mantener una comunicacion transparente y clara con todos nuestros clientes. Cada respuesta ha sido elaborada por nuestro equipo de expertos para brindarte la informacion mas precisa y actualizada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-content">
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>Respuesta Rapida</h3>
+          <p>Menos de 1 hora</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>Asesoria Gratis</h3>
+          <p>Sin compromiso</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>WhatsApp 24/7</h3>
+          <p>Siempre disponibles</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-text">
+          <h3>Expertos</h3>
+          <p>Equipo capacitado</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Preguntas y Respuestas</h2>
+    {faqs.map((faq, i) => (
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>{faq.q}</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>{faq.a}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>No Encontraste tu Respuesta?</h2>
+      <p>Nuestro equipo de asesores esta listo para resolver cualquier duda adicional. Contactanos por WhatsApp y recibe respuesta inmediata.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/525530454714?text=Hola,%20tengo%20una%20pregunta%20sobre%20sus%20podiums" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Preguntar por WhatsApp
+        </a>
+        <a href="/contacto" class="btn-call">Ir a Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        if (item) {
+          item.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+</Layout>
