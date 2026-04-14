@@ -4,18 +4,49 @@ import Layout from '../../layouts/Layout.astro';
 const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Podium de Acrilico Transparente",
-  "image": "https://podiumex.com/img/catalogo/acrilico-transparente.webp",
-  "description": "Renta el Podium de Acrilico Transparente: diseño moderno y minimalista. Altura 120cm, acrilico 6mm pulido. Ideal para conferencias y eventos corporativos.",
+  "name": "Podium de Acrílico Transparente",
+  "image": [
+    "https://podiumex.com/img/catalogo/acrilico-transparente.webp",
+    "https://podiumex.com/img/catalogo/acrilico-transparente-lateral.webp",
+    "https://podiumex.com/img/catalogo/acrilico-transparente-detalle.webp"
+  ],
+  "description": "Podium de Acrílico Transparente profesional para eventos corporativos y conferencias. Altura 120cm, acrílico 6mm pulido. Disponible para venta y renta en México.",
   "sku": "PDX-ACR-TRANS-001",
   "brand": {
     "@type": "Brand",
     "name": "PODIUMEX"
   },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "PODIUMEX",
+    "url": "https://podiumex.com"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Venta – Podium Acrílico Transparente",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": { "@type": "Organization", "name": "PODIUMEX" },
+      "url": "https://podiumex.com/catalogo/acrilico-transparente"
+    },
+    {
+      "@type": "Offer",
+      "name": "Renta diaria – Podium Acrílico Transparente",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": { "@type": "Organization", "name": "PODIUMEX" },
+      "url": "https://podiumex.com/catalogo/acrilico-transparente"
+    }
+  ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "89"
+    "reviewCount": "89",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 });
 ---
@@ -52,7 +83,7 @@ const schema = JSON.stringify({
           </div>
         </div>
         <div class="hero-cta">
-          <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20el%20Podium%20de%20Acrilico%20Transparente%20(PDX-ACR-TRANS-001)" class="btn-whatsapp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <a href="https://wa.me/525564328954?text=Hola,%20me%20interesa%20el%20Podium%20de%20Acrilico%20Transparente%20(PDX-ACR-TRANS-001)" class="btn-whatsapp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
           <a href="/contacto" class="btn-call">Solicitar Cotizacion</a>
         </div>
       </div>
@@ -178,7 +209,7 @@ const schema = JSON.stringify({
       <h2>Cotiza tu Podium de Acrilico Transparente</h2>
       <p>Contactanos para obtener una cotizacion personalizada. Ofrecemos renta y venta con entrega en toda la CDMX y area metropolitana.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/525530454714?text=Hola,%20me%20interesa%20el%20Podium%20de%20Acrilico%20Transparente%20(PDX-ACR-TRANS-001)" class="btn-whatsapp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a href="https://wa.me/525564328954?text=Hola,%20me%20interesa%20el%20Podium%20de%20Acrilico%20Transparente%20(PDX-ACR-TRANS-001)" class="btn-whatsapp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
         <a href="/contacto" class="btn-call">Solicitar Cotizacion</a>
       </div>
     </div>

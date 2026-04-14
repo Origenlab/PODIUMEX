@@ -1,49 +1,553 @@
 ---
-
+// Header.astro — navegación principal fija, debajo del topbar
 ---
 
-<header id="header">
-    <nav>
-        <a href="/" class="logo" style="--hide-before: none;">
-            <img loading="lazy" src="/img/podiumex.webp" alt="PODIUMEX - Venta y Renta de Podiums Profesionales en Mexico" height="85" style="display: block;">
-        </a>
-        <style>.logo::before { display: none !important; }</style>
-        <div class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links" id="navLinks">
-            <li class="dropdown">
-                <a href="/catalogo" class="dropdown-toggle">
-                    Catalogo
-                    <span class="dropdown-arrow">&#9660;</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/venta-de-podiums">Venta de Podiums</a>
-                    <a href="/renta-de-podiums">Renta de Podiums</a>
-                    <a href="/catalogo">Ver Todo el Catalogo</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="/servicios" class="dropdown-toggle">
-                    Servicios
-                    <span class="dropdown-arrow">&#9660;</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/entrega-e-instalacion">Entrega e Instalacion Express</a>
-                    <a href="/personalizacion-total">Personalizacion Premium</a>
-                    <a href="/setup-para-streaming">Setup para Streaming</a>
-                    <a href="/soporte-tecnico">Soporte Tecnico 24/7</a>
-                    <a href="/financiamiento">Financiamiento Flexible</a>
-                    <a href="/sustentabilidad">Sustentabilidad Certificada</a>
-                    <a href="/mantenimiento">Mantenimiento Profesional</a>
-                    <a href="/asesoria-de-eventos">Asesoria de Eventos</a>
-                </div>
-            </li>
-            <li><a href="/nosotros">Nosotros</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contacto">Contacto</a></li>
-        </ul>
+<header id="header" role="banner">
+  <div class="hdr-inner">
+
+    <!-- Logo -->
+    <a href="/" class="hdr-logo" aria-label="PODIUMEX – Inicio">
+      <img
+        src="/img/podiumex.webp"
+        alt="PODIUMEX – Venta y Renta de Podiums Profesionales en México"
+        fetchpriority="high"
+        loading="eager"
+      />
+    </a>
+
+    <!-- Nav principal -->
+    <nav class="hdr-nav" id="hdrNav" aria-label="Navegación principal">
+      <ul role="list">
+
+        <li class="hdr-dropdown">
+          <button class="hdr-nav-btn" aria-expanded="false" aria-haspopup="true">
+            Catálogo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="hdr-submenu" role="menu">
+            <a href="/venta-de-podiums" role="menuitem">
+              <span class="sub-icon">🛒</span>
+              <span>
+                <strong>Venta de Podiums</strong>
+                <small>Compra tu podium con garantía</small>
+              </span>
+            </a>
+            <a href="/renta-de-podiums" role="menuitem">
+              <span class="sub-icon">📅</span>
+              <span>
+                <strong>Renta de Podiums</strong>
+                <small>Por día, semana o evento</small>
+              </span>
+            </a>
+            <div class="sub-divider"></div>
+            <a href="/catalogo/acrilico-transparente" role="menuitem">Acrílico Transparente</a>
+            <a href="/catalogo/acrilico-negro" role="menuitem">Acrílico Negro</a>
+            <a href="/catalogo/podium-madera-negro" role="menuitem">Madera Negro</a>
+            <a href="/catalogo/madera-caoba-acrilico" role="menuitem">Madera y Acrílico</a>
+            <div class="sub-divider"></div>
+            <a href="/catalogo" role="menuitem" class="sub-ver-todo">Ver catálogo completo →</a>
+          </div>
+        </li>
+
+        <li class="hdr-dropdown">
+          <button class="hdr-nav-btn" aria-expanded="false" aria-haspopup="true">
+            Servicios
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="hdr-submenu hdr-submenu--wide" role="menu">
+            <a href="/entrega-e-instalacion" role="menuitem">
+              <span class="sub-icon">🚚</span>
+              <span>
+                <strong>Entrega e Instalación</strong>
+                <small>Express en 24 hrs con GPS</small>
+              </span>
+            </a>
+            <a href="/personalizacion-total" role="menuitem">
+              <span class="sub-icon">✏️</span>
+              <span>
+                <strong>Personalización</strong>
+                <small>Grabado láser de logo</small>
+              </span>
+            </a>
+            <a href="/setup-para-streaming" role="menuitem">
+              <span class="sub-icon">🎥</span>
+              <span>
+                <strong>Setup Streaming</strong>
+                <small>Audio, video y conectividad</small>
+              </span>
+            </a>
+            <a href="/soporte-tecnico" role="menuitem">
+              <span class="sub-icon">🛠</span>
+              <span>
+                <strong>Soporte Técnico 24/7</strong>
+                <small>Durante y después del evento</small>
+              </span>
+            </a>
+            <a href="/financiamiento" role="menuitem">
+              <span class="sub-icon">💳</span>
+              <span>
+                <strong>Financiamiento</strong>
+                <small>Meses sin intereses</small>
+              </span>
+            </a>
+            <a href="/mantenimiento" role="menuitem">
+              <span class="sub-icon">🔧</span>
+              <span>
+                <strong>Mantenimiento</strong>
+                <small>Pulido y restauración</small>
+              </span>
+            </a>
+            <a href="/sustentabilidad" role="menuitem">
+              <span class="sub-icon">🌿</span>
+              <span>
+                <strong>Sustentabilidad</strong>
+                <small>Certificación ESG</small>
+              </span>
+            </a>
+            <a href="/asesoria-de-eventos" role="menuitem">
+              <span class="sub-icon">💼</span>
+              <span>
+                <strong>Asesoría de Eventos</strong>
+                <small>Consultoría sin costo</small>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/nosotros" class="hdr-nav-link">Nosotros</a></li>
+        <li><a href="/blog" class="hdr-nav-link">Blog</a></li>
+        <li><a href="/contacto" class="hdr-nav-link">Contacto</a></li>
+      </ul>
     </nav>
+
+    <!-- CTA derecha -->
+    <div class="hdr-actions">
+      <a href="tel:+525564328954" class="hdr-tel" aria-label="Llamar a PODIUMEX">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>55 6432 8954</span>
+      </a>
+      <a
+        href="https://wa.me/525564328954?text=Hola%2C%20quiero%20cotizar%20un%20podium%20para%20mi%20evento"
+        class="hdr-cta-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Cotizar ahora
+      </a>
+    </div>
+
+    <!-- Hamburger móvil -->
+    <button
+      class="hdr-hamburger"
+      id="hdrHamburger"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="hdrNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
 </header>
+
+<style>
+/* ── Variables locales ──────────────────────────── */
+:root {
+  --topbar-h: 36px;
+  --header-h: 86px;
+  --nav-offset: calc(var(--topbar-h) + var(--header-h)); /* 122px */
+}
+
+/* ── Header base ────────────────────────────────── */
+#header {
+  position: fixed;
+  top: var(--topbar-h);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8e8e8;
+  transition: box-shadow 0.2s;
+}
+#header.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+
+/* ── Inner layout ───────────────────────────────── */
+.hdr-inner {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ── Logo ───────────────────────────────────────── */
+.hdr-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.hdr-logo img {
+  height: 66px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ── Nav ────────────────────────────────────────── */
+.hdr-nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.hdr-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links planos */
+.hdr-nav-link {
+  display: block;
+  padding: 0.45rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.hdr-nav-link:hover {
+  color: #0a0a0a;
+  background: #f5f5f5;
+}
+
+/* Botones de dropdown */
+.hdr-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.45rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.hdr-nav-btn:hover,
+.hdr-dropdown:hover .hdr-nav-btn {
+  color: #0a0a0a;
+  background: #f5f5f5;
+}
+.hdr-nav-btn svg {
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.hdr-dropdown:hover .hdr-nav-btn svg {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown ───────────────────────────────────── */
+.hdr-dropdown {
+  position: relative;
+}
+.hdr-submenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s, visibility 0.18s, transform 0.18s;
+  pointer-events: none;
+}
+.hdr-submenu--wide {
+  min-width: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.hdr-dropdown:hover .hdr-submenu,
+.hdr-dropdown:focus-within .hdr-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Items del submenu */
+.hdr-submenu a {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.845rem;
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.hdr-submenu a:hover {
+  background: #f7f7f7;
+}
+.hdr-submenu a strong {
+  display: block;
+  font-size: 0.845rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  line-height: 1.3;
+}
+.hdr-submenu a small {
+  display: block;
+  font-size: 0.755rem;
+  color: #888;
+  margin-top: 0.1rem;
+  line-height: 1.3;
+}
+.sub-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.sub-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0.25rem 0.5rem;
+  grid-column: 1 / -1;
+}
+.sub-ver-todo {
+  grid-column: 1 / -1;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: #b8860b !important;
+}
+.sub-ver-todo:hover {
+  background: rgba(184,134,11,0.06) !important;
+}
+
+/* ── Acciones derecha ───────────────────────────── */
+.hdr-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+.hdr-tel {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+.hdr-tel:hover {
+  color: #b8860b;
+}
+.hdr-tel svg {
+  color: #b8860b;
+  flex-shrink: 0;
+}
+.hdr-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-size: 0.845rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.01em;
+}
+.hdr-cta-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+/* ── Hamburger ──────────────────────────────────── */
+.hdr-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.hdr-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #0a0a0a;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.hdr-hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hdr-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hdr-hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hdr-tel { display: none; }
+  .hdr-inner { gap: 1rem; }
+}
+
+@media (max-width: 768px) {
+  :root { --header-h: 72px; }
+
+  .hdr-hamburger { display: flex; }
+  .hdr-actions { display: none; }
+
+  .hdr-nav {
+    position: fixed;
+    top: calc(var(--topbar-h) + var(--header-h));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 1.5rem 1rem 3rem;
+    border-top: 1px solid #e8e8e8;
+    z-index: 999;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hdr-nav.open {
+    transform: translateX(0);
+  }
+  .hdr-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.125rem;
+  }
+  .hdr-nav-link,
+  .hdr-nav-btn {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .hdr-dropdown { width: 100%; }
+  .hdr-submenu,
+  .hdr-submenu--wide {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 0 1rem;
+    background: transparent;
+    display: none;
+    grid-template-columns: 1fr;
+    pointer-events: auto;
+  }
+  .hdr-dropdown.mobile-open .hdr-submenu {
+    display: flex;
+    flex-direction: column;
+  }
+  .hdr-dropdown.mobile-open .hdr-submenu--wide {
+    display: flex;
+  }
+  .hdr-dropdown.mobile-open .hdr-nav-btn svg {
+    transform: rotate(180deg);
+  }
+
+  /* CTA en móvil dentro del menú */
+  .hdr-nav::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #f0f0f0;
+    margin: 1.25rem 0;
+  }
+
+  .hdr-logo img { height: 55px; }
+}
+</style>
+
+<script is:inline>
+(function () {
+  const header = document.getElementById('header');
+  const hamburger = document.getElementById('hdrHamburger');
+  const nav = document.getElementById('hdrNav');
+
+  // Scroll: añade clase .scrolled
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // Hamburger toggle
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Dropdowns en móvil
+    nav.querySelectorAll('.hdr-dropdown .hdr-nav-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const li = btn.closest('.hdr-dropdown');
+        li.classList.toggle('mobile-open');
+        btn.setAttribute('aria-expanded', li.classList.contains('mobile-open'));
+      });
+    });
+
+    // Cierra al hacer clic fuera
+    document.addEventListener('click', function (e) {
+      if (!header.contains(e.target)) {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+})();
+</script>

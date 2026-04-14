@@ -1,0 +1,126 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const featuredPosts = posts.filter((p) => p.data.featured);
+const regularPosts = posts.filter((p) => !p.data.featured);
+
+const title = "Blog de PODIUMEX – Guías y Consejos sobre Podiums Profesionales";
+const description = "Artículos, guías y consejos sobre podiums profesionales, eventos corporativos y presentaciones en México. Todo lo que necesitas saber de los expertos.";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog PODIUMEX",
+  "description": description,
+  "url": "https://podiumex.com/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PODIUMEX",
+    "url": "https://podiumex.com"
+  }
+});
+---
+
+<Layout title={title} description={description} canonical="/blog" schema={schema}>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Blog <span class="highlight">PODIUMEX</span></h1>
+        <p>Guías, consejos y recursos para que tus eventos y presentaciones sean impecables. Aprende de los expertos en podiums profesionales de México.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/525564328954?text=Hola,%20quiero%20cotizar%20un%20podium" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cotizar Podium
+          </a>
+          <a href="/catalogo" class="btn-call">Ver Catálogo</a>
+        </div>
+      </div>
+      <div class="hero-intro">
+        <h2>Recursos para Profesionales de Eventos</h2>
+        <p>En el blog de PODIUMEX compartimos conocimiento práctico sobre la selección, uso y cuidado de podiums profesionales. Artículos escritos por expertos en la industria de eventos, pensados para ayudarte a tomar las mejores decisiones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-content">
+      <div class="trust-item"><div class="trust-text"><h3>Contenido Experto</h3><p>Guías profesionales</p></div></div>
+      <div class="trust-item"><div class="trust-text"><h3>Consejos Prácticos</h3><p>Aplicables al instante</p></div></div>
+      <div class="trust-item"><div class="trust-text"><h3>Siempre Actualizado</h3><p>Contenido 2025–2026</p></div></div>
+      <div class="trust-item"><div class="trust-text"><h3>Recursos Gratis</h3><p>Acceso libre</p></div></div>
+    </div>
+  </div>
+
+  <!-- Artículos Destacados -->
+  {featuredPosts.length > 0 && (
+    <section style="padding:4rem 2rem 2rem;max-width:1200px;margin:0 auto;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Artículos Destacados</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;">
+        {featuredPosts.map((post) => (
+          <article>
+            <a href={`/blog/${post.id}`} style="display:block;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseout="this.style.boxShadow='none'">
+              <div style="overflow:hidden;height:220px;">
+                <img src={post.data.image} alt={post.data.imageAlt} width="600" height="220" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div style="padding:1.5rem;">
+                <span class="card-tag">{post.data.category}</span>
+                <h3 style="font-size:1.15rem;font-weight:700;color:var(--primary);margin:0.75rem 0 0.5rem;line-height:1.35;">{post.data.title}</h3>
+                <p style="font-size:0.9rem;color:var(--text-medium);line-height:1.6;margin-bottom:1rem;">{post.data.description}</p>
+                <div style="display:flex;justify-content:flex-end;">
+                  <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">Leer →</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Todos los Artículos -->
+  {regularPosts.length > 0 && (
+    <section style="padding:2rem 2rem 5rem;max-width:1200px;margin:0 auto;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Más Artículos</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
+        {regularPosts.map((post) => (
+          <article>
+            <a href={`/blog/${post.id}`} style="display:block;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;">
+              <div style="overflow:hidden;height:180px;">
+                <img src={post.data.image} alt={post.data.imageAlt} width="400" height="180" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="padding:1.25rem;">
+                <span class="card-tag">{post.data.category}</span>
+                <h3 style="font-size:1rem;font-weight:700;color:var(--primary);margin:0.5rem 0;line-height:1.4;">{post.data.title}</h3>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>¿Necesitas Ayuda para Elegir?</h2>
+      <p>Nuestros asesores pueden guiarte personalmente para encontrar el podium perfecto para tu evento. Cotización sin compromiso.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/525564328954?text=Hola,%20necesito%20asesoria%20para%20elegir%20un%20podium" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Asesoría por WhatsApp
+        </a>
+        <a href="/contacto" class="btn-call">Contacto</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
