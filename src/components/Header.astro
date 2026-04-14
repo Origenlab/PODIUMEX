@@ -25,7 +25,7 @@
             Catálogo
           </button>
           <div class="drop" role="menu">
-            <div class="drop-inner">
+            <div class="drop-inner drop-inner--cols">
               <div class="drop-col">
                 <p class="drop-heading">Modalidad</p>
                 <a href="/venta-de-podiums" role="menuitem" class="drop-featured">
@@ -296,8 +296,8 @@
   padding: 1.25rem;
 }
 
-/* Columnas */
-.drop-inner:has(.drop-col) {
+/* Columnas (clase explícita, sin :has) */
+.drop-inner--cols {
   display: flex;
   gap: 0;
   align-items: flex-start;
@@ -598,7 +598,7 @@
     flex-direction: column;
     gap: 0;
   }
-  .drop-inner:has(.drop-col) { flex-direction: column; }
+  .drop-inner--cols { flex-direction: column; }
 
   .drop-vsep { display: none; }
 
