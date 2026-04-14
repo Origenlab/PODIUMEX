@@ -1,136 +1,113 @@
 ---
-// Header.astro — navegación principal fija, debajo del topbar
+// Header.astro — menú profesional renovado, sin iconos
 ---
 
-<header id="header" role="banner">
+<header id="hdr" role="banner">
   <div class="hdr-inner">
 
     <!-- Logo -->
     <a href="/" class="hdr-logo" aria-label="PODIUMEX – Inicio">
       <img
         src="/img/podiumex.webp"
-        alt="PODIUMEX – Venta y Renta de Podiums Profesionales en México"
+        alt="PODIUMEX – Podiums Profesionales en México"
         fetchpriority="high"
         loading="eager"
       />
     </a>
 
-    <!-- Nav principal -->
+    <!-- Navegación desktop -->
     <nav class="hdr-nav" id="hdrNav" aria-label="Navegación principal">
       <ul role="list">
 
-        <li class="hdr-dropdown">
-          <button class="hdr-nav-btn" aria-expanded="false" aria-haspopup="true">
+        <!-- Catálogo -->
+        <li class="has-drop">
+          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
             Catálogo
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="hdr-submenu" role="menu">
-            <a href="/venta-de-podiums" role="menuitem">
-              <span class="sub-icon">🛒</span>
-              <span>
-                <strong>Venta de Podiums</strong>
-                <small>Compra tu podium con garantía</small>
-              </span>
-            </a>
-            <a href="/renta-de-podiums" role="menuitem">
-              <span class="sub-icon">📅</span>
-              <span>
-                <strong>Renta de Podiums</strong>
-                <small>Por día, semana o evento</small>
-              </span>
-            </a>
-            <div class="sub-divider"></div>
-            <a href="/catalogo/acrilico-transparente" role="menuitem">Acrílico Transparente</a>
-            <a href="/catalogo/acrilico-negro" role="menuitem">Acrílico Negro</a>
-            <a href="/catalogo/podium-madera-negro" role="menuitem">Madera Negro</a>
-            <a href="/catalogo/madera-caoba-acrilico" role="menuitem">Madera y Acrílico</a>
-            <div class="sub-divider"></div>
-            <a href="/catalogo" role="menuitem" class="sub-ver-todo">Ver catálogo completo →</a>
+          <div class="drop" role="menu">
+            <div class="drop-inner">
+              <div class="drop-col">
+                <p class="drop-heading">Modalidad</p>
+                <a href="/venta-de-podiums" role="menuitem" class="drop-featured">
+                  <strong>Venta de Podiums</strong>
+                  <span>Garantía 2 años · Envío gratis a México</span>
+                </a>
+                <a href="/renta-de-podiums" role="menuitem" class="drop-featured">
+                  <strong>Renta de Podiums</strong>
+                  <span>Por día, semana o evento</span>
+                </a>
+              </div>
+              <div class="drop-vsep"></div>
+              <div class="drop-col">
+                <p class="drop-heading">Por material</p>
+                <a href="/catalogo/acrilico-transparente" role="menuitem" class="drop-plain">Acrílico Transparente</a>
+                <a href="/catalogo/acrilico-negro" role="menuitem" class="drop-plain">Acrílico Negro</a>
+                <a href="/catalogo/podium-madera-negro" role="menuitem" class="drop-plain">Madera Negro</a>
+                <a href="/catalogo/madera-caoba-acrilico" role="menuitem" class="drop-plain">Madera y Acrílico</a>
+                <a href="/catalogo" role="menuitem" class="drop-all">Ver catálogo completo</a>
+              </div>
+            </div>
           </div>
         </li>
 
-        <li class="hdr-dropdown">
-          <button class="hdr-nav-btn" aria-expanded="false" aria-haspopup="true">
+        <!-- Servicios -->
+        <li class="has-drop">
+          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
             Servicios
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="hdr-submenu hdr-submenu--wide" role="menu">
-            <a href="/entrega-e-instalacion" role="menuitem">
-              <span class="sub-icon">🚚</span>
-              <span>
-                <strong>Entrega e Instalación</strong>
-                <small>Express en 24 hrs con GPS</small>
-              </span>
-            </a>
-            <a href="/personalizacion-total" role="menuitem">
-              <span class="sub-icon">✏️</span>
-              <span>
-                <strong>Personalización</strong>
-                <small>Grabado láser de logo</small>
-              </span>
-            </a>
-            <a href="/setup-para-streaming" role="menuitem">
-              <span class="sub-icon">🎥</span>
-              <span>
-                <strong>Setup Streaming</strong>
-                <small>Audio, video y conectividad</small>
-              </span>
-            </a>
-            <a href="/soporte-tecnico" role="menuitem">
-              <span class="sub-icon">🛠</span>
-              <span>
-                <strong>Soporte Técnico 24/7</strong>
-                <small>Durante y después del evento</small>
-              </span>
-            </a>
-            <a href="/financiamiento" role="menuitem">
-              <span class="sub-icon">💳</span>
-              <span>
-                <strong>Financiamiento</strong>
-                <small>Meses sin intereses</small>
-              </span>
-            </a>
-            <a href="/mantenimiento" role="menuitem">
-              <span class="sub-icon">🔧</span>
-              <span>
-                <strong>Mantenimiento</strong>
-                <small>Pulido y restauración</small>
-              </span>
-            </a>
-            <a href="/sustentabilidad" role="menuitem">
-              <span class="sub-icon">🌿</span>
-              <span>
-                <strong>Sustentabilidad</strong>
-                <small>Certificación ESG</small>
-              </span>
-            </a>
-            <a href="/asesoria-de-eventos" role="menuitem">
-              <span class="sub-icon">💼</span>
-              <span>
-                <strong>Asesoría de Eventos</strong>
-                <small>Consultoría sin costo</small>
-              </span>
-            </a>
+          <div class="drop drop-wide" role="menu">
+            <div class="drop-inner">
+              <p class="drop-heading">Servicios especializados</p>
+              <div class="drop-grid">
+                <a href="/entrega-e-instalacion" role="menuitem">
+                  <strong>Entrega e Instalación</strong>
+                  <span>Express en 24 hrs · Rastreo GPS</span>
+                </a>
+                <a href="/personalizacion-total" role="menuitem">
+                  <strong>Personalización</strong>
+                  <span>Grabado láser de precisión</span>
+                </a>
+                <a href="/setup-para-streaming" role="menuitem">
+                  <strong>Setup Streaming</strong>
+                  <span>Audio, video y conectividad</span>
+                </a>
+                <a href="/soporte-tecnico" role="menuitem">
+                  <strong>Soporte Técnico 24/7</strong>
+                  <span>Durante y después del evento</span>
+                </a>
+                <a href="/financiamiento" role="menuitem">
+                  <strong>Financiamiento</strong>
+                  <span>Meses sin intereses disponibles</span>
+                </a>
+                <a href="/mantenimiento" role="menuitem">
+                  <strong>Mantenimiento</strong>
+                  <span>Pulido y restauración</span>
+                </a>
+                <a href="/sustentabilidad" role="menuitem">
+                  <strong>Sustentabilidad</strong>
+                  <span>Certificación ESG</span>
+                </a>
+                <a href="/asesoria-de-eventos" role="menuitem">
+                  <strong>Asesoría de Eventos</strong>
+                  <span>Consultoría sin costo</span>
+                </a>
+              </div>
+            </div>
           </div>
         </li>
 
-        <li><a href="/nosotros" class="hdr-nav-link">Nosotros</a></li>
-        <li><a href="/blog" class="hdr-nav-link">Blog</a></li>
-        <li><a href="/contacto" class="hdr-nav-link">Contacto</a></li>
+        <li><a href="/nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="/blog" class="nav-link">Blog</a></li>
+        <li><a href="/contacto" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
 
-    <!-- CTA derecha -->
+    <!-- Acciones derecha (desktop) -->
     <div class="hdr-actions">
-      <a href="tel:+525564328954" class="hdr-tel" aria-label="Llamar a PODIUMEX">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        <span>55 6432 8954</span>
-      </a>
+      <a href="tel:+525564328954" class="hdr-tel">55 6432 8954</a>
       <a
         href="https://wa.me/525564328954?text=Hola%2C%20quiero%20cotizar%20un%20podium%20para%20mi%20evento"
-        class="hdr-cta-btn"
+        class="hdr-cta"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -138,10 +115,10 @@
       </a>
     </div>
 
-    <!-- Hamburger móvil -->
+    <!-- Hamburger -->
     <button
-      class="hdr-hamburger"
-      id="hdrHamburger"
+      class="hamburger"
+      id="hamburger"
       aria-label="Abrir menú"
       aria-expanded="false"
       aria-controls="hdrNav"
@@ -154,33 +131,36 @@
   </div>
 </header>
 
+<!-- Overlay para móvil -->
+<div class="mob-overlay" id="mobOverlay" aria-hidden="true"></div>
+
 <style>
-/* ── Variables locales ──────────────────────────── */
+/* ── Tokens ─────────────────────────────────────── */
 :root {
   --topbar-h: 36px;
-  --header-h: 86px;
-  --nav-offset: calc(var(--topbar-h) + var(--header-h)); /* 122px */
+  --hdr-h: 80px;
+  --nav-offset: calc(var(--topbar-h) + var(--hdr-h));
+  --accent: #b8860b;
+  --accent-light: #d4a634;
 }
 
 /* ── Header base ────────────────────────────────── */
-#header {
+#hdr {
   position: fixed;
   top: var(--topbar-h);
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   z-index: 1000;
-  height: var(--header-h);
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  height: var(--hdr-h);
+  background: #fff;
   border-bottom: 1px solid #e8e8e8;
-  transition: box-shadow 0.2s;
+  transition: box-shadow .25s, border-color .25s;
 }
-#header.scrolled {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+#hdr.scrolled {
+  box-shadow: 0 2px 24px rgba(0,0,0,.07);
+  border-color: transparent;
 }
 
-/* ── Inner layout ───────────────────────────────── */
+/* ── Inner ──────────────────────────────────────── */
 .hdr-inner {
   max-width: 1400px;
   height: 100%;
@@ -196,358 +176,591 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 .hdr-logo img {
-  height: 66px;
+  height: 58px;
   width: auto;
-  display: block;
   object-fit: contain;
 }
 
-/* ── Nav ────────────────────────────────────────── */
-.hdr-nav {
-  flex: 1;
+/* ── Navegación ─────────────────────────────────── */
+.hdr-nav { flex: 1; }
+.hdr-nav > ul {
   display: flex;
-  align-items: center;
-}
-.hdr-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+  align-items: stretch;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
+  gap: 0;
 }
 
-/* Nav links planos */
-.hdr-nav-link {
-  display: block;
-  padding: 0.45rem 0.875rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #4a4a4a;
-  border-radius: 6px;
-  transition: color 0.15s, background 0.15s;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.hdr-nav-link:hover {
-  color: #0a0a0a;
-  background: #f5f5f5;
-}
-
-/* Botones de dropdown */
-.hdr-nav-btn {
+/* Link base */
+.nav-link,
+.nav-btn {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.45rem 0.875rem;
-  font-size: 0.875rem;
+  height: var(--hdr-h);
+  padding: 0 1rem;
+  font-size: .875rem;
   font-weight: 500;
-  color: #4a4a4a;
+  letter-spacing: .015em;
+  color: #555;
+  text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
-  border-radius: 6px;
-  transition: color 0.15s, background 0.15s;
-  white-space: nowrap;
   font-family: inherit;
+  white-space: nowrap;
+  transition: color .15s;
+  gap: .3rem;
 }
-.hdr-nav-btn:hover,
-.hdr-dropdown:hover .hdr-nav-btn {
+.nav-link:hover,
+.nav-btn:hover,
+.has-drop:hover .nav-btn {
   color: #0a0a0a;
-  background: #f5f5f5;
-}
-.hdr-nav-btn svg {
-  transition: transform 0.2s;
-  flex-shrink: 0;
-}
-.hdr-dropdown:hover .hdr-nav-btn svg {
-  transform: rotate(180deg);
 }
 
-/* ── Dropdown ───────────────────────────────────── */
-.hdr-dropdown {
-  position: relative;
-}
-.hdr-submenu {
+/* Barra dorada inferior (hover) */
+.nav-link::after,
+.nav-btn::after {
+  content: '';
   position: absolute;
-  top: calc(100% + 8px);
+  bottom: 0; left: 1rem; right: 1rem;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .2s ease;
+}
+.nav-link:hover::after,
+.nav-btn:hover::after,
+.has-drop:hover .nav-btn::after {
+  transform: scaleX(1);
+}
+
+/* Chevron CSS en botones de dropdown */
+.nav-btn::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform .2s;
+  opacity: .55;
+  order: 1;
+  flex-shrink: 0;
+  margin-left: .1rem;
+}
+.has-drop:hover .nav-btn::before,
+.has-drop:focus-within .nav-btn::before {
+  transform: rotate(225deg) translateY(2px);
+  opacity: .9;
+}
+/* Asegura que ::after no interfiera con ::before en dropdown */
+.nav-btn::after { right: .5rem; left: 1rem; }
+
+/* ── Dropdown base ──────────────────────────────── */
+.has-drop { position: relative; }
+
+.drop {
+  position: absolute;
+  top: calc(100% + 1px);
   left: 0;
-  min-width: 240px;
-  background: #ffffff;
-  border: 1px solid #e8e8e8;
-  border-radius: 12px;
-  padding: 0.5rem;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  z-index: 500;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-top: 2px solid var(--accent);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.10);
+  min-width: 300px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(6px);
-  transition: opacity 0.18s, visibility 0.18s, transform 0.18s;
+  transform: translateY(8px);
+  transition: opacity .18s, visibility .18s, transform .18s;
   pointer-events: none;
 }
-.hdr-submenu--wide {
+.drop-wide {
   min-width: 520px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
 }
-.hdr-dropdown:hover .hdr-submenu,
-.hdr-dropdown:focus-within .hdr-submenu {
+
+.has-drop:hover .drop,
+.has-drop:focus-within .drop {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-/* Items del submenu */
-.hdr-submenu a {
+/* Layout interno del dropdown */
+.drop-inner {
+  padding: 1.25rem;
+}
+
+/* Columnas */
+.drop-inner:has(.drop-col) {
   display: flex;
+  gap: 0;
   align-items: flex-start;
-  gap: 0.625rem;
-  padding: 0.6rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.845rem;
-  color: #3a3a3a;
+}
+
+.drop-col { flex: 1; }
+
+.drop-vsep {
+  width: 1px;
+  background: #f0f0f0;
+  align-self: stretch;
+  margin: 0 1rem;
+}
+
+/* Encabezado de sección */
+.drop-heading {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0 0 .75rem;
+  padding: 0 .5rem;
+}
+
+/* Enlace destacado (con descripción) */
+.drop-featured {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .55rem .5rem;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background 0.12s;
+  transition: background .12s;
+  margin-bottom: .2rem;
 }
-.hdr-submenu a:hover {
-  background: #f7f7f7;
-}
-.hdr-submenu a strong {
-  display: block;
-  font-size: 0.845rem;
+.drop-featured:hover { background: #f8f8f8; }
+.drop-featured strong {
+  font-size: .84rem;
   font-weight: 600;
   color: #0a0a0a;
   line-height: 1.3;
 }
-.hdr-submenu a small {
-  display: block;
-  font-size: 0.755rem;
+.drop-featured span {
+  font-size: .76rem;
   color: #888;
-  margin-top: 0.1rem;
   line-height: 1.3;
 }
-.sub-icon {
-  font-size: 1rem;
-  flex-shrink: 0;
-  margin-top: 1px;
+
+/* Enlace simple */
+.drop-plain {
+  display: block;
+  padding: .4rem .5rem;
+  font-size: .83rem;
+  color: #4a4a4a;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background .12s, color .12s;
+  margin-bottom: .05rem;
 }
-.sub-divider {
-  height: 1px;
-  background: #f0f0f0;
-  margin: 0.25rem 0.5rem;
-  grid-column: 1 / -1;
+.drop-plain:hover { background: #f8f8f8; color: #0a0a0a; }
+
+/* "Ver todo" */
+.drop-all {
+  display: block;
+  margin-top: .75rem;
+  padding: .4rem .5rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .15s;
 }
-.sub-ver-todo {
-  grid-column: 1 / -1;
-  font-size: 0.82rem !important;
-  font-weight: 600 !important;
-  color: #b8860b !important;
+.drop-all:hover { color: var(--accent-light); }
+
+/* Grid de servicios (2 columnas) */
+.drop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .15rem 1rem;
+  margin-top: .75rem;
 }
-.sub-ver-todo:hover {
-  background: rgba(184,134,11,0.06) !important;
+.drop-grid a {
+  display: flex;
+  flex-direction: column;
+  gap: .12rem;
+  padding: .55rem .5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .12s;
+}
+.drop-grid a:hover { background: #f8f8f8; }
+.drop-grid a strong {
+  font-size: .82rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  line-height: 1.3;
+}
+.drop-grid a span {
+  font-size: .74rem;
+  color: #888;
+  line-height: 1.3;
 }
 
 /* ── Acciones derecha ───────────────────────────── */
 .hdr-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: .875rem;
   margin-left: auto;
-}
-.hdr-tel {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #4a4a4a;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color 0.15s;
-}
-.hdr-tel:hover {
-  color: #b8860b;
-}
-.hdr-tel svg {
-  color: #b8860b;
   flex-shrink: 0;
 }
-.hdr-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1.25rem;
-  background: #0a0a0a;
-  color: #ffffff;
-  font-size: 0.845rem;
+.hdr-tel {
+  font-size: .825rem;
   font-weight: 600;
-  border-radius: 8px;
+  color: #555;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.15s, transform 0.1s;
-  letter-spacing: 0.01em;
+  letter-spacing: .01em;
+  transition: color .15s;
 }
-.hdr-cta-btn:hover {
-  background: #1a1a1a;
+.hdr-tel:hover { color: var(--accent); }
+.hdr-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1.375rem;
+  background: #0a0a0a;
+  color: #fff;
+  font-size: .835rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border-radius: 7px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .15s, transform .12s;
+}
+.hdr-cta:hover {
+  background: #222;
   transform: translateY(-1px);
 }
 
 /* ── Hamburger ──────────────────────────────────── */
-.hdr-hamburger {
+.hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
+  width: 40px; height: 40px;
   padding: 8px;
   background: none;
   border: none;
   cursor: pointer;
   margin-left: auto;
+  flex-shrink: 0;
 }
-.hdr-hamburger span {
+.hamburger span {
   display: block;
-  width: 22px;
-  height: 2px;
+  height: 1.5px;
   background: #0a0a0a;
   border-radius: 2px;
-  transition: transform 0.25s, opacity 0.25s;
+  transition: transform .25s ease, opacity .25s ease, width .25s ease;
+  transform-origin: center;
 }
-.hdr-hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.hamburger span:nth-child(1) { width: 22px; }
+.hamburger span:nth-child(2) { width: 16px; }
+.hamburger span:nth-child(3) { width: 22px; }
+
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+  width: 22px;
 }
-.hdr-hamburger.active span:nth-child(2) {
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+  width: 22px;
+}
+
+/* ── Overlay móvil ──────────────────────────────── */
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(0,0,0,.45);
   opacity: 0;
+  transition: opacity .3s;
+  backdrop-filter: blur(2px);
 }
-.hdr-hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.mob-overlay.visible {
+  display: block;
 }
+.mob-overlay.faded-in { opacity: 1; }
 
-/* ── Responsive ─────────────────────────────────── */
-@media (max-width: 1024px) {
+/* ── Responsive: tablet ─────────────────────────── */
+@media (max-width: 1100px) {
   .hdr-tel { display: none; }
-  .hdr-inner { gap: 1rem; }
+  .hdr-inner { gap: 1.25rem; }
+  .nav-link, .nav-btn { padding: 0 .75rem; }
 }
 
-@media (max-width: 768px) {
-  :root { --header-h: 72px; }
+/* ── Responsive: móvil ──────────────────────────── */
+@media (max-width: 900px) {
+  :root { --hdr-h: 68px; }
 
-  .hdr-hamburger { display: flex; }
+  .hamburger { display: flex; }
   .hdr-actions { display: none; }
 
+  /* Panel lateral derecho */
   .hdr-nav {
     position: fixed;
-    top: calc(var(--topbar-h) + var(--header-h));
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ffffff;
+    top: 0; right: 0; bottom: 0;
+    width: min(85vw, 380px);
+    z-index: 1200;
+    background: #fff;
     overflow-y: auto;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    padding: 1.5rem 1rem 3rem;
-    border-top: 1px solid #e8e8e8;
-    z-index: 999;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hdr-nav.open {
-    transform: translateX(0);
-  }
-  .hdr-nav ul {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 0.125rem;
-  }
-  .hdr-nav-link,
-  .hdr-nav-btn {
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .hdr-dropdown { width: 100%; }
-  .hdr-submenu,
-  .hdr-submenu--wide {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    padding: 0 0 0 1rem;
-    background: transparent;
-    display: none;
-    grid-template-columns: 1fr;
-    pointer-events: auto;
-  }
-  .hdr-dropdown.mobile-open .hdr-submenu {
+    transform: translateX(100%);
+    transition: transform .32s cubic-bezier(.4,0,.2,1);
     display: flex;
     flex-direction: column;
+    box-shadow: -8px 0 40px rgba(0,0,0,.12);
   }
-  .hdr-dropdown.mobile-open .hdr-submenu--wide {
-    display: flex;
-  }
-  .hdr-dropdown.mobile-open .hdr-nav-btn svg {
-    transform: rotate(180deg);
+  .hdr-nav.is-open { transform: translateX(0); }
+
+  /* Cabecera del panel */
+  .hdr-nav::before {
+    content: '';
+    display: block;
+    height: var(--hdr-h);
+    border-bottom: 1px solid #f0f0f0;
+    flex-shrink: 0;
   }
 
-  /* CTA en móvil dentro del menú */
+  /* Lista principal */
+  .hdr-nav > ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: .75rem 0;
+    flex: 1;
+  }
+
+  /* Links y botones móvil */
+  .nav-link,
+  .nav-btn {
+    height: auto;
+    padding: .875rem 1.5rem;
+    font-size: .9375rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    border-radius: 0;
+    justify-content: space-between;
+    width: 100%;
+    letter-spacing: 0;
+  }
+  .nav-link:hover, .nav-btn:hover { background: #fafafa; }
+
+  /* Quitar underline en móvil */
+  .nav-link::after, .nav-btn::after { display: none; }
+
+  /* Chevron en móvil: reemplazamos con + / − */
+  .nav-btn::before {
+    content: '+';
+    width: auto; height: auto;
+    border: none;
+    transform: none;
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: .5;
+    transition: transform .2s, opacity .2s;
+  }
+  .has-drop.mob-open .nav-btn::before {
+    content: '−';
+    transform: none;
+    opacity: .7;
+  }
+
+  /* Submenu móvil: accordion */
+  .drop,
+  .drop-wide {
+    position: static;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0;
+    box-shadow: none;
+    min-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    pointer-events: auto;
+  }
+  .has-drop.mob-open .drop { max-height: 600px; }
+
+  .drop-inner {
+    padding: .5rem 1.5rem 1.25rem;
+    flex-direction: column;
+    gap: 0;
+  }
+  .drop-inner:has(.drop-col) { flex-direction: column; }
+
+  .drop-vsep { display: none; }
+
+  .drop-col { width: 100%; }
+  .drop-col + .drop-col { margin-top: .75rem; }
+
+  .drop-heading {
+    font-size: .68rem;
+    margin-bottom: .5rem;
+    color: #bbb;
+  }
+
+  .drop-featured {
+    padding: .5rem 0;
+    border-radius: 0;
+    border-bottom: 1px solid #f8f8f8;
+  }
+  .drop-featured:hover { background: none; }
+  .drop-featured strong { font-size: .875rem; }
+
+  .drop-plain {
+    padding: .45rem 0;
+    border-radius: 0;
+    color: #555;
+    font-size: .875rem;
+  }
+  .drop-plain:hover { background: none; color: #0a0a0a; }
+
+  .drop-all { padding: .5rem 0; margin-top: .5rem; }
+
+  .drop-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .drop-grid a {
+    padding: .5rem 0;
+    border-radius: 0;
+    border-bottom: 1px solid #f8f8f8;
+  }
+  .drop-grid a:hover { background: none; }
+  .drop-grid a strong { font-size: .875rem; }
+
+  /* CTA al fondo del panel */
   .hdr-nav::after {
     content: '';
     display: block;
     height: 1px;
     background: #f0f0f0;
-    margin: 1.25rem 0;
+    margin: 0 1.5rem;
   }
 
-  .hdr-logo img { height: 55px; }
+  /* Botones de acción en panel móvil */
+  .mob-nav-actions {
+    padding: 1.25rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+  .mob-nav-actions .mob-tel {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .01em;
+  }
+  .mob-nav-actions .mob-cta {
+    display: block;
+    text-align: center;
+    padding: .875rem;
+    background: #0a0a0a;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: .02em;
+  }
 }
 </style>
 
 <script is:inline>
 (function () {
-  const header = document.getElementById('header');
-  const hamburger = document.getElementById('hdrHamburger');
-  const nav = document.getElementById('hdrNav');
+  const hdr       = document.getElementById('hdr');
+  const hamburger = document.getElementById('hamburger');
+  const nav       = document.getElementById('hdrNav');
+  const overlay   = document.getElementById('mobOverlay');
 
-  // Scroll: añade clase .scrolled
+  /* ── Scroll: sombra ─────────────────────── */
   window.addEventListener('scroll', function () {
-    header.classList.toggle('scrolled', window.scrollY > 10);
+    hdr.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 
-  // Hamburger toggle
+  /* ── Helpers ────────────────────────────── */
+  function openMenu() {
+    nav.classList.add('is-open');
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Cerrar menú');
+    overlay.classList.add('visible');
+    requestAnimationFrame(function () {
+      overlay.classList.add('faded-in');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    nav.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Abrir menú');
+    overlay.classList.remove('faded-in');
+    setTimeout(function () { overlay.classList.remove('visible'); }, 300);
+    document.body.style.overflow = '';
+  }
+
+  /* ── Hamburger toggle ───────────────────── */
   if (hamburger && nav) {
     hamburger.addEventListener('click', function () {
-      const isOpen = nav.classList.toggle('open');
-      hamburger.classList.toggle('active', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-      hamburger.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      nav.classList.contains('is-open') ? closeMenu() : openMenu();
     });
+  }
 
-    // Dropdowns en móvil
-    nav.querySelectorAll('.hdr-dropdown .hdr-nav-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        const li = btn.closest('.hdr-dropdown');
-        li.classList.toggle('mobile-open');
-        btn.setAttribute('aria-expanded', li.classList.contains('mobile-open'));
+  /* ── Overlay cierra el menú ─────────────── */
+  if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+  }
+
+  /* ── Accordion en móvil ─────────────────── */
+  nav && nav.querySelectorAll('.has-drop .nav-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      var isMobile = window.innerWidth <= 900;
+      if (!isMobile) return;
+      e.stopPropagation();
+      var li = btn.closest('.has-drop');
+      var wasOpen = li.classList.contains('mob-open');
+      // Cierra todos
+      nav.querySelectorAll('.has-drop.mob-open').forEach(function (el) {
+        el.classList.remove('mob-open');
+        el.querySelector('.nav-btn').setAttribute('aria-expanded', 'false');
       });
-    });
-
-    // Cierra al hacer clic fuera
-    document.addEventListener('click', function (e) {
-      if (!header.contains(e.target)) {
-        nav.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+      // Abre el actual si no estaba abierto
+      if (!wasOpen) {
+        li.classList.add('mob-open');
+        btn.setAttribute('aria-expanded', 'true');
       }
     });
+  });
+
+  /* ── Cierra menú al redimensionar ────────── */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) closeMenu();
+  });
+
+  /* ── Inyecta botones CTA en panel móvil ──── */
+  if (nav) {
+    var actionsEl = document.createElement('div');
+    actionsEl.className = 'mob-nav-actions';
+    actionsEl.innerHTML =
+      '<a href="tel:+525564328954" class="mob-tel">55 6432 8954</a>' +
+      '<a href="https://wa.me/525564328954?text=Hola%2C%20quiero%20cotizar%20un%20podium" class="mob-cta" target="_blank" rel="noopener noreferrer">Cotizar ahora</a>';
+    nav.appendChild(actionsEl);
   }
 })();
 </script>
