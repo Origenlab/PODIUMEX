@@ -402,6 +402,9 @@
   line-height: 1.3;
 }
 
+/* Ocultar mob-nav-actions en desktop */
+.mob-nav-actions { display: none; }
+
 /* ── Acciones derecha ───────────────────────────── */
 .hdr-actions {
   display: flex;
@@ -521,11 +524,11 @@
   }
   .hdr-nav.is-open { transform: translateX(0); }
 
-  /* Cabecera del panel */
+  /* Cabecera del panel — altura = topbar + header para alinear con el borde inferior del header */
   .hdr-nav::before {
     content: '';
     display: block;
-    height: var(--hdr-h);
+    height: var(--nav-offset);
     border-bottom: 1px solid #f0f0f0;
     flex-shrink: 0;
   }

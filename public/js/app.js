@@ -108,7 +108,7 @@ function initializeMenu() {
 // HEADER SCROLL EFFECT
 // ============================================
 function initializeHeaderScroll() {
-    const header = document.getElementById('header');
+    const header = document.getElementById('hdr');
     if (!header) return;
 
     let ticking = false;
