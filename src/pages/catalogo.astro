@@ -1,192 +1,1268 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+// ─── Datos: Modelos Estándar ────────────────────────────────────────
+const modelosEstandar = [
+  {
+    slug: 'acrilico-transparente',
+    name: 'Acrílico Transparente',
+    tag: 'Más Popular',
+    material: 'Acrílico',
+    materialColor: 'acrilico',
+    image: '/img/catalogo/acrilico-transparente.webp',
+    imageAlt: 'Podium de acrílico transparente profesional para conferencias corporativas y eventos de alto impacto en México',
+    desc: 'Diseño minimalista y de alto impacto visual. El podium preferido por empresas líderes para conferencias, lanzamientos y eventos donde la imagen lo es todo.',
+    specs: [
+      { label: 'Altura', value: '120 cm' },
+      { label: 'Ancho', value: '50 cm' },
+      { label: 'Material', value: 'Acrílico 6 mm' },
+      { label: 'Garantía', value: '2 años' },
+    ],
+    usos: 'Conferencias · Lanzamientos · Streaming',
+    precio: 'Desde $8,500 MXN',
+  },
+  {
+    slug: 'acrilico-negro',
+    name: 'Acrílico Negro',
+    tag: 'Elegancia Premium',
+    material: 'Acrílico',
+    materialColor: 'acrilico',
+    image: '/img/catalogo/acrilico-negro.webp',
+    imageAlt: 'Podium de acrílico negro para galas, ceremonias de premiación y eventos formales de lujo',
+    desc: 'Sofisticación en cada detalle. Acabado oscuro de alto contraste ideal para galas, premiaciones y presentaciones ejecutivas donde el lujo es el mensaje.',
+    specs: [
+      { label: 'Altura', value: '120 cm' },
+      { label: 'Ancho', value: '50 cm' },
+      { label: 'Material', value: 'Acrílico 8 mm' },
+      { label: 'Garantía', value: '2 años' },
+    ],
+    usos: 'Galas · Premiaciones · Eventos VIP',
+    precio: 'Desde $9,200 MXN',
+  },
+  {
+    slug: 'podium-madera-negro',
+    name: 'Madera Negro',
+    tag: 'Autoridad Clásica',
+    material: 'Madera',
+    materialColor: 'madera',
+    image: '/img/catalogo/podium-madera-negro.webp',
+    imageAlt: 'Podium de madera negra clásico para eventos gubernamentales, ceremonias académicas e instituciones formales',
+    desc: 'Tradición, autoridad y solidez. La elección de gobiernos, universidades e instituciones que exigen formalidad absoluta en cada acto oficial.',
+    specs: [
+      { label: 'Altura', value: '120 cm' },
+      { label: 'Ancho', value: '55 cm' },
+      { label: 'Material', value: 'MDF lacado' },
+      { label: 'Garantía', value: '3 años' },
+    ],
+    usos: 'Gobierno · Universidades · Ceremonias',
+    precio: 'Desde $7,800 MXN',
+  },
+  {
+    slug: 'madera-caoba-acrilico',
+    name: 'Madera y Acrílico',
+    tag: 'Diseño Híbrido',
+    material: 'Combinado',
+    materialColor: 'combinado',
+    image: '/img/catalogo/madera-caoba-acrilico.webp',
+    imageAlt: 'Podium combinado de madera caoba con acrílico para eventos corporativos premium en México',
+    desc: 'Lo mejor de dos mundos. Cuerpo de madera caoba con fascia de acrílico: calidez, modernidad y personalización total en un solo modelo exclusivo.',
+    specs: [
+      { label: 'Altura', value: '120 cm' },
+      { label: 'Ancho', value: '55 cm' },
+      { label: 'Material', value: 'Madera + Acrílico' },
+      { label: 'Garantía', value: '3 años' },
+    ],
+    usos: 'Corporativo · Hoteles · Eventos Exclusivos',
+    precio: 'Desde $11,500 MXN',
+  },
+];
+
+// ─── Datos: Modelos Compactos ───────────────────────────────────────
+const modelosCompactos = [
+  {
+    slug: 'acrilico-transparente-compacto',
+    name: 'Acrílico Transparente Compacto',
+    tag: 'Compacto',
+    material: 'Acrílico',
+    materialColor: 'acrilico',
+    image: '/img/catalogo/acrilico-transparente-compacto.webp',
+    imageAlt: 'Podium compacto de acrílico transparente para estudios de grabación, podcasts y salas de juntas',
+    desc: 'Toda la elegancia del modelo estándar en formato reducido. Ideal para estudios de grabación, salas de juntas ejecutivas y eventos donde el espacio es limitado.',
+    specs: [
+      { label: 'Altura', value: '95 cm' },
+      { label: 'Ancho', value: '40 cm' },
+      { label: 'Material', value: 'Acrílico 6 mm' },
+      { label: 'Garantía', value: '2 años' },
+    ],
+    usos: 'Podcast · Studio · Salas de Juntas',
+    precio: 'Desde $6,200 MXN',
+  },
+  {
+    slug: 'acrilico-negro-compacto',
+    name: 'Acrílico Negro Compacto',
+    tag: 'Compacto',
+    material: 'Acrílico',
+    materialColor: 'acrilico',
+    image: '/img/catalogo/acrilico-negro-compacto.webp',
+    imageAlt: 'Podium compacto acrílico negro para presentaciones en espacios pequeños y eventos íntimos',
+    desc: 'La presencia del acrílico negro en formato compacto. Perfecto para eventos íntimos, ceremonias de menor escala y presentaciones en espacios privados.',
+    specs: [
+      { label: 'Altura', value: '95 cm' },
+      { label: 'Ancho', value: '40 cm' },
+      { label: 'Material', value: 'Acrílico 8 mm' },
+      { label: 'Garantía', value: '2 años' },
+    ],
+    usos: 'Eventos Íntimos · Oficinas · Galas Pequeñas',
+    precio: 'Desde $6,900 MXN',
+  },
+  {
+    slug: 'podium-madera-negro-compacto',
+    name: 'Madera Negro Compacto',
+    tag: 'Compacto',
+    material: 'Madera',
+    materialColor: 'madera',
+    image: '/img/catalogo/podium-madera-negro-compacto.webp',
+    imageAlt: 'Podium compacto de madera negra para salas de capacitación y ceremonias en espacios reducidos',
+    desc: 'La solidez y autoridad del MDF lacado en versión compacta. La elección para capacitaciones corporativas, reuniones de directivos y ceremonias de formato íntimo.',
+    specs: [
+      { label: 'Altura', value: '95 cm' },
+      { label: 'Ancho', value: '45 cm' },
+      { label: 'Material', value: 'MDF lacado' },
+      { label: 'Garantía', value: '3 años' },
+    ],
+    usos: 'Capacitación · Juntas Directivas · Salas VIP',
+    precio: 'Desde $5,800 MXN',
+  },
+  {
+    slug: 'madera-caoba-acrilico-compacto',
+    name: 'Madera y Acrílico Compacto',
+    tag: 'Compacto',
+    material: 'Combinado',
+    materialColor: 'combinado',
+    image: '/img/catalogo/madera-caoba-acrilico-compacto.webp',
+    imageAlt: 'Podium compacto combinado madera caoba y acrílico para eventos exclusivos en espacios reducidos',
+    desc: 'La combinación de madera caoba y acrílico en formato compacto. Para eventos exclusivos donde el diseño premium debe adaptarse al espacio disponible.',
+    specs: [
+      { label: 'Altura', value: '95 cm' },
+      { label: 'Ancho', value: '45 cm' },
+      { label: 'Material', value: 'Madera + Acrílico' },
+      { label: 'Garantía', value: '3 años' },
+    ],
+    usos: 'Eventos Exclusivos · Hoteles Boutique · Showrooms',
+    precio: 'Desde $8,400 MXN',
+  },
+];
+
+// ─── Datos: Guía de Materiales ──────────────────────────────────────
+const materiales = [
+  {
+    id: 'acrilico',
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+    nombre: 'Acrílico',
+    subtitulo: 'Modernidad y transparencia',
+    desc: 'Material de vanguardia que proyecta innovación y apertura. La transparencia crea un escenario limpio donde el orador es el protagonista. Alta resistencia a impactos y manchas.',
+    ideal: 'Empresas tecnológicas, startups, eventos de innovación, streaming, lanzamientos de producto.',
+    ventajas: ['Efecto visual de gran impacto', 'Fácil de limpiar y mantener', 'Personalización con grabado láser', 'Disponible en transparente y negro'],
+    modelos: ['Acrílico Transparente', 'Acrílico Negro'],
+  },
+  {
+    id: 'madera',
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    nombre: 'Madera',
+    subtitulo: 'Autoridad y tradición',
+    desc: 'MDF lacado de alta calidad que transmite solidez, formalidad y autoridad institucional. El lenguaje visual que gobiernos, universidades e instituciones han usado durante décadas.',
+    ideal: 'Secretarías de gobierno, universidades, notarías, cámaras legislativas, ceremonias oficiales y graduaciones.',
+    ventajas: ['Proyecta máxima autoridad institucional', 'Mayor resistencia estructural', 'Garantía de 3 años', 'Personalización con vinilado o grabado'],
+    modelos: ['Madera Negro Estándar', 'Madera Negro Compacto'],
+  },
+  {
+    id: 'combinado',
+    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+    nombre: 'Madera + Acrílico',
+    subtitulo: 'Lo mejor de dos mundos',
+    desc: 'La combinación premium que une la calidez de la madera caoba con la modernidad del acrílico. Diseño único que se adapta a cualquier ambientación y proyecta distinción.',
+    ideal: 'Hoteles cinco estrellas, corporativos premium, agencias de marketing, eventos de lujo y showrooms exclusivos.',
+    ventajas: ['Diseño exclusivo y diferenciador', 'Calidez + modernidad en un solo modelo', 'Personalización total en ambos materiales', 'El modelo más versátil del catálogo'],
+    modelos: ['Madera y Acrílico Estándar', 'Madera y Acrílico Compacto'],
+  },
+];
+
+// ─── Schema.org: ItemList del catálogo ─────────────────────────────
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Catálogo de Podiums Profesionales PODIUMEX",
+  "description": "Catálogo completo de podiums profesionales para venta y renta en México: acrílico transparente, acrílico negro, madera y combinados en versión estándar y compacta.",
+  "url": "https://podiumex.com/catalogo",
+  "numberOfItems": 8,
+  "itemListElement": [
+    ...modelosEstandar.map((m, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://podiumex.com/catalogo/${m.slug}`,
+      "name": `Podium ${m.name}`,
+    })),
+    ...modelosCompactos.map((m, i) => ({
+      "@type": "ListItem",
+      "position": modelosEstandar.length + i + 1,
+      "url": `https://podiumex.com/catalogo/${m.slug}`,
+      "name": `Podium ${m.name}`,
+    })),
+  ],
+});
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://podiumex.com" },
+    { "@type": "ListItem", "position": 2, "name": "Catálogo", "item": "https://podiumex.com/catalogo" },
+  ],
+});
 ---
 
 <Layout
-  title="Catalogo de Podiums Profesionales - PODIUMEX Mexico"
-  description="Catalogo completo de podiums profesionales: acrilico, madera, LED y combinados. Especificaciones tecnicas y opciones de renta o compra en Mexico."
+  title="Catálogo de Podiums Profesionales en México | PODIUMEX — 8 Modelos"
+  description="Catálogo completo de podiums profesionales en México: acrílico transparente, acrílico negro, madera y combinados. Estándar y compacto. Venta con garantía y renta por evento. Fabricación nacional."
   canonical="/catalogo"
+  schema={schema}
+  breadcrumbSchema={breadcrumbSchema}
 >
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1><span class="highlight">Catalogo</span> de Podiums Profesionales</h1>
-        <p>Explora nuestra coleccion completa de podiums profesionales en tamano estandar y compacto, fabricados con los mejores materiales y acabados del mercado.</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">8</span>
-            <span class="stat-label">Modelos</span>
+<!-- ══════════════════════════════════════════════════
+     BREADCRUMB
+══════════════════════════════════════════════════ -->
+<nav class="ct-breadcrumb" aria-label="Ruta de navegación">
+  <div class="ix-container">
+    <ol class="ct-breadcrumb-list">
+      <li><a href="/">Inicio</a></li>
+      <li aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </li>
+      <li aria-current="page">Catálogo</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section class="ct-hero" aria-labelledby="ct-hero-title">
+  <div class="ct-hero-inner">
+
+    <!-- ── Columna izquierda: headline + CTA ── -->
+    <div class="ct-hero-copy">
+
+      <div class="ix-eyebrow">
+        <span class="ix-eyebrow-dot" aria-hidden="true"></span>
+        8 modelos · Estándar y Compacto · Fabricación Nacional
+      </div>
+
+      <h1 id="ct-hero-title">
+        <span class="ix-highlight">Catálogo Completo</span><br>
+        de Podiums<br>Profesionales
+      </h1>
+
+      <p class="ct-hero-desc">
+        Cuatro materiales, dos tamaños, un estándar de calidad. Todos los modelos incluyen
+        garantía escrita, personalización disponible y envío a todo México.
+      </p>
+
+      <div class="ct-hero-actions">
+        <WhatsAppButton
+          text="Cotizar Ahora"
+          message="Hola, me interesa cotizar un podium del catálogo"
+        />
+        <a href="#modelos-estandar" class="btn-call">Ver Modelos →</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="ix-hero-stats">
+        <div class="ix-stat">
+          <span class="ix-stat-num">8</span>
+          <span class="ix-stat-label">Modelos</span>
+        </div>
+        <div class="ix-stat-divider" aria-hidden="true"></div>
+        <div class="ix-stat">
+          <span class="ix-stat-num">3</span>
+          <span class="ix-stat-label">Materiales</span>
+        </div>
+        <div class="ix-stat-divider" aria-hidden="true"></div>
+        <div class="ix-stat">
+          <span class="ix-stat-num">2</span>
+          <span class="ix-stat-label">Tamaños</span>
+        </div>
+        <div class="ix-stat-divider" aria-hidden="true"></div>
+        <div class="ix-stat">
+          <span class="ix-stat-num">2–3</span>
+          <span class="ix-stat-label">Años garantía</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Columna derecha: contenido editorial ── -->
+    <div class="ix-hero-editorial">
+
+      <p class="ct-editorial-label">¿Cuál es el modelo adecuado para tu evento?</p>
+
+      <p class="ix-editorial-p">
+        El catálogo PODIUMEX está diseñado para cubrir cada contexto de presentación:
+        <strong>acrílico para eventos modernos e innovadores</strong>, madera para ceremonias
+        institucionales de alto protocolo, y combinados para marcas que buscan distinción y exclusividad.
+      </p>
+
+      <p class="ix-editorial-p">
+        Todos los modelos están disponibles para <strong>venta con financiamiento a meses sin
+        intereses</strong> o para renta por evento con entrega, instalación y recolección incluidas.
+        Personalización con grabado láser disponible en cualquier modelo.
+      </p>
+
+      <ul class="ct-hero-checks">
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Entrega e instalación express en 24 hrs (CDMX)
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Envío gratuito a toda la República Mexicana
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Grabado láser de logo sin costo adicional en compra
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Asesoría gratuita para elegir el modelo correcto
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     QUICK LINKS — FILTRO DE CATEGORÍAS
+══════════════════════════════════════════════════ -->
+<nav class="ct-filters" aria-label="Filtrar por tipo de podium">
+  <a href="#modelos-estandar" class="ct-filter ct-filter--active">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
+    <span>Todos los Modelos</span>
+    <strong>8</strong>
+  </a>
+  <a href="#modelos-estandar" class="ct-filter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <span>Modelos Estándar</span>
+    <strong>4</strong>
+  </a>
+  <a href="#modelos-compactos" class="ct-filter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+    <span>Modelos Compactos</span>
+    <strong>4</strong>
+  </a>
+  <a href="#guia-materiales" class="ct-filter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <span>Guía de Materiales</span>
+  </a>
+  <a href="https://wa.me/525516567973?text=Hola%2C%20quiero%20asesor%C3%ADa%20para%20elegir%20el%20podium%20correcto" target="_blank" rel="noopener noreferrer" class="ct-filter ct-filter--cta">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>Asesoría Gratuita</span>
+  </a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════
+     MODELOS ESTÁNDAR
+══════════════════════════════════════════════════ -->
+<section class="ix-section" id="modelos-estandar" aria-labelledby="estandar-title">
+  <div class="ix-container">
+
+    <SectionHeader
+      tag="Modelos Estándar"
+      title="Podiums de Tamaño Completo — 120 cm"
+      description="Cuatro modelos diseñados para auditorios, salones de eventos y espacios corporativos donde la presencia visual es parte del protocolo."
+      id="estandar-title"
+      p1="Los modelos estándar están diseñados para <strong>auditorios, salones de eventos, salas de prensa y escenarios formales</strong> donde la presencia del podium comunica autoridad y profesionalismo desde el primer momento."
+      p2="Cada modelo incluye <strong>garantía escrita de 2 a 3 años, envío gratuito nacional y personalización con grabado láser</strong> disponible. Disponibles para compra con financiamiento o renta por evento."
+    />
+
+    <div class="ix-products-grid">
+      {modelosEstandar.map((p) => (
+        <article class={`ix-product-card ct-product-card`}>
+          <a href={`/catalogo/${p.slug}`} class="ix-product-img-link" tabindex="-1" aria-hidden="true">
+            <img src={p.image} alt={p.imageAlt} width="480" height="300" loading="lazy" />
+            <span class="ix-product-badge">{p.tag}</span>
+          </a>
+          <div class="ix-product-body">
+            <div class="ct-card-meta">
+              <span class={`card-tag ct-mat-${p.materialColor}`}>{p.material}</span>
+              <span class="ct-card-precio">{p.precio}</span>
+            </div>
+            <h3>
+              <a href={`/catalogo/${p.slug}`}>Podium {p.name}</a>
+            </h3>
+            <p>{p.desc}</p>
+
+            <ul class="ix-product-specs" aria-label={`Especificaciones del podium ${p.name}`}>
+              {p.specs.map(s => (
+                <li>
+                  <span class="spec-label">{s.label}</span>
+                  <span class="spec-value">{s.value}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="ct-card-usos">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              {p.usos}
+            </div>
+
+            <div class="ix-product-actions">
+              <WhatsAppButton
+                text="Cotizar"
+                message={`Hola, me interesa cotizar el podium ${p.name}`}
+              />
+              <a href={`/catalogo/${p.slug}`} class="ix-link-more">Ver detalles →</a>
+            </div>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">2</span>
-            <span class="stat-label">Tamanos</span>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     MODELOS COMPACTOS
+══════════════════════════════════════════════════ -->
+<section class="ix-section ix-section-alt" id="modelos-compactos" aria-labelledby="compacto-title">
+  <div class="ix-container">
+
+    <SectionHeader
+      tag="Modelos Compactos"
+      title="Podiums en Formato Reducido — 95 cm"
+      description="Los mismos materiales y acabados de la línea estándar, en un formato optimizado para espacios reducidos, estudios y eventos íntimos."
+      id="compacto-title"
+      p1="Los modelos compactos comparten <strong>exactamente los mismos materiales, acabados y estándares de calidad</strong> que los estándar, en una altura de 95 cm optimizada para salas de juntas, estudios de grabación y eventos de formato íntimo."
+      p2="Ideales para <strong>podcasts, streaming, capacitaciones corporativas y ceremonias en espacios privados</strong> donde el modelo estándar resultaría desproporcionado al espacio."
+    />
+
+    <div class="ix-products-grid">
+      {modelosCompactos.map((p) => (
+        <article class="ix-product-card ct-product-card">
+          <a href={`/catalogo/${p.slug}`} class="ix-product-img-link" tabindex="-1" aria-hidden="true">
+            <img src={p.image} alt={p.imageAlt} width="480" height="300" loading="lazy" />
+            <span class="ix-product-badge ct-badge-compacto">{p.tag}</span>
+          </a>
+          <div class="ix-product-body">
+            <div class="ct-card-meta">
+              <span class={`card-tag ct-mat-${p.materialColor}`}>{p.material}</span>
+              <span class="ct-card-precio">{p.precio}</span>
+            </div>
+            <h3>
+              <a href={`/catalogo/${p.slug}`}>Podium {p.name}</a>
+            </h3>
+            <p>{p.desc}</p>
+
+            <ul class="ix-product-specs" aria-label={`Especificaciones del podium ${p.name}`}>
+              {p.specs.map(s => (
+                <li>
+                  <span class="spec-label">{s.label}</span>
+                  <span class="spec-value">{s.value}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="ct-card-usos">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              {p.usos}
+            </div>
+
+            <div class="ix-product-actions">
+              <WhatsAppButton
+                text="Cotizar"
+                message={`Hola, me interesa cotizar el podium ${p.name}`}
+              />
+              <a href={`/catalogo/${p.slug}`} class="ix-link-more">Ver detalles →</a>
+            </div>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">4</span>
-            <span class="stat-label">Materiales</span>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     GUÍA DE MATERIALES
+══════════════════════════════════════════════════ -->
+<section class="ix-section" id="guia-materiales" aria-labelledby="materiales-title">
+  <div class="ix-container">
+
+    <SectionHeader
+      tag="Guía de Materiales"
+      title="¿Qué Material es el Correcto para tu Evento?"
+      description="Cada material comunica algo diferente. Esta guía te ayuda a tomar la decisión correcta en menos de dos minutos."
+      id="materiales-title"
+      p1="El material del podium <strong>no es solo una decisión estética</strong> — es un mensaje. El acrílico comunica modernidad y apertura; la madera proyecta autoridad e institución; la combinación habla de un nivel premium donde nada se dejó al azar."
+      p2="Si tienes dudas, nuestros asesores pueden recomendarte el modelo exacto según el tipo de evento, el aforo, el sector de tu industria y el presupuesto disponible. <strong>La asesoría no tiene ningún costo.</strong>"
+    />
+
+    <div class="ct-materiales-grid">
+      {materiales.map((mat) => (
+        <div class={`ct-material-card ct-material-card--${mat.id}`}>
+          <div class="ct-mat-header">
+            <div class="ct-mat-icon" set:html={mat.icon} aria-hidden="true"></div>
+            <div>
+              <h3>{mat.nombre}</h3>
+              <span class="ct-mat-sub">{mat.subtitulo}</span>
+            </div>
+          </div>
+          <p class="ct-mat-desc">{mat.desc}</p>
+          <div class="ct-mat-ideal">
+            <span class="ct-mat-ideal-label">Ideal para:</span>
+            <span class="ct-mat-ideal-text">{mat.ideal}</span>
+          </div>
+          <ul class="ct-mat-ventajas">
+            {mat.ventajas.map(v => (
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                {v}
+              </li>
+            ))}
+          </ul>
+          <div class="ct-mat-modelos">
+            {mat.modelos.map(m => (
+              <span>{m}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     ¿COMPRAR O RENTAR?
+══════════════════════════════════════════════════ -->
+<section class="ix-section ix-section-alt" aria-labelledby="comprar-rentar-title">
+  <div class="ix-container">
+
+    <SectionHeader
+      tag="Comprar o Rentar"
+      title="¿Cuál es la Mejor Opción para Tu Caso?"
+      description="Ambas modalidades tienen ventajas claras según la frecuencia de uso, el presupuesto y el tipo de evento."
+      id="comprar-rentar-title"
+      p1="Si realizas <strong>más de 3 eventos al año</strong> o necesitas un podium para uso fijo en tu sede, la compra es la opción financieramente más inteligente. Incluye garantía escrita, personalización definitiva y financiamiento a meses sin intereses."
+      p2="Si tu evento es <strong>puntual o de baja frecuencia</strong>, la renta es la solución perfecta: costo fijo, logística cubierta (entrega, instalación y recolección) y sin preocupaciones de almacenamiento o mantenimiento."
+    />
+
+    <div class="ct-comprar-rentar-grid">
+
+      <!-- Compra -->
+      <div class="ct-cr-card ct-cr-card--compra">
+        <div class="ct-cr-header">
+          <div class="ct-cr-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div>
+            <h3>Compra tu Podium</h3>
+            <span class="ct-cr-badge">Inversión Definitiva</span>
+          </div>
+        </div>
+        <p>La inversión más inteligente para empresas, instituciones y organizadores que realizan eventos de forma recurrente. Un solo pago que da retorno a partir del tercer evento.</p>
+        <ul class="ct-cr-lista">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Garantía escrita de 2 a 3 años</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Personalización definitiva con tu logo</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Financiamiento a meses sin intereses</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Disponible para todos los modelos</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Envío gratuito a todo México</li>
+        </ul>
+        <a href="/venta-de-podiums" class="btn-primary ct-cr-btn">Explorar Compra →</a>
+      </div>
+
+      <!-- Renta -->
+      <div class="ct-cr-card ct-cr-card--renta">
+        <div class="ct-cr-header">
+          <div class="ct-cr-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <h3>Renta por Evento</h3>
+            <span class="ct-cr-badge">Por Día · Semana · Mes</span>
+          </div>
+        </div>
+        <p>La solución más flexible para eventos puntuales. Sin preocupaciones de almacenamiento, transporte ni mantenimiento — todo incluido en un precio fijo por evento.</p>
+        <ul class="ct-cr-lista">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Entrega, instalación y recolección incluidas</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Personalización temporal con tu logo</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Soporte técnico durante el evento</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sin inversión inicial ni almacenamiento</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Disponible en CDMX y área metropolitana</li>
+        </ul>
+        <a href="/renta-de-podiums" class="btn-call ct-cr-btn">Explorar Renta →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PERSONALIZACIÓN
+══════════════════════════════════════════════════ -->
+<section class="ix-section ct-personalizacion" aria-labelledby="pers-title">
+  <div class="ix-container">
+    <div class="ct-pers-inner">
+
+      <div class="ct-pers-copy">
+        <span class="ix-section-tag">Personalización Premium</span>
+        <h2 id="pers-title">Tu Logo en Cada Podium. Con Precisión Milimétrica.</h2>
+        <p>Todos los modelos del catálogo aceptan grabado láser de logo. Enviamos prueba digital antes de grabar. Trabajamos con archivos vectoriales y entregamos el acabado que tu marca merece.</p>
+        <div class="ct-pers-actions">
+          <a href="/personalizacion-total" class="btn-primary">Ver Servicio de Personalización</a>
+          <WhatsAppButton
+            text="Solicitar Prueba Digital"
+            message="Hola, quiero solicitar una prueba digital de personalización con mi logo"
+          />
+        </div>
+      </div>
+
+      <div class="ct-pers-features">
+        <div class="ct-pers-feat">
+          <div class="ct-pers-feat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div>
+            <strong>Grabado Láser de Precisión</strong>
+            <span>Resultado permanente sobre acrílico o madera con acabado profesional</span>
+          </div>
+        </div>
+        <div class="ct-pers-feat">
+          <div class="ct-pers-feat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <div>
+            <strong>Prueba Digital Incluida</strong>
+            <span>Visualizas cómo quedará tu logo antes de proceder con el grabado</span>
+          </div>
+        </div>
+        <div class="ct-pers-feat">
+          <div class="ct-pers-feat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <strong>Archivos Vectoriales</strong>
+            <span>Trabajamos con AI, EPS, SVG y PDF. Sin pérdida de calidad en ningún tamaño</span>
+          </div>
+        </div>
+        <div class="ct-pers-feat">
+          <div class="ct-pers-feat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong>Garantía de Resultado</strong>
+            <span>Si el acabado no cumple el estándar, lo rehacemos sin costo adicional</span>
           </div>
         </div>
       </div>
-      <div class="hero-intro">
-        <h2>Podiums para Cada Tipo de Evento Profesional</h2>
-        <p>Nuestro catalogo de podiums profesionales incluye modelos en acrilico transparente, acrilico negro, madera y combinaciones de madera con acrilico. Cada podium esta disenado para ofrecer presencia, funcionalidad y durabilidad en conferencias de prensa, eventos corporativos, ceremonias gubernamentales y presentaciones ejecutivas en todo Mexico.</p>
-        <p>Disponemos de dos lineas de producto: modelos estandar para auditorios y salones de eventos, y modelos compactos ideales para espacios reducidos, estudios de grabacion y eventos intimos. Todos nuestros podiums pueden personalizarse con grabado de logo, iluminacion LED y acabados especiales para reflejar tu imagen corporativa.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Trust Bar -->
-  <section class="trust-bar">
-    <div class="trust-content">
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Envio Nacional</h3>
-          <p>A todo Mexico</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Entrega 24hrs</h3>
-          <p>CDMX y area metropolitana</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Personalizacion</h3>
-          <p>Logo grabado o impreso</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Pago Seguro</h3>
-          <p>Transferencia y tarjeta</p>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Modelos Estandar -->
-  <section class="section-catalog">
-    <div class="section-header">
-      <h2>Modelos Estandar</h2>
-      <p>Podiums de tamano completo para auditorios, salones de eventos y espacios corporativos.</p>
-    </div>
-    <div class="cards-grid">
-      <a href="/catalogo/acrilico-transparente" class="product-card">
-        <img src="/img/catalogo/acrilico-transparente.webp" alt="Podium de acrilico transparente profesional tamano estandar para conferencias y eventos corporativos" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Acrilico</span>
-          <h3>Podium Acrilico Transparente</h3>
-          <p>Diseno moderno y elegante en acrilico cristalino de alta resistencia. Ideal para conferencias de prensa y eventos donde se busca un estilo contemporaneo y sofisticado.</p>
-        </div>
-      </a>
-      <a href="/catalogo/acrilico-negro" class="product-card">
-        <img src="/img/catalogo/acrilico-negro.webp" alt="Podium de acrilico negro elegante tamano estandar para presentaciones ejecutivas y galas" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Acrilico</span>
-          <h3>Podium Acrilico Negro</h3>
-          <p>Acabado premium en acrilico negro mate con lineas minimalistas. Perfecto para galas, ceremonias de premiacion y presentaciones ejecutivas de alto impacto visual.</p>
-        </div>
-      </a>
-      <a href="/catalogo/podium-madera-negro" class="product-card">
-        <img src="/img/catalogo/podium-madera-negro.webp" alt="Podium de madera negra clasico tamano estandar para ceremonias oficiales y eventos gubernamentales" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Madera</span>
-          <h3>Podium Madera Negro</h3>
-          <p>Podium clasico de madera con acabado negro sobrio y profesional. La opcion predilecta para ceremonias oficiales, eventos gubernamentales y actos academicos formales.</p>
-        </div>
-      </a>
-      <a href="/catalogo/madera-caoba-acrilico" class="product-card">
-        <img src="/img/catalogo/madera-caoba-acrilico.webp" alt="Podium combinado de madera caoba con panel de acrilico tamano estandar para eventos premium" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Combinado</span>
-          <h3>Podium Madera y Acrilico</h3>
-          <p>Combinacion premium de madera caoba natural con panel frontal de acrilico. Fusiona elegancia clasica con modernidad para eventos corporativos de primer nivel.</p>
-        </div>
-      </a>
-    </div>
-  </section>
+<!-- ══════════════════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════════════════ -->
+<section class="ix-cta-final" aria-labelledby="cta-final-title">
+  <div class="ix-cta-final-inner">
 
-  <!-- Modelos Compactos -->
-  <section class="section-catalog">
-    <div class="section-header">
-      <h2>Modelos Compactos</h2>
-      <p>Podiums de tamano reducido para espacios pequenos, estudios de grabacion y eventos intimos.</p>
+    <!-- Izquierda: copy -->
+    <div class="ix-cta-final-copy">
+      <p class="ix-cta-final-eyebrow">Asesoría gratuita · Respuesta en menos de 2 horas</p>
+      <h2 id="cta-final-title">¿No Sabes Cuál Modelo Elegir?</h2>
+      <p>Envíanos un WhatsApp con tu tipo de evento, aforo aproximado y presupuesto. Un asesor especializado te recomienda el modelo correcto ese mismo día, sin compromiso de compra.</p>
     </div>
-    <div class="cards-grid">
-      <a href="/catalogo/acrilico-transparente-compacto" class="product-card">
-        <img src="/img/catalogo/acrilico-transparente-compacto.webp" alt="Podium compacto de acrilico transparente para estudios de grabacion y espacios reducidos" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Acrilico Compacto</span>
-          <h3>Podium Acrilico Transparente Compacto</h3>
-          <p>Version compacta del podium de acrilico transparente, ideal para estudios de grabacion, salas de juntas y espacios donde se requiere un perfil mas reducido.</p>
-        </div>
-      </a>
-      <a href="/catalogo/acrilico-negro-compacto" class="product-card">
-        <img src="/img/catalogo/acrilico-negro-compacto.webp" alt="Podium compacto de acrilico negro para presentaciones en espacios pequenos" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Acrilico Compacto</span>
-          <h3>Podium Acrilico Negro Compacto</h3>
-          <p>Podium compacto en acrilico negro con el mismo acabado premium de la version estandar, optimizado para presentaciones en espacios reducidos y eventos intimos.</p>
-        </div>
-      </a>
-      <a href="/catalogo/podium-madera-negro-compacto" class="product-card">
-        <img src="/img/catalogo/podium-madera-negro-compacto.webp" alt="Podium compacto de madera negra para oficinas y salas de juntas" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Madera Compacto</span>
-          <h3>Podium Madera Negro Compacto</h3>
-          <p>Version compacta del podium de madera negra, perfecto para oficinas corporativas, salas de capacitacion y ceremonias en espacios de formato reducido.</p>
-        </div>
-      </a>
-      <a href="/catalogo/madera-caoba-acrilico-compacto" class="product-card">
-        <img src="/img/catalogo/madera-caoba-acrilico-compacto.webp" alt="Podium compacto combinado de madera caoba con acrilico para eventos exclusivos" width="400" height="220" loading="lazy" />
-        <div class="card-content">
-          <span class="card-tag">Combinado Compacto</span>
-          <h3>Podium Madera y Acrilico Compacto</h3>
-          <p>Combinacion premium de madera caoba y acrilico en formato compacto. Toda la elegancia del modelo estandar adaptada a espacios mas pequenos y eventos selectos.</p>
-        </div>
-      </a>
-    </div>
-  </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>Encuentra el Podium Ideal para tu Evento</h2>
-      <p>Contactanos para recibir asesoria personalizada y una cotizacion a la medida de tus necesidades.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/525564328954?text=Hola,%20me%20interesa%20cotizar%20un%20podium%20de%20su%20catalogo" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp
-        </a>
-        <a href="/contacto" class="btn-call">Contactar</a>
+    <!-- Derecha: botones + trust -->
+    <div class="ix-cta-final-actions">
+      <WhatsAppButton
+        text="Hablar con un Asesor"
+        message="Hola, necesito asesoría para elegir el podium correcto para mi evento"
+      />
+      <a href="/contacto" class="ix-cta-outline-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Formulario de Contacto
+      </a>
+      <div class="ix-cta-trust">
+        <span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          8 modelos disponibles
+        </span>
+        <span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Garantía 2–3 años
+        </span>
+        <span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Envío gratis · Fabricación Nacional
+        </span>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
 </Layout>
 
 <style>
-  .section-catalog {
-    padding: 4rem 0 0;
-  }
-  .section-header {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 1rem;
-    padding: 0 2rem;
-  }
-  .section-header h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.75rem;
-  }
-  .section-header p {
-    font-size: 1rem;
-    color: var(--text-light);
-    line-height: 1.7;
-  }
+/* ═══════════════════════════════════════════════════════
+   CATÁLOGO (L2) — ESTILOS ESPECÍFICOS
+   Homologado al sistema ix-* del index
+═══════════════════════════════════════════════════════ */
+
+/* ── Breadcrumb ─────────────────────────────────────── */
+.ct-breadcrumb {
+  background: var(--secondary);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.75rem 0;
+}
+.ct-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+.ct-breadcrumb-list a {
+  color: var(--text-medium);
+  font-weight: 500;
+}
+.ct-breadcrumb-list a:hover { color: var(--accent); }
+.ct-breadcrumb-list li[aria-current="page"] {
+  color: var(--text-muted);
+}
+.ct-breadcrumb-list li svg {
+  color: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Hero ──────────────────────────────────────────── */
+.ct-hero {
+  padding: 3rem 5% 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.ct-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.ct-hero-copy h1 {
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+.ct-hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-medium);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+.ct-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.ct-editorial-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ct-editorial-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.ct-hero-checks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-light);
+}
+.ct-hero-checks li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+.ct-hero-checks li svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+/* ── Filtros de categoría ───────────────────────────── */
+.ct-filters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+.ct-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.375rem;
+  text-decoration: none;
+  border-right: 1px solid var(--border);
+  color: var(--text-medium);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+.ct-filter:last-child { border-right: none; }
+.ct-filter:hover { background: #fafafa; color: var(--primary); }
+.ct-filter--active {
+  color: var(--primary);
+  font-weight: 600;
+  background: rgba(184, 134, 11, 0.04);
+}
+.ct-filter svg { flex-shrink: 0; color: var(--accent); }
+.ct-filter span { flex: 1; }
+.ct-filter strong {
+  background: var(--secondary-dark);
+  color: var(--text-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+/* CTA destacado */
+.ct-filter--cta {
+  background: var(--primary);
+  color: rgba(255,255,255,0.85);
+}
+.ct-filter--cta:hover { background: #1a1a1a; color: var(--white); }
+.ct-filter--cta svg { color: #25D366; }
+
+@media (max-width: 1100px) {
+  .ct-filters { grid-template-columns: repeat(3, 1fr); }
+  .ct-filter:nth-child(3) { border-right: none; }
+  .ct-filter:nth-child(4),
+  .ct-filter:nth-child(5) { border-top: 1px solid var(--border); }
+  .ct-filter:nth-child(5) { border-right: none; }
+}
+@media (max-width: 640px) {
+  .ct-filters { grid-template-columns: 1fr 1fr; }
+  .ct-filter { padding: 0.875rem 1rem; font-size: 0.82rem; }
+  .ct-filter:nth-child(odd) { border-right: 1px solid var(--border); }
+  .ct-filter:nth-child(even) { border-right: none; }
+  .ct-filter:nth-child(n+3) { border-top: 1px solid var(--border); }
+  .ct-filter--cta { grid-column: span 2; border-right: none; }
+}
+
+/* ── Product card extras ────────────────────────────── */
+.ct-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.375rem;
+}
+.ct-card-precio {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+/* Material badges por color */
+.ct-mat-acrilico { background: rgba(59,130,246,0.08); color: #1e40af; }
+.ct-mat-madera   { background: rgba(120,80,30,0.08); color: #78501e; }
+.ct-mat-combinado { background: rgba(184,134,11,0.10); color: var(--accent-dark); }
+
+.ct-card-usos {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.ct-card-usos svg { color: var(--accent); flex-shrink: 0; }
+
+/* Badge especial compacto */
+.ct-badge-compacto { background: var(--primary); }
+
+/* ── Guía de Materiales ─────────────────────────────── */
+.ct-materiales-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+.ct-material-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: border-color 0.2s;
+}
+.ct-material-card:hover { border-color: var(--accent); }
+
+/* Línea de acento por tipo */
+.ct-material-card--acrilico  { border-top: 3px solid #3b82f6; }
+.ct-material-card--madera    { border-top: 3px solid #78501e; }
+.ct-material-card--combinado { border-top: 3px solid var(--accent); }
+
+.ct-mat-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.ct-mat-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--secondary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+.ct-mat-header h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.3;
+}
+.ct-mat-sub {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  display: block;
+  margin-top: 0.25rem;
+}
+.ct-mat-desc {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  line-height: 1.75;
+}
+.ct-mat-ideal {
+  background: var(--secondary);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.ct-mat-ideal-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.ct-mat-ideal-text {
+  font-size: 0.82rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+.ct-mat-ventajas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ct-mat-ventajas li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-medium);
+}
+.ct-mat-ventajas li svg { flex-shrink: 0; color: var(--accent); }
+.ct-mat-modelos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+.ct-mat-modelos span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  background: var(--secondary);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 900px) { .ct-materiales-grid { grid-template-columns: 1fr; } }
+
+/* ── Comprar o Rentar ───────────────────────────────── */
+.ct-comprar-rentar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+.ct-cr-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.ct-cr-card--compra { border-top: 3px solid var(--primary); }
+.ct-cr-card--renta  { border-top: 3px solid var(--accent); }
+.ct-cr-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ct-cr-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--secondary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+.ct-cr-header h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 0.25rem;
+}
+.ct-cr-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  background: rgba(184, 134, 11, 0.08);
+  padding: 0.2rem 0.625rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+.ct-cr-card > p {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  line-height: 1.75;
+}
+.ct-cr-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.ct-cr-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+.ct-cr-lista li svg { flex-shrink: 0; color: var(--accent); }
+.ct-cr-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+@media (max-width: 760px) { .ct-comprar-rentar-grid { grid-template-columns: 1fr; } }
+
+/* ── Personalización ────────────────────────────────── */
+.ct-personalizacion {
+  background: var(--primary);
+}
+.ct-pers-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.ct-pers-copy .ix-section-tag {
+  background: rgba(184, 134, 11, 0.15);
+  color: var(--accent-light);
+}
+.ct-pers-copy h2 {
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0.75rem 0 1rem;
+}
+.ct-pers-copy p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.ct-pers-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.ct-pers-actions .btn-primary {
+  background: var(--accent);
+  color: var(--primary);
+}
+.ct-pers-actions .btn-primary:hover { background: var(--accent-light); }
+.ct-pers-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.ct-pers-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.125rem;
+}
+.ct-pers-feat-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-light);
+}
+.ct-pers-feat strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+.ct-pers-feat span {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+/* ── CTA Final — reutiliza estilos del index ────────── */
+/* (ix-cta-final definido en index.astro — estilos inline abajo por si acaso) */
+.ix-cta-final {
+  background: var(--primary);
+  padding: 5rem 5%;
+}
+.ix-cta-final-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.ix-cta-final-copy .ix-cta-final-eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-light);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.ix-cta-final-copy h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+.ix-cta-final-copy p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+}
+.ix-cta-final-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  align-items: flex-start;
+}
+.ix-cta-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: border-color 0.15s, color 0.15s;
+}
+.ix-cta-outline-btn:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: var(--white);
+}
+.ix-cta-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1.25rem;
+  margin-top: 0.5rem;
+}
+.ix-cta-trust span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+.ix-cta-trust svg { color: var(--accent-light); }
+
+/* ══ RESPONSIVE GENERAL ══════════════════════════════ */
+@media (max-width: 1024px) {
+  .ct-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .ct-pers-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .ix-cta-final-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
+@media (max-width: 900px) {
+  .ct-hero { padding: 2.5rem 5% 4rem; }
+}
+@media (max-width: 640px) {
+  .ct-cr-card { padding: 1.5rem 1.25rem; }
+  .ct-material-card { padding: 1.5rem 1.25rem; }
+}
 </style>

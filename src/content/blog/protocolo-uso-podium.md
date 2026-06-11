@@ -11,90 +11,78 @@ imageAlt: "Presentador utilizando podium correctamente en recepción empresarial
 featured: false
 ---
 
-El podium es uno de los elementos de mayor protocolo en la comunicación formal. Usarlo correctamente puede potenciar la credibilidad del ponente; usarlo mal puede restar autoridad incluso al mejor discurso. Esta guía resume las buenas prácticas que hemos observado trabajando con cientos de eventos corporativos, gubernamentales y académicos en México.
+He visto presidentes, rectores, ministros, directores ejecutivos. He visto buenos discursos arruinados por postura. He visto discursos mediocres elevados por una presencia segura. La diferencia está en saber usar el podium como aliado, no como refugio.
 
-## El Principio Fundamental del Protocolo del Podium
+El podium está ahí para servirte. No para protegerte.
 
-El podium está diseñado para **servir al ponente, no para sustituirlo**. Todo el protocolo se desprende de este principio: la posición del cuerpo, el uso del micrófono, la relación con las notas y la interacción con la audiencia deben mantenerse abiertos y comunicativos, nunca detrás de una barrera psicológica.
+## La Posición Correcta: 10-15 Centímetros
 
-## Posición Corporal Correcta
+Ese es el espacio. No más atrás. No pegado al podium. 10 a 15 centímetros. Cuerpo ligeramente hacia adelante. Es la posición que dice "tengo algo que decir y estoy seguro de que quieres escucharlo".
 
-### Distancia del Podium
+Pies separados al ancho de los hombros. Apoyados firmemente. Hombros relajados. Espalda recta pero sin parecer soldado en formación. Es lo opuesto a lo que muchos hacen: encorvarse sobre el podium como si lo necesitaran para no caerse, o alejarse tanto que se nota que tienen miedo.
 
-La posición ideal es a **10–15 cm del podium**, con el cuerpo ligeramente proyectado hacia adelante. Aferrarse al podium, o peor, recostarse sobre él, comunica inseguridad o relajación excesiva, ninguna de las dos apropiada en eventos formales.
+Los brazos tienen un rol. No están ahí para agarrarse de los laterales del podium con los nudillos blancos. Tampoco para estar cruzados (signal de defensa, de cierre). Están a los lados, listos para gesticular hacia la audiencia cuando necesites énfasis. Eso no es "teatral". Es comunicación. El cuerpo habla tanto como la voz.
 
-### Postura
+## Las Manos: Tres Posiciones, Una Regla
 
-- Pies separados al ancho de los hombros, firmemente apoyados en el suelo
-- Hombros relajados, no tensos hacia los oídos
-- Espalda recta pero sin rigidez artificial
-- Brazos a los lados o usando gestos naturales hacia la audiencia, nunca cruzados
+**Posición 1: Control.** Manos apoyadas ligeramente en los laterales del podium. Es neutra, accesible, segura. La mayoría del tiempo estás aquí.
 
-### Manos
+**Posición 2: Énfasis.** Gesticulación natural hacia la audiencia. Cuando dices algo importante, las manos acompañan. Abierta, expansiva. Después vuelven a los laterales.
 
-En el podium, las manos tienen tres posiciones correctas:
+**Posición 3: Notas.** Tomas las hojas, las lees, las sueltas. Fluidez. Sin jugueteo.
 
-1. **Manos sobre el podium**, ligeramente apoyadas en los laterales (posición de control)
-2. **Gesticulación natural** hacia la audiencia durante los puntos de énfasis
-3. **Tomar y soltar las notas** con fluidez, sin juguetear con papel, bolígrafo u objetos
+Lo que nunca haces: golpear el podium (se ve defensivo), esconder las manos atrás (se ve culpable), sujetar con tanta fuerza que los nudillos se ponen blancos (se ve nervioso). Tres errores comunes, todos evitables.
 
-Lo que debe evitarse: golpear el podium, esconder las manos detrás del podium durante toda la presentación, o sujetar el lateral con los nudillos blancos.
+## El Micrófono de Cuello de Ganso: Distancia Exacta
 
-## Uso del Micrófono de Podium
+15 a 20 centímetros entre tu boca y la cápsula. No menos. No más. Es donde la voz suena clara sin ese efecto de proximidad que distorsiona.
 
-El micrófono de cuello de ganso (el más común en podiums) tiene características específicas que afectan la distancia correcta:
+El ángulo es crítico. El micrófono apunta a la boca. No al pecho. No a la frente. A la boca. Ajusta la altura del cuello de ganso antes de que empiece el evento, cuando la audiencia aún está acomodándose y nadie te está mirando con atención.
 
-**Distancia óptima:** 15–20 cm entre la boca y la cápsula del micrófono. A menor distancia, el audio se distorsiona (efecto de proximidad). A mayor distancia, se pierde nivel y claridad.
+Aquí va un consejo que nadie da: el micrófono capta TODO a menos de 50 centímetros. Si necesitas toser, aclararte la garganta, decir algo privado a alguien en el escenario, aléjate. El público escucha. La audiencia remota en Zoom también.
 
-**Ángulo:** el micrófono debe apuntar directamente a la boca, no al pecho o a la frente. Ajusta la altura del cuello de ganso antes de comenzar, cuando la audiencia no está aún concentrada en el escenario.
+## Notas: Cómo No Verse Como Que Estás Leyendo
 
-**Pausas:** el podium no es el lugar para toser, aclararse la garganta o hacer comentarios privados. El micrófono de podium capta todo lo que sucede a menos de 50 cm frente a él.
+El error más visible es la "cabeza baja". Lees todo inclinado hacia el podium. Tu voz va hacia abajo. El contacto visual desaparece. Se siente incómodo para la audiencia.
 
-## Uso de Notas y Documentos
+La técnica funciona así: lee una frase completa mentalmente. Levanta la vista. Dices esa frase dirigiéndote a alguien en la audiencia. Repites. Al principio se siente artificial. Después de cuatro o cinco veces, es natural. Y la audiencia jura que hablaste sin notas.
 
-### El Problema de la "Cabeza Baja"
+El material importa. Fuente mínimo 14 puntos. Párrafos cortos. Numeración grande en las páginas. Márgenes amplios para notas personales: lugares donde acelerar, pausas, énfasis.
 
-El error más común en el uso del podium es leer con la cabeza completamente inclinada hacia las notas. Esto rompe el contacto visual con la audiencia y hace que la voz se proyecte hacia el podium en lugar de hacia la sala.
+Nunca grabes las hojas. Deslízalas silenciosamente. El papel se ve profesional. El grapador "clack-clack" durante un discurso se oye en toda la sala.
 
-La técnica correcta: **noticias cortas y levantamiento de vista**. Lee mentalmente una frase completa, luego levanta la vista y di esa frase dirigiéndote a la audiencia. Repite. Con práctica, este ritmo se vuelve natural y crea la ilusión de hablar sin notas.
+## Por Tipo de Evento: Pequeñas Diferencias
 
-### Preparación del Material
+### Gubernamental o Institucional
 
-- Usa fuente grande (mínimo 14–16 puntos) para leer cómodamente sin inclinar la cabeza
-- Numera las páginas con números grandes en la esquina superior
-- Deja márgenes amplios para notas de énfasis o timing
-- Nunca grapar las hojas: deslízalas silenciosamente al terminar cada página
+El podium lleva el escudo o logo oficial. No negocias eso. El orden de ponentes sigue protocolo: titular al final. Cuando cedes el podium, lo haces con gesto de brazo abierto. No solo te vas. El cambio es ceremonia.
 
-## Protocolo Específico por Tipo de Evento
-
-### Evento Gubernamental o Institucional
-
-- El podium lleva el escudo institucional o logo oficial
-- El orden de ponentes sigue jerarquía protocolar (el titular habla último)
-- El anfitrión cede el podium con un gesto de apertura de brazo (nunca simplemente abandona el escenario)
-- Al terminar, el ponente agradece brevemente, recoge sus documentos y retira con paso firme
+Cuando terminas, agradeces brevemente. Recoges tus documentos sin apuro. Te retiras con paso firme. Son detalles. Los periodistas los ven. Los reportes lo mencionan si te equivocas.
 
 ### Conferencia Corporativa
 
-- El podium puede llevar logo de empresa, patrocinador o evento
-- Se permite agua en el podium (botella o vaso, según preferencia)
-- El timing es crítico: respeta los minutos asignados sin excepción
-- El cambio de ponente se coordina con el maestro de ceremonias
+Aquí hay más flexibilidad. Logo de empresa, sí. Agua en el podium, también. Pero el timing es rey. Respeta los minutos asignados. La mayoría de los ponentes falla en esto: dicen "serán cinco minutos" y son quince. Después vuelven con prisa, se nota la tensión.
 
-### Acto Académico (graduación, toma de protesta)
+El cambio de ponente se coordina. No es "ahora te toca a ti, espera a que esta persona se baje". Es coordinado con maestro de ceremonias o moderador.
 
-- La distancia física entre el podium y la audiencia suele ser mayor, por lo que el volumen y la proyección de voz deben compensar
-- El tono es más formal que en eventos corporativos
-- Las ovaciones de la audiencia requieren pausas planificadas en el discurso
+### Académico: Graduación, Toma de Protesta
 
-## El Podium en Eventos Híbridos
+La distancia es generalmente mayor. Auditorio grande, público lejos. Tu volumen y proyección de voz deben compensar. No es gritón, pero sí más proyectado que en una sala pequeña.
 
-Con parte de la audiencia siguiendo en pantalla, hay consideraciones adicionales:
+El tono es más formal. Las pausas son estratégicas. A veces llegan ovaciones. Anticipa eso. Deja espacio en el discurso para pausas de aplauso. Se ve incómodo seguir hablando sobre una ovación.
 
-**Mira a la cámara, no solo a la audiencia presencial.** Identifica previamente dónde está la cámara principal y distribúyete entre el contacto visual con la sala y con el lente.
+## En Transmisión: Donde Todo Cambia Un Poco
 
-**Los gestos son más efectivos que en presencial.** La audiencia remota no tiene el contexto del espacio físico, por lo que los gestos amplios y expresivos cobran más importancia para mantener el dinamismo.
+Con parte de la audiencia en pantalla, hay una regla extra: distribuye tu contacto visual. Parte a la audiencia presencial, parte a la cámara. Identifica dónde está la cámara principal antes de que empiece. Mírala a veces. No constantemente (se ve raro), pero sí regularmente.
 
-**Evita el podium que tapa demasiado.** En eventos híbridos, el acrílico transparente es técnicamente superior porque la audiencia remota puede ver el lenguaje corporal completo del ponente.
+Los gestos son más importantes en video. El público remoto no tiene el contexto espacial. Un gesto amplío que en presencial sería suficiente, en cámara es lo que comunica el énfasis.
 
-La preparación correcta del ponente y el equipo adecuado trabajan juntos para crear presentaciones que impactan tanto a la audiencia presente como a la remota. ¿Necesitas asesoría sobre la configuración correcta para tu próximo evento? Contáctanos.
+Y acá es donde el acrílico transparente gana. En video, cuando alguien se para detrás de un podium sólido, la mitad inferior del cuerpo desaparece. Parece que está sentado. Con acrílico transparente, el público remoto ve al ponente completo. Lenguaje corporal entero. Es técnicamente superior.
+
+## La Preparación Es La Clave
+
+No existe "dar bien un discurso sin preparación". No en eventos formales. La gente que se ve segura al podium practicó. Probó la distancia del micrófono. Leyó las notas en voz alta. Sintió el podium.
+
+Si es tu primer evento así, llega con tiempo. Párate al podium. Ajusta micrófono. Prueba la distancia de lectura. Mira a dónde está la cámara si la hay. Camina el escenario. Diez minutos de esto te ahorran una hora de nerviosismo.
+
+El podium es herramienta. Usada bien, desaparece. Usada mal, es lo único que la audiencia ve. La diferencia está en esos detalles que nadie menciona pero todos notan.

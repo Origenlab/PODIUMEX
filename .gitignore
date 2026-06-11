@@ -5,3 +5,5 @@ node_modules
 dist
 .cache
 .astro
+# macOS
+.DS_Store

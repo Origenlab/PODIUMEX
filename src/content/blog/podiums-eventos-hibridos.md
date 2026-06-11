@@ -11,88 +11,93 @@ imageAlt: "Configuración de podium para conferencia híbrida con streaming en Z
 featured: false
 ---
 
-Los eventos híbridos se han convertido en el nuevo estándar. Cuando parte de tu audiencia está presencialmente en el salón y otra parte te sigue desde sus dispositivos, el podium no solo necesita verse bien en vivo: tiene que rendir perfectamente frente a las cámaras. Esta guía técnica cubre todo lo que necesitas saber.
+Aquí va la verdad: en un evento presencial el podium es un mueble. En un evento híbrido, el podium es literalmente lo que ven cinco mil personas en sus pantallas durante tres horas. Eso cambia todo.
 
-## Por qué el Podium Importa Más en Eventos Híbridos
+## Por Qué Tu Elección de Podium Importa (Incluso Si Nadie Lo Dice)
 
-En un evento 100% presencial, el podium es el centro visual del escenario. En un evento híbrido, el podium **es literalmente el encuadre** que miles de personas verán en sus pantallas durante horas. Un podium mal elegido o mal posicionado arruina la producción visual de una transmisión, sin importar la calidad del contenido.
+Mira qué pasa en un evento híbrido mal hecho. El ponente está ahí, la transmisión está funcionando, pero algo se siente incómodo. ¿Por qué? Tres razones típicas:
 
-Los tres errores más comunes que vemos en eventos híbridos mal ejecutados:
+**Acabados brillantes que reflejan luz.** El podium se ve como un espejo en cámara. Es molesto, distrae, y cada movimiento del ponente genera reflejos que cruzan la pantalla.
 
-1. **Podiums con acabados brillantes** que generan reflejos en cámara
-2. **Materiales oscuros** que absorben la luz y crean sombras en el ponente
-3. **Podiums de tamaño incorrecto** que ocultan al ponente o se ven desproporcionados en plano general
+**Materiales oscuros que "comen" luz.** El ponente se ve oscuro, las sombras en la cara son duras. La audiencia remota se queja de que no se ve bien, cuando el problema es el podium, no la cámara.
 
-## El Podium Ideal para Streaming
+**Podium desproporcionado.** Demasiado grande y el ponente parece pequeño. Demasiado pequeño y se ve incómodo. El plano general se ve incorrecto y nadie sabe por qué.
 
-### Acrílico Transparente: El Estándar de la Industria Audiovisual
+El problema es que nadie dice esto hasta que es demasiado tarde. Ya está transmitiendo.
 
-El podium de acrílico transparente se convirtió en el preferido para streaming por razones técnicas concretas:
+## El Acrílico Transparente Es El Estándar Por Una Razón
 
-**Transparencia visual.** Al no tener masa visual sólida, el acrílico no "roba" espacio al ponente en cámara. El presentador se ve completo, lo que permite tanto planos abiertos (que muestran el lenguaje corporal) como planos medios (que enfocan en el rostro y manos).
+Si buscas en productoras audiovisuales profesionales, todas —todas— usan acrílico transparente para streaming. Y no es porque sea bonito. Es porque funciona técnicamente.
 
-**Comportamiento con la luz.** El acrílico difunde la luz suavemente sin crear reflejos duros. Con iluminación frontal correcta (luces de tres puntos a temperatura de color 5600K), el acrílico desaparece visualmente y solo permanece el ponente.
+Primero, no tiene "masa visual sólida". El acrílico deja que el ponente sea el centro visual. En plano abierto ves su lenguaje corporal completo. En plano medio ves cara y manos. No hay nada que bloquee la visión.
 
-**Versatilidad cromática.** Funciona con cualquier color de fondo: pantalla LED, cyclorama blanco, fondos de vinilo o greenscreen para postproducción.
+Segundo, la luz se comporta diferente en acrílico. No genera reflejos duros como la madera o el vidrio. Con iluminación frontal correcta (vamos a hablar de eso) el acrílico literalmente desaparece. Solo ves el ponente.
 
-### Configuración Técnica Recomendada
+Tercero, funciona con cualquier fondo. ¿Pantalla LED de color? Check. ¿Cyclorama blanco? Check. ¿Greenscreen para edición? Check. El acrílico se adapta.
 
-#### Posicionamiento de Cámara
+## Setup Técnico: La Configuración Que Funciona
 
-Para transmisiones profesionales recomendamos dos cámaras mínimo:
+### Dónde Pones las Cámaras
 
-- **Cámara principal:** plano medio al ponente, a la altura del podium, ligeramente elevada (ángulo 5°–10° descendente)
-- **Cámara secundaria:** plano general del escenario completo para tomas de corte
+Dos cámaras mínimo. No negocias eso.
 
-La cámara principal debe estar a una distancia de 4–6 metros del podium para usar una focal de 50–85mm equivalente. Este rango focal aplana levemente la perspectiva y es el más favorecedor para retratos en video.
+**Cámara 1 (la principal):** plano medio del ponente. Posiciona a la altura del podium, pero ligeramente inclinada hacia abajo (ángulo de 5 a 10 grados). A una distancia de 4 a 6 metros. Con esa distancia usas una focal de entre 50 y 85mm equivalente, que es el rango que se ve más natural para retrato en video.
 
-#### Iluminación para Streaming
+**Cámara 2 (la secundaria):** plano general completo del escenario. Es para cortes, para mostrar al público si hay, para abrir la toma cuando es necesario.
 
-| Luz | Tipo | Temperatura | Posición |
-|---|---|---|---|
-| Key light | LED panel | 5600K | 45° frente-lateral derecha |
-| Fill light | LED suave | 5600K | 45° frente-lateral izquierda |
-| Back light | LED spot | 5600K | Detrás-arriba |
-| Kicker | LED spot | 3200K | Lateral extremo |
+No cometas el error de ponerlas ambas a la misma distancia. Necesitas variación.
 
-El **back light** es crítico en eventos híbridos: separa visualmente al ponente del fondo y evita que se "pierda" contra la pantalla de proyección trasera.
+### Iluminación: Donde La Mayoría Se Equivoca
 
-#### Audio
+La luz es lo que hace que un event streaming se vea profesional o casero. Punto.
 
-El podium de PODIUMEX incluye portamicrófonos compatibles con:
-- Micrófono de cuello estándar (jack 3.5mm y XLR)
-- Micrófono de podium cuello de ganso (XLR)
-- Superficie plana para micrófono de superficie
+Necesitas:
 
-Para streaming recomendamos micrófono de condensador de cuello de ganso con respuesta en frecuencia de 80Hz–18kHz para captación óptima de voz.
+- **Key light** (luz principal): LED panel a 5600K de temperatura. Posición: 45 grados hacia la derecha, al frente. Esta es la que alumbra la cara.
+- **Fill light** (luz de relleno): LED suave a 5600K, 45 grados hacia la izquierda. Suaviza las sombras que genera la key.
+- **Back light** (luz trasera): LED spot a 5600K, detrás y arriba del ponente. Esto es crítico. Separa visualmente al ponente del fondo. Sin esto, la persona "se pega" a la pantalla de proyección y pierde profundidad.
+- **Kicker** (opcional pero lujoso): LED spot a 3200K, lateral extremo. Es el toque que dice "producción profesional". Aporta volumen y dimensión.
 
-## Setup para Plataformas Específicas
+El back light específicamente: muchos organizadores lo olvidan y después se arrepienten. Es la diferencia entre parecer amateur y parecer producción.
 
-### Zoom Webinars y Teams Live Events
+### Audio: Lo Obvio Que Nadie Hace Bien
 
-Estas plataformas comprimen el video significativamente. Para compensar:
+El podium de PODIUMEX acepta cualquier micrófono estándar de cuello de ganso con conector XLR. Punto de partida: un condensador decente. Rango de frecuencia mínimo 80Hz a 18kHz.
 
-- Usa fondo sólido o con poco movimiento (evitar cortinas o plantas móviles)
-- Ilumina uniformemente sin sombras duras
-- Posiciona el podium centrado en el encuadre con espacio lateral simétrico
+¿Por qué? Porque capta la voz de forma clara y directa, sin ese sonido "apagado" de los micrófonos baratos que parecen del año 2003.
 
-### YouTube Live y Vimeo Livestream
+Coloca el micrófono a 15-20 cm de la boca. Prueba distancia antes de que empiece. A menor distancia distorsiona. A mayor distancia se pierde claridad. Hay un punto dulce.
 
-Plataformas que aceptan calidad más alta (hasta 4K). Aquí el acrílico transparente brilla porque las cámaras profesionales capturan su translucidez de manera hermosa. Recomendamos backlight ligeramente coloreado con el color de marca del cliente.
+## Plataformas Específicas: Cada Una Tiene Trucos
 
-### Instagram Live y LinkedIn Live
+### Zoom y Teams
 
-Para estos formatos el encuadre es vertical o cuadrado. El podium compacto funciona mejor porque ocupa menos espacio horizontal y deja más área de visibilidad al ponente en el encuadre vertical.
+Estas plataformas comprimen el video más agresivamente. La imagen pierde detalle. Para compensar:
 
-## Checklist de Setup Híbrido con PODIUMEX
+- Fondo sólido o con poco movimiento. Evita cortinas, plantas, elementos dinámicos.
+- Iluminación uniforme. Nada de sombras duras.
+- Podium centrado, simétrico en el encuadre, con espacio lateral igual a ambos lados.
 
-Nuestro servicio de setup para streaming incluye:
+Es casi como diseñar para una resolución baja. Mantenlo simple.
 
-- [ ] Selección y entrega del podium correcto para tu plataforma
-- [ ] Asesoría de posicionamiento con base en plano del venue
-- [ ] Verificación de compatibilidad de micrófono
-- [ ] Prueba de imagen en cámara antes del evento
-- [ ] Soporte técnico durante toda la transmisión
-- [ ] Desmontaje y recolección post-evento
+### YouTube y Vimeo
 
-Los eventos híbridos bien ejecutados multiplican el alcance de tu mensaje. Con la configuración correcta, tu podium puede ser el elemento que separa una transmisión amateur de una producción profesional. Contáctanos para una consulta técnica gratuita.
+Mejor compresión, aceptan hasta 4K. Aquí el acrílico brilla porque se ve claramente la translucidez, el efecto de profundidad. Si tienes un backlight coloreado con tu color de marca, acá es donde se ve hermoso.
+
+### Instagram y LinkedIn
+
+Formato vertical u horizontal variable. El podium compacto es la mejor opción. Ocupa menos espacio horizontal, deja más área visible para el ponente. Es especialmente importante en vertical, donde el espacio es limitado.
+
+## Checklist: Lo Que Necesitas Antes De Transmitir
+
+- [ ] ¿Seleccionaste el podium correcto para tu plataforma? (Transparente para streaming, generalmente)
+- [ ] ¿Probaste la posición del podium en el espacio? ¿Se ve proporcionado en cámara?
+- [ ] ¿Verificaste que el micrófono es compatible? ¿Funciona el XLR?
+- [ ] ¿Corriste una prueba de imagen con cámara antes del evento? ¿Se ve bien?
+- [ ] ¿Tienes iluminación frontal + back light? (Muchos se olvidan del back light.)
+- [ ] ¿Probaste el audio? ¿La distancia micrófono-boca está correcta?
+- [ ] ¿Tienes a alguien disponible durante toda la transmisión por si algo falla?
+
+Los eventos híbridos bien ejecutados multiplican tu alcance. Literalmente. Un evento presencial es X cantidad de personas en un salón. Un evento híbrido es X personas ahí más cinco mil viendo en vivo. Eso justifica hacer bien la técnica.
+
+Contáctanos y hacemos una consulta técnica sin costo. Vemos tu espacio, tu setup, y te recomendamos exactamente qué necesitas. Es 30 minutos que después te ahorran horas de problemas.

@@ -9,7 +9,7 @@
 // CONFIGURATION
 // ============================================
 const CONFIG = {
-    whatsappNumber: '525530454714',
+    whatsappNumber: '525516567973',
     headerScrollThreshold: 50,
     scrollTopThreshold: 300,
     animationThreshold: 0.1,
