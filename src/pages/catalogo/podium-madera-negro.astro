@@ -1,13 +1,99 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { productSchema, breadcrumb } from '../../data/schema';
+import { productSchema, breadcrumb, faqSchema } from '../../data/schema';
+import SectionHeader from '../../components/SectionHeader.astro';
+import QuickLinks from '../../components/QuickLinks.astro';
+import CtaFinal from '../../components/CtaFinal.astro';
+import HelpSection from '../../components/HelpSection.astro';
+import ProductSidebar from '../../components/ProductSidebar.astro';
+import { homeFaqs } from '../../data/faqs';
+
+const sku = 'PDX-MAD-NEG-001';
+const waMsg = 'Hola, me interesa el Podium de Madera Negro (PDX-MAD-NEG-001). ¿Renta o venta?';
+const waHref = `https://wa.me/525516567973?text=${encodeURIComponent(waMsg)}`;
+
+const gallery = [
+  { src: '/img/catalogo/podium-madera-negro.webp', alt: 'Podium de madera negra lacada para ceremonias oficiales y eventos institucionales' },
+  { src: '/img/catalogo/podium-madera-negro-lateral.webp', alt: 'Vista lateral del podium de madera negra con perfil sólido' },
+  { src: '/img/catalogo/podium-madera-negro-detalle.webp', alt: 'Detalle del acabado lacado del podium de madera negra' },
+];
+
+const especificaciones = [
+  ['Material', 'MDF lacado negro'],
+  ['Acabado', 'Lacado satinado'],
+  ['Altura', '120 cm'],
+  ['Ancho', '55 cm'],
+  ['Profundidad', '40 cm'],
+  ['Peso', '16 kg'],
+  ['Color', 'Negro'],
+  ['Garantía', '3 años (escrita)'],
+  ['SKU', sku],
+];
+
+const caracteristicas = [
+  'MDF de alta densidad con lacado uniforme y resistente.',
+  'Estructura sólida que proyecta autoridad y formalidad.',
+  'Superficie amplia con repisa para documentos, laptop o micrófono.',
+  'Cuerpo cerrado al frente, ideal para escudos y branding institucional.',
+  'Base estable y reforzada para uso intensivo.',
+  'Compatible con grabado o placa institucional.',
+  'Acabado que no muestra huellas ni reflejos bajo reflectores.',
+  'Pensado para uso recurrente en recintos y auditorios.',
+];
+
+const incluyeRenta = [
+  'Entrega e instalación en tu sede',
+  'Nivelación y prueba en sitio',
+  'Soporte técnico durante el evento',
+  'Recolección al finalizar',
+];
+const incluyeVenta = [
+  'Garantía escrita de 3 años',
+  'Financiamiento a meses sin intereses',
+  'Grabado de escudo o logo (opcional)',
+  'Factura para empresa o gobierno',
+];
+const idealPara = [
+  'Eventos gubernamentales', 'Tomas de protesta', 'Universidades', 'Ceremonias oficiales',
+  'Informes y comparecencias', 'Conferencias institucionales', 'Auditorios y recintos',
+];
+
+const beneficios = [
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    title: 'Autoridad y formalidad',
+    desc: 'La madera lacada es la elección de gobiernos, universidades e instituciones que exigen presencia y solidez en cada acto oficial.',
+    badge: 'Institucional',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`,
+    title: 'Frente para tu escudo',
+    desc: 'Su cuerpo cerrado al frente es la superficie perfecta para colocar el escudo institucional o el logo de tu organización.',
+    badge: 'Branding',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>`,
+    title: 'Renta o venta',
+    desc: 'Por evento con entrega, instalación y recolección, o compra con garantía escrita de 3 años y financiamiento a meses.',
+    badge: 'Flexible',
+  },
+];
+
+const relacionados = [
+  { href: '/catalogo/madera-caoba-acrilico', tag: 'Combinado', title: 'Madera y Acrílico', desc: 'Calidez de la madera caoba con la modernidad del frente de acrílico.', image: '/img/catalogo/madera-caoba-acrilico.webp', imageAlt: 'Podium de madera caoba con frente de acrílico' },
+  { href: '/catalogo/acrilico-negro', tag: 'Acrílico', title: 'Acrílico Negro', desc: 'Sofisticación de alto contraste para galas, premiaciones y eventos VIP.', image: '/img/catalogo/acrilico-negro.webp', imageAlt: 'Podium de acrílico negro mate premium' },
+  { href: '/catalogo/acrilico-transparente', tag: 'Acrílico', title: 'Acrílico Transparente', desc: 'Diseño minimalista y moderno para conferencias y eventos de alto impacto.', image: '/img/catalogo/acrilico-transparente.webp', imageAlt: 'Podium de acrílico transparente profesional' },
+  { href: '/catalogo/podium-madera-negro-compacto', tag: 'Compacto', title: 'Madera Negro Compacto', desc: 'La solidez de la madera lacada en formato reducido para salas y juntas.', image: '/img/catalogo/podium-madera-negro-compacto.webp', imageAlt: 'Podium compacto de madera negra' },
+];
+
+const description = 'Venta y renta del podium de madera negra con acabado lacado: autoridad y formalidad para eventos gubernamentales, universidades y ceremonias oficiales en México. Garantía de 3 años y entrega en 24 h.';
 
 const schema = productSchema({
   name: 'Podium de Madera Negro',
   slug: 'podium-madera-negro',
-  description: 'Venta y renta del podium de madera negra con acabado lacado premium. Clásico y elegante para ceremonias oficiales, eventos gubernamentales y corporativos.',
-  images: ['/img/catalogo/podium-madera-negro.webp','/img/catalogo/podium-madera-negro-lateral.webp','/img/catalogo/podium-madera-negro-detalle.webp'],
-  sku: 'PDX-MAD-NEG-001',
+  description,
+  images: gallery.map((g) => g.src),
+  sku,
   material: 'Madera',
 });
 
@@ -16,170 +102,213 @@ const breadcrumbSchema = breadcrumb([
   { name: 'Catálogo', path: '/catalogo' },
   { name: 'Madera Negro' },
 ]);
+
+const faqLd = faqSchema(homeFaqs);
+const check = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
 ---
 
-<Layout title="Podium de Madera Negro - Venta y Renta" description="Venta y renta del podium de madera negra con acabado lacado premium. Clásico y elegante para ceremonias oficiales, eventos gubernamentales y corporativos." canonical="/catalogo/podium-madera-negro" schema={schema} breadcrumbSchema={breadcrumbSchema}>
+<Layout
+  title="Podium de Madera Negro | Renta y Venta | PODIUMEX"
+  description={description}
+  canonical="/catalogo/podium-madera-negro"
+  ogType="product"
+  ogImage="/img/catalogo/podium-madera-negro.webp"
+  schema={schema}
+  breadcrumbSchema={breadcrumbSchema}
+>
 
-  <nav class="breadcrumbs" aria-label="Navegacion">
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="Ruta de navegación" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">
       <a href="/" class="breadcrumb-link">Inicio</a>
-      <span class="breadcrumb-arrow">></span>
-      <a href="/catalogo" class="breadcrumb-link">Catalogo</a>
-      <span class="breadcrumb-arrow">></span>
-      <span class="breadcrumb-current">Podium de Madera Negro</span>
+      <span class="breadcrumb-arrow" aria-hidden="true">&rsaquo;</span>
+      <a href="/catalogo" class="breadcrumb-link">Catálogo</a>
+      <span class="breadcrumb-arrow" aria-hidden="true">&rsaquo;</span>
+      <span class="breadcrumb-current" aria-current="page">Madera Negro</span>
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Podium de <span class="highlight">Madera Negro</span></h1>
-        <p>Clasico y elegante con acabado lacado premium. La elección ideal para ceremonias oficiales, eventos gubernamentales y corporativos de alto nivel.</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">120cm</span>
-            <span class="stat-label">Altura</span>
+  <!-- ══ HERO (idéntico al index) ══ -->
+  <section class="ix-hero" aria-labelledby="pdp-title">
+    <div class="ix-hero-inner">
+      <div class="ix-hero-copy">
+        <div class="ix-eyebrow">
+          <span class="ix-eyebrow-dot" aria-hidden="true"></span>
+          Madera · Autoridad Clásica
+        </div>
+        <h1 id="pdp-title">
+          Podium de <span class="ix-highlight">Madera Negro</span>
+        </h1>
+        <p class="ix-hero-desc">
+          Tradición, autoridad y solidez en madera lacada negra. El podium de gobiernos,
+          universidades e instituciones que exigen formalidad absoluta en cada acto.
+        </p>
+      </div>
+      <div class="ix-hero-editorial">
+        <p class="ix-editorial-p">
+          Su cuerpo cerrado y su acabado lacado proyectan <strong>seriedad institucional</strong>.
+          Es el frente ideal para colocar el escudo o logo de tu organización en ceremonias y actos oficiales.
+        </p>
+        <p class="ix-editorial-p">
+          Disponible en <strong>renta o venta desde $7,800 MXN</strong>, con entrega en 24 h en CDMX,
+          garantía escrita de 3 años y personalización con grabado o placa institucional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accesos rápidos -->
+  <QuickLinks items={[
+    { icon: 'catalogo', label: 'Ver Todo el Catálogo', sub: '8 modelos disponibles', href: '/catalogo' },
+    { icon: 'renta', label: 'Renta de Podiums', sub: 'Por día, semana o evento', href: '/renta-de-podiums' },
+    { icon: 'venta', label: 'Venta de Podiums', sub: 'Compra con garantía escrita', href: '/venta-de-podiums' },
+    { icon: 'personalizacion', label: 'Personalización', sub: 'Grabado de escudo o logo', href: '/personalizacion-total' },
+    { icon: 'whatsapp', label: 'Cotización Gratuita', sub: 'Respuesta en menos de 2 horas', href: waHref, accent: true, external: true },
+  ]} />
+
+  <!-- ══ DETALLE DEL PRODUCTO (contenido + sidebar de interlinking) ══ -->
+  <section class="ix-section" aria-label="Detalle del producto">
+    <div class="ix-container">
+      <div class="ix-with-sidebar">
+
+        <!-- Columna principal -->
+        <div class="ix-main">
+          <!-- Galería (grid 3 por fila) -->
+          <div class="ix-pdp-gallery3">
+            {gallery.map((g) => (
+              <img src={g.src} alt={g.alt} width="400" height="300" loading="lazy" />
+            ))}
           </div>
-          <div class="stat-item">
-            <span class="stat-number">18kg</span>
-            <span class="stat-label">Peso</span>
+
+          <h2>Especificaciones técnicas</h2>
+          <p>
+            Fabricado en <strong>MDF de alta densidad con lacado negro satinado</strong>. Una pieza
+            sólida y formal, diseñada para gobiernos, universidades e instituciones donde la presencia
+            y el protocolo son parte del mensaje.
+          </p>
+
+          <div class="ix-specgrid">
+            {especificaciones.map(([k, v]) => (
+              <div class="ix-spec"><span class="l">{k}</span><span class="v">{v}</span></div>
+            ))}
           </div>
-          <div class="stat-item">
-            <span class="stat-number">50cm</span>
-            <span class="stat-label">Ancho</span>
+
+          <div class="ix-callout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <p><strong>Frente para tu escudo:</strong> a diferencia del acrílico, el cuerpo cerrado de la madera ofrece una superficie sólida ideal para grabar el escudo nacional, el logo de la universidad o la placa de tu institución.</p>
+          </div>
+
+          <h2>¿Qué incluye?</h2>
+          <div class="ix-twocol">
+            <div class="ix-infocard">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                En renta (por evento)
+              </h3>
+              <ul class="ix-feature-list">
+                {incluyeRenta.map((c) => (<li><Fragment set:html={check} />{c}</li>))}
+              </ul>
+            </div>
+            <div class="ix-infocard">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                En venta
+              </h3>
+              <ul class="ix-feature-list">
+                {incluyeVenta.map((c) => (<li><Fragment set:html={check} />{c}</li>))}
+              </ul>
+            </div>
+          </div>
+
+          <h2>Características</h2>
+          <ul class="ix-feature-list ix-feature-list--2col">
+            {caracteristicas.map((c) => (<li><Fragment set:html={check} />{c}</li>))}
+          </ul>
+
+          <h3>Ideal para</h3>
+          <div class="ix-tags">
+            {idealPara.map((t) => (<span class="ix-tag">{t}</span>))}
           </div>
         </div>
-        <div class="hero-cta">
-          <a href="https://wa.me/525516567973?text=Hola,%20me%20interesa%20el%20Podium%20de%20Madera%20Negro%20(PDX-MAD-NEG-001)" class="btn-whatsapp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-          <a href="/contacto" class="btn-call">Solicitar Cotización</a>
-        </div>
-      </div>
-      <div class="hero-intro">
-        <h2>Podium de madera negra lacada para ceremonias y eventos oficiales</h2>
-        <p>El podium de madera negro representa la tradición y la formalidad que demandan los eventos institucionales y gubernamentales. Su acabado lacado premium ofrece una presencia imponente en el escenario, proyectando seriedad y profesionalismo en cada discurso o presentación.</p>
-        <p>PODIUMEX ofrece este modelo en renta y venta, fabricado con MDF de alta densidad y un proceso de lacado que garantiza un acabado espejo resistente al uso frecuente. Entrega disponible en toda la Ciudad de México y zona metropolitana.</p>
+
+        <!-- Sidebar de interlinking -->
+        <ProductSidebar
+          currentSlug="podium-madera-negro"
+          modelName="Podium de Madera Negro"
+          price="Desde $7,800 MXN"
+          waHref={waHref}
+        />
+
       </div>
     </div>
   </section>
 
-  <section class="trust-bar">
-    <div class="trust-content">
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Envío e Instalación</h3>
-          <p>En CDMX y area metropolitana</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Acabado Lacado</h3>
-          <p>Terminado espejo premium</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Soporte Personalizado</h3>
-          <p>Asesoría para tu evento</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Disponibilidad Inmediata</h3>
-          <p>Stock listo para entrega</p>
-        </div>
+  <!-- ══ BENEFICIOS ══ -->
+  <section class="ix-section ix-section-alt" aria-labelledby="benef-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="¿Por qué este modelo?"
+        title="El Podium de las Instituciones"
+        description="Tres razones por las que la madera negra es la elección para actos oficiales."
+        id="benef-title"
+        p1="En un acto de gobierno o una ceremonia universitaria, el podium <strong>comunica jerarquía</strong>. La madera lacada aporta solemnidad y protocolo."
+        p2="Y porque cada pieza incluye <strong>garantía escrita de 3 años, entrega express y personalización</strong>, la decisión es sencilla."
+      />
+      <div class="ix-diff-grid" style="grid-template-columns:repeat(3,1fr);">
+        {beneficios.map((b) => (
+          <div class="ix-diff-card">
+            <div class="ix-diff-icon" set:html={b.icon} aria-hidden="true"></div>
+            <span class="ix-diff-badge">{b.badge}</span>
+            <h3>{b.title}</h3>
+            <p>{b.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <section style="padding:4rem var(--gutter)">
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem">
-      <img src="/img/catalogo/podium-madera-negro.webp" alt="Podium de madera negra lacada para ceremonias oficiales" loading="lazy" style="width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover">
-      <img src="/img/catalogo/podium-madera-negro-lateral.webp" alt="Vista lateral del podium madera negro clasico" loading="lazy" style="width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover">
-      <img src="/img/catalogo/podium-madera-negro-detalle.webp" alt="Detalle del acabado lacado del podium madera negro" loading="lazy" style="width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover">
-    </div>
-  </section>
-
-  <section style="padding:0 var(--gutter) 4rem">
-    <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:1.5rem">Especificaciones Tecnicas</h2>
-    <table style="width:100%;border-collapse:collapse;margin-bottom:2rem">
-      <tr style="border-bottom:1px solid var(--border)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary);width:40%">Material</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">Madera MDF lacada</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);background:var(--secondary)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary)">Altura</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">120cm</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary)">Ancho</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">50cm</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);background:var(--secondary)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary)">Profundidad</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">40cm</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary)">Peso</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">18kg</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);background:var(--secondary)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary)">Color</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">Negro lacado</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border)">
-        <td style="padding:0.75rem 1rem;font-weight:600;color:var(--primary)">SKU</td>
-        <td style="padding:0.75rem 1rem;color:var(--text-medium)">PDX-MAD-NEG-001</td>
-      </tr>
-    </table>
-
-    <h3 style="font-size:1.25rem;font-weight:700;color:var(--primary);margin-bottom:1rem">Caracteristicas</h3>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:2rem">
-      <li style="padding-left:1.25rem;position:relative;font-size:0.95rem;color:var(--text-medium);line-height:1.6">Madera MDF de alta densidad con acabado lacado espejo</li>
-      <li style="padding-left:1.25rem;position:relative;font-size:0.95rem;color:var(--text-medium);line-height:1.6">Superficie amplia de 50cm para documentos y equipo</li>
-      <li style="padding-left:1.25rem;position:relative;font-size:0.95rem;color:var(--text-medium);line-height:1.6">Estructura reforzada para máxima estabilidad</li>
-      <li style="padding-left:1.25rem;position:relative;font-size:0.95rem;color:var(--text-medium);line-height:1.6">Compartimento interno para almacenamiento discreto</li>
-      <li style="padding-left:1.25rem;position:relative;font-size:0.95rem;color:var(--text-medium);line-height:1.6">Resistente a rayaduras y marcas de uso</li>
-      <li style="padding-left:1.25rem;position:relative;font-size:0.95rem;color:var(--text-medium);line-height:1.6">Ideal para ceremonias oficiales, graduaciones y eventos gubernamentales</li>
-    </ul>
-  </section>
-
-  <section class="cards-grid">
-    <h2 style="grid-column:1/-1;font-size:1.75rem;font-weight:700;color:var(--primary);text-align:center;margin-bottom:1rem">Modelos Relacionados</h2>
-    <a href="/catalogo/madera-caoba-acrilico" class="product-card">
-      <img src="/img/catalogo/madera-caoba-acrilico.webp" alt="Podium madera caoba con acrilico" loading="lazy">
-      <div class="card-content">
-        <span class="card-tag">Premium</span>
-        <h3>Madera Caoba con Acrílico</h3>
-        <p>Combinación elegante de madera caoba con frente de acrílico transparente.</p>
+  <!-- ══ MODELOS RELACIONADOS ══ -->
+  <section class="ix-section" aria-labelledby="rel-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="Catálogo"
+        title="Modelos Relacionados"
+        description="Otros podiums que también podrían encajar con el estilo de tu evento."
+        id="rel-title"
+        p1="Tenemos <strong>8 modelos en acrílico, madera y combinados</strong>, en talla estándar y compacta, para cada contexto de presentación."
+        p2="¿No sabes cuál elegir? Te asesoramos <strong>sin costo</strong> según tu tipo de evento, aforo y presupuesto."
+      />
+      <div class="ix-services-grid ix-cards-tall">
+        {relacionados.map((r) => (
+          <a href={r.href} class="ix-service-card">
+            <div class="ix-service-img">
+              <img src={r.image} alt={r.imageAlt} width="400" height="180" loading="lazy" />
+              <span class="ix-service-tag">{r.tag}</span>
+            </div>
+            <div class="ix-service-body">
+              <h3>{r.title}</h3>
+              <p>{r.desc}</p>
+              <span class="ix-service-cta">Ver modelo →</span>
+            </div>
+          </a>
+        ))}
       </div>
-    </a>
-    <a href="/catalogo/podium-madera-negro-compacto" class="product-card">
-      <img src="/img/catalogo/podium-madera-negro-compacto.webp" alt="Podium madera negro compacto" loading="lazy">
-      <div class="card-content">
-        <span class="card-tag">Compacto</span>
-        <h3>Madera Negro Compacto</h3>
-        <p>Versión compacta del podium de madera negra para espacios reducidos.</p>
-      </div>
-    </a>
-    <a href="/catalogo/acrilico-negro" class="product-card">
-      <img src="/img/catalogo/acrilico-negro.webp" alt="Podium acrilico negro" loading="lazy">
-      <div class="card-content">
-        <span class="card-tag">Acrílico</span>
-        <h3>Podium Acrílico Negro</h3>
-        <p>Elegante podium de acrílico negro con acabado mate premium.</p>
-      </div>
-    </a>
-  </section>
-
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>Cotiza tu Podium de Madera Negro</h2>
-      <p>Contáctanos para obtener una cotización personalizada. Ofrecemos renta y venta con entrega en toda la CDMX y area metropolitana.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/525516567973?text=Hola,%20me%20interesa%20el%20Podium%20de%20Madera%20Negro%20(PDX-MAD-NEG-001)" class="btn-whatsapp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-        <a href="/contacto" class="btn-call">Solicitar Cotización</a>
+      <div class="ix-section-footer">
+        <a href="/catalogo" class="btn-primary">Ver Catálogo Completo</a>
       </div>
     </div>
   </section>
+
+  <CtaFinal
+    eyebrow="Cotización gratuita · Respuesta en menos de 2 horas"
+    title="Cotiza tu Podium de Madera Negro"
+    text="Dinos si lo necesitas en renta o venta, la fecha y la ciudad de tu evento. Te respondemos con precio, disponibilidad y tiempos ese mismo día."
+    waText="Cotizar este Modelo"
+    waMessage={waMsg}
+  />
+
+  <HelpSection />
+
+  <script type="application/ld+json" set:html={faqLd} />
 
 </Layout>
