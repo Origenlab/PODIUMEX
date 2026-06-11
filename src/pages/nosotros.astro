@@ -1,9 +1,77 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { webPageSchema, breadcrumb } from '../data/schema';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 
 const title = "Nosotros";
 const description = "Especialistas en renta y venta de podiums profesionales en México desde 2020. Fabricación nacional, personalización y servicio integral para cada evento.";
+
+// ─── Datos: Valores ──────────────────────────────────────────────────
+const valores = [
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+    title: 'Excelencia',
+    desc: 'Cada podium pasa por estrictos controles de calidad antes de salir del taller. No comprometemos la excelencia: nuestros clientes merecen lo mejor y eso entregamos.',
+    badge: 'Calidad',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>`,
+    title: 'Innovación',
+    desc: 'Buscamos constantemente nuevas formas de mejorar productos y servicios: materiales de última generación y procesos de fabricación más eficientes y sustentables.',
+    badge: 'Futuro',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    title: 'Compromiso',
+    desc: 'Atendemos a cada cliente como si fuera el único. Entendemos la importancia de cada evento y trabajamos sin descanso para cumplir y superar las expectativas.',
+    badge: 'Servicio',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>`,
+    title: 'Sustentabilidad',
+    desc: 'Creemos en la responsabilidad ambiental: maderas certificadas FSC, acrílicos reciclables y procesos de fabricación que minimizan nuestro impacto en el planeta.',
+    badge: 'ESG',
+  },
+];
+
+// ─── Datos: Capacidades ──────────────────────────────────────────────
+const capacidades = [
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    title: 'Cobertura Nacional',
+    desc: 'Sede en CDMX con entrega express en 24 h para CDMX, Monterrey y Guadalajara, y envíos de 48 a 72 h a cualquier ciudad del país.',
+    badge: 'México',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>`,
+    title: 'Tecnología e Innovación',
+    desc: 'Primeros en cotización instantánea por WhatsApp, reserva 100% digital, grabado láser CNC e inventario en tiempo real con rastreo de envíos.',
+    badge: 'Digital',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    title: 'Equipo Multidisciplinario',
+    desc: 'Diseñadores industriales, técnicos especializados, asesores de eventos y expertos en logística trabajando en conjunto para un servicio integral.',
+    badge: 'Expertos',
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`,
+    title: 'Calidad Certificada',
+    desc: 'Maderas FSC, acrílicos de grado óptico y acero inoxidable, con inspección de materia prima al 100% y garantía escrita de 2 a 3 años.',
+    badge: 'Garantía',
+  },
+];
+
+// ─── Datos: FAQ destacadas (mismo set que el index) ─────────────────
+const homeFaqs = [
+  { q: '¿Cuál es el tiempo de entrega?', a: 'Entrega express en 24 horas en CDMX, Monterrey y Guadalajara, y de 48 a 72 horas al resto de la república. Para pedidos con grabado personalizado el tiempo puede variar según la complejidad.' },
+  { q: '¿Puedo personalizar el podium con mi logo?', a: 'Sí. Grabamos tu logo, escudo institucional o gubernamental con láser de alta precisión sobre acrílico o madera. Enviamos una prueba digital antes de grabar para tu aprobación.' },
+  { q: '¿Cuál es la diferencia entre venta y renta?', a: 'La venta te da la propiedad permanente, ideal si haces eventos frecuentes. La renta es el uso por evento, perfecta para eventos únicos. Ambas incluyen nuestros estándares de calidad y soporte.' },
+  { q: '¿Qué incluye el servicio de renta?', a: 'Entrega en tu sede, instalación y nivelación profesional, soporte técnico durante el evento y recolección al finalizar. También asesoría para el posicionamiento óptimo en el escenario.' },
+  { q: '¿Hacen envíos a todo México?', a: 'Sí, cobertura nacional completa. Contamos con una red logística confiable que entrega tu podium en óptimas condiciones a cualquier ciudad del país.' },
+  { q: '¿Los podiums tienen garantía?', a: 'Todos nuestros podiums incluyen garantía escrita de 2 a 3 años que cubre defectos de fabricación y acabados. Además ofrecemos mantenimiento preventivo y correctivo.' },
+];
 
 const schema = webPageSchema({
   name: 'Nosotros · PODIUMEX',
@@ -20,192 +88,319 @@ const breadcrumbSchema = breadcrumb([
 
 <Layout title={title} description={description} canonical="/nosotros" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Sobre <span class="highlight">PODIUMEX</span></h1>
-        <p>El primer servicio digital de venta y renta de podiums profesionales en México. Innovación, tecnología y profesionalismo en cada evento.</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">2020</span>
-            <span class="stat-label">Fundación</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">1,500+</span>
-            <span class="stat-label">Eventos Atendidos</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">98.7%</span>
-            <span class="stat-label">Satisfacción</span>
-          </div>
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="Ruta de navegación" style="margin-top:0;">
+    <div class="breadcrumbs-wrapper">
+      <a href="/" class="breadcrumb-link">Inicio</a>
+      <span class="breadcrumb-arrow" aria-hidden="true">&rsaquo;</span>
+      <span class="breadcrumb-current" aria-current="page">Nosotros</span>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO (homologado al index)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-hero" aria-labelledby="nos-hero-title">
+    <div class="ix-hero-inner">
+      <div class="ix-hero-copy">
+        <div class="ix-eyebrow">
+          <span class="ix-eyebrow-dot" aria-hidden="true"></span>
+          Especialistas en México desde 2020
         </div>
-        <div class="hero-cta">
-          <a href="https://wa.me/525516567973?text=Hola,%20quiero%20conocer%20mas%20sobre%20PODIUMEX" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Contáctanos
-          </a>
-          <a href="/catalogo" class="btn-call">Ver Catalogo</a>
-        </div>
+        <h1 id="nos-hero-title">
+          <span class="ix-highlight">Sobre PODIUMEX</span><br>
+          Podiums que Dejan Huella
+        </h1>
+        <p class="ix-hero-desc">
+          El primer servicio digital de venta y renta de podiums profesionales en México.
+          Innovación, tecnología y profesionalismo en cada evento.
+        </p>
       </div>
-      <div class="hero-intro">
-        <h2>Revolucionando la Renta de Podiums en México</h2>
-        <p>PODIUMEX nació con la visión de transformar la industria de podiums profesionales en México. Desde nuestra fundación en 2020, hemos liderado la digitalización del servicio de venta y renta de podiums, ofreciendo una experiencia moderna, eficiente y profesional.</p>
-        <p>Somos el primer servicio 100% digital que permite cotizar, personalizar y reservar podiums profesionales de manera rápida y sencilla. Nuestra plataforma ha atendido a mas de 1,500 eventos en todo el pais, desde conferencias corporativas hasta ceremonias de gobierno.</p>
-        <p>Nos distinguimos por combinar tecnología de punta con atención personalizada, garantizando que cada cliente reciba exactamente lo que necesita para que su evento sea un exito rotundo.</p>
+      <div class="ix-hero-editorial">
+        <p class="ix-editorial-p">
+          PODIUMEX nació con la visión de <strong>transformar la industria de podiums profesionales
+          en México</strong>. Desde 2020 lideramos la digitalización del servicio de venta y renta,
+          con una experiencia moderna, eficiente y profesional.
+        </p>
+        <p class="ix-editorial-p">
+          Somos el primer servicio <strong>100% digital</strong> para cotizar, personalizar y
+          reservar podiums. Hemos atendido más de <strong>1,500 eventos</strong> en todo el país,
+          de conferencias corporativas a ceremonias de gobierno.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <div class="trust-bar">
-    <div class="trust-content">
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Desde 2020</h3>
-          <p>Pioneros digitales</p>
-        </div>
+  <!-- ══════════════════════════════════════════════════
+       ACCESOS RÁPIDOS (qlinks — complemento autorizado del index)
+  ══════════════════════════════════════════════════ -->
+  <nav class="qlinks" aria-label="Accesos rápidos">
+    <a href="/catalogo" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>1,500+ Eventos</h3>
-          <p>Experiencia comprobada</p>
-        </div>
+      <div class="qlink-text">
+        <strong>Catálogo Completo</strong>
+        <span>8 modelos disponibles</span>
       </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Cobertura Nacional</h3>
-          <p>Todo México</p>
-        </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="/servicios" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Calidad Premium</h3>
-          <p>Materiales certificados</p>
-        </div>
+      <div class="qlink-text">
+        <strong>Servicios</strong>
+        <span>Entrega, grabado, soporte</span>
       </div>
-    </div>
-  </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
 
-  <!-- Content Section -->
-  <section class="service-single-content">
-    <!-- Historia -->
-    <div class="service-intro-section">
-      <h2>Nuestra Historia</h2>
-      <p>PODIUMEX fue fundado en 2020 en la Ciudad de México con una misión clara: democratizar el acceso a podiums profesionales de alta calidad para eventos de todo tipo. En un mercado donde la oferta era limitada y los procesos eran lentos, identificamos la oportunidad de crear un servicio digital que simplificara la experiencia completa.</p>
-      <p>Comenzamos con una pequeña colección de podiums de acrílico y rápidamente expandimos nuestra oferta al escuchar las necesidades de nuestros clientes. Hoy contamos con una línea completa de podiums en acrílico transparente, acrílico negro, madera negro y madera con acrílico, en tamaños estándar y compacto.</p>
-      <p>Nuestra apuesta por la tecnología nos ha permitido ofrecer servicios como la cotización instantanea por WhatsApp, la personalización con grabado láser y la entrega express en las principales ciudades del pais. Cada innovación está pensada para facilitar la vida de nuestros clientes y elevar la calidad de sus eventos.</p>
-    </div>
-
-    <!-- Valores -->
-    <div class="service-intro-section">
-      <h2>Nuestros Valores</h2>
-      <div class="info-cards-grid" style="grid-template-columns:repeat(2,1fr);">
-        <div class="info-card">
-          <h4>Excelencia</h4>
-          <p>Cada podium que sale de nuestro taller pasa por estrictos controles de calidad. No comprometemos la excelencia por nada. Nuestros clientes merecen lo mejor y eso es lo que entregamos.</p>
-        </div>
-        <div class="info-card">
-          <h4>Innovación</h4>
-          <p>Buscamos constantemente nuevas formas de mejorar nuestros productos y servicios. Desde materiales de última generación hasta procesos de fabricación mas eficientes y sustentables.</p>
-        </div>
-        <div class="info-card">
-          <h4>Compromiso</h4>
-          <p>Nos comprometemos con cada cliente como si fuera el único. Entendemos la importancia de cada evento y trabajamos incansablemente para cumplir y superar las expectativas.</p>
-        </div>
-        <div class="info-card">
-          <h4>Sustentabilidad</h4>
-          <p>Creemos en la responsabilidad ambiental. Utilizamos maderas certificadas FSC, acrilicos reciclables y procesos de fabricación que minimizan nuestro impacto en el planeta.</p>
-        </div>
+    <a href="/renta-de-podiums" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </div>
-    </div>
-
-    <!-- Equipo -->
-    <div class="service-intro-section">
-      <h2>Nuestro Equipo</h2>
-      <p>Detrás de PODIUMEX hay un equipo multidisciplinario de profesionales apasionados por los eventos y la manufactura de calidad. Diseñadores industriales, técnicos especializados, asesores de eventos y expertos en logística trabajan en conjunto para ofrecer un servicio integral.</p>
-      <p>Cada miembro de nuestro equipo está capacitado para brindar atención experta y resolver cualquier necesidad. Desde la asesoría inicial para elegir el podium adecuado hasta el soporte técnico durante tu evento, siempre habra un profesional de PODIUMEX respaldandote.</p>
-    </div>
-
-    <!-- Certificaciones -->
-    <div class="service-intro-section">
-      <h2>Certificaciones y Calidad</h2>
-      <div class="service-two-col">
-        <div class="service-col">
-          <h3>Materiales Certificados</h3>
-          <ul class="service-list">
-            <li>Maderas con certificación FSC (Forest Stewardship Council)</li>
-            <li>Acrilicos de grado optico importados</li>
-            <li>Herrajes y componentes de acero inoxidable</li>
-            <li>Acabados libres de sustancias toxicas</li>
-          </ul>
-        </div>
-        <div class="service-col">
-          <h3>Control de Calidad</h3>
-          <ul class="service-list">
-            <li>Inspección de materia prima al 100%</li>
-            <li>Pruebas de resistencia y estabilidad</li>
-            <li>Revisión final antes de cada entrega</li>
-            <li>Garantía de satisfacción en todos los productos</li>
-          </ul>
-        </div>
+      <div class="qlink-text">
+        <strong>Renta de Podiums</strong>
+        <span>Por día, semana o evento</span>
       </div>
-    </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
 
-    <!-- Cobertura -->
-    <div class="service-intro-section">
-      <h2>Cobertura Nacional</h2>
-      <p>PODIUMEX tiene presencia en todo México. Con sede en la Ciudad de México, ofrecemos entrega express en 24 horas para CDMX, Monterrey y Guadalajara, y envíos a todo el pais en 48 a 72 horas. Nuestra red de logística nos permite llegar a cualquier punto de la republica mexicana.</p>
-      <div class="info-cards-grid">
-        <div class="info-card">
-          <h4>CDMX y Area Metropolitana</h4>
-          <p>Entrega en 24 horas. Instalación y recolección incluida en renta.</p>
-        </div>
-        <div class="info-card">
-          <h4>Monterrey y Guadalajara</h4>
-          <p>Entrega en 24-48 horas. Servicio de instalación disponible.</p>
-        </div>
-        <div class="info-card">
-          <h4>Resto del Pais</h4>
-          <p>Envíos en 48-72 horas a cualquier ciudad de México.</p>
-        </div>
+    <a href="/contacto" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </div>
-    </div>
+      <div class="qlink-text">
+        <strong>Contacto</strong>
+        <span>Hablemos de tu evento</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
 
-    <!-- Tecnologia -->
-    <div class="service-intro-section">
-      <h2>Tecnología e Innovación</h2>
-      <p>La tecnología es parte fundamental de nuestra propuesta de valor. Fuimos los primeros en ofrecer cotización instantanea por WhatsApp, visualización de productos en línea y un proceso de reserva 100% digital. Nuestras herramientas tecnologicas incluyen:</p>
-      <ul class="service-list">
-        <li>Plataforma web optimizada para cotización rápida</li>
-        <li>Atención automatizada por WhatsApp con respuesta en menos de 1 hora</li>
-        <li>Grabado láser de alta precisión con tecnología CNC</li>
-        <li>Sistema de gestion de inventario en tiempo real</li>
-        <li>Rastreo de envíos para seguimiento de entregas</li>
-      </ul>
-    </div>
+    <a href="https://wa.me/525516567973?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20PODIUMEX" target="_blank" rel="noopener noreferrer" class="qlink qlink--accent">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Cotización Gratuita</strong>
+        <span>Respuesta en menos de 2 horas</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </nav>
 
-    <!-- Vision -->
-    <div class="service-banner">
-      <h3>Nuestra Visión</h3>
-      <p>Ser la empresa líder en venta y renta de podiums profesionales en Latinoamérica, reconocida por la excelencia de nuestros productos, la innovación de nuestros servicios y el compromiso con la satisfacción de cada cliente. Buscamos expandir nuestra presencia a nivel internacional manteniendo los valores que nos han definido desde el primer día: calidad, profesionalismo y atención personalizada.</p>
+  <!-- ══════════════════════════════════════════════════
+       NUESTRA HISTORIA
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section" aria-labelledby="historia-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="Nuestra Historia"
+        title="De una Idea a Líderes del Mercado"
+        description="Fundados en 2020 en la Ciudad de México con una misión clara: democratizar el acceso a podiums profesionales de alta calidad para eventos de todo tipo."
+        id="historia-title"
+        p1="En un mercado con oferta limitada y procesos lentos, creamos un <strong>servicio digital</strong> que simplifica la experiencia completa. Empezamos con una pequeña colección de acrílico y crecimos escuchando a nuestros clientes."
+        p2="Hoy ofrecemos una línea completa en <strong>acrílico transparente, acrílico negro, madera negro y madera con acrílico</strong>, en tamaño estándar y compacto, con cotización por WhatsApp, grabado láser y entrega express."
+      />
     </div>
-
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>Forma Parte de Nuestra Historia</h2>
-      <p>Unete a los mas de 1,500 eventos exitosos que han confiado en PODIUMEX. Cotiza sin compromiso y descubre la diferencia de trabajar con profesionales.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/525516567973?text=Hola,%20quiero%20cotizar%20un%20podium%20profesional" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Cotizar Ahora
+  <!-- ══════════════════════════════════════════════════
+       NUESTROS VALORES (ix-diff-grid)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section ix-section-alt" aria-labelledby="valores-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="Nuestros Valores"
+        title="Lo que nos Define"
+        description="Cuatro principios que guían cada podium que fabricamos y cada evento que acompañamos."
+        id="valores-title"
+        p1="No son frases en una pared: son los criterios con los que tomamos decisiones de <strong>materiales, procesos y atención</strong> todos los días."
+        p2="Por eso cada cliente recibe lo que necesita y más del <strong>98.7% reporta satisfacción total</strong> con su experiencia."
+      />
+      <div class="ix-diff-grid">
+        {valores.map((v) => (
+          <div class="ix-diff-card">
+            <div class="ix-diff-icon" set:html={v.icon} aria-hidden="true"></div>
+            <span class="ix-diff-badge">{v.badge}</span>
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CAPACIDADES (ix-diff-grid)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section" aria-labelledby="capacidades-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="Por qué PODIUMEX"
+        title="Capacidades que nos Respaldan"
+        description="Cobertura, tecnología, talento y calidad certificada: la infraestructura detrás de más de 1,500 eventos exitosos."
+        id="capacidades-title"
+        p1="Somos <strong>fabricantes especializados</strong>, no un proveedor genérico. Cada pieza sale de nuestro taller en México con materiales certificados y revisión individual."
+        p2="Combinamos <strong>tecnología de punta con atención personalizada</strong> para que cada decisión de tu evento sea la correcta, antes, durante y después."
+      />
+      <div class="ix-diff-grid">
+        {capacidades.map((c) => (
+          <div class="ix-diff-card">
+            <div class="ix-diff-icon" set:html={c.icon} aria-hidden="true"></div>
+            <span class="ix-diff-badge">{c.badge}</span>
+            <h3>{c.title}</h3>
+            <p>{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CTA FINAL (homologado al index) — con visión
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-cta-final" aria-labelledby="nos-cta-title">
+    <div class="ix-cta-final-inner">
+      <div class="ix-cta-final-copy">
+        <p class="ix-cta-final-eyebrow">Nuestra visión · Líderes en Latinoamérica</p>
+        <h2 id="nos-cta-title">Forma Parte de Nuestra Historia</h2>
+        <p>Buscamos ser la empresa líder en venta y renta de podiums profesionales en Latinoamérica. Únete a los más de 1,500 eventos que ya confían en PODIUMEX.</p>
+      </div>
+      <div class="ix-cta-final-actions">
+        <WhatsAppButton
+          text="Cotizar por WhatsApp"
+          message="Hola, quiero cotizar un podium profesional para mi evento"
+        />
+        <a href="/catalogo" class="ix-cta-outline-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
+          Ver Catálogo Completo
         </a>
-        <a href="/contacto" class="btn-call">Contacto</a>
+        <div class="ix-cta-trust">
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Fabricación Nacional
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantía 2–3 años
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            1,500+ eventos · Desde 2020
+          </span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ + COTIZACIÓN RÁPIDA (antes del footer)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section ix-section-alt ix-help" aria-labelledby="help-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="¿Hablamos?"
+        title="Resuelve tus Dudas y Cotiza en un Minuto"
+        description="Las respuestas a lo que más nos preguntan, y un formulario directo a WhatsApp para recibir tu cotización sin compromiso."
+        id="help-title"
+        p1="Antes de decidir es normal tener preguntas sobre <strong>tiempos de entrega, personalización, garantía o la diferencia entre venta y renta</strong>. Aquí están las más frecuentes."
+        p2="¿Prefieres que te contactemos? Llena el formulario y <strong>te respondemos por WhatsApp en menos de 2 horas</strong>, con una cotización detallada y sin compromiso."
+      />
+
+      <div class="ix-help-grid">
+        <!-- Columna 1: Preguntas frecuentes -->
+        <div class="ix-help-faq">
+          <h3 class="ix-help-colhead">Preguntas Frecuentes</h3>
+          {homeFaqs.map((faq) => (
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>{faq.q}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content"><p>{faq.a}</p></div>
+              </div>
+            </div>
+          ))}
+          <a href="/preguntas-frecuentes" class="ix-help-alllink">Ver todas las preguntas frecuentes →</a>
+        </div>
+
+        <!-- Columna 2: Formulario a WhatsApp -->
+        <div class="ix-help-form">
+          <h3 class="ix-help-colhead">Cotiza por WhatsApp</h3>
+          <p class="ix-help-form-sub">Completa estos datos y te respondemos en menos de 2 horas. Sin compromiso.</p>
+          <form id="ixQuoteForm" class="ix-form" novalidate>
+            <div>
+              <label for="ixq-nombre">Nombre *</label>
+              <input id="ixq-nombre" type="text" name="nombre" required placeholder="Tu nombre completo" autocomplete="name">
+            </div>
+            <div class="ix-form-row">
+              <div>
+                <label for="ixq-tel">Teléfono *</label>
+                <input id="ixq-tel" type="tel" name="telefono" required placeholder="55 1234 5678" autocomplete="tel">
+              </div>
+              <div>
+                <label for="ixq-empresa">Empresa</label>
+                <input id="ixq-empresa" type="text" name="empresa" placeholder="Opcional" autocomplete="organization">
+              </div>
+            </div>
+            <div class="ix-form-row">
+              <div>
+                <label for="ixq-servicio">¿Qué necesitas? *</label>
+                <select id="ixq-servicio" name="servicio" required>
+                  <option value="Renta de podium">Renta de podium</option>
+                  <option value="Compra de podium">Compra de podium</option>
+                  <option value="Personalización / grabado">Personalización / grabado</option>
+                  <option value="Asesoría para mi evento">Asesoría para mi evento</option>
+                </select>
+              </div>
+              <div>
+                <label for="ixq-modelo">Modelo de interés</label>
+                <select id="ixq-modelo" name="modelo">
+                  <option value="">Sin preferencia</option>
+                  <option value="Acrílico Transparente">Acrílico Transparente</option>
+                  <option value="Acrílico Negro">Acrílico Negro</option>
+                  <option value="Madera Negro">Madera Negro</option>
+                  <option value="Madera y Acrílico">Madera y Acrílico</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="ixq-msg">Cuéntanos de tu evento</label>
+              <textarea id="ixq-msg" name="mensaje" rows="3" placeholder="Fecha, ciudad, tipo de evento, número de asistentes..."></textarea>
+            </div>
+            <button type="submit" class="ix-form-submit btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <p class="ix-form-note">Se abrirá WhatsApp con tu información lista para enviar. No compartimos tus datos.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    // El acordeón FAQ lo gestiona js/app.js (initializeFAQ) globalmente.
+    // Formulario → WhatsApp
+    document.getElementById('ixQuoteForm') && document.getElementById('ixQuoteForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const v = (n) => { const el = f.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
+      const nombre = v('nombre'), telefono = v('telefono');
+      if (!nombre || !telefono) { alert('Por favor escribe tu nombre y teléfono.'); return; }
+      let t = 'Hola PODIUMEX, quiero una cotización:\n\n';
+      t += '*Nombre:* ' + nombre + '\n';
+      t += '*Teléfono:* ' + telefono + '\n';
+      if (v('empresa')) t += '*Empresa:* ' + v('empresa') + '\n';
+      t += '*Necesito:* ' + v('servicio') + '\n';
+      if (v('modelo')) t += '*Modelo:* ' + v('modelo') + '\n';
+      if (v('mensaje')) t += '*Detalle:* ' + v('mensaje') + '\n';
+      window.open('https://wa.me/525516567973?text=' + encodeURIComponent(t), '_blank', 'noopener');
+    });
+  </script>
 
 </Layout>
