@@ -242,6 +242,35 @@
   .ix-pdp-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
+/* ── Layout con sidebar (interlinking) ─────────────── */
+.ix-with-sidebar { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 3rem; align-items: start; }
+.ix-main > h2 { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; margin: 2.5rem 0 1.25rem; }
+.ix-main > h2:first-child { margin-top: 0; }
+.ix-main > h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 2rem 0 1rem; }
+.ix-main > p { font-size: 1rem; color: var(--text-medium); line-height: 1.8; margin-bottom: 1.25rem; }
+.ix-sidebar { position: sticky; top: 130px; display: flex; flex-direction: column; gap: 1.25rem; }
+.ix-widget { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1.35rem; }
+.ix-widget h4 { font-size: 0.92rem; font-weight: 700; color: var(--primary); margin: 0 0 0.85rem; padding-bottom: 0.65rem; border-bottom: 1px solid var(--border-light); }
+.ix-widget-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.ix-widget-list a { font-size: 0.875rem; color: var(--text-medium); text-decoration: none; line-height: 1.4; display: flex; gap: 0.5rem; align-items: flex-start; }
+.ix-widget-list a::before { content: '›'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+.ix-widget-list a:hover { color: var(--accent); }
+.ix-widget-more { display: inline-block; margin-top: 0.9rem; font-size: 0.82rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+.ix-widget-more:hover { text-decoration: underline; }
+.ix-widget--cta { background: var(--secondary); }
+.ix-widget--cta .ix-widget-price { font-size: 1.15rem; font-weight: 800; color: var(--accent); margin: 0 0 0.25rem; }
+.ix-widget--cta p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; margin: 0 0 1rem; }
+.ix-widget--cta .btn-whatsapp { width: 100%; justify-content: center; }
+.ix-widget-link2 { display: block; text-align: center; margin-top: 0.6rem; font-size: 0.83rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+.ix-widget-link2:hover { text-decoration: underline; }
+@media (max-width: 980px) {
+  .ix-with-sidebar { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ix-sidebar { position: static; display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .ix-sidebar { grid-template-columns: 1fr; }
+}
+
 /* ── Accesos rápidos (qlinks) — strip post-hero del index ─ */
 .qlinks { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--white); }
 .qlink { display: flex; align-items: center; gap: 1rem; padding: 1.375rem 1.5rem; text-decoration: none; border-right: 1px solid var(--border); transition: background 0.15s; position: relative; }
