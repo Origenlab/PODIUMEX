@@ -30,12 +30,31 @@ const especificaciones = [
 ];
 
 const caracteristicas = [
-  'Acrílico de alta transparencia con bordes pulidos a espejo.',
-  'Superficie amplia para notas, laptop o micrófono.',
-  'Base estable con sistema antideslizante.',
-  'Ligero (9 kg): fácil de transportar e instalar.',
-  'Compatible con branding por vinilo o grabado láser.',
-  'Ideal para conferencias, ruedas de prensa y eventos corporativos.',
+  'Acrílico de grado óptico de alta transparencia, sin tono verdoso.',
+  'Bordes pulidos a espejo y cantos redondeados de seguridad.',
+  'Superficie amplia para notas, laptop, tablet o micrófono.',
+  'Base ancha y estable con tacos antideslizantes.',
+  'Ligero (9 kg): lo traslada e instala una sola persona.',
+  'Compatible con branding por vinilo o grabado láser de tu logo.',
+  'Repisa interior oculta para cables y control de presentación.',
+  'Fácil de limpiar; resistente a impactos y al uso continuo.',
+];
+
+const incluyeRenta = [
+  'Entrega e instalación en tu sede',
+  'Nivelación y prueba en sitio',
+  'Soporte técnico durante el evento',
+  'Recolección al finalizar',
+];
+const incluyeVenta = [
+  'Garantía escrita de 2 años',
+  'Financiamiento a meses sin intereses',
+  'Grabado láser de tu logo (opcional)',
+  'Factura para empresa o gobierno',
+];
+const idealPara = [
+  'Conferencias corporativas', 'Ruedas de prensa', 'Lanzamientos de producto',
+  'Foros y paneles', 'Eventos de empresa', 'Streaming e híbridos', 'Auditorios y universidades',
 ];
 
 const beneficios = [
@@ -163,19 +182,53 @@ const checkSm = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" str
 
           <h2>Especificaciones técnicas</h2>
           <p>
-            Un podium fabricado en <strong>acrílico de grado óptico de 6 mm</strong>, pulido a espejo
-            en todos sus bordes para un acabado cristalino y sin imperfecciones. Pensado para
-            conferencias, ruedas de prensa, lanzamientos y eventos corporativos donde la imagen moderna
-            es parte del mensaje.
+            Fabricado en <strong>acrílico de grado óptico de 6 mm</strong>, pulido a espejo en todos
+            sus bordes para un acabado cristalino y sin imperfecciones. Una pieza ligera y resistente,
+            diseñada para verse impecable evento tras evento y mantener la atención en quien habla.
           </p>
-          <table class="ix-spec-table">
-            {especificaciones.map(([k, v]) => (<tr><th>{k}</th><td>{v}</td></tr>))}
-          </table>
+
+          <div class="ix-specgrid">
+            {especificaciones.map(([k, v]) => (
+              <div class="ix-spec"><span class="l">{k}</span><span class="v">{v}</span></div>
+            ))}
+          </div>
+
+          <div class="ix-callout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <p><strong>Material y acabado:</strong> usamos acrílico de grado óptico (sin tono verdoso) y cada pieza pasa por control de calidad antes de salir del taller. El resultado es una superficie cristalina, libre de burbujas y rayas, lista para tu marca con grabado láser o vinilo.</p>
+          </div>
+
+          <h2>¿Qué incluye?</h2>
+          <div class="ix-twocol">
+            <div class="ix-infocard">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                En renta (por evento)
+              </h3>
+              <ul class="ix-feature-list">
+                {incluyeRenta.map((c) => (<li><Fragment set:html={check} />{c}</li>))}
+              </ul>
+            </div>
+            <div class="ix-infocard">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                En venta
+              </h3>
+              <ul class="ix-feature-list">
+                {incluyeVenta.map((c) => (<li><Fragment set:html={check} />{c}</li>))}
+              </ul>
+            </div>
+          </div>
 
           <h2>Características</h2>
-          <ul class="ix-feature-list">
+          <ul class="ix-feature-list ix-feature-list--2col">
             {caracteristicas.map((c) => (<li><Fragment set:html={check} />{c}</li>))}
           </ul>
+
+          <h3>Ideal para</h3>
+          <div class="ix-tags">
+            {idealPara.map((t) => (<span class="ix-tag">{t}</span>))}
+          </div>
         </div>
 
         <!-- Sidebar de interlinking -->
