@@ -137,6 +137,9 @@
 }
 .ix-service-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.06); }
 .ix-service-img { position: relative; height: 160px; overflow: hidden; }
+/* Variante alta para fichas de producto (podiums verticales) */
+.ix-cards-tall .ix-service-img { height: auto; aspect-ratio: 4/5; }
+.ix-cards-tall .ix-service-img img { object-position: center top; }
 .ix-service-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 .ix-service-tag {
   position: absolute; top: 0.625rem; left: 0.625rem; background: var(--accent); color: var(--white);
