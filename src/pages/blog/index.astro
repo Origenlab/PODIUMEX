@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { breadcrumb } from '../../data/schema';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort(
@@ -13,6 +15,16 @@ const regularPosts = posts.filter((p) => !p.data.featured);
 
 const title = "Blog – Guías y Consejos sobre Podiums Profesionales";
 const description = "Guías y consejos de expertos sobre renta y venta de podiums, eventos corporativos y presentaciones en CDMX y México. Aprende a elegir el podium ideal.";
+
+// ─── Datos: FAQ destacadas (mismo set que el index) ─────────────────
+const homeFaqs = [
+  { q: '¿Cuál es el tiempo de entrega?', a: 'Entrega express en 24 horas en CDMX, Monterrey y Guadalajara, y de 48 a 72 horas al resto de la república. Para pedidos con grabado personalizado el tiempo puede variar según la complejidad.' },
+  { q: '¿Puedo personalizar el podium con mi logo?', a: 'Sí. Grabamos tu logo, escudo institucional o gubernamental con láser de alta precisión sobre acrílico o madera. Enviamos una prueba digital antes de grabar para tu aprobación.' },
+  { q: '¿Cuál es la diferencia entre venta y renta?', a: 'La venta te da la propiedad permanente, ideal si haces eventos frecuentes. La renta es el uso por evento, perfecta para eventos únicos. Ambas incluyen nuestros estándares de calidad y soporte.' },
+  { q: '¿Qué incluye el servicio de renta?', a: 'Entrega en tu sede, instalación y nivelación profesional, soporte técnico durante el evento y recolección al finalizar. También asesoría para el posicionamiento óptimo en el escenario.' },
+  { q: '¿Hacen envíos a todo México?', a: 'Sí, cobertura nacional completa. Contamos con una red logística confiable que entrega tu podium en óptimas condiciones a cualquier ciudad del país.' },
+  { q: '¿Los podiums tienen garantía?', a: 'Todos nuestros podiums incluyen garantía escrita de 2 a 3 años que cubre defectos de fabricación y acabados. Además ofrecemos mantenimiento preventivo y correctivo.' },
+];
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -33,98 +45,316 @@ const breadcrumbSchema = breadcrumb([
 
 <Layout title={title} description={description} canonical="/blog" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Blog <span class="highlight">PODIUMEX</span></h1>
-        <p>Guías, consejos y recursos para que tus eventos y presentaciones sean impecables. Aprende de los expertos en podiums profesionales de México.</p>
-        <div class="hero-cta">
-          <a href="https://wa.me/525516567973?text=Hola,%20quiero%20cotizar%20un%20podium" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Cotizar Podium
-          </a>
-          <a href="/catalogo" class="btn-call">Ver Catálogo</a>
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="Ruta de navegación" style="margin-top:0;">
+    <div class="breadcrumbs-wrapper">
+      <a href="/" class="breadcrumb-link">Inicio</a>
+      <span class="breadcrumb-arrow" aria-hidden="true">&rsaquo;</span>
+      <span class="breadcrumb-current" aria-current="page">Blog</span>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO (homologado al index)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-hero" aria-labelledby="blog-hero-title">
+    <div class="ix-hero-inner">
+      <div class="ix-hero-copy">
+        <div class="ix-eyebrow">
+          <span class="ix-eyebrow-dot" aria-hidden="true"></span>
+          Recursos para profesionales de eventos
+        </div>
+        <h1 id="blog-hero-title">
+          <span class="ix-highlight">Blog PODIUMEX</span><br>
+          Guías y Consejos de Expertos
+        </h1>
+        <p class="ix-hero-desc">
+          Guías, consejos y recursos para que tus eventos y presentaciones sean impecables.
+          Aprende de los expertos en podiums profesionales de México.
+        </p>
+      </div>
+      <div class="ix-hero-editorial">
+        <p class="ix-editorial-p">
+          Compartimos conocimiento práctico sobre la <strong>selección, uso y cuidado de podiums
+          profesionales</strong>: comparativas de materiales, guías de compra, organización de
+          eventos y tendencias del sector.
+        </p>
+        <p class="ix-editorial-p">
+          Artículos escritos por <strong>expertos en la industria de eventos</strong> en CDMX y
+          toda la República, pensados para ayudarte a tomar las mejores decisiones para tu próximo evento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       ACCESOS RÁPIDOS (qlinks — complemento autorizado del index)
+  ══════════════════════════════════════════════════ -->
+  <nav class="qlinks" aria-label="Accesos rápidos">
+    <a href="/catalogo" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Catálogo Completo</strong>
+        <span>8 modelos disponibles</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="/servicios" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Servicios</strong>
+        <span>Entrega, grabado, soporte</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="/renta-de-podiums" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Renta de Podiums</strong>
+        <span>Por día, semana o evento</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="/preguntas-frecuentes" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Preguntas Frecuentes</strong>
+        <span>Resuelve tus dudas</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="https://wa.me/525516567973?text=Hola%2C%20quiero%20cotizar%20un%20podium" target="_blank" rel="noopener noreferrer" class="qlink qlink--accent">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Cotización Gratuita</strong>
+        <span>Respuesta en menos de 2 horas</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </nav>
+
+  {featuredPosts.length > 0 && (
+    <!-- ══════════════════════════════════════════════════
+         ARTÍCULOS DESTACADOS
+    ══════════════════════════════════════════════════ -->
+    <section class="ix-section" aria-labelledby="featured-title">
+      <div class="ix-container">
+        <SectionHeader
+          tag="Destacados"
+          title="Artículos Destacados"
+          description="Nuestras guías más útiles para elegir, rentar y aprovechar al máximo un podium profesional en tu próximo evento."
+          id="featured-title"
+          p1="Contenido seleccionado para <strong>organizadores, directivos y productores</strong> que quieren tomar decisiones informadas, sin relleno."
+          p2="Comparativas, guías de compra y organización de eventos basadas en más de <strong>1,500 eventos reales</strong> en toda la República."
+        />
+        <div class="ix-blog-grid">
+          {featuredPosts.map((post) => (
+            <article class="ix-blog-card">
+              <a href={`/blog/${post.id}`} class="ix-blog-img-link" tabindex="-1" aria-hidden="true">
+                <img src={post.data.image} alt={post.data.imageAlt} width="400" height="220" loading="lazy" />
+              </a>
+              <div class="ix-blog-body">
+                <span class="card-tag">{post.data.category}</span>
+                <h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3>
+                <p>{post.data.description}</p>
+                <span class="ix-service-cta">Leer artículo →</span>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
-      <div class="hero-intro">
-        <h2>Recursos para Profesionales de Eventos</h2>
-        <p>En el blog de PODIUMEX compartimos conocimiento práctico sobre la selección, uso y cuidado de podiums profesionales. Artículos escritos por expertos en la industria de eventos, pensados para ayudarte a tomar las mejores decisiones.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Bar -->
-  <div class="trust-bar">
-    <div class="trust-content">
-      <div class="trust-item"><div class="trust-text"><h3>Contenido Experto</h3><p>Guías profesionales</p></div></div>
-      <div class="trust-item"><div class="trust-text"><h3>Consejos Prácticos</h3><p>Aplicables al instante</p></div></div>
-      <div class="trust-item"><div class="trust-text"><h3>Siempre Actualizado</h3><p>Contenido 2025–2026</p></div></div>
-      <div class="trust-item"><div class="trust-text"><h3>Recursos Gratis</h3><p>Acceso libre</p></div></div>
-    </div>
-  </div>
-
-  <!-- Artículos Destacados -->
-  {featuredPosts.length > 0 && (
-    <section style="padding:4rem var(--gutter) 2rem;">
-      <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Artículos Destacados</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;">
-        {featuredPosts.map((post) => (
-          <article>
-            <a href={`/blog/${post.id}`} style="display:block;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseout="this.style.boxShadow='none'">
-              <div style="overflow:hidden;height:220px;">
-                <img src={post.data.image} alt={post.data.imageAlt} width="600" height="220" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-              </div>
-              <div style="padding:1.5rem;">
-                <span class="card-tag">{post.data.category}</span>
-                <h3 style="font-size:1.15rem;font-weight:700;color:var(--primary);margin:0.75rem 0 0.5rem;line-height:1.35;">{post.data.title}</h3>
-                <p style="font-size:0.9rem;color:var(--text-medium);line-height:1.6;margin-bottom:1rem;">{post.data.description}</p>
-                <div style="display:flex;justify-content:flex-end;">
-                  <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">Leer →</span>
-                </div>
-              </div>
-            </a>
-          </article>
-        ))}
-      </div>
     </section>
   )}
 
-  <!-- Todos los Artículos -->
   {regularPosts.length > 0 && (
-    <section style="padding:2rem var(--gutter) 5rem;">
-      <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Más Artículos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
-        {regularPosts.map((post) => (
-          <article>
-            <a href={`/blog/${post.id}`} style="display:block;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;">
-              <div style="overflow:hidden;height:180px;">
-                <img src={post.data.image} alt={post.data.imageAlt} width="400" height="180" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-              </div>
-              <div style="padding:1.25rem;">
+    <!-- ══════════════════════════════════════════════════
+         TODOS LOS ARTÍCULOS
+    ══════════════════════════════════════════════════ -->
+    <section class="ix-section ix-section-alt" aria-labelledby="all-title">
+      <div class="ix-container">
+        <SectionHeader
+          tag="Biblioteca"
+          title="Todos los Artículos"
+          description="Explora toda la biblioteca de guías y consejos sobre podiums, renta, personalización y organización de eventos."
+          id="all-title"
+          p1="Cubrimos desde <strong>costos y proveedores</strong> hasta protocolo, mantenimiento y tipos de evento (congresos, graduaciones, ruedas de prensa, eventos híbridos)."
+          p2="Todo el contenido es <strong>de acceso libre</strong> y se mantiene actualizado para 2025–2026."
+        />
+        <div class="ix-blog-grid">
+          {regularPosts.map((post) => (
+            <article class="ix-blog-card">
+              <a href={`/blog/${post.id}`} class="ix-blog-img-link" tabindex="-1" aria-hidden="true">
+                <img src={post.data.image} alt={post.data.imageAlt} width="400" height="200" loading="lazy" />
+              </a>
+              <div class="ix-blog-body">
                 <span class="card-tag">{post.data.category}</span>
-                <h3 style="font-size:1rem;font-weight:700;color:var(--primary);margin:0.5rem 0;line-height:1.4;">{post.data.title}</h3>
+                <h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3>
+                <p>{post.data.description}</p>
+                <span class="ix-service-cta">Leer artículo →</span>
               </div>
-            </a>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )}
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>¿Necesitas Ayuda para Elegir?</h2>
-      <p>Nuestros asesores pueden guiarte personalmente para encontrar el podium perfecto para tu evento. Cotización sin compromiso.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/525516567973?text=Hola,%20necesito%20asesoria%20para%20elegir%20un%20podium" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Asesoría por WhatsApp
+  <!-- ══════════════════════════════════════════════════
+       CTA FINAL (homologado al index)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-cta-final" aria-labelledby="blog-cta-title">
+    <div class="ix-cta-final-inner">
+      <div class="ix-cta-final-copy">
+        <p class="ix-cta-final-eyebrow">Cotización gratuita · Respuesta en menos de 2 horas</p>
+        <h2 id="blog-cta-title">¿Necesitas Ayuda para Elegir tu Podium?</h2>
+        <p>Después de leer, un asesor especializado puede guiarte para encontrar el podium y el setup perfectos para tu evento. Sin compromiso.</p>
+      </div>
+      <div class="ix-cta-final-actions">
+        <WhatsAppButton
+          text="Asesoría por WhatsApp"
+          message="Hola, leí el blog y necesito asesoría para elegir un podium"
+        />
+        <a href="/catalogo" class="ix-cta-outline-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
+          Ver Catálogo Completo
         </a>
-        <a href="/contacto" class="btn-call">Contacto</a>
+        <div class="ix-cta-trust">
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Fabricación Nacional
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantía 2–3 años
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Entrega en 24 hrs · Desde 2020
+          </span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ + COTIZACIÓN RÁPIDA (antes del footer)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section ix-section-alt ix-help" aria-labelledby="help-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="¿Hablamos?"
+        title="Resuelve tus Dudas y Cotiza en un Minuto"
+        description="Las respuestas a lo que más nos preguntan, y un formulario directo a WhatsApp para recibir tu cotización sin compromiso."
+        id="help-title"
+        p1="Antes de decidir es normal tener preguntas sobre <strong>tiempos de entrega, personalización, garantía o la diferencia entre venta y renta</strong>. Aquí están las más frecuentes."
+        p2="¿Prefieres que te contactemos? Llena el formulario y <strong>te respondemos por WhatsApp en menos de 2 horas</strong>, con una cotización detallada y sin compromiso."
+      />
+
+      <div class="ix-help-grid">
+        <!-- Columna 1: Preguntas frecuentes -->
+        <div class="ix-help-faq">
+          <h3 class="ix-help-colhead">Preguntas Frecuentes</h3>
+          {homeFaqs.map((faq) => (
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>{faq.q}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content"><p>{faq.a}</p></div>
+              </div>
+            </div>
+          ))}
+          <a href="/preguntas-frecuentes" class="ix-help-alllink">Ver todas las preguntas frecuentes →</a>
+        </div>
+
+        <!-- Columna 2: Formulario a WhatsApp -->
+        <div class="ix-help-form">
+          <h3 class="ix-help-colhead">Cotiza por WhatsApp</h3>
+          <p class="ix-help-form-sub">Completa estos datos y te respondemos en menos de 2 horas. Sin compromiso.</p>
+          <form id="ixQuoteForm" class="ix-form" novalidate>
+            <div>
+              <label for="ixq-nombre">Nombre *</label>
+              <input id="ixq-nombre" type="text" name="nombre" required placeholder="Tu nombre completo" autocomplete="name">
+            </div>
+            <div class="ix-form-row">
+              <div>
+                <label for="ixq-tel">Teléfono *</label>
+                <input id="ixq-tel" type="tel" name="telefono" required placeholder="55 1234 5678" autocomplete="tel">
+              </div>
+              <div>
+                <label for="ixq-empresa">Empresa</label>
+                <input id="ixq-empresa" type="text" name="empresa" placeholder="Opcional" autocomplete="organization">
+              </div>
+            </div>
+            <div class="ix-form-row">
+              <div>
+                <label for="ixq-servicio">¿Qué necesitas? *</label>
+                <select id="ixq-servicio" name="servicio" required>
+                  <option value="Renta de podium">Renta de podium</option>
+                  <option value="Compra de podium">Compra de podium</option>
+                  <option value="Personalización / grabado">Personalización / grabado</option>
+                  <option value="Asesoría para mi evento">Asesoría para mi evento</option>
+                </select>
+              </div>
+              <div>
+                <label for="ixq-modelo">Modelo de interés</label>
+                <select id="ixq-modelo" name="modelo">
+                  <option value="">Sin preferencia</option>
+                  <option value="Acrílico Transparente">Acrílico Transparente</option>
+                  <option value="Acrílico Negro">Acrílico Negro</option>
+                  <option value="Madera Negro">Madera Negro</option>
+                  <option value="Madera y Acrílico">Madera y Acrílico</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="ixq-msg">Cuéntanos de tu evento</label>
+              <textarea id="ixq-msg" name="mensaje" rows="3" placeholder="Fecha, ciudad, tipo de evento, número de asistentes..."></textarea>
+            </div>
+            <button type="submit" class="ix-form-submit btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <p class="ix-form-note">Se abrirá WhatsApp con tu información lista para enviar. No compartimos tus datos.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    // El acordeón FAQ lo gestiona js/app.js (initializeFAQ) globalmente.
+    // Formulario → WhatsApp
+    document.getElementById('ixQuoteForm') && document.getElementById('ixQuoteForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const v = (n) => { const el = f.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
+      const nombre = v('nombre'), telefono = v('telefono');
+      if (!nombre || !telefono) { alert('Por favor escribe tu nombre y teléfono.'); return; }
+      let t = 'Hola PODIUMEX, quiero una cotización:\n\n';
+      t += '*Nombre:* ' + nombre + '\n';
+      t += '*Teléfono:* ' + telefono + '\n';
+      if (v('empresa')) t += '*Empresa:* ' + v('empresa') + '\n';
+      t += '*Necesito:* ' + v('servicio') + '\n';
+      if (v('modelo')) t += '*Modelo:* ' + v('modelo') + '\n';
+      if (v('mensaje')) t += '*Detalle:* ' + v('mensaje') + '\n';
+      window.open('https://wa.me/525516567973?text=' + encodeURIComponent(t), '_blank', 'noopener');
+    });
+  </script>
 
 </Layout>
