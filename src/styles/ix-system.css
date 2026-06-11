@@ -73,3 +73,57 @@
   letter-spacing: 0.1em; color: var(--accent); margin-bottom: 1.25rem;
 }
 .ix-eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: inline-block; }
+
+/* ── Hero (patrón del index, 2 columnas) ───────────── */
+.ix-hero { padding: 3rem 5% 5rem; max-width: 1400px; margin: 0 auto; }
+.ix-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.ix-hero-copy h1 {
+  font-size: clamp(2.2rem, 5vw, 3.75rem); font-weight: 800; line-height: 1.1;
+  color: var(--primary); letter-spacing: -0.03em; margin-bottom: 1.5rem;
+}
+.ix-highlight { color: var(--accent); }
+.ix-hero-desc {
+  font-size: 1.1rem; color: var(--text-medium); line-height: 1.75;
+  max-width: 520px; margin-bottom: 2rem;
+}
+.ix-hero-editorial { padding: 2rem 0 2rem 3rem; border-left: 2px solid var(--border-light); }
+.ix-editorial-p { font-size: 0.96rem; color: var(--text-medium); line-height: 1.85; margin-bottom: 1.25rem; }
+.ix-editorial-p strong { color: var(--primary); font-weight: 600; }
+@media (max-width: 900px) {
+  .ix-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .ix-hero-editorial { border-left: none; border-top: 1px solid var(--border-light); padding: 2.5rem 0 0; }
+}
+@media (max-width: 640px) {
+  .ix-hero { padding: 5rem 1.25rem 3rem; }
+}
+
+/* ── Ayuda: FAQ acordeón + formulario a WhatsApp ───── */
+.ix-help-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.ix-help-colhead { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.25rem; }
+.ix-help-faq .faq-item { margin-bottom: 0.75rem; }
+.ix-help-faq .faq-question { width: 100%; border: none; text-align: left; font-family: inherit; gap: 1rem; }
+.ix-help-faq .faq-question svg { flex-shrink: 0; transition: transform 0.3s ease; }
+.ix-help-faq .faq-item.active .faq-question svg { transform: rotate(180deg); }
+.ix-help-alllink { display: inline-block; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+.ix-help-form {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem; box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+.ix-help-form-sub { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem; }
+.ix-form { display: flex; flex-direction: column; gap: 1rem; }
+.ix-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.ix-form label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--primary); margin-bottom: 0.4rem; }
+.ix-form input, .ix-form select, .ix-form textarea {
+  width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border);
+  border-radius: var(--radius-md); font-size: 0.92rem; font-family: inherit;
+  color: var(--primary); background: var(--white);
+}
+.ix-form input::placeholder, .ix-form textarea::placeholder { color: var(--text-muted); }
+.ix-form input:focus, .ix-form select:focus, .ix-form textarea:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.12);
+}
+.ix-form textarea { resize: vertical; min-height: 84px; }
+.ix-form-submit { width: 100%; justify-content: center; margin-top: 0.25rem; border: none; cursor: pointer; font-size: 1rem; }
+.ix-form-note { font-size: 0.78rem; color: var(--text-light); text-align: center; line-height: 1.5; margin: 0; }
+@media (max-width: 900px) { .ix-help-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+@media (max-width: 560px) { .ix-form-row { grid-template-columns: 1fr; } }
