@@ -128,3 +128,32 @@ figure{ max-width: 100% !important; }
   :root{ --gutter: 1rem; }
   .process-steps{ grid-template-columns:1fr 1fr; }
 }
+
+/* ---- Galería de imágenes: filas de 2 por fila (profesional) ---- */
+.media-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;
+  margin:0 auto 3rem;
+  max-width:78rem;
+}
+.media-grid figure{ margin:0 !important; max-width:100% !important; }
+.media-grid img{
+  width:100%;
+  height:auto;
+  aspect-ratio:3/2;
+  object-fit:cover;
+  border-radius:var(--radius-lg);
+  display:block;
+}
+.media-grid figcaption{
+  font-size:0.82rem;
+  color:var(--text-light);
+  text-align:center;
+  margin-top:0.55rem;
+  font-style:italic;
+  line-height:1.4;
+}
+@media (max-width: 640px){
+  .media-grid{ grid-template-columns:1fr; gap:1.25rem; }
+}

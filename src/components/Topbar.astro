@@ -6,6 +6,8 @@
   <div class="topbar-inner">
 
     <div class="topbar-left">
+      <span class="topbar-tagline">Renta de Podiums, Venta de Podiums en México</span>
+      <span class="topbar-sep topbar-sep--hide-sm" aria-hidden="true">/</span>
       <a href="tel:+525516567973" class="topbar-link">55 1656 7973</a>
       <span class="topbar-sep" aria-hidden="true">/</span>
       <a href="mailto:podiumexmx@gmail.com" class="topbar-link topbar-link--hide-sm">podiumexmx@gmail.com</a>
@@ -54,6 +56,14 @@
   display: flex;
   align-items: center;
   gap: .625rem;
+}
+
+.topbar-tagline {
+  font-size: .72rem;
+  font-weight: 600;
+  color: #d4a634;
+  letter-spacing: .02em;
+  white-space: nowrap;
 }
 
 .topbar-link {
@@ -108,6 +118,7 @@
   .topbar-link--hide-sm { display: none; }
   .topbar-sep--hide-sm  { display: none; }
   .topbar-hours         { display: none; }
+  .topbar-tagline       { display: none; }
 }
 
 @media (max-width: 480px) {
