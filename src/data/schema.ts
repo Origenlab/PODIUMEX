@@ -123,6 +123,7 @@ type ProductOpts = {
   images: string[];
   sku: string;
   material?: string;
+  price?: string; // precio "desde" (MXN, solo dígitos), p.ej. '8500'
 };
 export function productSchema(o: ProductOpts): string {
   const url = `${SITE.url}/catalogo/${o.slug}`;
@@ -142,6 +143,7 @@ export function productSchema(o: ProductOpts): string {
       '@type': 'Offer',
       url,
       priceCurrency: 'MXN',
+      ...(o.price ? { price: o.price, priceValidUntil: '2027-12-31' } : {}),
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: { '@id': BUSINESS_ID },
