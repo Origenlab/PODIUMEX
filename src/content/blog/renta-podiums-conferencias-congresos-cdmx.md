@@ -16,6 +16,12 @@ El podium es el símbolo visual de todo eso. Es desde donde habla la autoridad e
 
 Si ese podium se ve improvisado, o se ve chico, o si el micrófono no llega a la altura correcta, la primera impresión es: "esta producción no fue pensada". Y desde ahí, cuesta arriba.
 
+
+<figure>
+  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-01.avif" alt="Orador en podium durante congreso empresarial en hotel de Ciudad de México" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Podium profesional montado para un congreso corporativo en CDMX.</figcaption>
+</figure>
+
 ## Por Qué El Podium Importa Tanto En Conferencias Y Congresos
 
 Piensa en una conferencia bien producida. El ponente se mueve con naturalidad. Sus manos descansan donde deben descansar. Su voz sale limpia. Las cámaras captan un escenario que se ve completo, profesional.
@@ -25,6 +31,12 @@ Eso no ocurre por accidente.
 En la Ciudad de México operamos constantemente en los principales centros de convenciones, en hoteles de cinco estrellas, en auditorios universitarios. Hemos visto qué funciona y qué no. Conocemos estos espacios no por teoría, sino porque estamos ahí montando equipo cada semana.
 
 Y aquí está lo que hemos aprendido: los congresos en la CDMX tienen una exigencia particular. La audiencia es profesional. Ha participado en congresos internacionales. Nota la diferencia. Un podium de acrílico transparente con el logo del evento grabado en alta definición es hoy el estándar internacional. Transmite modernidad, apertura, profesionalismo. No es opinión: es lo que ves en los congresos más importantes del mundo.
+
+
+<figure>
+  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-02.avif" alt="Conferencista en podium ante gran audiencia de congreso" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Para congresos de gran formato, el podium ancla todo el escenario.</figcaption>
+</figure>
 
 ## Qué Modelo Elegir
 

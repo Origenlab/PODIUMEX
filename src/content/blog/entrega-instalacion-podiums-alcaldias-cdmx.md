@@ -14,6 +14,12 @@ Casi todo el mundo elige podium por dos cosas: el modelo y el precio. Y casi tod
 
 Esta guía explica, sin letra chica, cómo funciona de verdad la logística de renta de podiums en CDMX. Qué debería incluir un servicio serio, cómo cambia el montaje según la zona, cuánto tarda cada etapa y qué conviene confirmar antes de firmar. Es la información que rara vez está en la cotización y que más tranquilidad da el día del evento.
 
+
+<figure>
+  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-03.avif" alt="Podium instalado y listo para evento empresarial en hotel" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Entrega e instalación de podiums en todas las alcaldías de CDMX.</figcaption>
+</figure>
+
 ## "Renta de Podium" Debería Significar Mucho Más Que el Mueble
 
 Cuando un proveedor cotiza barato, vale la pena preguntar qué incluye ese precio. Muchas veces es solo el mueble dejado en la puerta. La diferencia entre eso y un servicio profesional es enorme, porque el podium no se "entrega": se entrega, se sube, se coloca, se nivela, se prueba, se cuida durante el evento y se recoge después. Cada uno de esos verbos es una oportunidad de que algo salga mal si no hay alguien responsable de él.

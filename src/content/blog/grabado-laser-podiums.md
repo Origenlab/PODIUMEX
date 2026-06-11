@@ -13,6 +13,12 @@ featured: false
 
 Piénsalo así: durante todo un evento, la cámara oscila entre dos planos. El ponente hablando. El ponente con un podium genérico al fondo. Cualquier foto que se publique después va a incluir ese podium. Y esa foto va a circular. Para siempre. Por eso el grabado láser no es un lujo, es una inversión en cómo quiere tu marca verse en el mundo.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-06.avif" alt="Podium personalizado en uso durante evento corporativo" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>El grabado láser permite personalizar el podium con tu marca.</figcaption>
+</figure>
+
 ## ¿Por Qué el Grabado Láser?
 
 El grabado láser marca directamente en el material. No es un adhesivo que se despega en tres meses. No es una impresión que se borra con el polvo. Es parte de la estructura misma del podium: permanente, legible desde cualquier ángulo, y que mejora con el tiempo (mientras que los adhesivos envejecen).

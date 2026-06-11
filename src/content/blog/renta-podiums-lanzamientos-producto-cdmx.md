@@ -14,6 +14,12 @@ Todo lanzamiento de producto está construido alrededor de un solo segundo: el d
 
 El podium es la pieza desde la que la marca toma la palabra y conduce esa narrativa. No es un atril cualquiera al que se le pega un logo: es el ancla visual de la keynote, el punto desde el que se construye expectativa y, si está bien resuelto, uno de los elementos más fotografiados de la noche. Por eso rentar el podium de un lanzamiento se parece más a elegir utilería de escena que a pedir mobiliario.
 
+
+<figure>
+  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-04.avif" alt="Presentador en podium sobre escenario durante lanzamiento de producto" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Un podium de impacto refuerza el lanzamiento de producto.</figcaption>
+</figure>
+
 ## Pensar Como Director de Escena, No Como Comprador de Mobiliario
 
 La diferencia entre un lanzamiento que se siente cuidado y uno que se siente armado a la carrera suele estar en las decisiones invisibles. Una de ellas es cómo dialoga el podium con todo lo demás: con la pantalla LED, con la iluminación, con el producto que se va a revelar. Si el podium pelea con esos elementos —los tapa, refleja sus luces, rompe la línea visual—, el ojo lo registra como un error aunque nadie sepa nombrarlo.
@@ -26,6 +32,12 @@ A diferencia de un evento institucional, el lanzamiento da permiso para arriesga
 - Dar presencia al vocero durante la keynote y desaparecer con elegancia en el reveal.
 - Integrarse con la iluminación y las pantallas, no estorbarlas.
 - Verse impecable en cámara, porque el lanzamiento vivirá después en video.
+
+
+<figure>
+  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-07.avif" alt="Orador en podium con pantalla en presentación de producto" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>La puesta en escena del podium amplifica el mensaje de marca.</figcaption>
+</figure>
 
 ## Las Sightlines: el Error Que Nadie Ve en el Render y Todos Ven en Vivo
 

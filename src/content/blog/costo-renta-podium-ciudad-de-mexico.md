@@ -14,6 +14,12 @@ La primera pregunta que casi todo mundo hace es la misma: ¿cuánto cuesta? Y la
 
 Aquí van los rangos. Y algo importante: el precio de rentar un podium no varía tanto entre proveedores como lo que recibes a cambio de ese precio. El día de tu evento, esa diferencia es lo que determina si todo funciona o si tienes un desastre en el escenario.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-01.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>El costo de renta varía según el tipo de podium y el evento en CDMX.</figcaption>
+</figure>
+
 ## Los Números
 
 Estos rangos incluyen entrega, instalación, soporte técnico y recolección. No es el precio de solo el mueble. Es lo que cuesta que el podium funcione en tu evento.

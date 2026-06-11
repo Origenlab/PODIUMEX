@@ -243,6 +243,24 @@ const breadcrumbSchema = JSON.stringify({
   color: var(--primary);
   font-weight: 600;
 }
+.blog-article-content figure {
+  margin: 2rem 0;
+}
+.blog-article-content figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.blog-article-content figcaption {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 0.6rem;
+  font-style: italic;
+}
 .blog-article-footer {
   margin-top: 3rem;
   padding-top: 1.5rem;

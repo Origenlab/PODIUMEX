@@ -13,6 +13,12 @@ featured: false
 
 Mira, después de años viendo qué tipo de podium funciona en cada evento, te puedo decir esto con certeza: la elección del material es lo que determina si tu escenario se siente profesional o amateur. Y entre acrílico y madera, no hay un ganador universal. Todo depende de qué mensaje quieres que diga tu evento.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-09.avif" alt="Oradora en podium de acrílico transparente en conferencia" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Acrílico vs madera: cada material proyecta una personalidad distinta.</figcaption>
+</figure>
+
 ## Acrílico: Lo Moderno Que Desaparece Cuando lo Necesitas
 
 El acrílico (sí, el plexiglás transparente) no es para cualquier evento. Es para los que necesitan que el podium esté ahí sin ser notado. Que el público mire al ponente, no al mobiliario.

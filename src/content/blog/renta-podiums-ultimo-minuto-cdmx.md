@@ -14,6 +14,12 @@ El evento se adelantó. O el proveedor de siempre canceló a última hora. O alg
 
 Lo escribo desde la experiencia de resolver estos casos. Las rentas urgentes no fallan por falta de inventario; fallan por mala comunicación. Quien sabe qué información dar y por qué canal pedirla, resuelve en minutos lo que a otros les toma horas de correos sin respuesta. Esta guía es justamente eso: cómo pedir bien cuando vas contra el reloj.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-07.avif" alt="Orador en podium en evento profesional de último minuto" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Renta de podiums urgente con entrega exprés en CDMX.</figcaption>
+</figure>
+
 ## Primero, la Buena Noticia: Urgente No Es Sinónimo de Improvisado
 
 Una renta de último minuto no significa conformarse con lo que sea. Con un proveedor que tenga inventario disponible y logística ágil en CDMX, es perfectamente posible conseguir un podium profesional —con entrega, instalación y nivelación— incluso para el mismo día o para mañana temprano. Lo que cambia con la prisa no es la calidad del mueble ni del montaje; es el margen.

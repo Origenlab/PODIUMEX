@@ -14,6 +14,12 @@ Hay un momento en casi toda boda que nadie ensaya y todos recuerdan: el del disc
 
 Un podium no cambia las palabras de ese discurso, pero cambia cómo se viven y cómo se ven. Le da al orador un punto firme desde dónde hablar, una superficie para las notas y las manos, y a la escena un centro visual que el fotógrafo agradece. En una boda donde se cuidó la mantelería, las flores y la iluminación, dejar los discursos sin un punto focal es una incoherencia que se nota. Por eso, cada vez más parejas y wedding planners en la Ciudad de México suman este detalle a la lista.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-podium-auditorio-universitario-01.avif" alt="Orador en podium dirigiéndose a invitados en evento social" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Podiums elegantes para bodas y eventos sociales en CDMX.</figcaption>
+</figure>
+
 ## Por Qué un Podium Eleva Toda la Celebración
 
 La elegancia de una boda se construye con coherencia. Cuando cada elemento conversa con los demás —el montaje, la papelería, la música, la luz— el conjunto se siente pensado. El momento de los discursos rompe esa coherencia cuando se improvisa: un orador sin lugar definido, de espaldas a media sala, con el micrófono haciendo eco. Un podium ordena ese instante y lo devuelve al mismo nivel de cuidado que el resto del evento.
@@ -27,6 +33,12 @@ Hay además una razón emocional, menos obvia pero muy real. Hablar frente a dos
 - Los discursos de testigos, padrinos y familia.
 - El agradecimiento final de los novios.
 - Las dinámicas que conduce el maestro de ceremonias.
+
+
+<figure>
+  <img src="/img/galeria-eventos/orador-podium-auditorio-universitario-04.avif" alt="Maestro de ceremonias en podium ante los asistentes" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Un podium aporta formalidad y protagonismo al evento social.</figcaption>
+</figure>
 
 ## La Estética Manda: Elegir el Modelo Que Conversa con tu Boda
 

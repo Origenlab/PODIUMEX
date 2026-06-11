@@ -14,11 +14,23 @@ Una graduación no es un evento cualquiera. Para los papás en la segunda fila, 
 
 El podium es donde todo ocurre. Donde están los discursos, los reconocimientos, las palabras que alguien va a recordar dentro de veinte años. Merece estar a la altura.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-podium-auditorio-universitario-02.avif" alt="Orador en podium en ceremonia de graduación en auditorio" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Podiums para graduaciones y ceremonias en auditorios de CDMX.</figcaption>
+</figure>
+
 ## Por Qué Importa el Podium
 
 En una graduación, el podium está en cuadro todo el acto. Discursos de autoridades, entrega de reconocimientos, representantes de generación, orador invitado: todo desde ese punto. Las fotos oficiales, el video que la familia guarda por décadas, el noticiero institucional: todo lo captura.
 
 No puede verse improvisado. Debe verse exactamente como su institución quiere verse: con identidad, seriedad, orgullo.
+
+
+<figure>
+  <img src="/img/galeria-eventos/orador-podium-auditorio-universitario-03.avif" alt="Ponente en podium frente a estudiantes en auditorio universitario" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>El podium da solemnidad al acto de graduación.</figcaption>
+</figure>
 
 ## La CDMX y Sus Graduaciones
 

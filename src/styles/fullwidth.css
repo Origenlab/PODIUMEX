@@ -62,6 +62,30 @@ img,video,iframe{ max-width:100%; }
   padding-right: var(--gutter) !important;
 }
 
+/* Textos internos (subtítulos / encabezados de sección) que tenían
+   topes de 480–700px y se veían “angostos”. Ahora ocupan el 100%
+   del módulo. Los centrados conservan su centrado; los del hero,
+   alineados a la izquierda, llenan su columna. */
+.sh-desc,
+.ix-section-header,
+.section-header{
+  max-width: 100% !important;
+}
+.ix-hero-desc,
+.ct-hero-desc{
+  max-width: 100% !important;
+}
+
+/* CTA centrado y subtítulo de testimonios: también al 100% del módulo
+   (el texto sigue centrado, pero el bloque ocupa todo el ancho). */
+.cta-content,
+.testimonials-header p{
+  max-width: 100% !important;
+}
+
+/* Figuras/imágenes destacadas: 100% del ancho del módulo */
+figure{ max-width: 100% !important; }
+
 /* El grid del blog (artículo + sidebar) ya es full width;
    solo ampliamos la columna principal en pantallas grandes. */
 @media (min-width: 1025px){

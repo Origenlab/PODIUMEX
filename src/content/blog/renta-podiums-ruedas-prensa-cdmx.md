@@ -14,6 +14,12 @@ Hay una foto que se repite en casi todas las ruedas de prensa: plano medio, el v
 
 No es un detalle menor. Una rueda de prensa es, por definición, un evento que se multiplica: lo que sucede frente a un puñado de reporteros termina reproducido en decenas de medios. El podium es lo único de la escenografía que viaja en todas esas reproducciones. Vale la pena elegirlo con criterio.
 
+
+<figure>
+  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-03.avif" alt="Vocero en podium frente a audiencia en rueda de prensa" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Para ruedas de prensa, un podium sobrio comunica seriedad institucional.</figcaption>
+</figure>
+
 ## El Podium Es Lo Único Que Sale en Todas las Tomas
 
 Piénsalo desde la cámara. En una conferencia de prensa hay fotografía fija, video para transmisión, grabación para redes y, a veces, señal en vivo. Todos esos formatos comparten un mismo punto de fuga: la persona que habla y el podium donde se apoya. El backing —el muro de marca al fondo— ayuda, pero se sale del cuadro en los planos cerrados. El podium no. En el primer plano, el frente del podium suele ser lo único de marca que queda dentro del encuadre.
@@ -30,6 +36,12 @@ En vivo, el ojo humano disculpa muchas cosas. La cámara no. Un reflejo en el ac
 - El ángulo de las superficies acrílicas respecto a los reflectores y los flashes.
 - La nitidez y el centrado del logotipo en la franja donde cae el encuadre.
 - La firmeza del mueble cuando se le encima la planta de micrófonos de los medios.
+
+
+<figure>
+  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-06.avif" alt="Orador en podium en conferencia de prensa con pantalla" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>El podium concentra la atención de medios y cámaras.</figcaption>
+</figure>
 
 ## El Audio: el Punto Donde Más Ruedas de Prensa Se Caen
 

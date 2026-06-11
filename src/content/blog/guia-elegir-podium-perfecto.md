@@ -15,6 +15,12 @@ Un evento empieza mucho antes de que la primera persona se siente. Empieza cuand
 
 Hay una razón por la que los mismos escenarios que ves en conferencias internacionales usan casi los mismos tipos de podium. No es casualidad. Es que ciertas cosas simplemente funcionan mejor que otras.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-04.avif" alt="Orador en podium ideal para conferencia empresarial" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Elegir el podium perfecto depende del tipo y escala del evento.</figcaption>
+</figure>
+
 ## Los Materiales: La Decisión Principal
 
 ### Acrílico Transparente

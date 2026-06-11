@@ -15,6 +15,12 @@ He visto presidentes, rectores, ministros, directores ejecutivos. He visto bueno
 
 El podium está ahí para servirte. No para protegerte.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-01.avif" alt="Ejecutiva dirigiéndose a la audiencia desde un podium de acrílico" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>El protocolo correcto de uso del podium proyecta autoridad y orden.</figcaption>
+</figure>
+
 ## La Posición Correcta: 10-15 Centímetros
 
 Ese es el espacio. No más atrás. No pegado al podium. 10 a 15 centímetros. Cuerpo ligeramente hacia adelante. Es la posición que dice "tengo algo que decir y estoy seguro de que quieres escucharlo".

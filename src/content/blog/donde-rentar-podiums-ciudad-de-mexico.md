@@ -14,6 +14,12 @@ Estás organizando un evento en la Ciudad de México y necesitas un podium que n
 
 Esta guía es para ti. Te vamos a decir qué buscamos, dónde encontrarlo, y qué hacer para que todo salga exactamente como lo planeaste.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-03.avif" alt="Conferencista en podium en sala empresarial de Ciudad de México" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Renta de podiums con entrega en toda la Ciudad de México.</figcaption>
+</figure>
+
 ## Por Qué el Podium Correcto Es Más Importante de Lo Que Crees
 
 El podium es el elemento de tu escenario que más cámara captura. Es donde la gente se para, donde habla, donde la atención visual converge. En una conferencia, en un lanzamiento, en una gala corporativa. Es el centro geométrico de la información.

@@ -13,6 +13,12 @@ featured: true
 
 Estamos en un punto de inflexión. La industria de eventos en México está haciendo exactamente lo que hace cualquier industria madura: dejar de pensar en soluciones genéricas y empezar a pensar en soluciones específicas. El podium es el reflejo de eso.
 
+
+<figure>
+  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-01.avif" alt="Conferencista en podium moderno sobre escenario de evento con pantalla LED" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Las tendencias 2025 apuntan a podiums integrados con la tecnología del escenario.</figcaption>
+</figure>
+
 ## 1. Del Mobiliario al Comunicador: El Podium Como Marca
 
 Hasta hace dos años, las empresas alquilaban podiums. Eran objetos intercambiables. Podium negro, logo pegado con vinilo, listo. No importaba cuál fuera.

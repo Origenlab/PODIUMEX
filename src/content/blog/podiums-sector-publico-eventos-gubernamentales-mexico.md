@@ -16,6 +16,12 @@ Cada conferencia de prensa, cada toma de protesta, cada acto de inauguración p�
 
 El podium, en ese contexto, no es un mueble de apoyo. Es un símbolo de investidura.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-04.avif" alt="Funcionario en podium durante evento gubernamental" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>El sector público exige podiums formales y de presencia institucional.</figcaption>
+</figure>
+
 ## Por Qué el Equipamiento Cuenta en Actos del Estado
 
 Un podium deteriorado, genérico o visualmente inapropiado no es un problema estético. Es una declaración institucional. Comunica que alguien no cuidó los detalles. Y en política, los detalles son mensaje.

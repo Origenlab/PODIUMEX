@@ -14,6 +14,12 @@ En un evento empresarial en la Ciudad de México, todo comunica. El color de la 
 
 Cuando tu empresa convoca a clientes, socios, directivos o inversionistas a una presentación, el escenario que montas no es un elemento decorativo. Es parte del mensaje.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-02.avif" alt="Directivo presentando desde podium en evento empresarial en CDMX" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>En eventos empresariales el podium es el centro visual del escenario.</figcaption>
+</figure>
+
 ## La Exigencia Corporativa en la CDMX
 
 Aquí es donde esto se pone concreto. Ciudad de México es uno de los mercados corporativos más activos de América Latina. Sedes regionales de multinacionales. Corporativos nacionales de primer nivel. Instituciones financieras. Cámaras industriales. Los eventos que estas organizaciones montan compiten (a veces inconscientemente, pero compiten) con los estándares de las mejores empresas del mundo.
@@ -21,6 +27,12 @@ Aquí es donde esto se pone concreto. Ciudad de México es uno de los mercados c
 Un evento corporativo con producción descuidada transmite un mensaje involuntario: que la organización no presta atención a los detalles. Y en el mundo corporativo de alto nivel, los detalles son lo que diferencia a los líderes de los seguidores.
 
 No es dramático. Es solo cómo funciona la percepción.
+
+
+<figure>
+  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-02.avif" alt="Podium en salón de hotel durante evento corporativo en CDMX" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Hoteles y salones corporativos: el podium define el punto focal.</figcaption>
+</figure>
 
 ## Cuándo Necesitas Un Podium Profesional
 

@@ -16,6 +16,12 @@ Casi todos los eventos que pasan por un hotel necesitan un podium. Las juntas de
 
 Ese es el problema que existe. Y también es la oportunidad que PODIUMEX resuelve.
 
+
+<figure>
+  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-06.avif" alt="Podium en salón de hotel y centro de convenciones en CDMX" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Podiums para hoteles y centros de convenciones en CDMX.</figcaption>
+</figure>
+
 ## Cómo Distingir a un Proveedor que Entiende Hotels de uno que Solo Vende Mobiliario
 
 Aquí está la realidad: cualquiera con un podium y un teléfono dice que provee a hoteles. La diferencia real aparece el día del evento, cuando ya no hay margen de corrección.
@@ -31,6 +37,12 @@ Un proveedor que funciona en hoteles entiende una cosa que los proveedores gené
 **Coordina con una sola persona.** No con el cliente final. No con el organizador externo. Directamente con el jefe de banquetes. Esa coordinación directa elimina intermediarios y garantiza que cuando hay un cambio de salón de último minuto o un imprevisto logístico, hay una sola conversación que lo resuelve, no un teléfono que suena tres veces.
 
 **Facturación que funciona con el sistema del hotel.** Los departamentos de compras de hoteles tienen requisitos específicos: RFC, domicilio fiscal correcto, formato de factura según la cadena, integración con sistemas contables. Un proveedor sin capacidad fiscal es un dolor de cabeza administrativo. PODIUMEX no es.
+
+
+<figure>
+  <img src="/img/galeria-eventos/orador-podium-auditorio-universitario-05.avif" alt="Orador en podium ante gran audiencia en centro de convenciones" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Centros de convenciones: el podium escala con el tamaño del recinto.</figcaption>
+</figure>
 
 ## El Catálogo: Elegir el Podium Correcto para Cada Tipo de Evento
 

@@ -13,6 +13,12 @@ featured: false
 
 Un podium profesional bien mantenido dura más de una década sin perder un ápice de su apariencia. Mal mantenido, dura dos eventos antes de verse como un mueble descuidado. La diferencia no es complicada. Solo requiere disciplina y saber exactamente qué hacer.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-02.avif" alt="Podium en uso durante una presentación ejecutiva" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Un podium bien mantenido conserva su acabado evento tras evento.</figcaption>
+</figure>
+
 ## Acrílico: Lo Que Debes Saber
 
 El acrílico es resistente. Pero se raya fácilmente si lo tocas con lo que no debes. Por eso es crítico entender qué funciona y qué no.

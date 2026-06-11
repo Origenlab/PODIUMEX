@@ -14,6 +14,12 @@ Un congreso de gran escala no es simplemente un evento grande. Es un ecosistema:
 
 Ciudad de México es la capital de congresos en México. Centro Citibanamex, World Trade Center, los hoteles de Reforma-Polanco, los auditorios de la UNAM, Iberoamericana, Tec. PODIUMEX trabaja regularmente en todos estos espacios. Conocemos los protocolos, los accesos, los tiempos, las fricciones típicas. Y sabemos cómo no acumularlas.
 
+
+<figure>
+  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-04.avif" alt="Podium en congreso y exposición empresarial en CDMX" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Podiums para congresos y exposiciones de gran formato en CDMX.</figcaption>
+</figure>
+
 ## Lo Que Realmente Exige un Congreso de Escala
 
 **Múltiples podiums iguales, ya.**
@@ -27,6 +33,12 @@ Los de audio necesitan el micrófono aquí. Los de video necesitan el podium pos
 
 **Soporte en sitio, de verdad.**
 En un congreso de varios días, no puedes quedarte sin asistencia técnica. Un micrófono que no ajusta, un soporte que cede, una base que no queda perfectamente nivelada: todo eso necesita solución en minutos, no en horas. Por eso estamos acá durante el evento.
+
+
+<figure>
+  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-05.avif" alt="Orador en podium ante audiencia numerosa en exposición" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>En exposiciones, el podium organiza las ponencias del programa.</figcaption>
+</figure>
 
 ## El Catálogo para Congresos
 

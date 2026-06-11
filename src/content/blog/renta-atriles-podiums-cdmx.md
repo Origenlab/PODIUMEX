@@ -12,6 +12,12 @@ featured: false
 
 La confusión entre atril y podium es tan común que ya la hemos asumido como parte del lenguaje. En México, la gente dice "atril" y "podium" como si fueran la misma cosa. Y técnicamente, en la vida diaria, no importa. Pero cuando estás organizando un evento y necesitas rentar el equipo correcto, sí importa. Aquí está la diferencia, y más importante: por qué te afecta.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-05.avif" alt="Orador en atril podium dirigiéndose a los asistentes" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Atriles y podiums en renta para todo tipo de evento en CDMX.</figcaption>
+</figure>
+
 ## Atril vs. Podium: Lo que Realmente Cambia
 
 Un **atril** es básicamente un soporte: un atril inclinado sobre una base que sostiene documentos, notas o una tablet. Es ligero, ocupa poco espacio y funciona cuando el presentador solo necesita un lugar donde apoyar sus notas mientras se mueve de un lado a otro del escenario.

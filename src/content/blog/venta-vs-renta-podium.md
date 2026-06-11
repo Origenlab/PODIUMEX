@@ -15,6 +15,12 @@ Llegará el momento en que tu empresa enfrente la pregunta. Quizás ya está enf
 
 Seré directo: la respuesta depende de un solo número. Cuántas veces usarás ese podium en un año.
 
+
+<figure>
+  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-07.avif" alt="Orador en podium en evento empresarial recurrente" width="1200" height="675" loading="lazy" decoding="async">
+  <figcaption>Vender o rentar: la frecuencia de tus eventos define la mejor opción.</figcaption>
+</figure>
+
 ## Qué Incluye Cada Modalidad
 
 Primero, aclaremos qué significa cada opción.
