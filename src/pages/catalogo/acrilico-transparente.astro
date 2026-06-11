@@ -80,8 +80,9 @@ const beneficios = [
 
 const relacionados = [
   { href: '/catalogo/acrilico-negro', tag: 'Acrílico', title: 'Acrílico Negro', desc: 'Sofisticación de alto contraste para galas, premiaciones y eventos VIP.', image: '/img/catalogo/acrilico-negro.webp', imageAlt: 'Podium de acrílico negro mate premium' },
-  { href: '/catalogo/acrilico-transparente-compacto', tag: 'Compacto', title: 'Acrílico Transparente Compacto', desc: 'La misma elegancia en formato reducido para estudios y salas de juntas.', image: '/img/catalogo/acrilico-transparente-compacto.webp', imageAlt: 'Podium de acrílico transparente compacto' },
+  { href: '/catalogo/podium-madera-negro', tag: 'Madera', title: 'Madera Negro', desc: 'Autoridad y formalidad para gobierno, universidades y ceremonias oficiales.', image: '/img/catalogo/podium-madera-negro.webp', imageAlt: 'Podium de madera negra clásico para eventos institucionales' },
   { href: '/catalogo/madera-caoba-acrilico', tag: 'Combinado', title: 'Madera y Acrílico', desc: 'Calidez de la madera caoba con la modernidad del frente de acrílico.', image: '/img/catalogo/madera-caoba-acrilico.webp', imageAlt: 'Podium de madera caoba con frente de acrílico' },
+  { href: '/catalogo/acrilico-transparente-compacto', tag: 'Compacto', title: 'Acrílico Transparente Compacto', desc: 'La misma elegancia en formato reducido para estudios y salas de juntas.', image: '/img/catalogo/acrilico-transparente-compacto.webp', imageAlt: 'Podium de acrílico transparente compacto' },
 ];
 
 const description = 'Renta y venta del podium de acrílico transparente: diseño minimalista de 120 cm en acrílico de 6 mm pulido. Ideal para conferencias y eventos corporativos en México. Entrega en 24 h y garantía escrita.';
@@ -278,7 +279,7 @@ const checkSm = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" str
         p1="Tenemos <strong>8 modelos en acrílico, madera y combinados</strong>, en talla estándar y compacta, para cada contexto de presentación."
         p2="¿No sabes cuál elegir? Te asesoramos <strong>sin costo</strong> según tu tipo de evento, aforo y presupuesto."
       />
-      <div class="ix-services-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="ix-services-grid">
         {relacionados.map((r) => (
           <a href={r.href} class="ix-service-card">
             <div class="ix-service-img">
