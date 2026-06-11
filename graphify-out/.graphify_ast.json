@@ -1,0 +1,884 @@
+{
+  "nodes": [
+    {
+      "id": "users_frankoropeza_documents_claude_projects_podiumex_astro_config_mjs",
+      "label": "astro.config.mjs",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/astro.config.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_initializemenu",
+      "label": "initializeMenu()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L42"
+    },
+    {
+      "id": "app_initializeheaderscroll",
+      "label": "initializeHeaderScroll()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L110"
+    },
+    {
+      "id": "app_initializescrolltop",
+      "label": "initializeScrollTop()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L136"
+    },
+    {
+      "id": "app_initializefaq",
+      "label": "initializeFAQ()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L169"
+    },
+    {
+      "id": "app_initializeservicefaq",
+      "label": "initializeServiceFAQ()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L218"
+    },
+    {
+      "id": "app_initializesmoothscroll",
+      "label": "initializeSmoothScroll()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L241"
+    },
+    {
+      "id": "app_initializectaform",
+      "label": "initializeCTAForm()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L270"
+    },
+    {
+      "id": "app_initializecontactform",
+      "label": "initializeContactForm()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L293"
+    },
+    {
+      "id": "app_validatefield",
+      "label": "validateField()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L306"
+    },
+    {
+      "id": "app_showfielderror",
+      "label": "showFieldError()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L338"
+    },
+    {
+      "id": "app_clearfielderror",
+      "label": "clearFieldError()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L350"
+    },
+    {
+      "id": "app_showformerror",
+      "label": "showFormError()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L356"
+    },
+    {
+      "id": "app_initializewhatsappform",
+      "label": "initializeWhatsAppForm()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L366"
+    },
+    {
+      "id": "app_getservicefrompath",
+      "label": "getServiceFromPath()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L433"
+    },
+    {
+      "id": "app_initializeanimations",
+      "label": "initializeAnimations()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L457"
+    },
+    {
+      "id": "app_initializelazyloading",
+      "label": "initializeLazyLoading()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L506"
+    },
+    {
+      "id": "app_validateemail",
+      "label": "validateEmail()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L533"
+    },
+    {
+      "id": "app_validatephone",
+      "label": "validatePhone()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L538"
+    },
+    {
+      "id": "app_debounce",
+      "label": "debounce()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L543"
+    },
+    {
+      "id": "app_getqueryparam",
+      "label": "getQueryParam()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L555"
+    },
+    {
+      "id": "app_formatprice",
+      "label": "formatPrice()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L560"
+    },
+    {
+      "id": "app_shownotification",
+      "label": "showNotification()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L568"
+    },
+    {
+      "id": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_initializemenu",
+      "label": "initializeMenu()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L42"
+    },
+    {
+      "id": "app_initializeheaderscroll",
+      "label": "initializeHeaderScroll()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L110"
+    },
+    {
+      "id": "app_initializescrolltop",
+      "label": "initializeScrollTop()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L136"
+    },
+    {
+      "id": "app_initializefaq",
+      "label": "initializeFAQ()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L169"
+    },
+    {
+      "id": "app_initializeservicefaq",
+      "label": "initializeServiceFAQ()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L218"
+    },
+    {
+      "id": "app_initializesmoothscroll",
+      "label": "initializeSmoothScroll()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L241"
+    },
+    {
+      "id": "app_initializectaform",
+      "label": "initializeCTAForm()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L270"
+    },
+    {
+      "id": "app_initializecontactform",
+      "label": "initializeContactForm()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L293"
+    },
+    {
+      "id": "app_validatefield",
+      "label": "validateField()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L306"
+    },
+    {
+      "id": "app_showfielderror",
+      "label": "showFieldError()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L338"
+    },
+    {
+      "id": "app_clearfielderror",
+      "label": "clearFieldError()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L350"
+    },
+    {
+      "id": "app_showformerror",
+      "label": "showFormError()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L356"
+    },
+    {
+      "id": "app_initializewhatsappform",
+      "label": "initializeWhatsAppForm()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L366"
+    },
+    {
+      "id": "app_getservicefrompath",
+      "label": "getServiceFromPath()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L433"
+    },
+    {
+      "id": "app_initializeanimations",
+      "label": "initializeAnimations()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L457"
+    },
+    {
+      "id": "app_initializelazyloading",
+      "label": "initializeLazyLoading()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L506"
+    },
+    {
+      "id": "app_validateemail",
+      "label": "validateEmail()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L533"
+    },
+    {
+      "id": "app_validatephone",
+      "label": "validatePhone()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L538"
+    },
+    {
+      "id": "app_debounce",
+      "label": "debounce()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L543"
+    },
+    {
+      "id": "app_getqueryparam",
+      "label": "getQueryParam()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L555"
+    },
+    {
+      "id": "app_formatprice",
+      "label": "formatPrice()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L560"
+    },
+    {
+      "id": "app_shownotification",
+      "label": "showNotification()",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L568"
+    },
+    {
+      "id": "users_frankoropeza_documents_claude_projects_podiumex_src_content_config_ts",
+      "label": "content.config.ts",
+      "file_type": "code",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/src/content.config.ts",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_astro_config_mjs",
+      "target": "config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/astro.config.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_astro_config_mjs",
+      "target": "sitemap",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/astro.config.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializemenu",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializeheaderscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializescrolltop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializefaq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializeservicefaq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializesmoothscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializectaform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L270",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializecontactform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_validatefield",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_showfielderror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L338",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_clearfielderror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_showformerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializewhatsappform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L366",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_getservicefrompath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L433",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializeanimations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L457",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_initializelazyloading",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L506",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_validateemail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L533",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_validatephone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L538",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_debounce",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L543",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_getqueryparam",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L555",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_formatprice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L560",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_js_app_js",
+      "target": "app_shownotification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L568",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_validateemail",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_validatephone",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L324",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_showfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L330",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_clearfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "app_showfielderror",
+      "target": "app_clearfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L339",
+      "weight": 1.0
+    },
+    {
+      "source": "app_showformerror",
+      "target": "app_showfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/js/app.js",
+      "source_location": "L359",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializemenu",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializeheaderscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializescrolltop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializefaq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializeservicefaq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializesmoothscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializectaform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L270",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializecontactform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_validatefield",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_showfielderror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L338",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_clearfielderror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_showformerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializewhatsappform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L366",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_getservicefrompath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L433",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializeanimations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L457",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_initializelazyloading",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L506",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_validateemail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L533",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_validatephone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L538",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_debounce",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L543",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_getqueryparam",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L555",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_formatprice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L560",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_public_js_app_js",
+      "target": "app_shownotification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L568",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_validateemail",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_validatephone",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L324",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_showfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L330",
+      "weight": 1.0
+    },
+    {
+      "source": "app_validatefield",
+      "target": "app_clearfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "app_showfielderror",
+      "target": "app_clearfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L339",
+      "weight": 1.0
+    },
+    {
+      "source": "app_showformerror",
+      "target": "app_showfielderror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/public/js/app.js",
+      "source_location": "L359",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_src_content_config_ts",
+      "target": "astro_content",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/src/content.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "users_frankoropeza_documents_claude_projects_podiumex_src_content_config_ts",
+      "target": "loaders",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/PODIUMEX/src/content.config.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,106 @@
+/* ============================================
+   PODIUMEX — Full-bleed / 100% width layer
+   --------------------------------------------
+   Lleva TODOS los módulos al 100% del ancho del
+   explorador en escritorio, con un gutter fluido
+   (respiración lateral) que escala por viewport.
+   Se carga al FINAL del cascade (vía global.css),
+   por eso usa !important para vencer los estilos
+   scoped de Astro y los caps de 1400/1200px.
+   ============================================ */
+
+:root{
+  /* Respiración lateral: crece con la pantalla, nunca infinita.
+     ~20px en móvil, ~48px en laptop, ~96px en monitores grandes. */
+  --gutter: clamp(1.25rem, 4vw, 6rem);
+  /* Ancho cómodo de lectura para bloques de texto largo */
+  --reading: 78rem;
+}
+
+/* Seguridad anti-desborde horizontal */
+html,body{ max-width:100%; overflow-x:hidden; }
+img,video,iframe{ max-width:100%; }
+
+/* ---- Contenedores estructurales → 100% + gutter fluido ---- */
+.hero,
+.ix-hero,
+.ct-hero,
+.ix-container,
+.ix-cta-final-inner,
+.trust-content,
+.breadcrumbs-wrapper,
+.cards-grid,
+.services-detailed .container,
+.service-single-content,
+.contact-section,
+.faq-section,
+.footer-main,
+.footer-bottom-content,
+.product-wrapper,
+.testimonials-page,
+.blog-container,
+.hdr-inner,
+.topbar-inner,
+.lm-inner,
+.ft-main,
+.ft-bottom-inner{
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+}
+
+/* Artículo de blog (post individual): full-bleed la sección,
+   pero el texto conserva un ancho de lectura cómodo y centrado. */
+.blog-article{
+  max-width: var(--reading) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+}
+
+/* El grid del blog (artículo + sidebar) ya es full width;
+   solo ampliamos la columna principal en pantallas grandes. */
+@media (min-width: 1025px){
+  .blog-container{ grid-template-columns: 1fr 360px !important; }
+}
+
+/* ---- Mejoras responsive / “que ocupe bien el viewport” ---- */
+
+/* Tablas (artículos) con scroll horizontal en móvil, sin romper layout */
+.blog-article table{ display:block; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+
+/* Imágenes de tarjetas y detalles siempre fluidas */
+.product-card img,.service-card img,.service-detail-image img{ width:100% !important; }
+
+@media (max-width: 1024px){
+  :root{ --gutter: clamp(1.25rem, 4vw, 3rem); }
+  .service-stats .stat-grid,
+  .info-cards-grid{ grid-template-columns:1fr 1fr; }
+  .process-steps{ grid-template-columns:repeat(2,1fr); }
+}
+
+@media (max-width: 768px){
+  :root{ --gutter: 1.25rem; }
+  /* Una columna en todo lo que aún venga a 2+ columnas */
+  .cards-grid,
+  .service-two-col,
+  .contact-grid,
+  .footer-content,
+  .info-cards-grid,
+  .event-types,
+  .service-stats .stat-grid{ grid-template-columns:1fr !important; }
+  .hero-content,.ix-hero-content{ grid-template-columns:1fr !important; }
+  /* CTAs y botones a ancho completo, tap-target cómodo */
+  .cta-buttons,.hero-cta,.hero-ctas{ flex-direction:column; }
+  .cta-buttons .btn-whatsapp,.cta-buttons .btn-call,.cta-buttons .btn-primary,
+  .hero-cta .btn-whatsapp,.hero-cta .btn-call,.hero-cta .btn-primary{ width:100%; justify-content:center; }
+}
+
+@media (max-width: 480px){
+  :root{ --gutter: 1rem; }
+  .process-steps{ grid-template-columns:1fr 1fr; }
+}

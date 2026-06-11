@@ -62,7 +62,7 @@ const schema = JSON.stringify({
 
   <!-- Artículos Destacados -->
   {featuredPosts.length > 0 && (
-    <section style="padding:4rem 2rem 2rem;max-width:1200px;margin:0 auto;">
+    <section style="padding:4rem var(--gutter) 2rem;">
       <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Artículos Destacados</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;">
         {featuredPosts.map((post) => (
@@ -88,7 +88,7 @@ const schema = JSON.stringify({
 
   <!-- Todos los Artículos -->
   {regularPosts.length > 0 && (
-    <section style="padding:2rem 2rem 5rem;max-width:1200px;margin:0 auto;">
+    <section style="padding:2rem var(--gutter) 5rem;">
       <h2 style="font-size:1.75rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Más Artículos</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
         {regularPosts.map((post) => (
