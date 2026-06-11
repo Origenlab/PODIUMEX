@@ -21,6 +21,11 @@
 html,body{ max-width:100%; overflow-x:hidden; }
 img,video,iframe{ max-width:100%; }
 
+/* Navegación por anclas (#secciones): scroll suave y compensación
+   del header fijo para que el título no quede tapado al saltar. */
+html{ scroll-behavior: smooth; }
+[id]{ scroll-margin-top: calc(var(--nav-offset, 116px) + 1.25rem); }
+
 /* ---- Contenedores estructurales → 100% + gutter fluido ---- */
 .hero,
 .ix-hero,
