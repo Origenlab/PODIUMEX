@@ -15,10 +15,13 @@ Todo lanzamiento de producto está construido alrededor de un solo segundo: el d
 El podium es la pieza desde la que la marca toma la palabra y conduce esa narrativa. No es un atril cualquiera al que se le pega un logo: es el ancla visual de la keynote, el punto desde el que se construye expectativa y, si está bien resuelto, uno de los elementos más fotografiados de la noche. Por eso rentar el podium de un lanzamiento se parece más a elegir utilería de escena que a pedir mobiliario.
 
 
-<figure>
-  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-04.avif" alt="Presentador en podium sobre escenario durante lanzamiento de producto" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Un podium de impacto refuerza el lanzamiento de producto.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-01.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-04.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-05.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-07.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Pensar Como Director de Escena, No Como Comprador de Mobiliario
 
@@ -33,11 +36,6 @@ A diferencia de un evento institucional, el lanzamiento da permiso para arriesga
 - Integrarse con la iluminación y las pantallas, no estorbarlas.
 - Verse impecable en cámara, porque el lanzamiento vivirá después en video.
 
-
-<figure>
-  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-07.avif" alt="Orador en podium con pantalla en presentación de producto" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>La puesta en escena del podium amplifica el mensaje de marca.</figcaption>
-</figure>
 
 ## Las Sightlines: el Error Que Nadie Ve en el Render y Todos Ven en Vivo
 

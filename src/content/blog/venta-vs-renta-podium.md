@@ -16,10 +16,13 @@ Llegará el momento en que tu empresa enfrente la pregunta. Quizás ya está enf
 Seré directo: la respuesta depende de un solo número. Cuántas veces usarás ese podium en un año.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-07.avif" alt="Orador en podium en evento empresarial recurrente" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Vender o rentar: la frecuencia de tus eventos define la mejor opción.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-09.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-10.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-01.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-01.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Qué Incluye Cada Modalidad
 

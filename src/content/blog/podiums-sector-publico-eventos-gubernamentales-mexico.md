@@ -17,10 +17,13 @@ Cada conferencia de prensa, cada toma de protesta, cada acto de inauguración p�
 El podium, en ese contexto, no es un mueble de apoyo. Es un símbolo de investidura.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-04.avif" alt="Funcionario en podium durante evento gubernamental" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>El sector público exige podiums formales y de presencia institucional.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-04.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-05.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-04.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-09.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Por Qué el Equipamiento Cuenta en Actos del Estado
 

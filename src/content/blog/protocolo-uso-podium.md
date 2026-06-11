@@ -16,10 +16,13 @@ He visto presidentes, rectores, ministros, directores ejecutivos. He visto bueno
 El podium está ahí para servirte. No para protegerte.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-01.avif" alt="Ejecutiva dirigiéndose a la audiencia desde un podium de acrílico" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>El protocolo correcto de uso del podium proyecta autoridad y orden.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-01.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-02.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-03.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-04.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## La Posición Correcta: 10-15 Centímetros
 

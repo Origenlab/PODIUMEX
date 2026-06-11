@@ -14,10 +14,13 @@ featured: false
 Aquí va la verdad: en un evento presencial el podium es un mueble. En un evento híbrido, el podium es literalmente lo que ven cinco mil personas en sus pantallas durante tres horas. Eso cambia todo.
 
 
-<figure>
-  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-05.avif" alt="Orador en podium con pantalla y transmisión en evento híbrido" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Los eventos híbridos integran podium, pantalla y transmisión en vivo.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-02.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-03.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-06.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-08.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Por Qué Tu Elección de Podium Importa (Incluso Si Nadie Lo Dice)
 
@@ -31,11 +34,6 @@ Mira qué pasa en un evento híbrido mal hecho. El ponente está ahí, la transm
 
 El problema es que nadie dice esto hasta que es demasiado tarde. Ya está transmitiendo.
 
-
-<figure>
-  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-08.avif" alt="Conferencista en podium frente a público y cámara de streaming" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>El podium es el ancla física de un evento presencial y virtual.</figcaption>
-</figure>
 
 ## El Acrílico Transparente Es El Estándar Por Una Razón
 

@@ -17,10 +17,13 @@ Casi todos los eventos que pasan por un hotel necesitan un podium. Las juntas de
 Ese es el problema que existe. Y también es la oportunidad que PODIUMEX resuelve.
 
 
-<figure>
-  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-06.avif" alt="Podium en salón de hotel y centro de convenciones en CDMX" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Podiums para hoteles y centros de convenciones en CDMX.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-06.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-07.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-podium-auditorio-universitario-09.avif" alt="Orador en podium en auditorio ante numerosa audiencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-podium-auditorio-universitario-10.avif" alt="Orador en podium en auditorio ante numerosa audiencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Cómo Distingir a un Proveedor que Entiende Hotels de uno que Solo Vende Mobiliario
 
@@ -38,11 +41,6 @@ Un proveedor que funciona en hoteles entiende una cosa que los proveedores gené
 
 **Facturación que funciona con el sistema del hotel.** Los departamentos de compras de hoteles tienen requisitos específicos: RFC, domicilio fiscal correcto, formato de factura según la cadena, integración con sistemas contables. Un proveedor sin capacidad fiscal es un dolor de cabeza administrativo. PODIUMEX no es.
 
-
-<figure>
-  <img src="/img/galeria-eventos/orador-podium-auditorio-universitario-05.avif" alt="Orador en podium ante gran audiencia en centro de convenciones" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Centros de convenciones: el podium escala con el tamaño del recinto.</figcaption>
-</figure>
 
 ## El Catálogo: Elegir el Podium Correcto para Cada Tipo de Evento
 

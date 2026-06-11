@@ -16,10 +16,13 @@ Organizar un evento corporativo es como dirigir una orquesta. Decenas de variabl
 Pero hay un orden. Un proceso. Si lo sigues, el caos se convierte en ejecución limpia.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-06.avif" alt="Presentador en podium durante evento corporativo organizado" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Un evento corporativo bien organizado coloca el podium en el centro.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-04.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-06.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-07.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-05.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Primera Fase: Antes de Contratar Nada (8–12 semanas)
 
@@ -49,11 +52,6 @@ Un podium que se ve genérico hace que el evento se vea genérico. Uno que se ve
 
 ---
 
-
-<figure>
-  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-05.avif" alt="Podium en sesión de capacitación empresarial en hotel" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Capacitaciones y juntas corporativas se articulan alrededor del podium.</figcaption>
-</figure>
 
 ## Segunda Fase: Elegir el Espacio (6–8 semanas antes)
 

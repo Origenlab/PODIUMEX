@@ -14,10 +14,13 @@ featured: false
 Piénsalo así: durante todo un evento, la cámara oscila entre dos planos. El ponente hablando. El ponente con un podium genérico al fondo. Cualquier foto que se publique después va a incluir ese podium. Y esa foto va a circular. Para siempre. Por eso el grabado láser no es un lujo, es una inversión en cómo quiere tu marca verse en el mundo.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-06.avif" alt="Podium personalizado en uso durante evento corporativo" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>El grabado láser permite personalizar el podium con tu marca.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-09.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-10.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-07.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-03.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## ¿Por Qué el Grabado Láser?
 

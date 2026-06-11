@@ -15,10 +15,13 @@ Estás organizando un evento en la Ciudad de México y necesitas un podium que n
 Esta guía es para ti. Te vamos a decir qué buscamos, dónde encontrarlo, y qué hacer para que todo salga exactamente como lo planeaste.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-03.avif" alt="Conferencista en podium en sala empresarial de Ciudad de México" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Renta de podiums con entrega en toda la Ciudad de México.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-01.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-02.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-06.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-08.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Por Qué el Podium Correcto Es Más Importante de Lo Que Crees
 

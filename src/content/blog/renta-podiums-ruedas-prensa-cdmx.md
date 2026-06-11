@@ -15,10 +15,13 @@ Hay una foto que se repite en casi todas las ruedas de prensa: plano medio, el v
 No es un detalle menor. Una rueda de prensa es, por definición, un evento que se multiplica: lo que sucede frente a un puñado de reporteros termina reproducido en decenas de medios. El podium es lo único de la escenografía que viaja en todas esas reproducciones. Vale la pena elegirlo con criterio.
 
 
-<figure>
-  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-03.avif" alt="Vocero en podium frente a audiencia en rueda de prensa" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Para ruedas de prensa, un podium sobrio comunica seriedad institucional.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-07.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-08.avif" alt="Conferencista en podium sobre escenario con pantalla en evento" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-04.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-08.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## El Podium Es Lo Único Que Sale en Todas las Tomas
 
@@ -37,11 +40,6 @@ En vivo, el ojo humano disculpa muchas cosas. La cámara no. Un reflejo en el ac
 - La nitidez y el centrado del logotipo en la franja donde cae el encuadre.
 - La firmeza del mueble cuando se le encima la planta de micrófonos de los medios.
 
-
-<figure>
-  <img src="/img/galeria-eventos/conferencista-keynote-podium-escenario-06.avif" alt="Orador en podium en conferencia de prensa con pantalla" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>El podium concentra la atención de medios y cámaras.</figcaption>
-</figure>
 
 ## El Audio: el Punto Donde Más Ruedas de Prensa Se Caen
 

@@ -15,10 +15,13 @@ En un evento empresarial en la Ciudad de México, todo comunica. El color de la 
 Cuando tu empresa convoca a clientes, socios, directivos o inversionistas a una presentación, el escenario que montas no es un elemento decorativo. Es parte del mensaje.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-02.avif" alt="Directivo presentando desde podium en evento empresarial en CDMX" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>En eventos empresariales el podium es el centro visual del escenario.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-05.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-06.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-07.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-03.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## La Exigencia Corporativa en la CDMX
 
@@ -28,11 +31,6 @@ Un evento corporativo con producción descuidada transmite un mensaje involuntar
 
 No es dramático. Es solo cómo funciona la percepción.
 
-
-<figure>
-  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-02.avif" alt="Podium en salón de hotel durante evento corporativo en CDMX" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Hoteles y salones corporativos: el podium define el punto focal.</figcaption>
-</figure>
 
 ## Cuándo Necesitas Un Podium Profesional
 

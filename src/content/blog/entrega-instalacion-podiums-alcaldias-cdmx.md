@@ -15,10 +15,13 @@ Casi todo el mundo elige podium por dos cosas: el modelo y el precio. Y casi tod
 Esta guía explica, sin letra chica, cómo funciona de verdad la logística de renta de podiums en CDMX. Qué debería incluir un servicio serio, cómo cambia el montaje según la zona, cuánto tarda cada etapa y qué conviene confirmar antes de firmar. Es la información que rara vez está en la cotización y que más tranquilidad da el día del evento.
 
 
-<figure>
-  <img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-03.avif" alt="Podium instalado y listo para evento empresarial en hotel" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Entrega e instalación de podiums en todas las alcaldías de CDMX.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-09.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-10.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-01.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-02.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## "Renta de Podium" Debería Significar Mucho Más Que el Mueble
 

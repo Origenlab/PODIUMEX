@@ -17,10 +17,13 @@ El mercado mexicano de renta y venta de podiums tiene de todo. Operadores con a�
 Este artículo te ahorra ese descubrimiento doloroso dándote exactamente qué evaluar.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-03.avif" alt="Conferencista en podium en evento corporativo profesional" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Un proveedor confiable garantiza podiums impecables y entrega puntual.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-09.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-10.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-01.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-03.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Por Qué Importa el Proveedor
 

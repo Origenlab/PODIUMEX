@@ -14,10 +14,13 @@ featured: false
 Mira, después de años viendo qué tipo de podium funciona en cada evento, te puedo decir esto con certeza: la elección del material es lo que determina si tu escenario se siente profesional o amateur. Y entre acrílico y madera, no hay un ganador universal. Todo depende de qué mensaje quieres que diga tu evento.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-09.avif" alt="Oradora en podium de acrílico transparente en conferencia" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Acrílico vs madera: cada material proyecta una personalidad distinta.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-09.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-08.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-07.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-04.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Acrílico: Lo Moderno Que Desaparece Cuando lo Necesitas
 

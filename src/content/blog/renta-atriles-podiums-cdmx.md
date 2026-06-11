@@ -13,10 +13,13 @@ featured: false
 La confusión entre atril y podium es tan común que ya la hemos asumido como parte del lenguaje. En México, la gente dice "atril" y "podium" como si fueran la misma cosa. Y técnicamente, en la vida diaria, no importa. Pero cuando estás organizando un evento y necesitas rentar el equipo correcto, sí importa. Aquí está la diferencia, y más importante: por qué te afecta.
 
 
-<figure>
-  <img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-05.avif" alt="Orador en atril podium dirigiéndose a los asistentes" width="1200" height="675" loading="lazy" decoding="async">
-  <figcaption>Atriles y podiums en renta para todo tipo de evento en CDMX.</figcaption>
-</figure>
+
+<div class="post-gallery">
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-06.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-ejecutivo-conferencia-podium-07.avif" alt="Orador ejecutivo en podium dirigiéndose a la audiencia en conferencia" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/orador-conferencia-empresarial-podium-cdmx-10.avif" alt="Orador en podium de madera en conferencia empresarial en CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/galeria-eventos/capacitacion-empresarial-congreso-hotel-cdmx-05.avif" alt="Orador en podium durante congreso empresarial en hotel de CDMX" width="1200" height="900" loading="lazy" decoding="async"></figure>
+</div>
 
 ## Atril vs. Podium: Lo que Realmente Cambia
 
