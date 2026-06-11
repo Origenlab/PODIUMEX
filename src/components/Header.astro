@@ -21,9 +21,9 @@
 
         <!-- Catálogo -->
         <li class="has-drop">
-          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          <a href="/catalogo" class="nav-btn" aria-haspopup="true" aria-expanded="false">
             Catálogo
-          </button>
+          </a>
           <div class="drop" role="menu">
             <div class="drop-inner drop-inner--cols">
               <div class="drop-col">
@@ -52,9 +52,9 @@
 
         <!-- Servicios -->
         <li class="has-drop">
-          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          <a href="/servicios" class="nav-btn" aria-haspopup="true" aria-expanded="false">
             Servicios
-          </button>
+          </a>
           <div class="drop drop-wide" role="menu">
             <div class="drop-inner">
               <p class="drop-heading">Servicios especializados</p>
@@ -734,7 +734,8 @@
   nav && nav.querySelectorAll('.has-drop .nav-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       var isMobile = window.innerWidth <= 900;
-      if (!isMobile) return;
+      if (!isMobile) return;              // desktop: deja navegar el <a href>
+      e.preventDefault();                 // móvil: 1er tap expande el submenú, no navega
       e.stopPropagation();
       var li = btn.closest('.has-drop');
       var wasOpen = li.classList.contains('mob-open');
