@@ -154,14 +154,11 @@ const checkSm = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" str
 
         <!-- Columna principal -->
         <div class="ix-main">
-          <!-- Galería -->
-          <div class="ix-pdp-gallery">
-            <img id="pdpMain" class="ix-pdp-main" src={gallery[0].src} alt={gallery[0].alt} width="800" height="600" />
-            <div class="ix-pdp-thumbs">
-              {gallery.map((g, i) => (
-                <img class={`ix-pdp-thumb${i === 0 ? ' is-active' : ''}`} src={g.src} alt={g.alt} data-full={g.src} width="260" height="195" loading="lazy" />
-              ))}
-            </div>
+          <!-- Galería (grid 3 por fila) -->
+          <div class="ix-pdp-gallery3">
+            {gallery.map((g) => (
+              <img src={g.src} alt={g.alt} width="400" height="300" loading="lazy" />
+            ))}
           </div>
 
           <h2>Especificaciones técnicas</h2>
@@ -260,21 +257,5 @@ const checkSm = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" str
   <HelpSection />
 
   <script type="application/ld+json" set:html={faqLd} />
-
-  <script is:inline>
-    // Galería: clic en miniatura cambia la imagen principal
-    (function () {
-      const main = document.getElementById('pdpMain');
-      if (!main) return;
-      document.querySelectorAll('.ix-pdp-thumb').forEach((th) => {
-        th.addEventListener('click', () => {
-          main.src = th.getAttribute('data-full');
-          main.alt = th.getAttribute('alt');
-          document.querySelectorAll('.ix-pdp-thumb').forEach((t) => t.classList.remove('is-active'));
-          th.classList.add('is-active');
-        });
-      });
-    })();
-  </script>
 
 </Layout>

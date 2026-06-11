@@ -242,6 +242,11 @@
   .ix-pdp-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
+/* ── Galería de producto en grid (3 por fila) ──────── */
+.ix-pdp-gallery3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 0.5rem; }
+.ix-pdp-gallery3 img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border); display: block; background: var(--secondary); }
+@media (max-width: 560px) { .ix-pdp-gallery3 { grid-template-columns: 1fr 1fr; } }
+
 /* ── Layout con sidebar (interlinking) ─────────────── */
 .ix-with-sidebar { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 3rem; align-items: start; }
 .ix-main > h2 { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; margin: 2.5rem 0 1.25rem; }
