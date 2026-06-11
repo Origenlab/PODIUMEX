@@ -1,26 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium Madera Caoba con Acrilico Compacto",
-  "image": "https://podiumex.com/img/catalogo/madera-caoba-acrilico-compacto.webp",
-  "description": "Podium compacto de madera caoba con acrílico, en renta y venta. Diseño premium para espacios reducidos sin sacrificar elegancia. Envío a todo México.",
-  "sku": "PDX-MAD-ACR-C01",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "41"
-  }
+const schema = productSchema({
+  name: 'Podium de Madera Caoba con Acrílico Compacto',
+  slug: 'madera-caoba-acrilico-compacto',
+  description: 'Podium compacto de madera caoba con acrílico, en renta y venta. Diseño premium para espacios reducidos sin sacrificar elegancia. Envío a todo México.',
+  images: ['/img/catalogo/madera-caoba-acrilico-compacto.webp','/img/catalogo/madera-caoba-acrilico-compacto-lateral.webp','/img/catalogo/madera-caoba-acrilico-compacto-detalle.webp'],
+  sku: 'PDX-MAD-CAO-CMP-001',
+  material: 'Madera y acrílico',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Madera Caoba con Acrílico Compacto' },
+]);
 ---
 
-<Layout title="Podium Madera Caoba con Acrilico Compacto" description="Podium compacto de madera caoba con acrílico, en renta y venta. Diseño premium para espacios reducidos sin sacrificar elegancia. Envío a todo México." canonical="/catalogo/madera-caoba-acrilico-compacto" schema={schema}>
+<Layout title="Podium Madera Caoba con Acrilico Compacto" description="Podium compacto de madera caoba con acrílico, en renta y venta. Diseño premium para espacios reducidos sin sacrificar elegancia. Envío a todo México." canonical="/catalogo/madera-caoba-acrilico-compacto" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

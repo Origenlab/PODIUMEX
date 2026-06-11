@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, breadcrumb } from '../data/schema';
 
 const title = "Soporte Tecnico 24/7 para Eventos Mexico";
 const description = "Soporte técnico profesional 24/7 para tu evento: asistencia antes, durante y después, con técnico en sitio y atención remota por WhatsApp. Podiums en México.";
+
+const schema = serviceSchema({
+  name: 'Soporte Técnico para Eventos',
+  description,
+  path: '/soporte-tecnico',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios' },
+  { name: 'Soporte Técnico' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/soporte-tecnico">
+<Layout title={title} description={description} canonical="/soporte-tecnico" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <div class="breadcrumbs" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">

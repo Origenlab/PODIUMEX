@@ -1,26 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium de Acrilico Negro",
-  "image": "https://podiumex.com/img/catalogo/acrilico-negro.webp",
-  "description": "Renta y venta del podium de acrílico negro premium con acabado mate. Elegante y moderno para presentaciones ejecutivas, galas y eventos de alto nivel en México.",
-  "sku": "PDX-ACR-NEG-001",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "76"
-  }
+const schema = productSchema({
+  name: 'Podium de Acrílico Negro',
+  slug: 'acrilico-negro',
+  description: 'Renta y venta del podium de acrílico negro premium con acabado mate. Elegante y moderno para presentaciones ejecutivas, galas y eventos de alto nivel en México.',
+  images: ['/img/catalogo/acrilico-negro.webp','/img/catalogo/acrilico-negro-lateral.webp','/img/catalogo/acrilico-negro-detalle.webp'],
+  sku: 'PDX-ACR-NEG-001',
+  material: 'Acrílico',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Acrílico Negro' },
+]);
 ---
 
-<Layout title="Podium de Acrilico Negro - Renta y Venta de Podiums" description="Renta y venta del podium de acrílico negro premium con acabado mate. Elegante y moderno para presentaciones ejecutivas, galas y eventos de alto nivel en México." canonical="/catalogo/acrilico-negro" schema={schema}>
+<Layout title="Podium de Acrilico Negro - Renta y Venta de Podiums" description="Renta y venta del podium de acrílico negro premium con acabado mate. Elegante y moderno para presentaciones ejecutivas, galas y eventos de alto nivel en México." canonical="/catalogo/acrilico-negro" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

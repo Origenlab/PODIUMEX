@@ -1,8 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { webPageSchema, breadcrumb } from '../data/schema';
 
 const title = "Testimonios - Clientes Satisfechos Mexico";
 const description = "Empresas, instituciones y organizadores de eventos confían en nuestros podiums profesionales en México. Lee testimonios reales de renta y venta de podiums.";
+
+const schema = webPageSchema({
+  name: 'Testimonios de Clientes',
+  description,
+  path: '/testimonios',
+  type: 'WebPage',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Testimonios' },
+]);
 
 const testimonials = [
   { name: "Lic. Roberto Martinez", company: "Grupo Financiero Nacional", role: "Director de Comunicacion", text: "PODIUMEX transformo nuestras conferencias de prensa. El podium de acrilico transparente con nuestro logo grabado le da un nivel de profesionalismo impresionante a cada evento. El servicio de entrega e instalacion fue impecable.", rating: 5 },
@@ -14,7 +27,7 @@ const testimonials = [
 ];
 ---
 
-<Layout title={title} description={description} canonical="/testimonios">
+<Layout title={title} description={description} canonical="/testimonios" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Hero -->
   <section class="hero">

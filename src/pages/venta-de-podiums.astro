@@ -1,66 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { itemListSchema, breadcrumb } from '../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Venta de Podiums Profesionales en Mexico",
-  "description": "Catalogo de podiums profesionales disponibles para compra en Mexico",
-  "url": "https://podiumex.com/venta-de-podiums",
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Podium Acrilico Transparente",
-        "url": "https://podiumex.com/catalogo/acrilico-transparente"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Podium Acrilico Negro",
-        "url": "https://podiumex.com/catalogo/acrilico-negro"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Podium Madera Negro",
-        "url": "https://podiumex.com/catalogo/podium-madera-negro"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Podium Madera y Acrilico",
-        "url": "https://podiumex.com/catalogo/madera-caoba-acrilico"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Podium Acrilico Transparente Compacto",
-        "url": "https://podiumex.com/catalogo/acrilico-transparente-compacto"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Podium Acrilico Negro Compacto",
-        "url": "https://podiumex.com/catalogo/acrilico-negro-compacto"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "name": "Podium Madera Negro Compacto",
-        "url": "https://podiumex.com/catalogo/podium-madera-negro-compacto"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "name": "Podium Madera y Acrilico Compacto",
-        "url": "https://podiumex.com/catalogo/madera-caoba-acrilico-compacto"
-      }
-    ]
-  }
-});
+const ventaItems = [
+  { name: 'Podium Acrílico Transparente', path: '/catalogo/acrilico-transparente' },
+  { name: 'Podium Acrílico Negro', path: '/catalogo/acrilico-negro' },
+  { name: 'Podium Madera Negro', path: '/catalogo/podium-madera-negro' },
+  { name: 'Podium Madera Caoba con Acrílico', path: '/catalogo/madera-caoba-acrilico' },
+  { name: 'Podium Acrílico Transparente Compacto', path: '/catalogo/acrilico-transparente-compacto' },
+  { name: 'Podium Acrílico Negro Compacto', path: '/catalogo/acrilico-negro-compacto' },
+  { name: 'Podium Madera Negro Compacto', path: '/catalogo/podium-madera-negro-compacto' },
+  { name: 'Podium Madera Caoba con Acrílico Compacto', path: '/catalogo/madera-caoba-acrilico-compacto' },
+];
+const schema = itemListSchema(
+  'Venta de Podiums Profesionales en México',
+  'Catálogo de podiums profesionales disponibles para compra en México: acrílico, madera y combinados, en versión estándar y compacta.',
+  '/venta-de-podiums',
+  ventaItems
+);
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Venta de Podiums' },
+]);
 ---
 
 <Layout
@@ -68,6 +29,7 @@ const schema = JSON.stringify({
   description="Venta de podiums profesionales en México: acrílico, madera y combinados para conferencias, eventos corporativos y ceremonias. Envío a todo el país."
   canonical="/venta-de-podiums"
   schema={schema}
+  breadcrumbSchema={breadcrumbSchema}
 >
 
   <!-- Hero -->

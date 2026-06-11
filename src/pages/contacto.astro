@@ -1,42 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { webPageSchema, breadcrumb } from '../data/schema';
 
 const title = "Contacto - Cotiza tu Podium Profesional Mexico";
 const description = "Contáctanos para cotizar la renta o venta de tu podium profesional en México. Atención personalizada y respuesta inmediata por WhatsApp. Cotiza hoy.";
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "PODIUMEX",
-  "description": "Venta y renta de podiums profesionales en Mexico",
-  "url": "https://podiumex.com",
-  "telephone": "+525516567973",
-  "email": "contacto@podiumex.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ciudad de Mexico",
-    "addressLocality": "Ciudad de Mexico",
-    "addressRegion": "CDMX",
-    "addressCountry": "MX"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "10:00",
-      "closes": "14:00"
-    }
-  ]
+const schema = webPageSchema({
+  name: 'Contacto · Cotiza tu Podium Profesional',
+  description: description,
+  path: '/contacto',
+  type: 'ContactPage',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Contacto' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/contacto" schema={schema}>
+<Layout title={title} description={description} canonical="/contacto" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Hero -->
   <section class="hero">
@@ -137,7 +119,7 @@ const schema = JSON.stringify({
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <div>
               <h3 style="font-size:0.95rem;font-weight:600;color:var(--primary);margin-bottom:0.25rem;">Email</h3>
-              <a href="mailto:contacto@podiumex.com" style="font-size:0.9rem;color:var(--text-medium);">contacto@podiumex.com</a>
+              <a href="mailto:podiumexmx@gmail.com" style="font-size:0.9rem;color:var(--text-medium);">podiumexmx@gmail.com</a>
             </div>
           </div>
 

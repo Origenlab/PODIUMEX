@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { articleSchema, breadcrumb } from '../../data/schema';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -27,45 +28,22 @@ const formattedDate = pubDate.toLocaleDateString('es-MX', {
 const isoDate = pubDate.toISOString();
 const isoUpdated = updatedDate?.toISOString() ?? isoDate;
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "description": description,
-  "image": `https://podiumex.com${image}`,
-  "datePublished": isoDate,
-  "dateModified": isoUpdated,
-  "author": {
-    "@type": "Organization",
-    "name": author,
-    "url": "https://podiumex.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PODIUMEX",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://podiumex.com/img/podiumex.webp"
-    },
-    "url": "https://podiumex.com"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": `https://podiumex.com/blog/${post.id}`
-  },
-  "keywords": tags.join(', '),
-  "articleSection": category
+const schema = articleSchema({
+  title,
+  description,
+  image,
+  path: `/blog/${post.id}`,
+  datePublished: isoDate,
+  dateModified: isoUpdated,
+  section: category,
+  keywords: tags.join(', '),
 });
 
-const breadcrumbSchema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://podiumex.com" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://podiumex.com/blog" },
-    { "@type": "ListItem", "position": 3, "name": title }
-  ]
-});
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Blog', path: '/blog' },
+  { name: title },
+]);
 ---
 
 <Layout

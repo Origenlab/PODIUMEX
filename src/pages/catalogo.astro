@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { itemListSchema, breadcrumb } from '../data/schema';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 
@@ -190,37 +191,17 @@ const materiales = [
 ];
 
 // ─── Schema.org: ItemList del catálogo ─────────────────────────────
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Catálogo de Podiums Profesionales PODIUMEX",
-  "description": "Catálogo completo de podiums profesionales para venta y renta en México: acrílico transparente, acrílico negro, madera y combinados en versión estándar y compacta.",
-  "url": "https://podiumex.com/catalogo",
-  "numberOfItems": 8,
-  "itemListElement": [
-    ...modelosEstandar.map((m, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "url": `https://podiumex.com/catalogo/${m.slug}`,
-      "name": `Podium ${m.name}`,
-    })),
-    ...modelosCompactos.map((m, i) => ({
-      "@type": "ListItem",
-      "position": modelosEstandar.length + i + 1,
-      "url": `https://podiumex.com/catalogo/${m.slug}`,
-      "name": `Podium ${m.name}`,
-    })),
-  ],
-});
+const schema = itemListSchema(
+  'Catálogo de Podiums Profesionales en México',
+  'Catálogo completo de podiums para venta y renta en México: acrílico transparente, negro, madera y combinados, en versión estándar y compacta.',
+  '/catalogo',
+  [...modelosEstandar, ...modelosCompactos].map(m => ({ name: `Podium ${m.name}`, path: `/catalogo/${m.slug}` }))
+);
 
-const breadcrumbSchema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://podiumex.com" },
-    { "@type": "ListItem", "position": 2, "name": "Catálogo", "item": "https://podiumex.com/catalogo" },
-  ],
-});
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo' },
+]);
 ---
 
 <Layout

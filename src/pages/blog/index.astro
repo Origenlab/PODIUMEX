@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { breadcrumb } from '../../data/schema';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort(
@@ -19,15 +20,18 @@ const schema = JSON.stringify({
   "name": "Blog PODIUMEX",
   "description": description,
   "url": "https://podiumex.com/blog",
-  "publisher": {
-    "@type": "Organization",
-    "name": "PODIUMEX",
-    "url": "https://podiumex.com"
-  }
+  "inLanguage": "es-MX",
+  "isPartOf": { "@id": "https://podiumex.com/#website" },
+  "publisher": { "@id": "https://podiumex.com/#business" }
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Blog' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/blog" schema={schema}>
+<Layout title={title} description={description} canonical="/blog" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Hero -->
   <section class="hero">

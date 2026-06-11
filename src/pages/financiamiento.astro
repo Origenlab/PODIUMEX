@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, breadcrumb } from '../data/schema';
 
 const title = "Financiamiento Flexible para Podiums Mexico";
 const description = "Financiamiento y pago flexible para la compra de podiums profesionales en México: meses sin intereses, transferencia y facturación para empresas y gobierno.";
+
+const schema = serviceSchema({
+  name: 'Financiamiento para Compra de Podiums',
+  description,
+  path: '/financiamiento',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios' },
+  { name: 'Financiamiento' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/financiamiento">
+<Layout title={title} description={description} canonical="/financiamiento" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <div class="breadcrumbs" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">

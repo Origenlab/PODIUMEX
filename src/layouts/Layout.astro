@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/fullwidth.css';
+import { globalGraph } from '../data/schema';
 import Topbar from '../components/Topbar.astro';
 import Header from '../components/Header.astro';
 import LinksModule from '../components/LinksModule.astro';
@@ -87,7 +88,9 @@ const imageAlt = ogImageAlt || `${title} - PODIUMEX`;
     <link rel="preconnect" href="https://wa.me">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-    <!-- Schema JSON-LD principal -->
+    <!-- Schema global: LocalBusiness + WebSite (todas las páginas) -->
+    <script type="application/ld+json" set:html={globalGraph()} />
+    <!-- Schema JSON-LD específico de la página -->
     {schema && <script type="application/ld+json" set:html={schema} />}
     <!-- Schema BreadcrumbList -->
     {breadcrumbSchema && <script type="application/ld+json" set:html={breadcrumbSchema} />}

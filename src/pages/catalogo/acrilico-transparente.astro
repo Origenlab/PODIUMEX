@@ -1,57 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium de Acrílico Transparente",
-  "image": [
-    "https://podiumex.com/img/catalogo/acrilico-transparente.webp",
-    "https://podiumex.com/img/catalogo/acrilico-transparente-lateral.webp",
-    "https://podiumex.com/img/catalogo/acrilico-transparente-detalle.webp"
-  ],
-  "description": "Podium de Acrílico Transparente profesional para eventos corporativos y conferencias. Altura 120cm, acrílico 6mm pulido. Disponible para venta y renta en México.",
-  "sku": "PDX-ACR-TRANS-001",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "manufacturer": {
-    "@type": "Organization",
-    "name": "PODIUMEX",
-    "url": "https://podiumex.com"
-  },
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Venta – Podium Acrílico Transparente",
-      "priceCurrency": "MXN",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition",
-      "seller": { "@type": "Organization", "name": "PODIUMEX" },
-      "url": "https://podiumex.com/catalogo/acrilico-transparente"
-    },
-    {
-      "@type": "Offer",
-      "name": "Renta diaria – Podium Acrílico Transparente",
-      "priceCurrency": "MXN",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition",
-      "seller": { "@type": "Organization", "name": "PODIUMEX" },
-      "url": "https://podiumex.com/catalogo/acrilico-transparente"
-    }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "89",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
+const schema = productSchema({
+  name: 'Podium de Acrílico Transparente',
+  slug: 'acrilico-transparente',
+  description: 'Renta y venta del podium de acrílico transparente: diseño minimalista, 120 cm y 6 mm. Ideal para conferencias y eventos corporativos en México.',
+  images: ['/img/catalogo/acrilico-transparente.webp','/img/catalogo/acrilico-transparente-lateral.webp','/img/catalogo/acrilico-transparente-detalle.webp'],
+  sku: 'PDX-ACR-TRANS-001',
+  material: 'Acrílico',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Acrílico Transparente' },
+]);
 ---
 
-<Layout title="Podium de Acrilico Transparente - Renta de Podiums" description="Renta y venta del podium de acrílico transparente: diseño minimalista, 120 cm y 6 mm. Ideal para conferencias y eventos corporativos en México." canonical="/catalogo/acrilico-transparente" schema={schema}>
+<Layout title="Podium de Acrilico Transparente - Renta de Podiums" description="Renta y venta del podium de acrílico transparente: diseño minimalista, 120 cm y 6 mm. Ideal para conferencias y eventos corporativos en México." canonical="/catalogo/acrilico-transparente" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

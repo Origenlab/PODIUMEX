@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { webPageSchema, breadcrumb } from '../data/schema';
 
 const title = "Sustentabilidad - Materiales Certificados Mexico";
 const description = "Podiums sustentables en México: maderas certificadas FSC, acrílicos reciclables y fabricación ecoeficiente. Calidad profesional con compromiso ambiental.";
+
+const schema = webPageSchema({
+  name: 'Sustentabilidad y Materiales Certificados',
+  description,
+  path: '/sustentabilidad',
+  type: 'WebPage',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Sustentabilidad' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/sustentabilidad">
+<Layout title={title} description={description} canonical="/sustentabilidad" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <div class="breadcrumbs" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">

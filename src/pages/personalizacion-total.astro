@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, breadcrumb } from '../data/schema';
 
 const title = "Personalizacion Total - Grabado Laser de Podiums Mexico";
 const description = "Personaliza tu podium con grabado láser de alta precisión: logos corporativos, escudos institucionales y diseños a medida. Renta y venta de podiums en México.";
+
+const schema = serviceSchema({
+  name: 'Personalización de Podiums con Grabado Láser',
+  description,
+  path: '/personalizacion-total',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios' },
+  { name: 'Personalización Total' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/personalizacion-total">
+<Layout title={title} description={description} canonical="/personalizacion-total" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <div class="breadcrumbs" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">

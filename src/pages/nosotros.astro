@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { webPageSchema, breadcrumb } from '../data/schema';
 
 const title = "Nosotros";
 const description = "Especialistas en renta y venta de podiums profesionales en México desde 2020. Fabricación nacional, personalización y servicio integral para cada evento.";
+
+const schema = webPageSchema({
+  name: 'Nosotros · PODIUMEX',
+  description,
+  path: '/nosotros',
+  type: 'AboutPage',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Nosotros' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/nosotros">
+<Layout title={title} description={description} canonical="/nosotros" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Hero -->
   <section class="hero">

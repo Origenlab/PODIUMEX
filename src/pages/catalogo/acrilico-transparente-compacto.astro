@@ -1,26 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium Acrilico Transparente Compacto",
-  "image": "https://podiumex.com/img/catalogo/acrilico-transparente-compacto.webp",
-  "description": "Podium de acrílico transparente compacto, en renta y venta. Diseño minimalista para espacios reducidos, podcasts y eventos íntimos. Cobertura en todo México.",
-  "sku": "PDX-ACR-TRANS-C01",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "45"
-  }
+const schema = productSchema({
+  name: 'Podium de Acrílico Transparente Compacto',
+  slug: 'acrilico-transparente-compacto',
+  description: 'Podium de acrílico transparente compacto, en renta y venta. Diseño minimalista para espacios reducidos, podcasts y eventos íntimos. Cobertura en todo México.',
+  images: ['/img/catalogo/acrilico-transparente-compacto.webp','/img/catalogo/acrilico-transparente-compacto-lateral.webp','/img/catalogo/acrilico-transparente-compacto-detalle.webp'],
+  sku: 'PDX-ACR-TRANS-CMP-001',
+  material: 'Acrílico',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Acrílico Transparente Compacto' },
+]);
 ---
 
-<Layout title="Podium Acrilico Transparente Compacto" description="Podium de acrílico transparente compacto, en renta y venta. Diseño minimalista para espacios reducidos, podcasts y eventos íntimos. Cobertura en todo México." canonical="/catalogo/acrilico-transparente-compacto" schema={schema}>
+<Layout title="Podium Acrilico Transparente Compacto" description="Podium de acrílico transparente compacto, en renta y venta. Diseño minimalista para espacios reducidos, podcasts y eventos íntimos. Cobertura en todo México." canonical="/catalogo/acrilico-transparente-compacto" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

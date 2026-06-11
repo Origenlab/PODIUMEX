@@ -1,26 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium de Madera Negro",
-  "image": "https://podiumex.com/img/catalogo/podium-madera-negro.webp",
-  "description": "Venta y renta del podium de madera negra con acabado lacado premium. Clásico y elegante para ceremonias oficiales, eventos gubernamentales y corporativos.",
-  "sku": "PDX-MAD-NEG-001",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "92"
-  }
+const schema = productSchema({
+  name: 'Podium de Madera Negro',
+  slug: 'podium-madera-negro',
+  description: 'Venta y renta del podium de madera negra con acabado lacado premium. Clásico y elegante para ceremonias oficiales, eventos gubernamentales y corporativos.',
+  images: ['/img/catalogo/podium-madera-negro.webp','/img/catalogo/podium-madera-negro-lateral.webp','/img/catalogo/podium-madera-negro-detalle.webp'],
+  sku: 'PDX-MAD-NEG-001',
+  material: 'Madera',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Madera Negro' },
+]);
 ---
 
-<Layout title="Podium de Madera Negro - Venta y Renta" description="Venta y renta del podium de madera negra con acabado lacado premium. Clásico y elegante para ceremonias oficiales, eventos gubernamentales y corporativos." canonical="/catalogo/podium-madera-negro" schema={schema}>
+<Layout title="Podium de Madera Negro - Venta y Renta" description="Venta y renta del podium de madera negra con acabado lacado premium. Clásico y elegante para ceremonias oficiales, eventos gubernamentales y corporativos." canonical="/catalogo/podium-madera-negro" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

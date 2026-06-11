@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, breadcrumb } from '../data/schema';
 
 const title = "Asesoria de Eventos - Seleccion de Podiums Mexico";
 const description = "Asesoría profesional para elegir el podium ideal según tu evento, espacio, audiencia y presupuesto. Renta y venta de podiums en CDMX y todo México.";
+
+const schema = serviceSchema({
+  name: 'Asesoría para Selección de Podiums',
+  description,
+  path: '/asesoria-de-eventos',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios' },
+  { name: 'Asesoría de Eventos' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/asesoria-de-eventos">
+<Layout title={title} description={description} canonical="/asesoria-de-eventos" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <div class="breadcrumbs" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">

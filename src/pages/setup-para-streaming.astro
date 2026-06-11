@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, breadcrumb } from '../data/schema';
 
 const title = "Setup para Streaming - Eventos Hibridos Mexico";
 const description = "Configuración de podiums para streaming y eventos híbridos en México: iluminación, posición de cámaras y compatibilidad con Zoom, Teams y transmisión en vivo.";
+
+const schema = serviceSchema({
+  name: 'Setup de Podiums para Streaming',
+  description,
+  path: '/setup-para-streaming',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios' },
+  { name: 'Setup para Streaming' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/setup-para-streaming">
+<Layout title={title} description={description} canonical="/setup-para-streaming" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <div class="breadcrumbs" style="margin-top:0;">
     <div class="breadcrumbs-wrapper">

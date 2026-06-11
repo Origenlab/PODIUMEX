@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, breadcrumb } from '../data/schema';
 
 const title = "Entrega e Instalacion Express de Podiums Mexico";
 const description = "Entrega express en 24 horas e instalación profesional de podiums para tu evento en CDMX, Monterrey, Guadalajara y todo México. Montaje y nivelación incluidos.";
+
+const schema = serviceSchema({
+  name: 'Entrega e Instalación de Podiums',
+  description,
+  path: '/entrega-e-instalacion',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios' },
+  { name: 'Entrega e Instalación' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/entrega-e-instalacion">
+<Layout title={title} description={description} canonical="/entrega-e-instalacion" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Breadcrumbs -->
   <div class="breadcrumbs" style="margin-top:0;">

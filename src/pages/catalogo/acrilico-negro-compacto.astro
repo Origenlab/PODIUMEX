@@ -1,26 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium Acrilico Negro Compacto",
-  "image": "https://podiumex.com/img/catalogo/acrilico-negro-compacto.webp",
-  "description": "Podium de acrílico negro compacto con acabado mate, en renta y venta. Ideal para estudios, podcasts y presentaciones en espacios reducidos. Envío en México.",
-  "sku": "PDX-ACR-NEG-C01",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "38"
-  }
+const schema = productSchema({
+  name: 'Podium de Acrílico Negro Compacto',
+  slug: 'acrilico-negro-compacto',
+  description: 'Podium de acrílico negro compacto con acabado mate, en renta y venta. Ideal para estudios, podcasts y presentaciones en espacios reducidos. Envío en México.',
+  images: ['/img/catalogo/acrilico-negro-compacto.webp','/img/catalogo/acrilico-negro-compacto-lateral.webp','/img/catalogo/acrilico-negro-compacto-detalle.webp'],
+  sku: 'PDX-ACR-NEG-CMP-001',
+  material: 'Acrílico',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Acrílico Negro Compacto' },
+]);
 ---
 
-<Layout title="Podium Acrilico Negro Compacto" description="Podium de acrílico negro compacto con acabado mate, en renta y venta. Ideal para estudios, podcasts y presentaciones en espacios reducidos. Envío en México." canonical="/catalogo/acrilico-negro-compacto" schema={schema}>
+<Layout title="Podium Acrilico Negro Compacto" description="Podium de acrílico negro compacto con acabado mate, en renta y venta. Ideal para estudios, podcasts y presentaciones en espacios reducidos. Envío en México." canonical="/catalogo/acrilico-negro-compacto" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

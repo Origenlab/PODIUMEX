@@ -3,11 +3,22 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import { webPageSchema } from '../data/schema';
 
 // ─── Blog: últimos 3 artículos dinámicos ───────────────────────────
 const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 4);
+
+// ─── Datos: FAQ destacadas (home) ───────────────────────────────────
+const homeFaqs = [
+  { q: '¿Cuál es el tiempo de entrega?', a: 'Entrega express en 24 horas en CDMX, Monterrey y Guadalajara, y de 48 a 72 horas al resto de la república. Para pedidos con grabado personalizado el tiempo puede variar según la complejidad.' },
+  { q: '¿Puedo personalizar el podium con mi logo?', a: 'Sí. Grabamos tu logo, escudo institucional o gubernamental con láser de alta precisión sobre acrílico o madera. Enviamos una prueba digital antes de grabar para tu aprobación.' },
+  { q: '¿Cuál es la diferencia entre venta y renta?', a: 'La venta te da la propiedad permanente, ideal si haces eventos frecuentes. La renta es el uso por evento, perfecta para eventos únicos. Ambas incluyen nuestros estándares de calidad y soporte.' },
+  { q: '¿Qué incluye el servicio de renta?', a: 'Entrega en tu sede, instalación y nivelación profesional, soporte técnico durante el evento y recolección al finalizar. También asesoría para el posicionamiento óptimo en el escenario.' },
+  { q: '¿Hacen envíos a todo México?', a: 'Sí, cobertura nacional completa. Contamos con una red logística confiable que entrega tu podium en óptimas condiciones a cualquier ciudad del país.' },
+  { q: '¿Los podiums tienen garantía?', a: 'Todos nuestros podiums incluyen garantía escrita de 2 a 3 años que cubre defectos de fabricación y acabados. Además ofrecemos mantenimiento preventivo y correctivo.' },
+];
 
 // ─── Datos: Catálogo Principal ──────────────────────────────────────
 const products = [
@@ -280,41 +291,11 @@ const testimonials = [
 ];
 
 // ─── Schema.org: LocalBusiness mejorado ────────────────────────────
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "PODIUMEX",
-  "description": "Especialistas en venta y renta de podiums profesionales en México. Fabricación nacional, entrega en 24 horas, personalización con grabado láser.",
-  "telephone": "+52-55-1656-7973",
-  "email": "podiumexmx@gmail.com",
-  "priceRange": "$$",
-  "currenciesAccepted": "MXN",
-  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-  "areaServed": ["Ciudad de México","Monterrey","Guadalajara","Puebla","Querétaro","México"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. Tamaulipas 150-1301B",
-    "addressLocality": "Col. Condesa, Ciudad de México",
-    "postalCode": "06140",
-    "addressCountry": "MX"
-  },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
-  ],
-  "url": "https://podiumex.com",
-  "image": "https://podiumex.com/img/img-general/coleccion-podiums-profesionales-variados.webp",
-  "sameAs": [],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Catálogo de Podiums Profesionales",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Podium de Acrílico Transparente" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Podium de Acrílico Negro" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Podium de Madera Negro" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Podium de Madera con Acrílico" } }
-    ]
-  }
+const schema = webPageSchema({
+  name: 'Renta y Venta de Podiums Profesionales en México',
+  description: 'Renta y venta de podiums profesionales en CDMX y todo México: acrílico, madera y combinados, con entrega en 24 h, personalización y garantía.',
+  path: '/',
+  type: 'WebPage',
 });
 ---
 

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { faqSchema, breadcrumb } from '../data/schema';
 
 const title = "Preguntas Frecuentes - Venta y Renta de Podiums Mexico";
 const description = "Resuelve tus dudas sobre la renta y venta de podiums en México: tiempos de entrega, personalización, garantías, precios y cobertura. Todo en un solo lugar.";
@@ -17,21 +18,15 @@ const faqs = [
   { q: "Como puedo cotizar?", a: "Puedes cotizar de manera rapida y sencilla a traves de WhatsApp, llamada telefonica o nuestro formulario web en la pagina de contacto. Nuestro equipo de asesores te respondera en menos de 1 hora con una cotizacion detallada y sin compromiso." }
 ];
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
-    }
-  }))
-});
+const schema = faqSchema(faqs);
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Preguntas Frecuentes' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/preguntas-frecuentes" schema={schema}>
+<Layout title={title} description={description} canonical="/preguntas-frecuentes" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Hero -->
   <section class="hero">

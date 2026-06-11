@@ -1,26 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { productSchema, breadcrumb } from '../../data/schema';
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Podium Madera Caoba con Acrilico",
-  "image": "https://podiumex.com/img/catalogo/madera-caoba-acrilico.webp",
-  "description": "Renta y venta del podium combinado de madera caoba con frente de acrílico. Elegancia clásica y moderna para eventos exclusivos y ceremonias en México.",
-  "sku": "PDX-MAD-ACR-001",
-  "brand": {
-    "@type": "Brand",
-    "name": "PODIUMEX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "68"
-  }
+const schema = productSchema({
+  name: 'Podium de Madera Caoba con Acrílico',
+  slug: 'madera-caoba-acrilico',
+  description: 'Renta y venta del podium combinado de madera caoba con frente de acrílico. Elegancia clásica y moderna para eventos exclusivos y ceremonias en México.',
+  images: ['/img/catalogo/madera-caoba-acrilico.webp','/img/catalogo/madera-caoba-acrilico-lateral.webp','/img/catalogo/madera-caoba-acrilico-detalle.webp'],
+  sku: 'PDX-MAD-CAO-001',
+  material: 'Madera y acrílico',
 });
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Catálogo', path: '/catalogo' },
+  { name: 'Madera Caoba con Acrílico' },
+]);
 ---
 
-<Layout title="Podium Madera Caoba con Acrilico" description="Renta y venta del podium combinado de madera caoba con frente de acrílico. Elegancia clásica y moderna para eventos exclusivos y ceremonias en México." canonical="/catalogo/madera-caoba-acrilico" schema={schema}>
+<Layout title="Podium Madera Caoba con Acrilico" description="Renta y venta del podium combinado de madera caoba con frente de acrílico. Elegancia clásica y moderna para eventos exclusivos y ceremonias en México." canonical="/catalogo/madera-caoba-acrilico" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <nav class="breadcrumbs" aria-label="Navegacion">
     <div class="breadcrumbs-wrapper">

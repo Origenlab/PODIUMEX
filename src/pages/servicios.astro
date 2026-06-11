@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { webPageSchema, breadcrumb } from '../data/schema';
 
 const title = "Servicios Profesionales";
 const description = "Servicios integrales para eventos: entrega express, personalización con grabado láser, streaming y soporte técnico. Renta y venta de podiums en México.";
+
+const schema = webPageSchema({
+  name: 'Servicios Profesionales para Eventos',
+  description,
+  path: '/servicios',
+  type: 'WebPage',
+});
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios' },
+]);
 ---
 
-<Layout title={title} description={description} canonical="/servicios">
+<Layout title={title} description={description} canonical="/servicios" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
   <!-- Hero -->
   <section class="hero">
