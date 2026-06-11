@@ -1,9 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { webPageSchema, breadcrumb } from '../data/schema';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 
 const title = "Contacto - Cotiza tu Podium Profesional Mexico";
 const description = "Contáctanos para cotizar la renta o venta de tu podium profesional en México. Atención personalizada y respuesta inmediata por WhatsApp. Cotiza hoy.";
+
+// ─── Datos: FAQ destacadas (mismo set que el index) ─────────────────
+const homeFaqs = [
+  { q: '¿Cuál es el tiempo de entrega?', a: 'Entrega express en 24 horas en CDMX, Monterrey y Guadalajara, y de 48 a 72 horas al resto de la república. Para pedidos con grabado personalizado el tiempo puede variar según la complejidad.' },
+  { q: '¿Puedo personalizar el podium con mi logo?', a: 'Sí. Grabamos tu logo, escudo institucional o gubernamental con láser de alta precisión sobre acrílico o madera. Enviamos una prueba digital antes de grabar para tu aprobación.' },
+  { q: '¿Cuál es la diferencia entre venta y renta?', a: 'La venta te da la propiedad permanente, ideal si haces eventos frecuentes. La renta es el uso por evento, perfecta para eventos únicos. Ambas incluyen nuestros estándares de calidad y soporte.' },
+  { q: '¿Qué incluye el servicio de renta?', a: 'Entrega en tu sede, instalación y nivelación profesional, soporte técnico durante el evento y recolección al finalizar. También asesoría para el posicionamiento óptimo en el escenario.' },
+  { q: '¿Hacen envíos a todo México?', a: 'Sí, cobertura nacional completa. Contamos con una red logística confiable que entrega tu podium en óptimas condiciones a cualquier ciudad del país.' },
+  { q: '¿Los podiums tienen garantía?', a: 'Todos nuestros podiums incluyen garantía escrita de 2 a 3 años que cubre defectos de fabricación y acabados. Además ofrecemos mantenimiento preventivo y correctivo.' },
+];
 
 const schema = webPageSchema({
   name: 'Contacto · Cotiza tu Podium Profesional',
@@ -20,269 +32,372 @@ const breadcrumbSchema = breadcrumb([
 
 <Layout title={title} description={description} canonical="/contacto" schema={schema} breadcrumbSchema={breadcrumbSchema}>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Contacto - <span class="highlight">Cotiza tu Podium</span> Profesional</h1>
-        <p>Estamos listos para ayudarte a encontrar el podium perfecto para tu evento. Respuesta inmediata por WhatsApp.</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">&lt;1hr</span>
-            <span class="stat-label">Tiempo de Respuesta</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">WhatsApp</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Sin Compromiso</span>
-          </div>
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="Ruta de navegación" style="margin-top:0;">
+    <div class="breadcrumbs-wrapper">
+      <a href="/" class="breadcrumb-link">Inicio</a>
+      <span class="breadcrumb-arrow" aria-hidden="true">&rsaquo;</span>
+      <span class="breadcrumb-current" aria-current="page">Contacto</span>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO (homologado al index)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-hero" aria-labelledby="ct-hero-title">
+    <div class="ix-hero-inner">
+      <div class="ix-hero-copy">
+        <div class="ix-eyebrow">
+          <span class="ix-eyebrow-dot" aria-hidden="true"></span>
+          Respuesta en menos de 1 hora · WhatsApp 24/7
         </div>
-        <div class="hero-cta">
-          <a href="https://wa.me/525516567973?text=Hola,%20quiero%20cotizar%20un%20podium" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Directo
-          </a>
-          <a href="tel:+525516567973" class="btn-call">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            Llamar Ahora
-          </a>
-        </div>
+        <h1 id="ct-hero-title">
+          <span class="ix-highlight">Cotiza tu Podium</span><br>
+          Hablemos de tu Evento
+        </h1>
+        <p class="ix-hero-desc">
+          Estamos listos para ayudarte a encontrar el podium perfecto para tu evento.
+          Atención personalizada y respuesta inmediata por WhatsApp.
+        </p>
       </div>
-      <div class="hero-intro">
-        <h2>Atención Personalizada para tu Evento</h2>
-        <p>En PODIUMEX entendemos que cada evento es único. Por eso, nuestro equipo de asesores especializados está disponible para brindarte atención personalizada y ayudarte a elegir el podium ideal para tu conferencia, congreso, ceremonia o evento corporativo.</p>
-        <p>Contamos con multiples canales de comunicación para que puedas contactarnos de la manera que te resulte mas comoda. Respuesta garantizada en menos de 1 hora por WhatsApp y cotizaciones detalladas sin compromiso.</p>
-        <p>Atendemos a empresas, instituciones de gobierno, universidades, hoteles y organizadores de eventos en todo México con la misma calidad y profesionalismo.</p>
+      <div class="ix-hero-editorial">
+        <p class="ix-editorial-p">
+          Cada evento es único. Nuestro equipo de <strong>asesores especializados</strong> te ayuda
+          a elegir el podium ideal para tu conferencia, congreso, ceremonia o evento corporativo,
+          con cotización detallada y sin compromiso.
+        </p>
+        <p class="ix-editorial-p">
+          Atendemos a <strong>empresas, gobierno, universidades, hoteles y organizadores</strong> en
+          todo México, con respuesta garantizada en menos de 1 hora por WhatsApp.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <div class="trust-bar">
-    <div class="trust-content">
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>WhatsApp 24/7</h3>
-          <p>Respuesta inmediata</p>
-        </div>
+  <!-- ══════════════════════════════════════════════════
+       ACCESOS RÁPIDOS (qlinks — complemento autorizado del index)
+  ══════════════════════════════════════════════════ -->
+  <nav class="qlinks" aria-label="Accesos rápidos">
+    <a href="/catalogo" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Cotización Gratis</h3>
-          <p>Sin compromiso</p>
-        </div>
+      <div class="qlink-text">
+        <strong>Catálogo Completo</strong>
+        <span>8 modelos disponibles</span>
       </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Asesoría Experta</h3>
-          <p>Equipo especializado</p>
-        </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="/servicios" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="trust-text">
-          <h3>Cobertura Nacional</h3>
-          <p>Todo México</p>
-        </div>
+      <div class="qlink-text">
+        <strong>Servicios</strong>
+        <span>Entrega, grabado, soporte</span>
       </div>
-    </div>
-  </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="contact-grid">
-
-      <!-- Left: Contact Info -->
-      <div>
-        <h2 style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:2rem;">Información de Contacto</h2>
-
-        <div style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem;">
-          <div style="display:flex;align-items:flex-start;gap:1rem;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <div>
-              <h3 style="font-size:0.95rem;font-weight:600;color:var(--primary);margin-bottom:0.25rem;">Teléfono</h3>
-              <a href="tel:+525516567973" style="font-size:0.9rem;color:var(--text-medium);">+52 55 1656 7973</a>
-            </div>
-          </div>
-
-          <div style="display:flex;align-items:flex-start;gap:1rem;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent)" style="flex-shrink:0;margin-top:2px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <div>
-              <h3 style="font-size:0.95rem;font-weight:600;color:var(--primary);margin-bottom:0.25rem;">WhatsApp</h3>
-              <a href="https://wa.me/525516567973" target="_blank" rel="noopener noreferrer" style="font-size:0.9rem;color:var(--text-medium);">+52 55 1656 7973</a>
-            </div>
-          </div>
-
-          <div style="display:flex;align-items:flex-start;gap:1rem;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <div>
-              <h3 style="font-size:0.95rem;font-weight:600;color:var(--primary);margin-bottom:0.25rem;">Email</h3>
-              <a href="mailto:podiumexmx@gmail.com" style="font-size:0.9rem;color:var(--text-medium);">podiumexmx@gmail.com</a>
-            </div>
-          </div>
-
-          <div style="display:flex;align-items:flex-start;gap:1rem;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div>
-              <h3 style="font-size:0.95rem;font-weight:600;color:var(--primary);margin-bottom:0.25rem;">Dirección</h3>
-              <p style="font-size:0.9rem;color:var(--text-medium);">Ciudad de México, México</p>
-            </div>
-          </div>
-        </div>
-
-        <div style="background:var(--secondary);border-radius:var(--radius-lg);padding:1.5rem;">
-          <h3 style="font-size:1rem;font-weight:600;color:var(--primary);margin-bottom:1rem;">Horario de Atención</h3>
-          <div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.9rem;color:var(--text-medium);">
-            <div style="display:flex;justify-content:space-between;">
-              <span>Lunes a Viernes</span>
-              <span style="font-weight:600;color:var(--primary);">9:00 - 18:00</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;">
-              <span>Sabados</span>
-              <span style="font-weight:600;color:var(--primary);">10:00 - 14:00</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;">
-              <span>Domingos</span>
-              <span style="color:var(--text-light);">Solo emergencias</span>
-            </div>
-            <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-light);">WhatsApp disponible 24/7 para cotizaciones.</p>
-          </div>
-        </div>
+    <a href="/renta-de-podiums" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </div>
+      <div class="qlink-text">
+        <strong>Renta de Podiums</strong>
+        <span>Por día, semana o evento</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
 
-      <!-- Right: WhatsApp Form -->
-      <div>
-        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;">
-          <h2 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:0.5rem;">Cotiza por WhatsApp</h2>
-          <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:1.5rem;">Completa el formulario y te contactamos al instante.</p>
+    <a href="/preguntas-frecuentes" class="qlink">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Preguntas Frecuentes</strong>
+        <span>Resuelve tus dudas</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
 
-          <form id="contactForm" style="display:flex;flex-direction:column;gap:1rem;">
+    <a href="https://wa.me/525516567973?text=Hola%2C%20quiero%20cotizar%20un%20podium" target="_blank" rel="noopener noreferrer" class="qlink qlink--accent">
+      <div class="qlink-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div class="qlink-text">
+        <strong>Cotización Gratuita</strong>
+        <span>Respuesta en menos de 2 horas</span>
+      </div>
+      <svg class="qlink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       CONTACTO: INFO + FORMULARIO (ix-help-grid)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section" aria-labelledby="contacto-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="Contacto"
+        title="Cotiza en un Minuto"
+        description="Escríbenos por el canal que prefieras. Respondemos en menos de 1 hora con una cotización detallada y sin compromiso."
+        id="contacto-title"
+        p1="Atención personalizada para <strong>conferencias, congresos, ceremonias y eventos corporativos</strong> en CDMX y toda la República Mexicana."
+        p2="Múltiples canales — <strong>WhatsApp, teléfono, correo y formulario</strong> — para que nos contactes como te resulte más cómodo."
+      />
+
+      <div class="ix-help-grid">
+        <!-- Columna 1: datos de contacto -->
+        <div>
+          <h3 class="ix-help-colhead">Información de Contacto</h3>
+          <ul class="ct-contact-list">
+            <li>
+              <span class="ct-contact-ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </span>
+              <div><strong>Teléfono</strong><a href="tel:+525516567973">+52 55 1656 7973</a></div>
+            </li>
+            <li>
+              <span class="ct-contact-ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/525516567973" target="_blank" rel="noopener noreferrer">+52 55 1656 7973</a></div>
+            </li>
+            <li>
+              <span class="ct-contact-ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div><strong>Email</strong><a href="mailto:podiumexmx@gmail.com">podiumexmx@gmail.com</a></div>
+            </li>
+            <li>
+              <span class="ct-contact-ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div><strong>Dirección</strong><span class="ct-contact-text">Ciudad de México, México</span></div>
+            </li>
+          </ul>
+
+          <div class="ct-horario">
+            <h4>Horario de Atención</h4>
+            <div class="ct-horario-row"><span>Lunes a Viernes</span><strong>9:00 – 18:00</strong></div>
+            <div class="ct-horario-row"><span>Sábados</span><strong>10:00 – 14:00</strong></div>
+            <div class="ct-horario-row"><span>Domingos</span><span class="ct-muted">Solo emergencias</span></div>
+            <p class="ct-horario-note">WhatsApp disponible 24/7 para cotizaciones.</p>
+          </div>
+        </div>
+
+        <!-- Columna 2: formulario detallado a WhatsApp -->
+        <div class="ix-help-form">
+          <h3 class="ix-help-colhead">Cotiza por WhatsApp</h3>
+          <p class="ix-help-form-sub">Completa el formulario y te contactamos al instante, sin compromiso.</p>
+          <form id="contactForm" class="ix-form" novalidate>
             <div>
-              <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Nombre *</label>
-              <input type="text" name="nombre" required style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;" placeholder="Tu nombre completo">
+              <label for="cf-nombre">Nombre *</label>
+              <input id="cf-nombre" type="text" name="nombre" required placeholder="Tu nombre completo" autocomplete="name">
             </div>
-
-            <div>
-              <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Empresa</label>
-              <input type="text" name="empresa" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;" placeholder="Nombre de tu empresa">
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="ix-form-row">
               <div>
-                <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Email</label>
-                <input type="email" name="email" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;" placeholder="correo@empresa.com">
-              </div>
-              <div>
-                <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Teléfono</label>
-                <input type="tel" name="telefono" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;" placeholder="55 1234 5678">
-              </div>
-            </div>
-
-            <div>
-              <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Servicio de Interes *</label>
-              <select name="servicio" required style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;background:var(--white);">
-                <option value="">Selecciona un servicio</option>
-                <option value="Venta de Podium">Venta de Podium</option>
-                <option value="Renta de Podium">Renta de Podium</option>
-                <option value="Personalizacion">Personalización / Grabado Láser</option>
-                <option value="Entrega e Instalacion">Entrega e Instalación</option>
-                <option value="Setup Streaming">Setup para Streaming</option>
-                <option value="Soporte Tecnico">Soporte Técnico</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </div>
-
-            <div>
-              <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Productos de Interes</label>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
-                <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-medium);cursor:pointer;">
-                  <input type="checkbox" name="productos" value="Podium Acrilico Transparente"> Acrílico Transparente
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-medium);cursor:pointer;">
-                  <input type="checkbox" name="productos" value="Podium Acrilico Negro"> Acrílico Negro
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-medium);cursor:pointer;">
-                  <input type="checkbox" name="productos" value="Podium Madera Negro"> Madera Negro
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-medium);cursor:pointer;">
-                  <input type="checkbox" name="productos" value="Podium Madera con Acrilico"> Madera con Acrílico
-                </label>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-              <div>
-                <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Fecha del Evento</label>
-                <input type="text" name="fecha" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;" placeholder="Fecha aproximada">
+                <label for="cf-empresa">Empresa</label>
+                <input id="cf-empresa" type="text" name="empresa" placeholder="Opcional" autocomplete="organization">
               </div>
               <div>
-                <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Ubicación</label>
-                <input type="text" name="ubicacion" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;" placeholder="Ciudad o sede">
+                <label for="cf-tel">Teléfono</label>
+                <input id="cf-tel" type="tel" name="telefono" placeholder="55 1234 5678" autocomplete="tel">
               </div>
             </div>
-
-            <div>
-              <label style="display:block;font-size:0.85rem;font-weight:500;color:var(--primary);margin-bottom:0.375rem;">Mensaje</label>
-              <textarea name="mensaje" rows="4" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius-md);font-size:0.9rem;font-family:inherit;resize:vertical;" placeholder="Cuentanos mas sobre tu evento..."></textarea>
+            <div class="ix-form-row">
+              <div>
+                <label for="cf-email">Email</label>
+                <input id="cf-email" type="email" name="email" placeholder="correo@empresa.com" autocomplete="email">
+              </div>
+              <div>
+                <label for="cf-servicio">Servicio de interés *</label>
+                <select id="cf-servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option value="Venta de Podium">Venta de Podium</option>
+                  <option value="Renta de Podium">Renta de Podium</option>
+                  <option value="Personalización / Grabado Láser">Personalización / Grabado Láser</option>
+                  <option value="Entrega e Instalación">Entrega e Instalación</option>
+                  <option value="Setup para Streaming">Setup para Streaming</option>
+                  <option value="Soporte Técnico">Soporte Técnico</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
             </div>
-
-            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:1rem 2rem;background:#25D366;color:white;border:none;border-radius:var(--radius-md);font-weight:600;font-size:1rem;cursor:pointer;font-family:inherit;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <div>
+              <label>Productos de interés</label>
+              <div class="ix-form-checks">
+                <label><input type="checkbox" name="productos" value="Acrílico Transparente"> Acrílico Transparente</label>
+                <label><input type="checkbox" name="productos" value="Acrílico Negro"> Acrílico Negro</label>
+                <label><input type="checkbox" name="productos" value="Madera Negro"> Madera Negro</label>
+                <label><input type="checkbox" name="productos" value="Madera con Acrílico"> Madera con Acrílico</label>
+              </div>
+            </div>
+            <div class="ix-form-row">
+              <div>
+                <label for="cf-fecha">Fecha del evento</label>
+                <input id="cf-fecha" type="text" name="fecha" placeholder="Fecha aproximada">
+              </div>
+              <div>
+                <label for="cf-ubic">Ubicación</label>
+                <input id="cf-ubic" type="text" name="ubicacion" placeholder="Ciudad o sede">
+              </div>
+            </div>
+            <div>
+              <label for="cf-msg">Mensaje</label>
+              <textarea id="cf-msg" name="mensaje" rows="3" placeholder="Cuéntanos más sobre tu evento..."></textarea>
+            </div>
+            <button type="submit" class="ix-form-submit btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Enviar por WhatsApp
             </button>
+            <p class="ix-form-note">Se abrirá WhatsApp con tu información lista para enviar. No compartimos tus datos.</p>
           </form>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Map Section -->
-  <section style="padding:0 var(--gutter) 4rem;">
-    <h2 style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:1.5rem;">Ubicación</h2>
-    <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240927.81480659984!2d-99.29592032812497!3d19.39077199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0036b1352927%3A0xdefd9e4ee8d18a5b!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicacion PODIUMEX en Ciudad de Mexico"></iframe>
+  <!-- ══════════════════════════════════════════════════
+       MAPA / UBICACIÓN
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section ix-section-alt" aria-labelledby="mapa-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="Ubicación"
+        title="Cobertura Nacional desde CDMX"
+        description="Con sede en la Ciudad de México y entrega en todo el país: 24 h en CDMX, Monterrey y Guadalajara, 48 a 72 h al resto de la república."
+        id="mapa-title"
+        p1="Nuestra red logística llega a <strong>cualquier ciudad de México</strong> con tu podium en óptimas condiciones, con instalación disponible en las principales plazas."
+        p2="¿Evento fuera de CDMX? Cuéntanos la sede y coordinamos <strong>entrega, montaje y recolección</strong> a la medida."
+      />
+      <div class="ct-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240927.81480659984!2d-99.29592032812497!3d19.39077199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0036b1352927%3A0xdefd9e4ee8d18a5b!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación PODIUMEX en Ciudad de México"></iframe>
+      </div>
     </div>
-    <div style="margin-top:1rem;text-align:center;">
-      <a href="https://maps.google.com/?q=Ciudad+de+Mexico" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:500;font-size:0.95rem;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Como llegar
-      </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ (acordeón) — antes del CTA
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-section" aria-labelledby="faq-title">
+    <div class="ix-container">
+      <SectionHeader
+        tag="¿Hablamos?"
+        title="Preguntas Frecuentes"
+        description="Resuelve las dudas más comunes antes de escribirnos. Si la tuya no aparece, contáctanos por WhatsApp."
+        id="faq-title"
+        p1="Reunimos lo que más nos preguntan sobre <strong>entrega, personalización, garantía y la diferencia entre venta y renta</strong>."
+        p2="¿Necesitas algo específico? Usa el formulario de arriba o el botón de WhatsApp y <strong>te respondemos en menos de 2 horas</strong>."
+      />
+      <div class="ct-faq">
+        {homeFaqs.map((faq) => (
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>{faq.q}</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content"><p>{faq.a}</p></div>
+            </div>
+          </div>
+        ))}
+        <div style="text-align:center;margin-top:1.5rem;">
+          <a href="/preguntas-frecuentes" class="ix-help-alllink">Ver todas las preguntas frecuentes →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CTA FINAL (homologado al index)
+  ══════════════════════════════════════════════════ -->
+  <section class="ix-cta-final" aria-labelledby="ct-cta-title">
+    <div class="ix-cta-final-inner">
+      <div class="ix-cta-final-copy">
+        <p class="ix-cta-final-eyebrow">Cotización gratuita · Respuesta en menos de 2 horas</p>
+        <h2 id="ct-cta-title">¿Prefieres Escribirnos Directo?</h2>
+        <p>Envíanos un WhatsApp con lo que necesitas. Un asesor especializado te responde con precios, disponibilidad y tiempos de entrega ese mismo día.</p>
+      </div>
+      <div class="ix-cta-final-actions">
+        <WhatsAppButton
+          text="Cotizar por WhatsApp"
+          message="Hola, quiero cotizar un podium para mi evento"
+        />
+        <a href="tel:+525516567973" class="ix-cta-outline-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+        <div class="ix-cta-trust">
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            WhatsApp 24/7
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Cotización sin compromiso
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Cobertura nacional · Desde 2020
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 
   <script is:inline>
-    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    // El acordeón FAQ lo gestiona js/app.js (initializeFAQ) globalmente.
+    // Formulario detallado → WhatsApp
+    document.getElementById('contactForm') && document.getElementById('contactForm').addEventListener('submit', (e) => {
       e.preventDefault();
-      const form = e.target as HTMLFormElement;
-      const nombre = (form.querySelector('[name="nombre"]') as HTMLInputElement).value;
-      const empresa = (form.querySelector('[name="empresa"]') as HTMLInputElement).value;
-      const email = (form.querySelector('[name="email"]') as HTMLInputElement).value;
-      const telefono = (form.querySelector('[name="telefono"]') as HTMLInputElement).value;
-      const servicio = (form.querySelector('[name="servicio"]') as HTMLSelectElement).value;
-      const fecha = (form.querySelector('[name="fecha"]') as HTMLInputElement).value;
-      const ubicacion = (form.querySelector('[name="ubicacion"]') as HTMLInputElement).value;
-      const mensaje = (form.querySelector('[name="mensaje"]') as HTMLTextAreaElement).value;
-
-      const checkboxes = form.querySelectorAll('[name="productos"]:checked') as NodeListOf<HTMLInputElement>;
-      const productos = Array.from(checkboxes).map(cb => cb.value).join(', ');
-
-      let text = `Hola PODIUMEX, me gustaria cotizar:\n\n`;
-      text += `*Nombre:* ${nombre}\n`;
-      if (empresa) text += `*Empresa:* ${empresa}\n`;
-      if (email) text += `*Email:* ${email}\n`;
-      if (telefono) text += `*Telefono:* ${telefono}\n`;
-      text += `*Servicio:* ${servicio}\n`;
-      if (productos) text += `*Productos:* ${productos}\n`;
-      if (fecha) text += `*Fecha del evento:* ${fecha}\n`;
-      if (ubicacion) text += `*Ubicacion:* ${ubicacion}\n`;
-      if (mensaje) text += `*Mensaje:* ${mensaje}\n`;
-
-      const url = `https://wa.me/525516567973?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
+      const f = e.target;
+      const v = (n) => { const el = f.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
+      const nombre = v('nombre'), servicio = v('servicio');
+      if (!nombre || !servicio) { alert('Por favor escribe tu nombre y elige un servicio.'); return; }
+      const productos = Array.from(f.querySelectorAll('[name="productos"]:checked')).map((c) => c.value).join(', ');
+      let t = 'Hola PODIUMEX, me gustaría cotizar:\n\n';
+      t += '*Nombre:* ' + nombre + '\n';
+      if (v('empresa')) t += '*Empresa:* ' + v('empresa') + '\n';
+      if (v('email')) t += '*Email:* ' + v('email') + '\n';
+      if (v('telefono')) t += '*Teléfono:* ' + v('telefono') + '\n';
+      t += '*Servicio:* ' + servicio + '\n';
+      if (productos) t += '*Productos:* ' + productos + '\n';
+      if (v('fecha')) t += '*Fecha del evento:* ' + v('fecha') + '\n';
+      if (v('ubicacion')) t += '*Ubicación:* ' + v('ubicacion') + '\n';
+      if (v('mensaje')) t += '*Mensaje:* ' + v('mensaje') + '\n';
+      window.open('https://wa.me/525516567973?text=' + encodeURIComponent(t), '_blank', 'noopener');
     });
   </script>
 
 </Layout>
+
+<style>
+  /* ── Contacto: lista de datos ── */
+  .ct-contact-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; margin: 0 0 2rem; padding: 0; }
+  .ct-contact-list li { display: flex; align-items: flex-start; gap: 1rem; }
+  .ct-contact-ic { flex-shrink: 0; width: 42px; height: 42px; border-radius: 10px; background: var(--secondary); color: var(--accent); display: flex; align-items: center; justify-content: center; }
+  .ct-contact-list li div { display: flex; flex-direction: column; gap: 0.15rem; }
+  .ct-contact-list strong { font-size: 0.9rem; font-weight: 600; color: var(--primary); }
+  .ct-contact-list a, .ct-contact-text { font-size: 0.9rem; color: var(--text-medium); text-decoration: none; }
+  .ct-contact-list a:hover { color: var(--accent); }
+  /* Horario */
+  .ct-horario { background: var(--secondary); border-radius: var(--radius-lg); padding: 1.5rem; }
+  .ct-horario h4 { font-size: 1rem; font-weight: 700; color: var(--primary); margin: 0 0 1rem; }
+  .ct-horario-row { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-medium); margin-bottom: 0.5rem; }
+  .ct-horario-row strong { color: var(--primary); font-weight: 600; }
+  .ct-muted { color: var(--text-light); }
+  .ct-horario-note { margin: 0.75rem 0 0; font-size: 0.85rem; color: var(--text-light); }
+  /* Checkboxes del formulario */
+  .ix-form-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .ix-form-checks label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 400; color: var(--text-medium); cursor: pointer; margin: 0; }
+  .ix-form-checks input { width: auto; }
+  /* Mapa */
+  .ct-map { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); }
+  .ct-map iframe { display: block; }
+  /* FAQ centrado */
+  .ct-faq { max-width: 820px; margin: 0 auto; }
+  @media (max-width: 560px) { .ix-form-checks { grid-template-columns: 1fr; } }
+</style>
