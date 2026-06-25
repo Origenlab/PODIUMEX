@@ -9,6 +9,7 @@ export interface QA {
 }
 
 export const homeFaqs: QA[] = [
+  { q: '¿Cuánto cuesta rentar o comprar un podium en México?', a: 'Los precios de venta van desde $5,800 MXN (Podium Madera Negro Compacto) hasta $11,500 MXN (Podium Madera y Acrílico Estándar). El Acrílico Transparente —el más popular— arranca en $8,500 MXN. Para renta el precio varía según modelo y duración; contáctanos al 55 1656 7973 para cotización en menos de 2 horas.' },
   { q: '¿Cuál es el tiempo de entrega?', a: 'Entrega express en 24 horas en CDMX, Monterrey y Guadalajara, y de 48 a 72 horas al resto de la república. Para pedidos con grabado personalizado el tiempo puede variar según la complejidad.' },
   { q: '¿Puedo personalizar el podium con mi logo?', a: 'Sí. Grabamos tu logo, escudo institucional o gubernamental con láser de alta precisión sobre acrílico o madera. Enviamos una prueba digital antes de grabar para tu aprobación.' },
   { q: '¿Cuál es la diferencia entre venta y renta?', a: 'La venta te da la propiedad permanente, ideal si haces eventos frecuentes. La renta es el uso por evento, perfecta para eventos únicos. Ambas incluyen nuestros estándares de calidad y soporte.' },

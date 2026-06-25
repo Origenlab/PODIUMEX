@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { serviceSchema, faqSchema, breadcrumb } from '../data/schema';
+
+const schema = serviceSchema({
+  name: 'Renta de Podiums Profesionales para Eventos en México',
+  description: 'Renta de podiums de acrílico, madera y combinados por día, semana o evento en CDMX y toda la república. Incluye entrega, instalación profesional, soporte técnico durante el evento y recolección. Personalización temporal con logo disponible. Respuesta en menos de 2 horas.',
+  path: '/renta-de-podiums',
+  serviceType: 'Renta de Podiums para Eventos',
+});
+
+const rentaFaq = faqSchema([
+  { q: '¿Qué incluye la renta de un podium en PODIUMEX?', a: 'El servicio de renta incluye entrega en tu sede, instalación y nivelación profesional por técnicos especializados, soporte técnico durante todo el evento, asesoría para posicionamiento óptimo en el escenario y recolección al finalizar. Puedes agregar personalización temporal con tu logo o escudo y setup para streaming en vivo.' },
+  { q: '¿Cuánto cuesta rentar un podium en CDMX?', a: 'El precio de renta varía según el modelo, la duración (día, semana o evento) y si incluye personalización con logo. Contáctanos por WhatsApp al 55 1656 7973 y te enviamos cotización detallada en menos de 2 horas, sin compromiso.' },
+  { q: '¿En qué ciudades hacen renta de podiums?', a: 'La renta con entrega, instalación y recolección está disponible en CDMX y área metropolitana. Para Monterrey, Guadalajara y otras ciudades coordinamos renta con envío especializado; contáctanos para confirmar disponibilidad y condiciones en tu ciudad.' },
+  { q: '¿Puedo personalizar el podium rentado con el logo de mi empresa?', a: 'Sí. Ofrecemos personalización temporal con vinilo de alta calidad o backing personalizado para renta. El grabado láser definitivo aplica solo para venta. Enviamos prueba visual antes del evento para tu aprobación.' },
+  { q: '¿Cuánto tiempo antes debo reservar?', a: 'Recomendamos reservar con al menos 72 horas de anticipación para garantizar disponibilidad del modelo y configuración requerida. Para eventos con personalización, con 5 días hábiles de antelación. En casos de urgencia contáctanos directamente por WhatsApp.' },
+  { q: '¿Qué diferencia hay entre rentar y comprar un podium?', a: 'La renta es ideal si organizas eventos esporádicos o quieres probar el modelo antes de comprar: no requieres inversión inicial ni almacenamiento. La compra conviene si realizas 3 o más eventos al año: obtienes propiedad permanente, personalización definitiva con grabado láser y garantía escrita de 2 a 3 años.' },
+]);
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Renta de Podiums' },
+]);
 ---
 
 <Layout
-  title="Renta de Podiums Profesionales - Alquiler de Podium en Mexico"
-  description="Renta de podiums profesionales en CDMX y México: acrílico, madera y combinados para conferencias, eventos corporativos y ceremonias. Entrega en 24 h."
+  title="Renta de Podiums Profesionales para Eventos en CDMX y México | PODIUMEX"
+  description="Renta podiums de acrílico y madera para eventos en CDMX y todo México. Entrega, instalación y recolección incluidas. Personalización temporal con logo. Respuesta en menos de 2 horas."
   canonical="/renta-de-podiums"
+  schema={schema}
+  breadcrumbSchema={breadcrumbSchema}
 >
+<script type="application/ld+json" set:html={rentaFaq} />
 
   <!-- Hero -->
   <section class="hero">

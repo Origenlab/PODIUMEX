@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CtaFinal from '../components/CtaFinal.astro';
+import { webPageSchema, faqSchema, breadcrumb } from '../data/schema';
+
+const schema = webPageSchema({
+  name: '¿Cuánto Cuesta un Podium Profesional en México? Precios 2026',
+  description: 'Tabla de precios de podiums profesionales en México: venta desde $5,800 MXN y renta por evento. 8 modelos en acrílico y madera. Precios verificados PODIUMEX 2026.',
+  path: '/precio-podium-mexico',
+  type: 'WebPage',
+});
+
+const priceFaq = faqSchema([
+  {
+    q: '¿Cuánto cuesta un podium profesional en México?',
+    a: 'Los precios de venta de podiums profesionales en México van desde $5,800 MXN (Podium Madera Negro Compacto, 95 cm) hasta $11,500 MXN (Podium Madera y Acrílico Estándar, 120 cm). El modelo más popular —Acrílico Transparente estándar— cuesta $8,500 MXN. Todos los precios incluyen garantía escrita de 2 a 3 años, envío gratuito a toda la república y la opción de personalización con grabado láser del logo.',
+  },
+  {
+    q: '¿Cuánto cuesta rentar un podium para un evento en México?',
+    a: 'El precio de renta de un podium en México varía según el modelo, la duración (por día, fin de semana o semana completa) y los servicios incluidos (instalación, personalización, streaming setup). PODIUMEX ofrece cotización gratuita y personalizada por WhatsApp al 55 1656 7973, con respuesta en menos de 2 horas.',
+  },
+  {
+    q: '¿Vale más la pena comprar o rentar un podium?',
+    a: 'Depende de la frecuencia de uso. Si organizas 3 o más eventos al año, la compra es más rentable: precio desde $5,800 MXN, propiedad permanente, personalización definitiva con grabado láser y garantía escrita 2-3 años. Si son eventos puntuales, la renta elimina la inversión inicial y el almacenamiento, con entrega, instalación y recolección incluidas.',
+  },
+  {
+    q: '¿El precio incluye instalación y entrega?',
+    a: 'En la venta, el envío gratuito llega a toda la república (24h en CDMX, Monterrey y Guadalajara; 48-72h al resto del país). En la renta, la entrega, instalación profesional, soporte técnico durante el evento y recolección están incluidas. La personalización con grabado láser tiene un costo adicional según la complejidad del diseño.',
+  },
+  {
+    q: '¿Cuánto cuesta el grabado láser del logo en un podium?',
+    a: 'La personalización con grabado láser CNC de logotipos, escudos institucionales o diseños corporativos tiene un costo adicional según la complejidad. PODIUMEX envía prueba digital antes de grabar y garantiza el resultado. Contáctanos por WhatsApp con tu archivo AI, EPS, SVG o PDF para recibir presupuesto exacto.',
+  },
+  {
+    q: '¿Existen descuentos por volumen o compra de múltiples podiums?',
+    a: 'Sí. PODIUMEX ofrece esquemas corporativos con precios especiales para compras de 3 o más unidades, paquetes para hoteles y venues que requieren equipamiento fijo de salones, y contratos anuales de renta para empresas con eventos frecuentes. Solicita una cotización corporativa por WhatsApp al 55 1656 7973.',
+  },
+]);
+
+const breadcrumbSchema = breadcrumb([
+  { name: 'Inicio', path: '/' },
+  { name: 'Precio de Podiums en México' },
+]);
+
+const models = [
+  { name: 'Acrílico Transparente', tag: 'Más Popular', size: 'Estándar (120 cm)', material: 'Acrílico 6mm', warranty: '2 años', price: '$8,500', use: 'Conferencias, tech, streaming, lanzamientos', url: '/catalogo/acrilico-transparente' },
+  { name: 'Acrílico Negro', tag: 'Premium', size: 'Estándar (120 cm)', material: 'Acrílico 8mm', warranty: '2 años', price: '$9,200', use: 'Galas, premiaciones, eventos VIP', url: '/catalogo/acrilico-negro' },
+  { name: 'Madera Negro', tag: 'Institucional', size: 'Estándar (120 cm)', material: 'MDF lacado', warranty: '3 años', price: '$7,800', use: 'Gobierno, universidades, ceremonias', url: '/catalogo/podium-madera-negro' },
+  { name: 'Madera y Acrílico', tag: 'Lujo', size: 'Estándar (120 cm)', material: 'Caoba + acrílico', warranty: '3 años', price: '$11,500', use: 'Hoteles, corporativo premium, bodas', url: '/catalogo/madera-caoba-acrilico' },
+  { name: 'Acrílico Transparente Compacto', tag: '', size: 'Compacto (95 cm)', material: 'Acrílico 6mm', warranty: '2 años', price: '$6,200', use: 'Podcast, streaming, salas de juntas', url: '/catalogo/acrilico-transparente-compacto' },
+  { name: 'Acrílico Negro Compacto', tag: '', size: 'Compacto (95 cm)', material: 'Acrílico 8mm', warranty: '2 años', price: '$6,900', use: 'Eventos íntimos, oficinas, galas pequeñas', url: '/catalogo/acrilico-negro-compacto' },
+  { name: 'Madera Negro Compacto', tag: 'Desde', size: 'Compacto (95 cm)', material: 'MDF lacado', warranty: '3 años', price: '$5,800', use: 'Capacitación, juntas directivas, salas VIP', url: '/catalogo/podium-madera-negro-compacto' },
+  { name: 'Madera y Acrílico Compacto', tag: '', size: 'Compacto (95 cm)', material: 'Caoba + acrílico', warranty: '3 años', price: '$8,400', use: 'Showrooms, hoteles boutique, eventos exclusivos', url: '/catalogo/madera-caoba-acrilico-compacto' },
+];
+---
+
+<Layout
+  title="Precio de Podiums Profesionales en México 2026 — Desde $5,800 MXN | PODIUMEX"
+  description="¿Cuánto cuesta un podium en México? Tabla de precios actualizada 2026: venta desde $5,800 MXN, 8 modelos en acrílico y madera, garantía escrita, envío gratis. Renta por cotización."
+  canonical="/precio-podium-mexico"
+  schema={schema}
+  breadcrumbSchema={breadcrumbSchema}
+>
+<script type="application/ld+json" set:html={priceFaq} />
+
+<!-- Hero -->
+<section style="background:#fff; padding:3.5rem 0 2rem; border-bottom:1px solid #e5e7eb;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
+    <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;"><a href="/" style="color:#6b7280;text-decoration:none;">Inicio</a> › Precio de Podiums en México</p>
+    <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#111;line-height:1.2;margin-bottom:1rem;">¿Cuánto Cuesta un Podium Profesional en México?</h1>
+    <p style="font-size:1.1rem;color:#374151;max-width:700px;line-height:1.7;margin-bottom:1.5rem;">Tabla de precios verificada 2026. Venta desde <strong>$5,800 MXN</strong> con garantía escrita, envío gratis y grabado láser. Renta disponible en CDMX y área metropolitana con cotización personalizada.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="https://wa.me/525516567973?text=Hola%2C%20quiero%20cotizar%20un%20podium" target="_blank" rel="noopener noreferrer" style="background:#25D366;color:#fff;padding:.85rem 1.75rem;border-radius:50px;font-weight:700;text-decoration:none;font-size:1rem;">💬 Cotizar por WhatsApp</a>
+      <a href="/catalogo" style="background:#111;color:#fff;padding:.85rem 1.75rem;border-radius:50px;font-weight:700;text-decoration:none;font-size:1rem;">Ver Catálogo Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- Tabla de precios -->
+<section style="padding:3rem 0;background:#f9fafb;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
+    <h2 style="font-size:1.6rem;font-weight:700;color:#111;margin-bottom:.5rem;">Precios de Venta — 8 Modelos</h2>
+    <p style="color:#6b7280;margin-bottom:2rem;">Precios desde. Incluyen: envío gratuito a toda la república · instalación disponible · garantía escrita · personalización con grabado láser (cargo adicional según complejidad).</p>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.08);">
+        <thead>
+          <tr style="background:#111;color:#fff;">
+            <th style="padding:.9rem 1rem;text-align:left;">Modelo</th>
+            <th style="padding:.9rem 1rem;text-align:center;">Tamaño</th>
+            <th style="padding:.9rem 1rem;text-align:left;">Material</th>
+            <th style="padding:.9rem 1rem;text-align:center;">Garantía</th>
+            <th style="padding:.9rem 1rem;text-align:left;">Ideal para</th>
+            <th style="padding:.9rem 1rem;text-align:right;">Precio desde</th>
+          </tr>
+        </thead>
+        <tbody>
+          {models.map((m, i) => (
+            <tr style={`border-bottom:1px solid #f3f4f6;${i % 2 === 1 ? 'background:#fafafa;' : ''}`}>
+              <td style="padding:.85rem 1rem;font-weight:600;color:#111;">
+                <a href={m.url} style="color:#111;text-decoration:none;">{m.name}</a>
+                {m.tag && <span style="margin-left:.5rem;background:#f0fdf4;color:#166534;font-size:.72rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;text-transform:uppercase;">{m.tag}</span>}
+              </td>
+              <td style="padding:.85rem 1rem;text-align:center;color:#374151;">{m.size}</td>
+              <td style="padding:.85rem 1rem;color:#374151;">{m.material}</td>
+              <td style="padding:.85rem 1rem;text-align:center;color:#374151;">{m.warranty}</td>
+              <td style="padding:.85rem 1rem;color:#6b7280;font-size:.9rem;">{m.use}</td>
+              <td style="padding:.85rem 1rem;text-align:right;font-weight:800;font-size:1.05rem;color:#111;white-space:nowrap;">{m.price} MXN</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:1rem;font-size:.85rem;color:#9ca3af;">*Precios en pesos mexicanos (MXN), vigentes 2026. Sujetos a cambio sin previo aviso. Personalización con grabado láser tiene costo adicional según complejidad.</p>
+  </div>
+</section>
+
+<!-- Venta vs Renta -->
+<section style="padding:3rem 0;background:#fff;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
+    <h2 style="font-size:1.6rem;font-weight:700;color:#111;margin-bottom:.5rem;">¿Comprar o Rentar un Podium?</h2>
+    <p style="color:#6b7280;margin-bottom:2rem;">La modalidad correcta depende de la frecuencia de tus eventos.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+      <div style="border:2px solid #111;border-radius:12px;padding:2rem;">
+        <h3 style="font-size:1.25rem;font-weight:700;color:#111;margin-bottom:1rem;">🏆 Compra — Propiedad Permanente</h3>
+        <ul style="list-style:none;padding:0;margin:0 0 1.5rem;color:#374151;line-height:2;">
+          <li>✅ Desde <strong>$5,800 MXN</strong> (pago único)</li>
+          <li>✅ Garantía escrita 2-3 años</li>
+          <li>✅ Personalización definitiva con grabado láser</li>
+          <li>✅ Financiamiento a meses sin intereses</li>
+          <li>✅ Envío gratuito a toda la república</li>
+          <li>✅ Ideal si haces <strong>3 o más eventos/año</strong></li>
+        </ul>
+        <a href="/venta-de-podiums" style="display:block;text-align:center;background:#111;color:#fff;padding:.85rem;border-radius:8px;font-weight:700;text-decoration:none;">Ver opciones de compra</a>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:2rem;">
+        <h3 style="font-size:1.25rem;font-weight:700;color:#111;margin-bottom:1rem;">📅 Renta — Por Evento</h3>
+        <ul style="list-style:none;padding:0;margin:0 0 1.5rem;color:#374151;line-height:2;">
+          <li>✅ Sin inversión inicial</li>
+          <li>✅ Entrega + instalación incluidas</li>
+          <li>✅ Soporte técnico durante el evento</li>
+          <li>✅ Recolección al finalizar</li>
+          <li>✅ Personalización temporal con logo</li>
+          <li>✅ Ideal para <strong>eventos esporádicos</strong></li>
+        </ul>
+        <a href="https://wa.me/525516567973?text=Hola%2C%20quiero%20cotizar%20renta%20de%20podium" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;background:#25D366;color:#fff;padding:.85rem;border-radius:8px;font-weight:700;text-decoration:none;">Cotizar renta por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:3rem 0;background:#f9fafb;">
+  <div style="max-width:800px;margin:0 auto;padding:0 1.5rem;">
+    <h2 style="font-size:1.6rem;font-weight:700;color:#111;margin-bottom:2rem;">Preguntas frecuentes sobre precios</h2>
+    <details style="background:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.06);">
+      <summary style="font-weight:600;cursor:pointer;color:#111;">¿Cuánto cuesta un podium profesional en México?</summary>
+      <p style="margin-top:1rem;color:#374151;line-height:1.7;">Los precios de venta van desde <strong>$5,800 MXN</strong> (Madera Negro Compacto) hasta <strong>$11,500 MXN</strong> (Madera y Acrílico Estándar). El modelo más popular —Acrílico Transparente 120 cm— arranca en <strong>$8,500 MXN</strong>, con garantía escrita de 2 años y envío gratuito.</p>
+    </details>
+    <details style="background:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.06);">
+      <summary style="font-weight:600;cursor:pointer;color:#111;">¿Cuánto cuesta rentar un podium para evento?</summary>
+      <p style="margin-top:1rem;color:#374151;line-height:1.7;">El precio de renta depende del modelo, duración y servicios adicionales (personalización, streaming setup). PODIUMEX ofrece cotización personalizada por WhatsApp en menos de 2 horas. La renta incluye entrega, instalación y recolección.</p>
+    </details>
+    <details style="background:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.06);">
+      <summary style="font-weight:600;cursor:pointer;color:#111;">¿El precio incluye instalación y entrega?</summary>
+      <p style="margin-top:1rem;color:#374151;line-height:1.7;">En venta: envío gratuito a toda la república (24h en CDMX/MTY/GDL, 48-72h al resto). En renta: entrega, instalación, soporte técnico y recolección incluidas. La personalización con grabado láser tiene costo adicional.</p>
+    </details>
+    <details style="background:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.06);">
+      <summary style="font-weight:600;cursor:pointer;color:#111;">¿Hay descuentos por volumen o compra corporativa?</summary>
+      <p style="margin-top:1rem;color:#374151;line-height:1.7;">Sí. Precios especiales para 3 o más unidades, paquetes para hoteles y venues, y contratos anuales de renta para empresas con eventos frecuentes. Solicita cotización corporativa por WhatsApp al 55 1656 7973.</p>
+    </details>
+  </div>
+</section>
+
+<CtaFinal
+  title="¿Listo para cotizar tu podium?"
+  text="Dinos el modelo, fecha y ciudad de tu evento. Respondemos con precio exacto en menos de 2 horas por WhatsApp."
+/>
+
+</Layout>
