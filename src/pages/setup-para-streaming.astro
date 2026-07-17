@@ -141,8 +141,8 @@ const breadcrumbSchema = breadcrumb([
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
-      const f = e.target as HTMLFormElement;
-      const d = (n: string) => (f.querySelector(`[name="${n}"]`) as HTMLInputElement)?.value || '';
+      const f = e.target;
+      const d = (n) => f.querySelector(`[name="${n}"]`)?.value || '';
       let t = `Hola, necesito setup para streaming:\n\n*Nombre:* ${d('nombre')}`;
       if (d('plataforma')) t += `\n*Plataforma:* ${d('plataforma')}`;
       if (d('mensaje')) t += `\n*Detalles:* ${d('mensaje')}`;

@@ -138,8 +138,8 @@ const breadcrumbSchema = breadcrumb([
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
-      const f = e.target as HTMLFormElement;
-      const d = (n: string) => (f.querySelector(`[name="${n}"]`) as HTMLInputElement)?.value || '';
+      const f = e.target;
+      const d = (n) => f.querySelector(`[name="${n}"]`)?.value || '';
       let t = `Hola, necesito soporte tecnico:\n\n*Nombre:* ${d('nombre')}\n*Telefono:* ${d('telefono')}`;
       if (d('mensaje')) t += `\n*Situacion:* ${d('mensaje')}`;
       window.open(`https://wa.me/525516567973?text=${encodeURIComponent(t)}`, '_blank');

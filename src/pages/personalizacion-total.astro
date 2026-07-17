@@ -145,8 +145,8 @@ const breadcrumbSchema = breadcrumb([
     document.querySelectorAll('.service-faq-question').forEach(btn => { btn.addEventListener('click', () => { btn.parentElement?.classList.toggle('active'); }); });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
-      const f = e.target as HTMLFormElement;
-      const d = (n: string) => (f.querySelector(`[name="${n}"]`) as HTMLInputElement)?.value || '';
+      const f = e.target;
+      const d = (n) => f.querySelector(`[name="${n}"]`)?.value || '';
       let t = `Hola, me interesa personalizar un podium:\n\n*Nombre:* ${d('nombre')}`;
       if (d('empresa')) t += `\n*Empresa:* ${d('empresa')}`;
       if (d('mensaje')) t += `\n*Grabado:* ${d('mensaje')}`;

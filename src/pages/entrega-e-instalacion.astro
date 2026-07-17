@@ -230,8 +230,8 @@ const breadcrumbSchema = breadcrumb([
     });
     document.getElementById('whatsappForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
-      const f = e.target as HTMLFormElement;
-      const d = (n: string) => (f.querySelector(`[name="${n}"]`) as HTMLInputElement)?.value || '';
+      const f = e.target;
+      const d = (n) => f.querySelector(`[name="${n}"]`)?.value || '';
       let t = `Hola, necesito servicio de entrega e instalacion:\n\n*Nombre:* ${d('nombre')}\n*Telefono:* ${d('telefono')}`;
       if (d('fecha')) t += `\n*Fecha:* ${d('fecha')}`;
       if (d('ubicacion')) t += `\n*Ubicacion:* ${d('ubicacion')}`;
